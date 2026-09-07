@@ -8,13 +8,15 @@ A bilingual, responsive introduction to Industrial and Systems Engineering. Buil
 - `npm run dev` for the local preview.
 - `npm run build` for Cloudflare Workers/Sites output.
 - `npx tsc --noEmit` and `node scripts/validate-data.mjs` for code and curriculum checks.
-- `npx oxlint app components/domain-app.tsx components/explorer.tsx lib` for authored application code. The full starter lint includes pre-existing errors in unused vendored `components/ui` files and `hooks/use-mobile.ts`; those are intentionally preserved.
+- `npx oxlint app components/domain-app.tsx components/explorer.tsx components/site-link.tsx lib` for authored application code. The full starter lint includes pre-existing errors in unused vendored `components/ui` files and `hooks/use-mobile.ts`; those are intentionally preserved.
 
 ## Routes and preferences
 
 `/en` and `/fa` contain the overview. Each locale has `/chart`, `/majors`, `/tools`, `/resources`, and `/wikipedia` routes. The root route restores the previous language, defaulting to English. Dark mode is the initial theme; preferences are saved in browser local storage.
 
 Chart views and filters use URL parameters (`view`, `category`, `group`, `pathway`, `q`, `course`). Filters update immediately without server requests. Language links retain query parameters, including the selected course. There is no account system, database, or runtime AI service.
+
+Module links use native document navigation through `components/site-link.tsx`. This avoids a verified production-only prefetch/click failure in the starter's vinext RSC Link runtime. Browser back/forward, URL selections, language and theme preferences remain available.
 
 ## Content and provenance
 

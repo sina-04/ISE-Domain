@@ -2,7 +2,7 @@
 /* Supplied SVGs are intentionally preserved as SVGs, without raster optimization. */
 /* eslint-disable @next/next/no-img-element */
 import { useState, useSyncExternalStore, type CSSProperties } from 'react';
-import Link from 'next/link';
+import Link from '@/components/site-link';
 import {
   Search,
   ArrowUpRight,

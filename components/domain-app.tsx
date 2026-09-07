@@ -2,7 +2,7 @@
 /* Supplied SVG artwork is preserved intact and loaded lazily; raster optimization does not apply. */
 /* eslint-disable @next/next/no-img-element */
 import { Suspense, useEffect, useState, useSyncExternalStore } from 'react';
-import Link from 'next/link';
+import Link from '@/components/site-link';
 import {
   ArrowUpRight,
   ArrowRight,
