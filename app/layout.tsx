@@ -1,42 +1,37 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Barlow_Condensed, Manrope, Vazirmatn } from 'next/font/google';
 import './globals.css';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const display = Barlow_Condensed({
+  weight: ['500', '600', '700', '800'],
   subsets: ['latin'],
+  variable: '--font-display',
 });
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
-
+const body = Manrope({ subsets: ['latin'], variable: '--font-body' });
+const persian = Vazirmatn({ subsets: ['arabic'], variable: '--font-persian' });
 export const metadata: Metadata = {
-  title: 'Orbit Pulse',
-  description: 'A luminous pulse radiating through an abstract purple orbit.',
-  openGraph: {
-    title: 'Orbit Pulse',
-    description: 'A luminous pulse radiating through an abstract purple orbit.',
-    images: ['/orbit-reference.svg'],
+  title: {
+    default: 'ISE Domain — Industrial & Systems Engineering',
+    template: '%s | ISE Domain',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Orbit Pulse',
-    description: 'A luminous pulse radiating through an abstract purple orbit.',
-    images: ['/orbit-reference.svg'],
-  },
+  description:
+    'Explore Industrial and Systems Engineering: courses, graduate pathways, tools and resources. In English and Persian.',
 };
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.lang=location.pathname.startsWith('/fa')?'fa':'en';document.documentElement.dir=location.pathname.startsWith('/fa')?'rtl':'ltr';try{document.documentElement.dataset.theme=localStorage.getItem('ise-theme')||'dark'}catch(e){}`,
+          }}
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${display.variable} ${body.variable} ${persian.variable}`}
       >
         {children}
       </body>

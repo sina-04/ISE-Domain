@@ -1,0 +1,4221 @@
+[
+  {
+    "id": "gen-001",
+    "code": null,
+    "name": {
+      "en": "Islamic Thought I (Origin and Resurrection)",
+      "fa": "اندیشه اسلامی ۱ (مبدأ و معاد)"
+    },
+    "credits": 2,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D2:F2"
+      }
+    ],
+    "description": {
+      "en": "Explore foundational Islamic perspectives on existence, belief and the afterlife.",
+      "fa": "آشنایی با دیدگاه‌های بنیادی اسلامی درباره هستی، ایمان و معاد."
+    },
+    "wikiTopic": "Islamic theology",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Schools of Islamic theology",
+        "url": "https://en.wikipedia.org/wiki/Schools_of_Islamic_theology"
+      },
+      "fa": {
+        "title": "مکتب‌های کلامی اسلامی",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%DA%A9%D8%AA%D8%A8%E2%80%8C%D9%87%D8%A7%DB%8C_%DA%A9%D9%84%D8%A7%D9%85%DB%8C_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-002",
+    "code": null,
+    "name": {
+      "en": "Islamic Thought II (Prophethood and Imamate)",
+      "fa": "اندیشه اسلامی ۲ (نبوت و امامت)"
+    },
+    "credits": 2,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D3:F3"
+      }
+    ],
+    "description": {
+      "en": "Study Islamic perspectives on prophethood and religious leadership.",
+      "fa": "بررسی دیدگاه‌های اسلامی درباره نبوت و امامت."
+    },
+    "wikiTopic": "Prophethood in Islam",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Prophet",
+        "url": "https://en.wikipedia.org/wiki/Prophet"
+      },
+      "fa": {
+        "title": "پیامبر",
+        "url": "https://fa.wikipedia.org/wiki/%D9%BE%DB%8C%D8%A7%D9%85%D8%A8%D8%B1"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-003",
+    "code": null,
+    "name": {
+      "en": "Islamic Ethics (Foundations and Concepts)",
+      "fa": "اخلاق اسلامی (مبانی و مفاهیم)"
+    },
+    "credits": 2,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D4:F4"
+      }
+    ],
+    "description": {
+      "en": "Examine ethical concepts and their relationship to individual and social conduct.",
+      "fa": "بررسی مفاهیم اخلاقی و ارتباط آن‌ها با رفتار فردی و اجتماعی."
+    },
+    "wikiTopic": "Islamic ethics",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Islamic ethics",
+        "url": "https://en.wikipedia.org/wiki/Islamic_ethics"
+      },
+      "fa": {
+        "title": "اخلاق اسلامی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D8%AE%D9%84%D8%A7%D9%82_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-004",
+    "code": null,
+    "name": {
+      "en": "The Islamic Revolution of Iran",
+      "fa": "انقلاب اسلامی ایران"
+    },
+    "credits": 2,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D5:F5"
+      }
+    ],
+    "description": {
+      "en": "Study the historical context and development of the Iranian Revolution.",
+      "fa": "مطالعه زمینه تاریخی و روند انقلاب اسلامی ایران."
+    },
+    "wikiTopic": "Iranian Revolution",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Iranian Revolution",
+        "url": "https://en.wikipedia.org/wiki/Iranian_Revolution"
+      },
+      "fa": {
+        "title": "انقلاب ۱۳۵۷",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D9%82%D9%84%D8%A7%D8%A8_%DB%B1%DB%B3%DB%B5%DB%B7"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-005",
+    "code": null,
+    "name": {
+      "en": "Analytical History of Early Islam",
+      "fa": "تاریخ تحلیلی صدر اسلام"
+    },
+    "credits": 2,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D6:F6"
+      }
+    ],
+    "description": {
+      "en": "Examine early Islamic history through historical events and their context.",
+      "fa": "بررسی رویدادها و زمینه‌های تاریخی صدر اسلام."
+    },
+    "wikiTopic": "History of Islam",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "History of Islam",
+        "url": "https://en.wikipedia.org/wiki/History_of_Islam"
+      },
+      "fa": {
+        "title": "تاریخ اسلام",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE_%D8%A7%D8%B3%D9%84%D8%A7%D9%85"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-006",
+    "code": null,
+    "name": {
+      "en": "Thematic Interpretation of the Holy Quran",
+      "fa": "تفسیر موضوعی قرآن"
+    },
+    "credits": 2,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D7:F7"
+      }
+    ],
+    "description": {
+      "en": "Read Quranic passages through thematic interpretation and discussion.",
+      "fa": "مطالعه آیات قرآن با تفسیر موضوعی و گفت‌وگو درباره مفاهیم آن‌ها."
+    },
+    "wikiTopic": "Tafsir",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Tafsir",
+        "url": "https://en.wikipedia.org/wiki/Tafsir"
+      },
+      "fa": {
+        "title": "تفسیر قرآن",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AA%D9%81%D8%B3%DB%8C%D8%B1_%D9%82%D8%B1%D8%A2%D9%86"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-007",
+    "code": null,
+    "name": {
+      "en": "Family and Population Studies",
+      "fa": "دانش خانواده و جمعیت"
+    },
+    "credits": 2,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D8:F8"
+      }
+    ],
+    "description": {
+      "en": "Explore family relationships, population change and their social context.",
+      "fa": "آشنایی با روابط خانواده، تغییرات جمعیت و زمینه اجتماعی آن‌ها."
+    },
+    "wikiTopic": "Demography",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Demography",
+        "url": "https://en.wikipedia.org/wiki/Demography"
+      },
+      "fa": {
+        "title": "جمعیت‌شناسی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AC%D9%85%D8%B9%DB%8C%D8%AA%E2%80%8C%D8%B4%D9%86%D8%A7%D8%B3%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-008",
+    "code": null,
+    "name": {
+      "en": "Persian Language",
+      "fa": "زبان فارسی"
+    },
+    "credits": 2,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D9:F9"
+      }
+    ],
+    "description": {
+      "en": "Develop Persian reading, writing and communication through language and literature.",
+      "fa": "تقویت خواندن، نوشتن و ارتباط به زبان فارسی با مطالعه زبان و ادبیات."
+    },
+    "wikiTopic": "Persian language",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Persian language",
+        "url": "https://en.wikipedia.org/wiki/Persian_language"
+      },
+      "fa": {
+        "title": "زبان فارسی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B2%D8%A8%D8%A7%D9%86_%D9%81%D8%A7%D8%B1%D8%B3%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-009",
+    "code": null,
+    "name": {
+      "en": "English Language",
+      "fa": "زبان انگلیسی"
+    },
+    "credits": 2,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D10:F10"
+      }
+    ],
+    "description": {
+      "en": "Build general English reading and communication skills for university study.",
+      "fa": "تقویت مهارت‌های عمومی خواندن و ارتباط به انگلیسی برای تحصیل دانشگاهی."
+    },
+    "wikiTopic": "English language",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "English language",
+        "url": "https://en.wikipedia.org/wiki/English_language"
+      },
+      "fa": {
+        "title": "زبان انگلیسی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B2%D8%A8%D8%A7%D9%86_%D8%A7%D9%86%DA%AF%D9%84%DB%8C%D8%B3%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-010",
+    "code": null,
+    "name": {
+      "en": "Sacred Defense and Resistance Studies",
+      "fa": "علوم و معارف دفاع مقدس و مقاومت"
+    },
+    "credits": 2,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D11:F11"
+      }
+    ],
+    "description": {
+      "en": "Study the Iran–Iraq War and related historical narratives in the general curriculum.",
+      "fa": "مطالعه جنگ ایران و عراق و روایت‌های تاریخی مرتبط در برنامه دروس عمومی."
+    },
+    "wikiTopic": "Iran–Iraq War",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Iran–Iraq War",
+        "url": "https://en.wikipedia.org/wiki/Iran%E2%80%93Iraq_War"
+      },
+      "fa": {
+        "title": "جنگ ایران و عراق",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AC%D9%86%DA%AF_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86_%D9%88_%D8%B9%D8%B1%D8%A7%D9%82"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-011",
+    "code": null,
+    "name": {
+      "en": "Physical Education",
+      "fa": "تربیت بدنی"
+    },
+    "credits": 1,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D12:F12"
+      }
+    ],
+    "description": {
+      "en": "Develop physical fitness and learn principles of regular physical activity.",
+      "fa": "توسعه آمادگی جسمانی و آشنایی با اصول فعالیت بدنی منظم."
+    },
+    "wikiTopic": "Physical education",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Physical education",
+        "url": "https://en.wikipedia.org/wiki/Physical_education"
+      },
+      "fa": {
+        "title": "تربیت بدنی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AA%D8%B1%D8%A8%DB%8C%D8%AA_%D8%A8%D8%AF%D9%86%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "gen-012",
+    "code": null,
+    "name": {
+      "en": "Sport I",
+      "fa": "ورزش ۱"
+    },
+    "credits": 1,
+    "group": "general",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D13:F13"
+      }
+    ],
+    "description": {
+      "en": "Practice sport-specific movement, teamwork and physical fitness.",
+      "fa": "تمرین مهارت‌های ورزشی، کار گروهی و آمادگی جسمانی."
+    },
+    "wikiTopic": "Sport",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Sport",
+        "url": "https://en.wikipedia.org/wiki/Sport"
+      },
+      "fa": {
+        "title": "ورزش",
+        "url": "https://fa.wikipedia.org/wiki/%D9%88%D8%B1%D8%B2%D8%B4"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "sci-101",
+    "code": "SCI-101",
+    "name": {
+      "en": "General Mathematics 1",
+      "fa": "ریاضی عمومی ۱"
+    },
+    "credits": 3,
+    "group": "foundation",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [
+      "common"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D18:F18"
+      },
+      {
+        "file": "curriculum",
+        "page": 20
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L9:N9"
+      }
+    ],
+    "description": {
+      "en": "Learn limits, derivatives and integrals to describe change and solve quantitative problems.",
+      "fa": "یادگیری حد، مشتق و انتگرال برای توصیف تغییر و حل مسائل کمی."
+    },
+    "wikiTopic": "Calculus",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Calculus",
+        "url": "https://en.wikipedia.org/wiki/Calculus"
+      },
+      "fa": {
+        "title": "حسابان",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AD%D8%B3%D8%A7%D8%A8%D8%A7%D9%86"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "sci-102",
+    "code": "SCI-102",
+    "name": {
+      "en": "General Mathematics 2",
+      "fa": "ریاضی عمومی ۲"
+    },
+    "credits": 3,
+    "group": "foundation",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [
+      "common"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D19:F19"
+      },
+      {
+        "file": "curriculum",
+        "page": 22
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L10:N10"
+      }
+    ],
+    "description": {
+      "en": "Extend calculus to vectors, several variables and multiple integrals used in engineering models.",
+      "fa": "گسترش حسابان به بردارها، چند متغیر و انتگرال‌های چندگانه در مدل‌های مهندسی."
+    },
+    "wikiTopic": "Multivariable calculus",
+    "prerequisiteIds": [
+      "sci-101"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Multivariable calculus",
+        "url": "https://en.wikipedia.org/wiki/Multivariable_calculus"
+      },
+      "fa": {
+        "title": "حساب چندمتغیره",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AD%D8%B3%D8%A7%D8%A8_%DA%86%D9%86%D8%AF%D9%85%D8%AA%D8%BA%DB%8C%D8%B1%D9%87"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "sci-103",
+    "code": "SCI-103",
+    "name": {
+      "en": "Differential Equations",
+      "fa": "معادلات دیفرانسیل"
+    },
+    "credits": 3,
+    "group": "foundation",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D20:F20"
+      },
+      {
+        "file": "curriculum",
+        "page": 24
+      }
+    ],
+    "description": {
+      "en": "Model changing systems with differential equations and interpret their solutions.",
+      "fa": "مدل‌سازی سیستم‌های متغیر با معادلات دیفرانسیل و تفسیر پاسخ آن‌ها."
+    },
+    "wikiTopic": "Differential equation",
+    "prerequisiteIds": [],
+    "corequisiteIds": [
+      "sci-102"
+    ],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Differential equation",
+        "url": "https://en.wikipedia.org/wiki/Differential_equation"
+      },
+      "fa": {
+        "title": "معادله دیفرانسیل",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D9%87_%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "sci-104",
+    "code": "SCI-104",
+    "name": {
+      "en": "Probability Theory and Its Applications",
+      "fa": "نظریه احتمال و کاربردها"
+    },
+    "credits": 3,
+    "group": "foundation",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [
+      "data-ai"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D21:F21"
+      },
+      {
+        "file": "curriculum",
+        "page": 26
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B30:D30"
+      }
+    ],
+    "description": {
+      "en": "Describe uncertainty using random variables, probability distributions and expectation.",
+      "fa": "توصیف عدم قطعیت با متغیرهای تصادفی، توزیع‌های احتمال و امید ریاضی."
+    },
+    "wikiTopic": "Probability theory",
+    "prerequisiteIds": [],
+    "corequisiteIds": [
+      "sci-102"
+    ],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Probability theory",
+        "url": "https://en.wikipedia.org/wiki/Probability_theory"
+      },
+      "fa": {
+        "title": "نظریه احتمالات",
+        "url": "https://fa.wikipedia.org/wiki/%D9%86%D8%B8%D8%B1%DB%8C%D9%87_%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84%D8%A7%D8%AA"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "sci-106",
+    "code": "SCI-106",
+    "name": {
+      "en": "Physics 1",
+      "fa": "فیزیک ۱"
+    },
+    "credits": 3,
+    "group": "foundation",
+    "categories": [
+      "other"
+    ],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D22:F22"
+      },
+      {
+        "file": "curriculum",
+        "page": 28
+      }
+    ],
+    "description": {
+      "en": "Understand motion, forces and energy as foundations for analyzing physical systems.",
+      "fa": "شناخت حرکت، نیرو و انرژی به‌عنوان پایه تحلیل سیستم‌های فیزیکی."
+    },
+    "wikiTopic": "Classical mechanics",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Classical mechanics",
+        "url": "https://en.wikipedia.org/wiki/Classical_mechanics"
+      },
+      "fa": {
+        "title": "مکانیک کلاسیک",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%DA%A9%D8%A7%D9%86%DB%8C%DA%A9_%DA%A9%D9%84%D8%A7%D8%B3%DB%8C%DA%A9"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "sci-114",
+    "code": "SCI-114",
+    "name": {
+      "en": "Computer Programming",
+      "fa": "برنامه‌سازی کامپیوتری"
+    },
+    "credits": 3,
+    "group": "foundation",
+    "categories": [
+      "programming"
+    ],
+    "pathwayIds": [
+      "data-ai"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D23:F23"
+      },
+      {
+        "file": "curriculum",
+        "page": 30
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B34:D34"
+      }
+    ],
+    "description": {
+      "en": "Write algorithms and programs that transform inputs into reproducible solutions.",
+      "fa": "نوشتن الگوریتم و برنامه برای تبدیل ورودی‌ها به راه‌حل‌های تکرارپذیر."
+    },
+    "wikiTopic": "Computer programming",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Computer programming",
+        "url": "https://en.wikipedia.org/wiki/Computer_programming"
+      },
+      "fa": {
+        "title": "برنامه‌نویسی رایانه‌ای",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C_%D8%B1%D8%A7%DB%8C%D8%A7%D9%86%D9%87%E2%80%8C%D8%A7%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "sci-115",
+    "code": "SCI-115",
+    "name": {
+      "en": "Computer Application in Numerical Analysis",
+      "fa": "کاربست کامپیوتر در محاسبات عددی"
+    },
+    "credits": 2,
+    "group": "foundation",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [
+      "data-ai"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D24:F24"
+      },
+      {
+        "file": "curriculum",
+        "page": 32
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B33:D33"
+      }
+    ],
+    "description": {
+      "en": "Use computational approximations to solve equations, estimate integrals and analyze numerical error.",
+      "fa": "استفاده از تقریب‌های محاسباتی برای حل معادلات، برآورد انتگرال و تحلیل خطای عددی."
+    },
+    "wikiTopic": "Numerical analysis",
+    "prerequisiteIds": [
+      "sci-101",
+      "sci-114"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Numerical analysis",
+        "url": "https://en.wikipedia.org/wiki/Numerical_analysis"
+      },
+      "fa": {
+        "title": "آنالیز عددی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A2%D9%86%D8%A7%D9%84%DB%8C%D8%B2_%D8%B9%D8%AF%D8%AF%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "sci-116",
+    "code": "SCI-116",
+    "name": {
+      "en": "Physics Laboratory 1",
+      "fa": "آزمایشگاه فیزیک ۱"
+    },
+    "credits": 1,
+    "group": "foundation",
+    "categories": [
+      "other"
+    ],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "D25:F25"
+      },
+      {
+        "file": "curriculum",
+        "page": 36
+      },
+      {
+        "file": "curriculum",
+        "page": 14,
+        "field": "corequisites"
+      }
+    ],
+    "description": {
+      "en": "Measure physical phenomena, evaluate experimental uncertainty and communicate results.",
+      "fa": "اندازه‌گیری پدیده‌های فیزیکی، ارزیابی عدم قطعیت آزمایش و گزارش نتایج."
+    },
+    "wikiTopic": "Experimental physics",
+    "prerequisiteIds": [],
+    "corequisiteIds": [
+      "sci-106"
+    ],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Experimental physics",
+        "url": "https://en.wikipedia.org/wiki/Experimental_physics"
+      },
+      "fa": {
+        "title": "فیزیک تجربی",
+        "url": "https://fa.wikipedia.org/wiki/%D9%81%DB%8C%D8%B2%DB%8C%DA%A9_%D8%AA%D8%AC%D8%B1%D8%A8%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-101",
+    "code": "ISE-101",
+    "name": {
+      "en": "Microeconomics",
+      "fa": "اقتصاد خرد"
+    },
+    "credits": 2,
+    "group": "mandatory",
+    "categories": [
+      "finance"
+    ],
+    "pathwayIds": [
+      "quality"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H2:J2"
+      },
+      {
+        "file": "curriculum",
+        "page": 39
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G4:I4"
+      }
+    ],
+    "description": {
+      "en": "Explore how households and firms make choices, and how markets allocate scarce resources.",
+      "fa": "بررسی انتخاب خانوارها و بنگاه‌ها و چگونگی تخصیص منابع کمیاب در بازار."
+    },
+    "wikiTopic": "Microeconomics",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Microeconomics",
+        "url": "https://en.wikipedia.org/wiki/Microeconomics"
+      },
+      "fa": {
+        "title": "اقتصاد خرد",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF_%D8%AE%D8%B1%D8%AF"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-102",
+    "code": "ISE-102",
+    "name": {
+      "en": "Macroeconomics",
+      "fa": "اقتصاد کلان"
+    },
+    "credits": 2,
+    "group": "mandatory",
+    "categories": [
+      "finance"
+    ],
+    "pathwayIds": [
+      "quality"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H3:J3"
+      },
+      {
+        "file": "curriculum",
+        "page": 41
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G5:I5"
+      }
+    ],
+    "description": {
+      "en": "Study output, inflation, employment and the economy-wide effects of policy.",
+      "fa": "مطالعه تولید، تورم، اشتغال و آثار سیاست‌ها در سطح کل اقتصاد."
+    },
+    "wikiTopic": "Macroeconomics",
+    "prerequisiteIds": [
+      "ise-101"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Macroeconomics",
+        "url": "https://en.wikipedia.org/wiki/Macroeconomics"
+      },
+      "fa": {
+        "title": "اقتصاد کلان",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF_%DA%A9%D9%84%D8%A7%D9%86"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-103",
+    "code": "ISE-103",
+    "name": {
+      "en": "Principles of Accounting and Cost Accounting",
+      "fa": "اصول حسابداری و هزینه‌یابی"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "finance",
+      "management"
+    ],
+    "pathwayIds": [
+      "finance",
+      "feasibility"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H4:J4"
+      },
+      {
+        "file": "curriculum",
+        "page": 43
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G15:I15"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G28:I28"
+      }
+    ],
+    "description": {
+      "en": "Read financial records and trace product and service costs to support managerial decisions.",
+      "fa": "خواندن اطلاعات مالی و ردیابی هزینه محصولات و خدمات برای تصمیم‌های مدیریتی."
+    },
+    "wikiTopic": "Cost accounting",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "The PDF recommends completing at least 60 credits.",
+      "fa": "در PDF گذراندن حداقل 60 واحد توصیه شده است."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Cost accounting",
+        "url": "https://en.wikipedia.org/wiki/Cost_accounting"
+      },
+      "fa": {
+        "title": "حسابداری صنعتی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C_%D8%B5%D9%86%D8%B9%D8%AA%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-104",
+    "code": "ISE-104",
+    "name": {
+      "en": "Project Management and Planning",
+      "fa": "برنامه‌ریزی و مدیریت پروژه"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "management"
+    ],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H5:J5"
+      },
+      {
+        "file": "curriculum",
+        "page": 45
+      }
+    ],
+    "description": {
+      "en": "Plan project activities, dependencies, schedules and resources while balancing time and cost.",
+      "fa": "برنامه‌ریزی فعالیت‌ها، وابستگی‌ها، زمان و منابع پروژه با توجه به موازنه زمان و هزینه."
+    },
+    "wikiTopic": "Project management",
+    "prerequisiteIds": [
+      "ise-109"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Project management",
+        "url": "https://en.wikipedia.org/wiki/Project_management"
+      },
+      "fa": {
+        "title": "مدیریت پروژه",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA_%D9%BE%D8%B1%D9%88%DA%98%D9%87"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-105",
+    "code": "ISE-105",
+    "name": {
+      "en": "The Methods of Measurement and Management of Work",
+      "fa": "روش‌های کارسنجی و مدیریت کار"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "optimization",
+      "hse"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H6:J6"
+      },
+      {
+        "file": "curriculum",
+        "page": 47
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B3:D3"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G21:I21"
+      }
+    ],
+    "description": {
+      "en": "Observe work methods, measure task times and redesign activities to improve performance.",
+      "fa": "مشاهده روش‌های کار، اندازه‌گیری زمان فعالیت‌ها و بازطراحی آن‌ها برای بهبود عملکرد."
+    },
+    "wikiTopic": "Time and motion study",
+    "prerequisiteIds": [
+      "ise-114"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Time and motion study",
+        "url": "https://en.wikipedia.org/wiki/Time_and_motion_study"
+      },
+      "fa": {
+        "title": "مطالعه زمان و حرکت",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%B7%D8%A7%D9%84%D8%B9%D9%87_%D8%B2%D9%85%D8%A7%D9%86_%D9%88_%D8%AD%D8%B1%DA%A9%D8%AA"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-106",
+    "code": "ISE-106",
+    "name": {
+      "en": "Facilities Design",
+      "fa": "طرح‌ریزی واحدهای صنعتی"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "optimization",
+      "logistics",
+      "feasibility"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H7:J7"
+      },
+      {
+        "file": "curriculum",
+        "page": 50
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B4:D4"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B25:D25"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G30:I30"
+      }
+    ],
+    "description": {
+      "en": "Arrange facilities, workstations and material flows to support efficient industrial operations.",
+      "fa": "چیدمان واحدها، ایستگاه‌های کاری و جریان مواد برای پشتیبانی از عملیات صنعتی کارآمد."
+    },
+    "wikiTopic": "Plant layout study",
+    "prerequisiteIds": [
+      "ise-105",
+      "ise-112"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Plant layout study",
+        "url": "https://en.wikipedia.org/wiki/Plant_layout_study"
+      },
+      "fa": {
+        "title": "مطالعه طراحی کارخانه",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%B7%D8%A7%D9%84%D8%B9%D9%87_%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C_%DA%A9%D8%A7%D8%B1%D8%AE%D8%A7%D9%86%D9%87"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-107",
+    "code": "ISE-107",
+    "name": {
+      "en": "Statistical Quality Control",
+      "fa": "کنترل کیفیت آماری"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "quality"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H8:J8"
+      },
+      {
+        "file": "curriculum",
+        "page": 52
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G8:I8"
+      }
+    ],
+    "description": {
+      "en": "Use control charts and process capability analysis to distinguish variation from signals of change.",
+      "fa": "استفاده از نمودارهای کنترل و تحلیل قابلیت فرایند برای تشخیص تغییرپذیری و نشانه‌های تغییر."
+    },
+    "wikiTopic": "Statistical process control",
+    "prerequisiteIds": [
+      "ise-108"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Statistical process control",
+        "url": "https://en.wikipedia.org/wiki/Statistical_process_control"
+      },
+      "fa": {
+        "title": "کنترل آماری فرایندها",
+        "url": "https://fa.wikipedia.org/wiki/%DA%A9%D9%86%D8%AA%D8%B1%D9%84_%D8%A2%D9%85%D8%A7%D8%B1%DB%8C_%D9%81%D8%B1%D8%A7%DB%8C%D9%86%D8%AF%D9%87%D8%A7"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-108",
+    "code": "ISE-108",
+    "name": {
+      "en": "Engineering Statistics",
+      "fa": "آمار مهندسی"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [
+      "data-ai",
+      "quality"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H9:J9"
+      },
+      {
+        "file": "curriculum",
+        "page": 54
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B31:D31"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G7:I7"
+      }
+    ],
+    "description": {
+      "en": "Use estimation, hypothesis testing and statistical models to learn from engineering data.",
+      "fa": "استفاده از برآورد، آزمون فرض و مدل‌های آماری برای شناخت داده‌های مهندسی."
+    },
+    "wikiTopic": "Statistics",
+    "prerequisiteIds": [
+      "sci-104"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Statistics",
+        "url": "https://en.wikipedia.org/wiki/Statistics"
+      },
+      "fa": {
+        "title": "آمار",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A2%D9%85%D8%A7%D8%B1"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-109",
+    "code": "ISE-109",
+    "name": {
+      "en": "Operations Research 1",
+      "fa": "تحقیق در عملیات ۱"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [
+      "logistics"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H10:J10"
+      },
+      {
+        "file": "curriculum",
+        "page": 56
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B23:D23"
+      }
+    ],
+    "description": {
+      "en": "Formulate optimization problems and use linear programming to allocate limited resources.",
+      "fa": "صورت‌بندی مسائل بهینه‌سازی و استفاده از برنامه‌ریزی خطی برای تخصیص منابع محدود."
+    },
+    "wikiTopic": "Linear programming",
+    "prerequisiteIds": [
+      "sci-101",
+      "ise-118"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Linear programming",
+        "url": "https://en.wikipedia.org/wiki/Linear_programming"
+      },
+      "fa": {
+        "title": "برنامه‌ریزی خطی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D8%B1%DB%8C%D8%B2%DB%8C_%D8%AE%D8%B7%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-110",
+    "code": "ISE-110",
+    "name": {
+      "en": "Operations Research 2",
+      "fa": "تحقیق در عملیات ۲"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H11:J11"
+      },
+      {
+        "file": "curriculum",
+        "page": 58
+      }
+    ],
+    "description": {
+      "en": "Extend optimization methods to more complex decisions and mathematical models.",
+      "fa": "گسترش روش‌های بهینه‌سازی به تصمیم‌ها و مدل‌های ریاضی پیچیده‌تر."
+    },
+    "wikiTopic": "Operations research",
+    "prerequisiteIds": [
+      "ise-109"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Operations research",
+        "url": "https://en.wikipedia.org/wiki/Operations_research"
+      },
+      "fa": {
+        "title": "تحقیق در عملیات",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AA%D8%AD%D9%82%DB%8C%D9%82_%D8%AF%D8%B1_%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-111",
+    "code": "ISE-111",
+    "name": {
+      "en": "Principles of Management and Organization Theory",
+      "fa": "اصول مدیریت و نظریه سازمان"
+    },
+    "credits": 2,
+    "group": "mandatory",
+    "categories": [
+      "management"
+    ],
+    "pathwayIds": [
+      "quality"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H12:J12"
+      },
+      {
+        "file": "curriculum",
+        "page": 60
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G3:I3"
+      }
+    ],
+    "description": {
+      "en": "Understand organizational structures, management functions and the coordination of people.",
+      "fa": "شناخت ساختارهای سازمانی، وظایف مدیریت و هماهنگی افراد."
+    },
+    "wikiTopic": "Organizational theory",
+    "prerequisiteIds": [
+      "ise-103"
+    ],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "The PDF recommends completing at least 50 credits.",
+      "fa": "در PDF گذراندن حداقل 50 واحد توصیه شده است."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Organizational theory",
+        "url": "https://en.wikipedia.org/wiki/Organizational_theory"
+      },
+      "fa": {
+        "title": "نظریه سازمانی",
+        "url": "https://fa.wikipedia.org/wiki/%D9%86%D8%B8%D8%B1%DB%8C%D9%87_%D8%B3%D8%A7%D8%B2%D9%85%D8%A7%D9%86%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-112",
+    "code": "ISE-112",
+    "name": {
+      "en": "Engineering Design and Drawing",
+      "fa": "طراحی و نقشه‌کشی مهندسی"
+    },
+    "credits": 2,
+    "group": "mandatory",
+    "categories": [
+      "other"
+    ],
+    "pathwayIds": [
+      "optimization"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H13:J13"
+      },
+      {
+        "file": "curriculum",
+        "page": 62
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B5:D5"
+      }
+    ],
+    "description": {
+      "en": "Communicate the shape, dimensions and relationships of engineering objects through drawings.",
+      "fa": "بیان شکل، ابعاد و روابط اجزای مهندسی از طریق نقشه‌های فنی."
+    },
+    "wikiTopic": "Engineering drawing",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Engineering drawing",
+        "url": "https://en.wikipedia.org/wiki/Engineering_drawing"
+      },
+      "fa": {
+        "title": "رسم فنی و مهندسی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B1%D8%B3%D9%85_%D9%81%D9%86%DB%8C_%D9%88_%D9%85%D9%87%D9%86%D8%AF%D8%B3%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-113",
+    "code": "ISE-113",
+    "name": {
+      "en": "Engineering Economy",
+      "fa": "اقتصاد مهندسی"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "finance"
+    ],
+    "pathwayIds": [
+      "finance",
+      "feasibility"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H14:J14"
+      },
+      {
+        "file": "curriculum",
+        "page": 64
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G14:I14"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G29:I29"
+      }
+    ],
+    "description": {
+      "en": "Compare engineering alternatives using cash flows, interest and the time value of money.",
+      "fa": "مقایسه گزینه‌های مهندسی با استفاده از جریان نقدی، بهره و ارزش زمانی پول."
+    },
+    "wikiTopic": "Engineering economics",
+    "prerequisiteIds": [
+      "ise-102"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Engineering economics",
+        "url": "https://en.wikipedia.org/wiki/Engineering_economics"
+      },
+      "fa": {
+        "title": "اقتصاد مهندسی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF_%D9%85%D9%87%D9%86%D8%AF%D8%B3%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-114",
+    "code": "ISE-114",
+    "name": {
+      "en": "Manufacturing Processes",
+      "fa": "روش‌های ساخت و تولید"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "other"
+    ],
+    "pathwayIds": [
+      "optimization"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H15:J15"
+      },
+      {
+        "file": "curriculum",
+        "page": 66
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B6:D6"
+      }
+    ],
+    "description": {
+      "en": "Understand how materials become products through manufacturing processes and production methods.",
+      "fa": "شناخت تبدیل مواد به محصول از طریق فرایندها و روش‌های ساخت و تولید."
+    },
+    "wikiTopic": "Manufacturing",
+    "prerequisiteIds": [
+      "ise-125"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Manufacturing",
+        "url": "https://en.wikipedia.org/wiki/Manufacturing"
+      },
+      "fa": {
+        "title": "تولید (صنعت)",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AA%D9%88%D9%84%DB%8C%D8%AF_(%D8%B5%D9%86%D8%B9%D8%AA)"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-115",
+    "code": "ISE-115",
+    "name": {
+      "en": "Principles of Warehouse and Inventory Management",
+      "fa": "مبانی مدیریت انبار و موجودی"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "optimization"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H16:J16"
+      },
+      {
+        "file": "curriculum",
+        "page": 68
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B7:D7"
+      }
+    ],
+    "description": {
+      "en": "Balance stock availability and holding costs using inventory policies and warehouse principles.",
+      "fa": "ایجاد موازنه میان دسترس‌پذیری کالا و هزینه نگهداری با سیاست‌های موجودی و اصول انبار."
+    },
+    "wikiTopic": "Inventory",
+    "prerequisiteIds": [
+      "ise-109"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Inventory",
+        "url": "https://en.wikipedia.org/wiki/Inventory"
+      },
+      "fa": {
+        "title": "موجودی کالا",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D9%88%D8%AC%D9%88%D8%AF%DB%8C_%DA%A9%D8%A7%D9%84%D8%A7"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-116",
+    "code": "ISE-116",
+    "name": {
+      "en": "Production Systems Planning",
+      "fa": "برنامه‌ریزی سیستم‌های تولید"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "optimization"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H17:J17"
+      },
+      {
+        "file": "curriculum",
+        "page": 70
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B8:D8"
+      }
+    ],
+    "description": {
+      "en": "Coordinate demand, capacity and production plans to organize manufacturing systems.",
+      "fa": "هماهنگی تقاضا، ظرفیت و برنامه تولید برای سازمان‌دهی سیستم‌های تولیدی."
+    },
+    "wikiTopic": "Production planning",
+    "prerequisiteIds": [
+      "ise-115"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Production planning",
+        "url": "https://en.wikipedia.org/wiki/Production_planning"
+      },
+      "fa": {
+        "title": "برنامه‌ریزی تولید",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D8%B1%DB%8C%D8%B2%DB%8C_%D8%AA%D9%88%D9%84%DB%8C%D8%AF"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-117",
+    "code": "ISE-117",
+    "name": {
+      "en": "Principles of Simulation",
+      "fa": "اصول شبیه‌سازی"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [
+      "optimization"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H18:J18"
+      },
+      {
+        "file": "curriculum",
+        "page": 72
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B9:D9"
+      }
+    ],
+    "description": {
+      "en": "Build and evaluate models of dynamic systems to compare alternatives before changing real operations.",
+      "fa": "ساخت و ارزیابی مدل سیستم‌های پویا برای مقایسه گزینه‌ها پیش از تغییر عملیات واقعی."
+    },
+    "wikiTopic": "Discrete-event simulation",
+    "prerequisiteIds": [
+      "sci-114",
+      "ise-108"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Discrete-event simulation",
+        "url": "https://en.wikipedia.org/wiki/Discrete-event_simulation"
+      },
+      "fa": {
+        "title": "شبیه‌سازی رویداد گسسته",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B4%D8%A8%DB%8C%D9%87%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C_%D8%B1%D9%88%DB%8C%D8%AF%D8%A7%D8%AF_%DA%AF%D8%B3%D8%B3%D8%AA%D9%87"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-118",
+    "code": "ISE-118",
+    "name": {
+      "en": "Linear Algebra",
+      "fa": "جبر خطی"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [
+      "data-ai"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H19:J19"
+      },
+      {
+        "file": "curriculum",
+        "page": 74
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B32:D32"
+      }
+    ],
+    "description": {
+      "en": "Work with vectors, matrices and linear systems that underpin optimization and data analysis.",
+      "fa": "کار با بردارها، ماتریس‌ها و دستگاه‌های خطی به‌عنوان پایه بهینه‌سازی و تحلیل داده."
+    },
+    "wikiTopic": "Linear algebra",
+    "prerequisiteIds": [
+      "sci-101"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Linear algebra",
+        "url": "https://en.wikipedia.org/wiki/Linear_algebra"
+      },
+      "fa": {
+        "title": "جبر خطی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AC%D8%A8%D8%B1_%D8%AE%D8%B7%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-119",
+    "code": "ISE-119",
+    "name": {
+      "en": "Principles of Information Technology",
+      "fa": "اصول و مبانی فناوری اطلاعات"
+    },
+    "credits": 2,
+    "group": "mandatory",
+    "categories": [
+      "programming"
+    ],
+    "pathwayIds": [
+      "common"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H20:J20"
+      },
+      {
+        "file": "curriculum",
+        "page": 76
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L11:N11"
+      }
+    ],
+    "description": {
+      "en": "Understand computing, networks and information technology in organizational work.",
+      "fa": "شناخت رایانش، شبکه‌ها و فناوری اطلاعات در فعالیت‌های سازمانی."
+    },
+    "wikiTopic": "Information technology",
+    "prerequisiteIds": [
+      "sci-114"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Information technology",
+        "url": "https://en.wikipedia.org/wiki/Information_technology"
+      },
+      "fa": {
+        "title": "فناوری اطلاعات",
+        "url": "https://fa.wikipedia.org/wiki/%D9%81%D9%86%D8%A7%D9%88%D8%B1%DB%8C_%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-120",
+    "code": "ISE-120",
+    "name": {
+      "en": "Electrical Engineering Fundamentals and Workshop",
+      "fa": "مبانی مهندسی برق و کارگاه"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "other"
+    ],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H21:J21"
+      },
+      {
+        "file": "curriculum",
+        "page": 78
+      }
+    ],
+    "description": {
+      "en": "Learn electrical fundamentals and connect basic circuit concepts to practical workshop work.",
+      "fa": "یادگیری مبانی برق و پیوند مفاهیم مدار با فعالیت عملی کارگاهی."
+    },
+    "wikiTopic": "Electrical engineering",
+    "prerequisiteIds": [
+      "sci-106"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Electrical engineering",
+        "url": "https://en.wikipedia.org/wiki/Electrical_engineering"
+      },
+      "fa": {
+        "title": "مهندسی برق",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D9%87%D9%86%D8%AF%D8%B3%DB%8C_%D8%A8%D8%B1%D9%82"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-121",
+    "code": "ISE-121",
+    "name": {
+      "en": "Design and Planning of Service Systems",
+      "fa": "طراحی و برنامه‌ریزی سیستم‌های خدماتی"
+    },
+    "credits": 3,
+    "group": "mandatory",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "optimization"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H22:J22"
+      },
+      {
+        "file": "curriculum",
+        "page": 80
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B10:D10"
+      }
+    ],
+    "description": {
+      "en": "Design service processes around demand, capacity, customer experience and operational constraints.",
+      "fa": "طراحی فرایندهای خدماتی بر اساس تقاضا، ظرفیت، تجربه مشتری و محدودیت‌های عملیاتی."
+    },
+    "wikiTopic": "Service design",
+    "prerequisiteIds": [
+      "ise-128"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Service design",
+        "url": "https://en.wikipedia.org/wiki/Service_design"
+      },
+      "fa": {
+        "title": "طراحی خدمات",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C_%D8%AE%D8%AF%D9%85%D8%A7%D8%AA"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-122",
+    "code": "ISE-122",
+    "name": {
+      "en": "Foundation of Machine Learning and Artificial Intelligence",
+      "fa": "هوش مصنوعی و تحول دیجیتال"
+    },
+    "credits": 2,
+    "group": "mandatory",
+    "categories": [
+      "programming"
+    ],
+    "pathwayIds": [
+      "common"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H23:J23"
+      },
+      {
+        "file": "curriculum",
+        "page": 82
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L12:N12"
+      }
+    ],
+    "description": {
+      "en": "Explore machine learning and AI concepts and their role in transforming industrial decisions.",
+      "fa": "آشنایی با مفاهیم یادگیری ماشین و هوش مصنوعی و نقش آن‌ها در تحول تصمیم‌های صنعتی."
+    },
+    "wikiTopic": "Artificial intelligence",
+    "prerequisiteIds": [
+      "ise-108",
+      "ise-119"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Artificial intelligence",
+        "url": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+      },
+      "fa": {
+        "title": "هوش مصنوعی",
+        "url": "https://fa.wikipedia.org/wiki/%D9%87%D9%88%D8%B4_%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-123",
+    "code": "ISE-123",
+    "name": {
+      "en": "Research Method and Report Writing",
+      "fa": "روش تحقیق و گزارش‌نویسی مهندسی"
+    },
+    "credits": 2,
+    "group": "mandatory",
+    "categories": [],
+    "pathwayIds": [
+      "common"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H24:J24"
+      },
+      {
+        "file": "curriculum",
+        "page": 84
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L13:N13"
+      }
+    ],
+    "description": {
+      "en": "Frame research questions, evaluate evidence and write structured engineering reports.",
+      "fa": "صورت‌بندی پرسش پژوهش، ارزیابی شواهد و نگارش گزارش‌های ساختارمند مهندسی."
+    },
+    "wikiTopic": "Research",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "Semester 5 or later, as listed in the PDF.",
+      "fa": "مطابق PDF، نیمسال 5 و پس از آن."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Research",
+        "url": "https://en.wikipedia.org/wiki/Research"
+      },
+      "fa": {
+        "title": "پژوهش",
+        "url": "https://fa.wikipedia.org/wiki/%D9%BE%DA%98%D9%88%D9%87%D8%B4"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-124",
+    "code": "ISE-124",
+    "name": {
+      "en": "English for Industrial and Systems Engineering",
+      "fa": "زبان تخصصی مهندسی صنایع و سیستم‌ها"
+    },
+    "credits": 2,
+    "group": "mandatory",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "common"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H25:J25"
+      },
+      {
+        "file": "curriculum",
+        "page": 86
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L14:N14"
+      }
+    ],
+    "description": {
+      "en": "Read and communicate technical ideas using the English vocabulary of industrial and systems engineering.",
+      "fa": "خواندن و بیان مفاهیم فنی با واژگان انگلیسی مهندسی صنایع و سیستم‌ها."
+    },
+    "wikiTopic": "English for specific purposes",
+    "prerequisiteIds": [
+      "gen-009"
+    ],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "The PDF recommends completing at least 80 credits.",
+      "fa": "در PDF گذراندن حداقل 80 واحد توصیه شده است."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "English for specific purposes",
+        "url": "https://en.wikipedia.org/wiki/English_for_specific_purposes"
+      },
+      "fa": null,
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-125",
+    "code": "ISE-125",
+    "name": {
+      "en": "Machine Workshop",
+      "fa": "کارگاه ماشین‌افزار"
+    },
+    "credits": 1,
+    "group": "mandatory",
+    "categories": [
+      "other"
+    ],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H26:J26"
+      },
+      {
+        "file": "curriculum",
+        "page": 88
+      }
+    ],
+    "description": {
+      "en": "Gain practical familiarity with machine tools, machining operations and workshop practice.",
+      "fa": "آشنایی عملی با ماشین‌ابزار، عملیات ماشین‌کاری و کار در کارگاه."
+    },
+    "wikiTopic": "Machining",
+    "prerequisiteIds": [],
+    "corequisiteIds": [
+      "ise-112"
+    ],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Machining",
+        "url": "https://en.wikipedia.org/wiki/Machining"
+      },
+      "fa": {
+        "title": "ماشین‌کاری",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%A7%D8%B4%DB%8C%D9%86%E2%80%8C%DA%A9%D8%A7%D8%B1%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-126",
+    "code": "ISE-126",
+    "name": {
+      "en": "Welding, Foundry and Modeling Workshop",
+      "fa": "کارگاه عمومی جوش، ریخته‌گری، ذوب و مدل‌سازی"
+    },
+    "credits": 1,
+    "group": "mandatory",
+    "categories": [
+      "other"
+    ],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "H27:J27"
+      },
+      {
+        "file": "curriculum",
+        "page": 90
+      }
+    ],
+    "description": {
+      "en": "Explore joining and casting processes through practical workshop activities.",
+      "fa": "آشنایی با فرایندهای اتصال و ریخته‌گری از طریق فعالیت‌های عملی کارگاهی."
+    },
+    "wikiTopic": "Casting",
+    "prerequisiteIds": [
+      "ise-112"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Casting",
+        "url": "https://en.wikipedia.org/wiki/Casting"
+      },
+      "fa": {
+        "title": "ریخته‌گری",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B1%DB%8C%D8%AE%D8%AA%D9%87%E2%80%8C%DA%AF%D8%B1%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-131",
+    "code": "ISE-131",
+    "name": {
+      "en": "Industries Creation Design",
+      "fa": "طراحی ایجاد صنایع"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "feasibility"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L2:N2"
+      },
+      {
+        "file": "curriculum",
+        "page": 100
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G31:I31"
+      }
+    ],
+    "description": {
+      "en": "Combine market, technical and economic analysis to develop an industrial establishment plan.",
+      "fa": "ترکیب تحلیل بازار، فنی و اقتصادی برای تدوین طرح ایجاد یک واحد صنعتی."
+    },
+    "wikiTopic": "Feasibility study",
+    "prerequisiteIds": [
+      "ise-106",
+      "ise-113"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Feasibility study",
+        "url": "https://en.wikipedia.org/wiki/Feasibility_study"
+      },
+      "fa": {
+        "title": "امکان‌سنجی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D9%85%DA%A9%D8%A7%D9%86%E2%80%8C%D8%B3%D9%86%D8%AC%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-132",
+    "code": "ISE-132",
+    "name": {
+      "en": "Quality and Productivity Management",
+      "fa": "مدیریت کیفیت و بهره‌وری"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "quality"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L3:N3"
+      },
+      {
+        "file": "curriculum",
+        "page": 102
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G9:I9"
+      }
+    ],
+    "description": {
+      "en": "Apply quality-management and productivity concepts to systematic organizational improvement.",
+      "fa": "به‌کارگیری مفاهیم مدیریت کیفیت و بهره‌وری برای بهبود نظام‌مند سازمان."
+    },
+    "wikiTopic": "Quality management",
+    "prerequisiteIds": [
+      "ise-107"
+    ],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "Semester 7 or later, as listed in the PDF.",
+      "fa": "مطابق PDF، نیمسال 7 و پس از آن."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Quality management",
+        "url": "https://en.wikipedia.org/wiki/Quality_management"
+      },
+      "fa": {
+        "title": "مدیریت کیفیت",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA_%DA%A9%DB%8C%D9%81%DB%8C%D8%AA"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-133",
+    "code": "ISE-133",
+    "name": {
+      "en": "Specialized, National and International Standards",
+      "fa": "آشنایی با استانداردهای تخصصی، ملی و بین‌المللی"
+    },
+    "credits": 2,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L4:N4"
+      },
+      {
+        "file": "curriculum",
+        "page": 104
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Understand the purpose of technical standards and their use in national and international practice.",
+      "fa": "شناخت هدف استانداردهای فنی و کاربرد آن‌ها در فعالیت‌های ملی و بین‌المللی."
+    },
+    "wikiTopic": "Technical standard",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "The PDF recommends completing at least 80 credits.",
+      "fa": "در PDF گذراندن حداقل 80 واحد توصیه شده است."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Technical standard",
+        "url": "https://en.wikipedia.org/wiki/Technical_standard"
+      },
+      "fa": {
+        "title": "استاندارد",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%D8%AF%D8%A7%D8%B1%D8%AF"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-134",
+    "code": "ISE-134",
+    "name": {
+      "en": "Big Data and Business Analytics",
+      "fa": "داده‌های بزرگ و واکاوش کسب‌و‌کار"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L5:N5"
+      },
+      {
+        "file": "curriculum",
+        "page": 105
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Explore large datasets and analytical methods that support business understanding and decisions.",
+      "fa": "بررسی مجموعه‌داده‌های بزرگ و روش‌های تحلیلی برای شناخت کسب‌وکار و تصمیم‌گیری."
+    },
+    "wikiTopic": "Business analytics",
+    "prerequisiteIds": [
+      "ise-122"
+    ],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "Semester 6 or later, as listed in the PDF.",
+      "fa": "مطابق PDF، نیمسال 6 و پس از آن."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Business analytics",
+        "url": "https://en.wikipedia.org/wiki/Business_analytics"
+      },
+      "fa": null,
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-135",
+    "code": "ISE-135",
+    "name": {
+      "en": "Health, Safety and Environmental Engineering (HSE)",
+      "fa": "مهندسی ایمنی، بهداشت و محیط‌زیست"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "hse"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L6:N6"
+      },
+      {
+        "file": "curriculum",
+        "page": 107
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G22:I22"
+      }
+    ],
+    "description": {
+      "en": "Identify workplace hazards and consider health, safety and environmental factors in engineering work.",
+      "fa": "شناسایی مخاطرات محیط کار و توجه به بهداشت، ایمنی و محیط‌زیست در فعالیت مهندسی."
+    },
+    "wikiTopic": "Environment, health and safety",
+    "prerequisiteIds": [
+      "ise-105"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Environment, health and safety",
+        "url": "https://en.wikipedia.org/wiki/Environment,_health_and_safety"
+      },
+      "fa": null,
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-136",
+    "code": "ISE-136",
+    "name": {
+      "en": "Maintenance and Repair Planning",
+      "fa": "برنامه‌ریزی نگهداری و تعمیرات"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "optimization"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L7:N7"
+      },
+      {
+        "file": "curriculum",
+        "page": 109
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B11:D11"
+      }
+    ],
+    "description": {
+      "en": "Plan maintenance activities using reliability, failure information and economic considerations.",
+      "fa": "برنامه‌ریزی فعالیت‌های نگهداری با توجه به قابلیت اطمینان، اطلاعات خرابی و ملاحظات اقتصادی."
+    },
+    "wikiTopic": "Maintenance",
+    "prerequisiteIds": [
+      "sci-104",
+      "ise-113"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Maintenance",
+        "url": "https://en.wikipedia.org/wiki/Maintenance"
+      },
+      "fa": {
+        "title": "تعمیر و نگهداری",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1_%D9%88_%D9%86%DA%AF%D9%87%D8%AF%D8%A7%D8%B1%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-137",
+    "code": "ISE-137",
+    "name": {
+      "en": "Production and Inventory Planning and Control",
+      "fa": "برنامه‌ریزی و کنترل تولید و موجودی‌ها"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [
+      "logistics"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L8:N8"
+      },
+      {
+        "file": "curriculum",
+        "page": 111
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B24:D24"
+      }
+    ],
+    "description": {
+      "en": "Coordinate production and inventory decisions to match demand while managing operational costs.",
+      "fa": "هماهنگی تصمیم‌های تولید و موجودی برای پاسخ به تقاضا و مدیریت هزینه‌های عملیاتی."
+    },
+    "wikiTopic": "Production planning",
+    "prerequisiteIds": [
+      "ise-116"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Production planning",
+        "url": "https://en.wikipedia.org/wiki/Production_planning"
+      },
+      "fa": {
+        "title": "برنامه‌ریزی تولید",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D8%B1%DB%8C%D8%B2%DB%8C_%D8%AA%D9%88%D9%84%DB%8C%D8%AF"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-138",
+    "code": "ISE-138",
+    "name": {
+      "en": "Transportation Planning",
+      "fa": "برنامه‌ریزی حمل و نقل"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L9:N9"
+      },
+      {
+        "file": "curriculum",
+        "page": 113
+      }
+    ],
+    "description": {
+      "en": "Model transportation choices, flows and networks to improve the movement of people and goods.",
+      "fa": "مدل‌سازی انتخاب‌ها، جریان‌ها و شبکه‌های حمل‌ونقل برای بهبود جابه‌جایی افراد و کالا."
+    },
+    "wikiTopic": "Transportation planning",
+    "prerequisiteIds": [
+      "ise-109"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Transportation planning",
+        "url": "https://en.wikipedia.org/wiki/Transportation_planning"
+      },
+      "fa": {
+        "title": "برنامه‌ریزی ترابری",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D8%B1%DB%8C%D8%B2%DB%8C_%D8%AA%D8%B1%D8%A7%D8%A8%D8%B1%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-139",
+    "code": "ISE-139",
+    "name": {
+      "en": "Principles of Decision-Making",
+      "fa": "مبانی تصمیم‌سازی و تصمیم‌گیری"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [
+      "math"
+    ],
+    "pathwayIds": [
+      "research"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L10:N10"
+      },
+      {
+        "file": "curriculum",
+        "page": 115
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L3:N3"
+      }
+    ],
+    "description": {
+      "en": "Structure decisions and compare alternatives when several criteria or viewpoints matter.",
+      "fa": "ساختاربندی تصمیم و مقایسه گزینه‌ها هنگامی که چند معیار یا دیدگاه اهمیت دارد."
+    },
+    "wikiTopic": "Multiple-criteria decision analysis",
+    "prerequisiteIds": [
+      "ise-109"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Multiple-criteria decision analysis",
+        "url": "https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis"
+      },
+      "fa": {
+        "title": "تحلیل چندمعیاره تصمیم",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AA%D8%AD%D9%84%DB%8C%D9%84_%DA%86%D9%86%D8%AF%D9%85%D8%B9%DB%8C%D8%A7%D8%B1%D9%87_%D8%AA%D8%B5%D9%85%DB%8C%D9%85"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-140",
+    "code": "ISE-140",
+    "name": {
+      "en": "Management Information Systems (MIS)",
+      "fa": "سیستم‌های اطلاعات مدیریت"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [
+      "programming"
+    ],
+    "pathwayIds": [
+      "data-ai"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L11:N11"
+      },
+      {
+        "file": "curriculum",
+        "page": 117
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B35:D35"
+      }
+    ],
+    "description": {
+      "en": "Understand how information systems support business processes, reporting and managerial decisions.",
+      "fa": "شناخت نقش سیستم‌های اطلاعاتی در فرایندهای کسب‌وکار، گزارش‌دهی و تصمیم‌های مدیریت."
+    },
+    "wikiTopic": "Management information system",
+    "prerequisiteIds": [
+      "sci-114"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Management information system",
+        "url": "https://en.wikipedia.org/wiki/Management_information_system"
+      },
+      "fa": {
+        "title": "سامانه اطلاعاتی مدیریتی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87_%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA%DB%8C_%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-141",
+    "code": "ISE-141",
+    "name": {
+      "en": "Foundations of Classical and Digital Marketing",
+      "fa": "اصول فروش و بازاریابی کلاسیک و دیجیتال"
+    },
+    "credits": 2,
+    "group": "elective",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "quality"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L12:N12"
+      },
+      {
+        "file": "curriculum",
+        "page": 119
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G6:I6"
+      }
+    ],
+    "description": {
+      "en": "Explore customer needs, market segmentation and classical and digital marketing channels.",
+      "fa": "بررسی نیاز مشتری، بخش‌بندی بازار و کانال‌های بازاریابی کلاسیک و دیجیتال."
+    },
+    "wikiTopic": "Marketing",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "The PDF recommends completing at least 80 credits.",
+      "fa": "در PDF گذراندن حداقل 80 واحد توصیه شده است."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Marketing",
+        "url": "https://en.wikipedia.org/wiki/Marketing"
+      },
+      "fa": {
+        "title": "بازاریابی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%DB%8C%D8%A7%D8%A8%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-142",
+    "code": "ISE-142",
+    "name": {
+      "en": "Financial Management",
+      "fa": "مدیریت مالی"
+    },
+    "credits": 2,
+    "group": "elective",
+    "categories": [
+      "finance"
+    ],
+    "pathwayIds": [
+      "finance"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L13:N13"
+      },
+      {
+        "file": "curriculum",
+        "page": 121
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G16:I16"
+      }
+    ],
+    "description": {
+      "en": "Examine financial planning, investment and financing decisions in organizations.",
+      "fa": "بررسی برنامه‌ریزی مالی و تصمیم‌های سرمایه‌گذاری و تأمین مالی در سازمان‌ها."
+    },
+    "wikiTopic": "Financial management",
+    "prerequisiteIds": [
+      "ise-103"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Financial management",
+        "url": "https://en.wikipedia.org/wiki/Financial_management"
+      },
+      "fa": {
+        "title": "مدیریت مالی",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA_%D9%85%D8%A7%D9%84%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-143",
+    "code": "ISE-143",
+    "name": {
+      "en": "Simulation Laboratory",
+      "fa": "آزمایشگاه شبیه‌سازی"
+    },
+    "credits": 1,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L14:N14"
+      },
+      {
+        "file": "curriculum",
+        "page": 123
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Implement simulation models in software and interpret experimental results.",
+      "fa": "پیاده‌سازی مدل‌های شبیه‌سازی در نرم‌افزار و تفسیر نتایج آزمایش‌ها."
+    },
+    "wikiTopic": "Computer simulation",
+    "prerequisiteIds": [
+      "ise-117"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Computer simulation",
+        "url": "https://en.wikipedia.org/wiki/Computer_simulation"
+      },
+      "fa": {
+        "title": "شبیه‌سازی کامپیوتری",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B4%D8%A8%DB%8C%D9%87%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C_%DA%A9%D8%A7%D9%85%D9%BE%DB%8C%D9%88%D8%AA%D8%B1%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-144",
+    "code": "ISE-144",
+    "name": {
+      "en": "Metrology and Quality Control Laboratory",
+      "fa": "آزمایشگاه اندازه‌گیری دقیق و کنترل کیفیت"
+    },
+    "credits": 1,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L15:N15"
+      },
+      {
+        "file": "curriculum",
+        "page": 125
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Practice precision measurement and quality-control methods in a laboratory setting.",
+      "fa": "تمرین اندازه‌گیری دقیق و روش‌های کنترل کیفیت در محیط آزمایشگاه."
+    },
+    "wikiTopic": "Metrology",
+    "prerequisiteIds": [
+      "ise-114",
+      "ise-107"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Metrology",
+        "url": "https://en.wikipedia.org/wiki/Metrology"
+      },
+      "fa": {
+        "title": "مترولوژی",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%AA%D8%B1%D9%88%D9%84%D9%88%DA%98%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-145",
+    "code": "ISE-145",
+    "name": {
+      "en": "Business Intelligence and Visualization",
+      "fa": "هوشمندی کسب‌و‌کار و دیداری‌سازی"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [
+      "programming"
+    ],
+    "pathwayIds": [
+      "data-ai"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L16:N16"
+      },
+      {
+        "file": "curriculum",
+        "page": 127
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B36:D36"
+      }
+    ],
+    "description": {
+      "en": "Transform business data into interpretable dashboards and visual evidence for decisions.",
+      "fa": "تبدیل داده کسب‌وکار به داشبوردهای قابل فهم و شواهد دیداری برای تصمیم‌گیری."
+    },
+    "wikiTopic": "Business intelligence",
+    "prerequisiteIds": [
+      "ise-103",
+      "ise-108",
+      "sci-114"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Business intelligence",
+        "url": "https://en.wikipedia.org/wiki/Business_intelligence"
+      },
+      "fa": {
+        "title": "هوش کسب‌وکار",
+        "url": "https://fa.wikipedia.org/wiki/%D9%87%D9%88%D8%B4_%DA%A9%D8%B3%D8%A8%E2%80%8C%D9%88%DA%A9%D8%A7%D8%B1"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-146",
+    "code": "ISE-146",
+    "name": {
+      "en": "Graph Theory and Its Applications",
+      "fa": "نظریه گراف و کاربردهای آن"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L17:N17"
+      },
+      {
+        "file": "curriculum",
+        "page": 129
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Represent relationships as graphs and use network concepts to solve engineering problems.",
+      "fa": "نمایش روابط با گراف و استفاده از مفاهیم شبکه برای حل مسائل مهندسی."
+    },
+    "wikiTopic": "Graph theory",
+    "prerequisiteIds": [
+      "ise-110"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Graph theory",
+        "url": "https://en.wikipedia.org/wiki/Graph_theory"
+      },
+      "fa": {
+        "title": "نظریه گراف",
+        "url": "https://fa.wikipedia.org/wiki/%D9%86%D8%B8%D8%B1%DB%8C%D9%87_%DA%AF%D8%B1%D8%A7%D9%81"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-147",
+    "code": "ISE-147",
+    "name": {
+      "en": "Product Design, Development and Management",
+      "fa": "طراحی، توسعه و مدیریت محصول"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L18:N18"
+      },
+      {
+        "file": "curriculum",
+        "page": 131
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Follow a product from identifying needs through design, development and management.",
+      "fa": "دنبال‌کردن مسیر محصول از شناسایی نیاز تا طراحی، توسعه و مدیریت."
+    },
+    "wikiTopic": "Product development",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "The PDF recommends completing at least 80 credits.",
+      "fa": "در PDF گذراندن حداقل 80 واحد توصیه شده است."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "New product development",
+        "url": "https://en.wikipedia.org/wiki/New_product_development"
+      },
+      "fa": {
+        "title": "توسعه محصول جدید",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AA%D9%88%D8%B3%D8%B9%D9%87_%D9%85%D8%AD%D8%B5%D9%88%D9%84_%D8%AC%D8%AF%DB%8C%D8%AF"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-148",
+    "code": "ISE-148",
+    "name": {
+      "en": "Probabilistic Models and Queuing Theory",
+      "fa": "مدل‌های احتمالی و نظریه صف"
+    },
+    "credits": 2,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L19:N19"
+      },
+      {
+        "file": "curriculum",
+        "page": 133
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Model random system behavior and waiting lines to understand congestion and service capacity.",
+      "fa": "مدل‌سازی رفتار تصادفی سیستم و صف‌ها برای شناخت ازدحام و ظرفیت خدمت."
+    },
+    "wikiTopic": "Queueing theory",
+    "prerequisiteIds": [
+      "sci-104"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Queueing theory",
+        "url": "https://en.wikipedia.org/wiki/Queueing_theory"
+      },
+      "fa": {
+        "title": "نظریه صف",
+        "url": "https://fa.wikipedia.org/wiki/%D9%86%D8%B8%D8%B1%DB%8C%D9%87_%D8%B5%D9%81"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-149",
+    "code": "ISE-149",
+    "name": {
+      "en": "Data Science and Knowledge Management",
+      "fa": "علم داده و مدیریت دانش"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L20:N20"
+      },
+      {
+        "file": "curriculum",
+        "page": 135
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Explore how data methods and organizational knowledge can support learning and decisions.",
+      "fa": "بررسی نقش روش‌های داده و دانش سازمانی در یادگیری و تصمیم‌گیری."
+    },
+    "wikiTopic": "Data science",
+    "prerequisiteIds": [
+      "sci-114",
+      "ise-108"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Data science",
+        "url": "https://en.wikipedia.org/wiki/Data_science"
+      },
+      "fa": {
+        "title": "علم داده",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B9%D9%84%D9%85_%D8%AF%D8%A7%D8%AF%D9%87"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-150",
+    "code": "ISE-150",
+    "name": {
+      "en": "Data-Driven Programming",
+      "fa": "مدل‌سازی و برنامه‌سازی داده محور"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L21:N21"
+      },
+      {
+        "file": "curriculum",
+        "page": 137
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Connect data processing and programming with mathematical decision models.",
+      "fa": "پیوند پردازش داده و برنامه‌نویسی با مدل‌های ریاضی تصمیم‌گیری."
+    },
+    "wikiTopic": "Mathematical optimization",
+    "prerequisiteIds": [
+      "ise-110",
+      "ise-149"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Mathematical optimization",
+        "url": "https://en.wikipedia.org/wiki/Mathematical_optimization"
+      },
+      "fa": {
+        "title": "بهینه‌سازی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A8%D9%87%DB%8C%D9%86%D9%87%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-151",
+    "code": "ISE-151",
+    "name": {
+      "en": "Uncertainty Topics",
+      "fa": "آشنایی با مباحث عدم قطعیت"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L22:N22"
+      },
+      {
+        "file": "curriculum",
+        "page": 139
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Explore ways to represent uncertain information and analyze decisions under uncertainty.",
+      "fa": "آشنایی با روش‌های نمایش اطلاعات نامطمئن و تحلیل تصمیم در شرایط عدم قطعیت."
+    },
+    "wikiTopic": "Uncertainty",
+    "prerequisiteIds": [
+      "ise-110"
+    ],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "The PDF recommends completing at least 100 credits.",
+      "fa": "در PDF گذراندن حداقل ۱۰۰ واحد توصیه شده است."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Uncertainty",
+        "url": "https://en.wikipedia.org/wiki/Uncertainty"
+      },
+      "fa": {
+        "title": "عدم قطعیت",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B9%D8%AF%D9%85_%D9%82%D8%B7%D8%B9%DB%8C%D8%AA"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-152",
+    "code": "ISE-152",
+    "name": {
+      "en": "Principles of Supply Chain",
+      "fa": "مبانی زنجیره تأمین"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L23:N23"
+      },
+      {
+        "file": "curriculum",
+        "page": 141
+      },
+      {
+        "file": "curriculum",
+        "page": 17,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Understand coordination across suppliers, producers and customers in a supply network.",
+      "fa": "شناخت هماهنگی میان تأمین‌کنندگان، تولیدکنندگان و مشتریان در شبکه تأمین."
+    },
+    "wikiTopic": "Supply chain management",
+    "prerequisiteIds": [
+      "ise-109",
+      "ise-121"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Supply chain management",
+        "url": "https://en.wikipedia.org/wiki/Supply_chain_management"
+      },
+      "fa": {
+        "title": "مدیریت زنجیره تأمین",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA_%D8%B2%D9%86%D8%AC%DB%8C%D8%B1%D9%87_%D8%AA%D8%A3%D9%85%DB%8C%D9%86"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-153",
+    "code": "ISE-153",
+    "name": {
+      "en": "Troubleshooting and Systems Analysis",
+      "fa": "عارضه‌یابی و تحلیل سیستم‌ها"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "research"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L24:N24"
+      },
+      {
+        "file": "curriculum",
+        "page": 143
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L4:N4"
+      }
+    ],
+    "description": {
+      "en": "Diagnose system problems by examining structure, relationships and dynamic behavior.",
+      "fa": "عارضه‌یابی مسائل سیستم با بررسی ساختار، روابط و رفتار پویا."
+    },
+    "wikiTopic": "Systems analysis",
+    "prerequisiteIds": [
+      "sci-103"
+    ],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "Semester 6 or later, as listed in the PDF.",
+      "fa": "مطابق PDF، نیمسال 6 و پس از آن."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Systems analysis",
+        "url": "https://en.wikipedia.org/wiki/Systems_analysis"
+      },
+      "fa": {
+        "title": "تحلیل سامانه‌ها",
+        "url": "https://fa.wikipedia.org/wiki/%D8%AA%D8%AD%D9%84%DB%8C%D9%84_%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87%E2%80%8C%D9%87%D8%A7"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-154",
+    "code": "ISE-154",
+    "name": {
+      "en": "Industrial Automation, Mechanical Assembly and Numerical Control",
+      "fa": "اتوماسیون صنعتی، مونتاژ مکانیکی و کنترل عددی"
+    },
+    "credits": 2,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L25:N25"
+      },
+      {
+        "file": "curriculum",
+        "page": 145
+      },
+      {
+        "file": "curriculum",
+        "page": 18,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Explore automated production, mechanical assembly and computer-controlled manufacturing.",
+      "fa": "آشنایی با تولید خودکار، مونتاژ مکانیکی و ساخت تحت کنترل رایانه."
+    },
+    "wikiTopic": "Automation",
+    "prerequisiteIds": [
+      "ise-106",
+      "ise-125"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Automation",
+        "url": "https://en.wikipedia.org/wiki/Automation"
+      },
+      "fa": {
+        "title": "اتوماسیون",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D8%AA%D9%88%D9%85%D8%A7%D8%B3%DB%8C%D9%88%D9%86"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-155",
+    "code": "ISE-155",
+    "name": {
+      "en": "Numerical Software in Industrial and Systems Engineering",
+      "fa": "نرم‌افزار‌های محاسباتی در مهندسی صنایع و سیستم‌ها"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L26:N26"
+      },
+      {
+        "file": "curriculum",
+        "page": 147
+      },
+      {
+        "file": "curriculum",
+        "page": 18,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Use computational software to implement numerical and industrial engineering methods.",
+      "fa": "استفاده از نرم‌افزارهای محاسباتی برای پیاده‌سازی روش‌های عددی و مهندسی صنایع."
+    },
+    "wikiTopic": "Scientific computing",
+    "prerequisiteIds": [
+      "sci-114"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Computational science",
+        "url": "https://en.wikipedia.org/wiki/Computational_science"
+      },
+      "fa": {
+        "title": "علم محاسبه",
+        "url": "https://fa.wikipedia.org/wiki/%D8%B9%D9%84%D9%85_%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%87"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-156",
+    "code": "ISE-156",
+    "name": {
+      "en": "Knowledge-Based and Small Enterprises Business Management",
+      "fa": "مدیریت کسب‌و‌کار های دانش‌بنیان و بنگاه‌های کوچک"
+    },
+    "credits": 2,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L27:N27"
+      },
+      {
+        "file": "curriculum",
+        "page": 149
+      },
+      {
+        "file": "curriculum",
+        "page": 18,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Examine the organization and management of small and knowledge-based businesses.",
+      "fa": "بررسی سازمان‌دهی و مدیریت بنگاه‌های کوچک و کسب‌وکارهای دانش‌بنیان."
+    },
+    "wikiTopic": "Small and medium-sized enterprises",
+    "prerequisiteIds": [
+      "ise-121",
+      "ise-147"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Small and medium enterprises",
+        "url": "https://en.wikipedia.org/wiki/Small_and_medium_enterprises"
+      },
+      "fa": {
+        "title": "بنگاه‌های کوچک و متوسط",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A8%D9%86%DA%AF%D8%A7%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%DA%A9%D9%88%DA%86%DA%A9_%D9%88_%D9%85%D8%AA%D9%88%D8%B3%D8%B7"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-157",
+    "code": "ISE-157",
+    "name": {
+      "en": "Business Models: Design and Evaluation",
+      "fa": "مدل‌های کسب‌و‌کار: طراحی و ارزیابی"
+    },
+    "credits": 2,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L28:N28"
+      },
+      {
+        "file": "curriculum",
+        "page": 151
+      },
+      {
+        "file": "curriculum",
+        "page": 18,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Describe, design and evaluate how a business creates and delivers value.",
+      "fa": "توصیف، طراحی و ارزیابی شیوه خلق و ارائه ارزش در یک کسب‌وکار."
+    },
+    "wikiTopic": "Business model",
+    "prerequisiteIds": [
+      "ise-111"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Business model",
+        "url": "https://en.wikipedia.org/wiki/Business_model"
+      },
+      "fa": {
+        "title": "مدل کسب‌وکار",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%AF%D9%84_%DA%A9%D8%B3%D8%A8%E2%80%8C%D9%88%DA%A9%D8%A7%D8%B1"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-158",
+    "code": "ISE-158",
+    "name": {
+      "en": "Acquaintance with Scientific Institutions and International Organizations",
+      "fa": "آشنایی با نهادهای علمی و سازمان‌های بین‌المللی"
+    },
+    "credits": 1,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L29:N29"
+      },
+      {
+        "file": "curriculum",
+        "page": 153
+      },
+      {
+        "file": "curriculum",
+        "page": 18,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Become familiar with scientific institutions and international professional organizations.",
+      "fa": "آشنایی با نهادهای علمی و سازمان‌های حرفه‌ای بین‌المللی."
+    },
+    "wikiTopic": "Professional association",
+    "prerequisiteIds": [
+      "ise-124"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Professional association",
+        "url": "https://en.wikipedia.org/wiki/Professional_association"
+      },
+      "fa": {
+        "title": "انجمن تخصصی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%AC%D9%85%D9%86_%D8%AA%D8%AE%D8%B5%D8%B5%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-159",
+    "code": "ISE-159",
+    "name": {
+      "en": "Legal Knowledge and Labor Laws",
+      "fa": "آشنایی با دانش حقوقی و قوانین کار"
+    },
+    "credits": 1,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L30:N30"
+      },
+      {
+        "file": "curriculum",
+        "page": 155
+      },
+      {
+        "file": "curriculum",
+        "page": 18,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Build awareness of legal concepts and labor rules relevant to engineering organizations.",
+      "fa": "کسب آگاهی از مفاهیم حقوقی و قوانین کار مرتبط با سازمان‌های مهندسی."
+    },
+    "wikiTopic": "Labour law",
+    "prerequisiteIds": [
+      "ise-133"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Labour law",
+        "url": "https://en.wikipedia.org/wiki/Labour_law"
+      },
+      "fa": {
+        "title": "قانون کار",
+        "url": "https://fa.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%DA%A9%D8%A7%D8%B1"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-161",
+    "code": "ISE-161",
+    "name": {
+      "en": "Industry 4.0 and Digital Transformation",
+      "fa": "صنعت چهارم و تحول دیجیتال"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L31:N31"
+      },
+      {
+        "file": "curriculum",
+        "page": 157
+      },
+      {
+        "file": "curriculum",
+        "page": 18,
+        "field": "credits"
+      }
+    ],
+    "description": {
+      "en": "Explore connected production, digital technologies and the transformation of industrial systems.",
+      "fa": "بررسی تولید متصل، فناوری‌های دیجیتال و تحول سیستم‌های صنعتی."
+    },
+    "wikiTopic": "Industry 4.0",
+    "prerequisiteIds": [
+      "ise-122"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Fourth Industrial Revolution",
+        "url": "https://en.wikipedia.org/wiki/Fourth_Industrial_Revolution"
+      },
+      "fa": {
+        "title": "انقلاب صنعتی چهارم",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D9%82%D9%84%D8%A7%D8%A8_%D8%B5%D9%86%D8%B9%D8%AA%DB%8C_%DA%86%D9%87%D8%A7%D8%B1%D9%85"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-162",
+    "code": "ISE-162",
+    "name": {
+      "en": "Human Factors Engineering",
+      "fa": "مهندسی عوامل انسانی"
+    },
+    "credits": 3,
+    "group": "elective",
+    "categories": [
+      "core"
+    ],
+    "pathwayIds": [
+      "hse"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "L32:N32"
+      },
+      {
+        "file": "curriculum",
+        "page": 159
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G23:I23"
+      }
+    ],
+    "description": {
+      "en": "Design tasks and workplaces around human physical and cognitive capabilities.",
+      "fa": "طراحی وظایف و محیط کار متناسب با توانایی‌های جسمی و شناختی انسان."
+    },
+    "wikiTopic": "Human factors and ergonomics",
+    "prerequisiteIds": [
+      "ise-105"
+    ],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Ergonomics",
+        "url": "https://en.wikipedia.org/wiki/Ergonomics"
+      },
+      "fa": {
+        "title": "ارگونومی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A7%D8%B1%DA%AF%D9%88%D9%86%D9%88%D9%85%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-128",
+    "code": "ISE-128",
+    "name": {
+      "en": "Technology, Innovation and Entrepreneurship Management",
+      "fa": "مدیریت فناوری، نوآوری و کارآفرینی"
+    },
+    "credits": 2,
+    "group": "employability",
+    "categories": [],
+    "pathwayIds": [
+      "common"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "P2:Q2"
+      },
+      {
+        "file": "curriculum",
+        "page": 94
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L15:N15"
+      }
+    ],
+    "description": {
+      "en": "Connect technology and innovation to the development of new ventures and business opportunities.",
+      "fa": "پیوند فناوری و نوآوری با شکل‌گیری کسب‌وکار و فرصت‌های کارآفرینی."
+    },
+    "wikiTopic": "Entrepreneurship",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "Semester 6 or later, as listed in the PDF.",
+      "fa": "مطابق PDF، نیمسال 6 و پس از آن."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Entrepreneurship",
+        "url": "https://en.wikipedia.org/wiki/Entrepreneurship"
+      },
+      "fa": {
+        "title": "کارآفرینی",
+        "url": "https://fa.wikipedia.org/wiki/%DA%A9%D8%A7%D8%B1%D8%A2%D9%81%D8%B1%DB%8C%D9%86%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-129",
+    "code": "ISE-129",
+    "name": {
+      "en": "Internship",
+      "fa": "کارآموزی"
+    },
+    "credits": 2,
+    "group": "employability",
+    "categories": [],
+    "pathwayIds": [
+      "common"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "P3:Q3"
+      },
+      {
+        "file": "curriculum",
+        "page": 96
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L16:N16"
+      }
+    ],
+    "description": {
+      "en": "Connect classroom learning with supervised experience in production or service organizations.",
+      "fa": "پیوند یادگیری دانشگاهی با تجربه هدایت‌شده در سازمان‌های تولیدی یا خدماتی."
+    },
+    "wikiTopic": "Internship",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "The PDF recommends completing at least 80 credits.",
+      "fa": "در PDF گذراندن حداقل 80 واحد توصیه شده است."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Internship",
+        "url": "https://en.wikipedia.org/wiki/Internship"
+      },
+      "fa": {
+        "title": "کارورزی",
+        "url": "https://fa.wikipedia.org/wiki/%DA%A9%D8%A7%D8%B1%D9%88%D8%B1%D8%B2%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-130",
+    "code": "ISE-130",
+    "name": {
+      "en": "Professional Soft Skills",
+      "fa": "مهارت های نرم شغلی"
+    },
+    "credits": 2,
+    "group": "employability",
+    "categories": [],
+    "pathwayIds": [
+      "common"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "P4:Q4"
+      },
+      {
+        "file": "curriculum",
+        "page": 97
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "L17:N17"
+      }
+    ],
+    "description": {
+      "en": "Practice communication, teamwork and professional skills for working in real organizations.",
+      "fa": "تمرین ارتباطات، کار گروهی و مهارت‌های حرفه‌ای برای فعالیت در سازمان‌های واقعی."
+    },
+    "wikiTopic": "Soft skills",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Soft skills",
+        "url": "https://en.wikipedia.org/wiki/Soft_skills"
+      },
+      "fa": {
+        "title": "مهارت‌های نرم",
+        "url": "https://fa.wikipedia.org/wiki/%D9%85%D9%87%D8%A7%D8%B1%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C_%D9%86%D8%B1%D9%85"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "ise-127",
+    "code": "ISE-127",
+    "name": {
+      "en": "Undergraduate Project",
+      "fa": "پروژه"
+    },
+    "credits": 3,
+    "group": "project",
+    "categories": [],
+    "pathwayIds": [],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "ISE Chart (New Edition)",
+        "range": "P9:Q9"
+      },
+      {
+        "file": "curriculum",
+        "page": 92
+      }
+    ],
+    "description": {
+      "en": "Integrate methods from the degree to investigate and communicate a substantial engineering problem.",
+      "fa": "ترکیب روش‌های آموخته‌شده برای بررسی و ارائه یک مسئله مهم مهندسی."
+    },
+    "wikiTopic": "Capstone course",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": {
+      "en": "The PDF recommends completing at least 100 credits.",
+      "fa": "در PDF گذراندن حداقل ۱۰۰ واحد توصیه شده است."
+    },
+    "wikipedia": {
+      "en": {
+        "title": "Capstone course",
+        "url": "https://en.wikipedia.org/wiki/Capstone_course"
+      },
+      "fa": null,
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "health-001",
+    "code": null,
+    "name": {
+      "en": "Introduction to Healthcare Systems",
+      "fa": "آشنایی با سیستم‌های سلامت"
+    },
+    "credits": 2,
+    "group": "supplementary",
+    "categories": [],
+    "pathwayIds": [
+      "healthcare"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B16:D16"
+      }
+    ],
+    "description": {
+      "en": "Explore how healthcare services are organized and how systems thinking can improve their delivery.",
+      "fa": "بررسی سازمان‌دهی خدمات سلامت و نقش تفکر سیستمی در بهبود ارائه آن‌ها."
+    },
+    "wikiTopic": "Health system",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Health system",
+        "url": "https://en.wikipedia.org/wiki/Health_system"
+      },
+      "fa": {
+        "title": "نظام سلامت",
+        "url": "https://fa.wikipedia.org/wiki/%D9%86%D8%B8%D8%A7%D9%85_%D8%B3%D9%84%D8%A7%D9%85%D8%AA"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "health-002",
+    "code": null,
+    "name": {
+      "en": "Biostatistics and Health Indicators",
+      "fa": "آمار زیستی و شاخص‌های بهداشتی"
+    },
+    "credits": 2,
+    "group": "supplementary",
+    "categories": [],
+    "pathwayIds": [
+      "healthcare"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B17:D17"
+      }
+    ],
+    "description": {
+      "en": "Use statistical reasoning and health indicators to describe health-related data.",
+      "fa": "استفاده از استدلال آماری و شاخص‌های بهداشتی برای توصیف داده‌های سلامت."
+    },
+    "wikiTopic": "Biostatistics",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Biostatistics",
+        "url": "https://en.wikipedia.org/wiki/Biostatistics"
+      },
+      "fa": {
+        "title": "آمار زیستی",
+        "url": "https://fa.wikipedia.org/wiki/%D8%A2%D9%85%D8%A7%D8%B1_%D8%B2%DB%8C%D8%B3%D8%AA%DB%8C"
+      },
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  {
+    "id": "health-003",
+    "code": null,
+    "name": {
+      "en": "Research Methodology and Design",
+      "fa": "روش‌شناسی و طراحی تحقیق"
+    },
+    "credits": 2,
+    "group": "supplementary",
+    "categories": [],
+    "pathwayIds": [
+      "healthcare"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B18:D18"
+      }
+    ],
+    "description": {
+      "en": "Formulate health research questions and choose appropriate study designs.",
+      "fa": "صورت‌بندی پرسش پژوهشی در سلامت و انتخاب طرح مطالعه مناسب."
+    },
+    "wikiTopic": "Study design",
+    "prerequisiteIds": [],
+    "corequisiteIds": [],
+    "standing": null,
+    "wikipedia": {
+      "en": {
+        "title": "Clinical study design",
+        "url": "https://en.wikipedia.org/wiki/Clinical_study_design"
+      },
+      "fa": null,
+      "relation": "related",
+      "verifiedAt": "2026-09-06"
+    }
+  }
+]

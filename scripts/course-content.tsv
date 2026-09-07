@@ -1,0 +1,84 @@
+GEN-001|Explore foundational Islamic perspectives on existence, belief and the afterlife.|آشنایی با دیدگاه‌های بنیادی اسلامی درباره هستی، ایمان و معاد.|Islamic theology
+GEN-002|Study Islamic perspectives on prophethood and religious leadership.|بررسی دیدگاه‌های اسلامی درباره نبوت و امامت.|Prophethood in Islam
+GEN-003|Examine ethical concepts and their relationship to individual and social conduct.|بررسی مفاهیم اخلاقی و ارتباط آن‌ها با رفتار فردی و اجتماعی.|Islamic ethics
+GEN-004|Study the historical context and development of the Iranian Revolution.|مطالعه زمینه تاریخی و روند انقلاب اسلامی ایران.|Iranian Revolution
+GEN-005|Examine early Islamic history through historical events and their context.|بررسی رویدادها و زمینه‌های تاریخی صدر اسلام.|History of Islam
+GEN-006|Read Quranic passages through thematic interpretation and discussion.|مطالعه آیات قرآن با تفسیر موضوعی و گفت‌وگو درباره مفاهیم آن‌ها.|Tafsir
+GEN-007|Explore family relationships, population change and their social context.|آشنایی با روابط خانواده، تغییرات جمعیت و زمینه اجتماعی آن‌ها.|Demography
+GEN-008|Develop Persian reading, writing and communication through language and literature.|تقویت خواندن، نوشتن و ارتباط به زبان فارسی با مطالعه زبان و ادبیات.|Persian language
+GEN-009|Build general English reading and communication skills for university study.|تقویت مهارت‌های عمومی خواندن و ارتباط به انگلیسی برای تحصیل دانشگاهی.|English language
+GEN-010|Study the Iran–Iraq War and related historical narratives in the general curriculum.|مطالعه جنگ ایران و عراق و روایت‌های تاریخی مرتبط در برنامه دروس عمومی.|Iran–Iraq War
+GEN-011|Develop physical fitness and learn principles of regular physical activity.|توسعه آمادگی جسمانی و آشنایی با اصول فعالیت بدنی منظم.|Physical education
+GEN-012|Practice sport-specific movement, teamwork and physical fitness.|تمرین مهارت‌های ورزشی، کار گروهی و آمادگی جسمانی.|Sport
+SCI-101|Learn limits, derivatives and integrals to describe change and solve quantitative problems.|یادگیری حد، مشتق و انتگرال برای توصیف تغییر و حل مسائل کمی.|Calculus
+SCI-102|Extend calculus to vectors, several variables and multiple integrals used in engineering models.|گسترش حسابان به بردارها، چند متغیر و انتگرال‌های چندگانه در مدل‌های مهندسی.|Multivariable calculus
+SCI-103|Model changing systems with differential equations and interpret their solutions.|مدل‌سازی سیستم‌های متغیر با معادلات دیفرانسیل و تفسیر پاسخ آن‌ها.|Differential equation
+SCI-104|Describe uncertainty using random variables, probability distributions and expectation.|توصیف عدم قطعیت با متغیرهای تصادفی، توزیع‌های احتمال و امید ریاضی.|Probability theory
+SCI-106|Understand motion, forces and energy as foundations for analyzing physical systems.|شناخت حرکت، نیرو و انرژی به‌عنوان پایه تحلیل سیستم‌های فیزیکی.|Classical mechanics
+SCI-114|Write algorithms and programs that transform inputs into reproducible solutions.|نوشتن الگوریتم و برنامه برای تبدیل ورودی‌ها به راه‌حل‌های تکرارپذیر.|Computer programming
+SCI-115|Use computational approximations to solve equations, estimate integrals and analyze numerical error.|استفاده از تقریب‌های محاسباتی برای حل معادلات، برآورد انتگرال و تحلیل خطای عددی.|Numerical analysis
+SCI-116|Measure physical phenomena, evaluate experimental uncertainty and communicate results.|اندازه‌گیری پدیده‌های فیزیکی، ارزیابی عدم قطعیت آزمایش و گزارش نتایج.|Experimental physics
+ISE-101|Explore how households and firms make choices, and how markets allocate scarce resources.|بررسی انتخاب خانوارها و بنگاه‌ها و چگونگی تخصیص منابع کمیاب در بازار.|Microeconomics
+ISE-102|Study output, inflation, employment and the economy-wide effects of policy.|مطالعه تولید، تورم، اشتغال و آثار سیاست‌ها در سطح کل اقتصاد.|Macroeconomics
+ISE-103|Read financial records and trace product and service costs to support managerial decisions.|خواندن اطلاعات مالی و ردیابی هزینه محصولات و خدمات برای تصمیم‌های مدیریتی.|Cost accounting
+ISE-104|Plan project activities, dependencies, schedules and resources while balancing time and cost.|برنامه‌ریزی فعالیت‌ها، وابستگی‌ها، زمان و منابع پروژه با توجه به موازنه زمان و هزینه.|Project management
+ISE-105|Observe work methods, measure task times and redesign activities to improve performance.|مشاهده روش‌های کار، اندازه‌گیری زمان فعالیت‌ها و بازطراحی آن‌ها برای بهبود عملکرد.|Time and motion study
+ISE-106|Arrange facilities, workstations and material flows to support efficient industrial operations.|چیدمان واحدها، ایستگاه‌های کاری و جریان مواد برای پشتیبانی از عملیات صنعتی کارآمد.|Plant layout study
+ISE-107|Use control charts and process capability analysis to distinguish variation from signals of change.|استفاده از نمودارهای کنترل و تحلیل قابلیت فرایند برای تشخیص تغییرپذیری و نشانه‌های تغییر.|Statistical process control
+ISE-108|Use estimation, hypothesis testing and statistical models to learn from engineering data.|استفاده از برآورد، آزمون فرض و مدل‌های آماری برای شناخت داده‌های مهندسی.|Statistics
+ISE-109|Formulate optimization problems and use linear programming to allocate limited resources.|صورت‌بندی مسائل بهینه‌سازی و استفاده از برنامه‌ریزی خطی برای تخصیص منابع محدود.|Linear programming
+ISE-110|Extend optimization methods to more complex decisions and mathematical models.|گسترش روش‌های بهینه‌سازی به تصمیم‌ها و مدل‌های ریاضی پیچیده‌تر.|Operations research
+ISE-111|Understand organizational structures, management functions and the coordination of people.|شناخت ساختارهای سازمانی، وظایف مدیریت و هماهنگی افراد.|Organizational theory
+ISE-112|Communicate the shape, dimensions and relationships of engineering objects through drawings.|بیان شکل، ابعاد و روابط اجزای مهندسی از طریق نقشه‌های فنی.|Engineering drawing
+ISE-113|Compare engineering alternatives using cash flows, interest and the time value of money.|مقایسه گزینه‌های مهندسی با استفاده از جریان نقدی، بهره و ارزش زمانی پول.|Engineering economics
+ISE-114|Understand how materials become products through manufacturing processes and production methods.|شناخت تبدیل مواد به محصول از طریق فرایندها و روش‌های ساخت و تولید.|Manufacturing
+ISE-115|Balance stock availability and holding costs using inventory policies and warehouse principles.|ایجاد موازنه میان دسترس‌پذیری کالا و هزینه نگهداری با سیاست‌های موجودی و اصول انبار.|Inventory
+ISE-116|Coordinate demand, capacity and production plans to organize manufacturing systems.|هماهنگی تقاضا، ظرفیت و برنامه تولید برای سازمان‌دهی سیستم‌های تولیدی.|Production planning
+ISE-117|Build and evaluate models of dynamic systems to compare alternatives before changing real operations.|ساخت و ارزیابی مدل سیستم‌های پویا برای مقایسه گزینه‌ها پیش از تغییر عملیات واقعی.|Discrete-event simulation
+ISE-118|Work with vectors, matrices and linear systems that underpin optimization and data analysis.|کار با بردارها، ماتریس‌ها و دستگاه‌های خطی به‌عنوان پایه بهینه‌سازی و تحلیل داده.|Linear algebra
+ISE-119|Understand computing, networks and information technology in organizational work.|شناخت رایانش، شبکه‌ها و فناوری اطلاعات در فعالیت‌های سازمانی.|Information technology
+ISE-120|Learn electrical fundamentals and connect basic circuit concepts to practical workshop work.|یادگیری مبانی برق و پیوند مفاهیم مدار با فعالیت عملی کارگاهی.|Electrical engineering
+ISE-121|Design service processes around demand, capacity, customer experience and operational constraints.|طراحی فرایندهای خدماتی بر اساس تقاضا، ظرفیت، تجربه مشتری و محدودیت‌های عملیاتی.|Service design
+ISE-122|Explore machine learning and AI concepts and their role in transforming industrial decisions.|آشنایی با مفاهیم یادگیری ماشین و هوش مصنوعی و نقش آن‌ها در تحول تصمیم‌های صنعتی.|Artificial intelligence
+ISE-123|Frame research questions, evaluate evidence and write structured engineering reports.|صورت‌بندی پرسش پژوهش، ارزیابی شواهد و نگارش گزارش‌های ساختارمند مهندسی.|Research
+ISE-124|Read and communicate technical ideas using the English vocabulary of industrial and systems engineering.|خواندن و بیان مفاهیم فنی با واژگان انگلیسی مهندسی صنایع و سیستم‌ها.|English for specific purposes
+ISE-125|Gain practical familiarity with machine tools, machining operations and workshop practice.|آشنایی عملی با ماشین‌ابزار، عملیات ماشین‌کاری و کار در کارگاه.|Machining
+ISE-126|Explore joining and casting processes through practical workshop activities.|آشنایی با فرایندهای اتصال و ریخته‌گری از طریق فعالیت‌های عملی کارگاهی.|Casting
+ISE-127|Integrate methods from the degree to investigate and communicate a substantial engineering problem.|ترکیب روش‌های آموخته‌شده برای بررسی و ارائه یک مسئله مهم مهندسی.|Capstone course
+ISE-128|Connect technology and innovation to the development of new ventures and business opportunities.|پیوند فناوری و نوآوری با شکل‌گیری کسب‌وکار و فرصت‌های کارآفرینی.|Entrepreneurship
+ISE-129|Connect classroom learning with supervised experience in production or service organizations.|پیوند یادگیری دانشگاهی با تجربه هدایت‌شده در سازمان‌های تولیدی یا خدماتی.|Internship
+ISE-130|Practice communication, teamwork and professional skills for working in real organizations.|تمرین ارتباطات، کار گروهی و مهارت‌های حرفه‌ای برای فعالیت در سازمان‌های واقعی.|Soft skills
+ISE-131|Combine market, technical and economic analysis to develop an industrial establishment plan.|ترکیب تحلیل بازار، فنی و اقتصادی برای تدوین طرح ایجاد یک واحد صنعتی.|Feasibility study
+ISE-132|Apply quality-management and productivity concepts to systematic organizational improvement.|به‌کارگیری مفاهیم مدیریت کیفیت و بهره‌وری برای بهبود نظام‌مند سازمان.|Quality management
+ISE-133|Understand the purpose of technical standards and their use in national and international practice.|شناخت هدف استانداردهای فنی و کاربرد آن‌ها در فعالیت‌های ملی و بین‌المللی.|Technical standard
+ISE-134|Explore large datasets and analytical methods that support business understanding and decisions.|بررسی مجموعه‌داده‌های بزرگ و روش‌های تحلیلی برای شناخت کسب‌وکار و تصمیم‌گیری.|Business analytics
+ISE-135|Identify workplace hazards and consider health, safety and environmental factors in engineering work.|شناسایی مخاطرات محیط کار و توجه به بهداشت، ایمنی و محیط‌زیست در فعالیت مهندسی.|Environment, health and safety
+ISE-136|Plan maintenance activities using reliability, failure information and economic considerations.|برنامه‌ریزی فعالیت‌های نگهداری با توجه به قابلیت اطمینان، اطلاعات خرابی و ملاحظات اقتصادی.|Maintenance
+ISE-137|Coordinate production and inventory decisions to match demand while managing operational costs.|هماهنگی تصمیم‌های تولید و موجودی برای پاسخ به تقاضا و مدیریت هزینه‌های عملیاتی.|Production planning
+ISE-138|Model transportation choices, flows and networks to improve the movement of people and goods.|مدل‌سازی انتخاب‌ها، جریان‌ها و شبکه‌های حمل‌ونقل برای بهبود جابه‌جایی افراد و کالا.|Transportation planning
+ISE-139|Structure decisions and compare alternatives when several criteria or viewpoints matter.|ساختاربندی تصمیم و مقایسه گزینه‌ها هنگامی که چند معیار یا دیدگاه اهمیت دارد.|Multiple-criteria decision analysis
+ISE-140|Understand how information systems support business processes, reporting and managerial decisions.|شناخت نقش سیستم‌های اطلاعاتی در فرایندهای کسب‌وکار، گزارش‌دهی و تصمیم‌های مدیریت.|Management information system
+ISE-141|Explore customer needs, market segmentation and classical and digital marketing channels.|بررسی نیاز مشتری، بخش‌بندی بازار و کانال‌های بازاریابی کلاسیک و دیجیتال.|Marketing
+ISE-142|Examine financial planning, investment and financing decisions in organizations.|بررسی برنامه‌ریزی مالی و تصمیم‌های سرمایه‌گذاری و تأمین مالی در سازمان‌ها.|Financial management
+ISE-143|Implement simulation models in software and interpret experimental results.|پیاده‌سازی مدل‌های شبیه‌سازی در نرم‌افزار و تفسیر نتایج آزمایش‌ها.|Computer simulation
+ISE-144|Practice precision measurement and quality-control methods in a laboratory setting.|تمرین اندازه‌گیری دقیق و روش‌های کنترل کیفیت در محیط آزمایشگاه.|Metrology
+ISE-145|Transform business data into interpretable dashboards and visual evidence for decisions.|تبدیل داده کسب‌وکار به داشبوردهای قابل فهم و شواهد دیداری برای تصمیم‌گیری.|Business intelligence
+ISE-146|Represent relationships as graphs and use network concepts to solve engineering problems.|نمایش روابط با گراف و استفاده از مفاهیم شبکه برای حل مسائل مهندسی.|Graph theory
+ISE-147|Follow a product from identifying needs through design, development and management.|دنبال‌کردن مسیر محصول از شناسایی نیاز تا طراحی، توسعه و مدیریت.|Product development
+ISE-148|Model random system behavior and waiting lines to understand congestion and service capacity.|مدل‌سازی رفتار تصادفی سیستم و صف‌ها برای شناخت ازدحام و ظرفیت خدمت.|Queueing theory
+ISE-149|Explore how data methods and organizational knowledge can support learning and decisions.|بررسی نقش روش‌های داده و دانش سازمانی در یادگیری و تصمیم‌گیری.|Data science
+ISE-150|Connect data processing and programming with mathematical decision models.|پیوند پردازش داده و برنامه‌نویسی با مدل‌های ریاضی تصمیم‌گیری.|Mathematical optimization
+ISE-151|Explore ways to represent uncertain information and analyze decisions under uncertainty.|آشنایی با روش‌های نمایش اطلاعات نامطمئن و تحلیل تصمیم در شرایط عدم قطعیت.|Uncertainty
+ISE-152|Understand coordination across suppliers, producers and customers in a supply network.|شناخت هماهنگی میان تأمین‌کنندگان، تولیدکنندگان و مشتریان در شبکه تأمین.|Supply chain management
+ISE-153|Diagnose system problems by examining structure, relationships and dynamic behavior.|عارضه‌یابی مسائل سیستم با بررسی ساختار، روابط و رفتار پویا.|Systems analysis
+ISE-154|Explore automated production, mechanical assembly and computer-controlled manufacturing.|آشنایی با تولید خودکار، مونتاژ مکانیکی و ساخت تحت کنترل رایانه.|Automation
+ISE-155|Use computational software to implement numerical and industrial engineering methods.|استفاده از نرم‌افزارهای محاسباتی برای پیاده‌سازی روش‌های عددی و مهندسی صنایع.|Scientific computing
+ISE-156|Examine the organization and management of small and knowledge-based businesses.|بررسی سازمان‌دهی و مدیریت بنگاه‌های کوچک و کسب‌وکارهای دانش‌بنیان.|Small and medium-sized enterprises
+ISE-157|Describe, design and evaluate how a business creates and delivers value.|توصیف، طراحی و ارزیابی شیوه خلق و ارائه ارزش در یک کسب‌وکار.|Business model
+ISE-158|Become familiar with scientific institutions and international professional organizations.|آشنایی با نهادهای علمی و سازمان‌های حرفه‌ای بین‌المللی.|Professional association
+ISE-159|Build awareness of legal concepts and labor rules relevant to engineering organizations.|کسب آگاهی از مفاهیم حقوقی و قوانین کار مرتبط با سازمان‌های مهندسی.|Labour law
+ISE-161|Explore connected production, digital technologies and the transformation of industrial systems.|بررسی تولید متصل، فناوری‌های دیجیتال و تحول سیستم‌های صنعتی.|Industry 4.0
+ISE-162|Design tasks and workplaces around human physical and cognitive capabilities.|طراحی وظایف و محیط کار متناسب با توانایی‌های جسمی و شناختی انسان.|Human factors and ergonomics
+HEALTH-001|Explore how healthcare services are organized and how systems thinking can improve their delivery.|بررسی سازمان‌دهی خدمات سلامت و نقش تفکر سیستمی در بهبود ارائه آن‌ها.|Health system
+HEALTH-002|Use statistical reasoning and health indicators to describe health-related data.|استفاده از استدلال آماری و شاخص‌های بهداشتی برای توصیف داده‌های سلامت.|Biostatistics
+HEALTH-003|Formulate health research questions and choose appropriate study designs.|صورت‌بندی پرسش پژوهشی در سلامت و انتخاب طرح مطالعه مناسب.|Study design

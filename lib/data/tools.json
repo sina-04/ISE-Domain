@@ -1,0 +1,1977 @@
+[
+  {
+    "id": "timer-pro-professional",
+    "name": "Timer Pro Professional",
+    "url": "https://www.acsco.com/",
+    "description": {
+      "en": "Video-based work measurement and time studies.",
+      "fa": "اندازه‌گیری کار و زمان‌سنجی مبتنی بر ویدئو."
+    },
+    "courseIds": [
+      "ise-105"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B3:D3"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B64:D64"
+      }
+    ]
+  },
+  {
+    "id": "mtm-software-solutions",
+    "name": "MTM software solutions",
+    "url": "https://mtm.org/en/",
+    "description": {
+      "en": "Methods-time measurement and work design.",
+      "fa": "اندازه‌گیری زمان روش‌ها و طراحی کار."
+    },
+    "courseIds": [
+      "ise-105"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B3:D3"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B64:D64"
+      }
+    ]
+  },
+  {
+    "id": "microsoft-excel",
+    "name": "Microsoft Excel",
+    "url": "https://www.microsoft.com/en-us/microsoft-365/excel",
+    "description": {
+      "en": "Spreadsheets for models, calculations and reporting.",
+      "fa": "صفحه‌گسترده برای مدل‌سازی، محاسبه و گزارش‌دهی."
+    },
+    "courseIds": [
+      "ise-103",
+      "ise-105",
+      "ise-113",
+      "ise-131",
+      "ise-139",
+      "ise-142"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B3:D3"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B35:D35"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B36:D36"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B37:D37"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B64:D64"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B70:D70"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B71:D71"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B73:D73"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B78:D78"
+      }
+    ]
+  },
+  {
+    "id": "microsoft-excel-solver",
+    "name": "Microsoft Excel Solver",
+    "url": "https://support.microsoft.com/en-us/office/define-and-solve-a-problem-by-using-solver-5d1a388f-079d-43ac-a7eb-f63e45925040",
+    "description": {
+      "en": "Spreadsheet optimization with decision variables and constraints.",
+      "fa": "بهینه‌سازی در صفحه‌گسترده با متغیر تصمیم و محدودیت."
+    },
+    "courseIds": [
+      "ise-116",
+      "ise-137"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B8:D8"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B11:D11"
+      }
+    ]
+  },
+  {
+    "id": "autocad",
+    "name": "AutoCAD",
+    "url": "https://www.autodesk.com/products/autocad/overview",
+    "description": {
+      "en": "Technical drawings and CAD-based facility layouts.",
+      "fa": "نقشه‌کشی فنی و چیدمان واحدها با طراحی رایانه‌ای."
+    },
+    "courseIds": [
+      "ise-106",
+      "ise-112"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B4:D4"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B5:D5"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B31:D31"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B72:D72"
+      }
+    ]
+  },
+  {
+    "id": "microsoft-visio",
+    "name": "Microsoft Visio",
+    "url": "https://www.microsoft.com/en-us/microsoft-365/visio",
+    "description": {
+      "en": "Process maps, flowcharts and technical diagrams.",
+      "fa": "نقشه فرایند، نمودار جریان و دیاگرام فنی."
+    },
+    "courseIds": [
+      "ise-106",
+      "ise-111",
+      "ise-112",
+      "ise-132",
+      "ise-153"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B4:D4"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B5:D5"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B31:D31"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B45:D45"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B54:D54"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B72:D72"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B79:D79"
+      }
+    ]
+  },
+  {
+    "id": "siemens-tecnomatix-factory-line-design",
+    "name": "Siemens Tecnomatix Factory & Line Design",
+    "url": "https://www.siemens.com/en-us/products/tecnomatix/factory-line-design/",
+    "description": {
+      "en": "Plan factory spaces and production-line layouts.",
+      "fa": "برنامه‌ریزی فضای کارخانه و چیدمان خطوط تولید."
+    },
+    "courseIds": [
+      "ise-106"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B4:D4"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B72:D72"
+      }
+    ]
+  },
+  {
+    "id": "flexsim",
+    "name": "FlexSim",
+    "url": "https://www.flexsim.com/",
+    "description": {
+      "en": "Model material flows and experiment with production systems.",
+      "fa": "مدل‌سازی جریان مواد و آزمایش سیستم‌های تولیدی."
+    },
+    "courseIds": [
+      "ise-106",
+      "ise-114",
+      "ise-115",
+      "ise-117"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B4:D4"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B6:D6"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B7:D7"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B31:D31"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B72:D72"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B77:D77"
+      }
+    ]
+  },
+  {
+    "id": "solidworks",
+    "name": "SOLIDWORKS",
+    "url": "https://www.solidworks.com/",
+    "description": {
+      "en": "Create mechanical designs and three-dimensional models.",
+      "fa": "طراحی مکانیکی و ساخت مدل‌های سه‌بعدی."
+    },
+    "courseIds": [
+      "ise-112"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B5:D5"
+      }
+    ]
+  },
+  {
+    "id": "siemens-tecnomatix-plant-simulation",
+    "name": "Siemens Tecnomatix Plant Simulation",
+    "url": "https://www.siemens.com/en-us/products/tecnomatix/plant-simulation-software/",
+    "description": {
+      "en": "Simulate and analyze production and logistics systems.",
+      "fa": "شبیه‌سازی و تحلیل سیستم‌های تولید و لجستیک."
+    },
+    "courseIds": [
+      "ise-114"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B6:D6"
+      }
+    ]
+  },
+  {
+    "id": "arena-simulation",
+    "name": "Arena Simulation",
+    "url": "https://www.rockwellautomation.com/en-us/products/software/arena-simulation.html",
+    "description": {
+      "en": "Discrete-event simulation for processes and service systems.",
+      "fa": "شبیه‌سازی پیشامد گسسته برای فرایندها و سیستم‌های خدماتی."
+    },
+    "courseIds": [
+      "health-001",
+      "ise-114",
+      "ise-117",
+      "ise-121"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B6:D6"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B9:D9"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B58:D58"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B77:D77"
+      }
+    ]
+  },
+  {
+    "id": "odoo-inventory",
+    "name": "Odoo Inventory",
+    "url": "https://www.odoo.com/app/inventory",
+    "description": {
+      "en": "Manage warehouse operations and inventory movements.",
+      "fa": "مدیریت عملیات انبار و جابه‌جایی موجودی."
+    },
+    "courseIds": [
+      "ise-115",
+      "ise-137"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B7:D7"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B11:D11"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B30:D30"
+      }
+    ]
+  },
+  {
+    "id": "sap-extended-warehouse-management-sap-ewm",
+    "name": "SAP Extended Warehouse Management (SAP EWM)",
+    "url": "https://www.sap.com/products/scm/extended-warehouse-management.html",
+    "description": {
+      "en": "Enterprise warehouse planning and execution.",
+      "fa": "برنامه‌ریزی و اجرای عملیات انبار در مقیاس سازمانی."
+    },
+    "courseIds": [
+      "ise-115"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B7:D7"
+      }
+    ]
+  },
+  {
+    "id": "anylogic",
+    "name": "AnyLogic",
+    "url": "https://www.anylogic.com/",
+    "description": {
+      "en": "Combine discrete-event, agent-based and system dynamics simulation.",
+      "fa": "ترکیب شبیه‌سازی پیشامد گسسته، عامل‌مبنا و پویایی سیستم."
+    },
+    "courseIds": [
+      "health-001",
+      "ise-106",
+      "ise-115",
+      "ise-117",
+      "ise-121",
+      "ise-153"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B7:D7"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B9:D9"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B31:D31"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B58:D58"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B77:D77"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B79:D79"
+      }
+    ]
+  },
+  {
+    "id": "sap-s-4hana-manufacturing-for-planning-and-scheduling",
+    "name": "SAP S/4HANA Manufacturing for Planning and Scheduling",
+    "url": "https://learning.sap.com/courses/planning-with-advanced-planning-methods-in-eppds/explaining-supply-chain-planning",
+    "description": {
+      "en": "Enterprise production planning and detailed scheduling.",
+      "fa": "برنامه‌ریزی تولید و زمان‌بندی تفصیلی سازمانی."
+    },
+    "courseIds": [
+      "ise-116",
+      "ise-137"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B8:D8"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B11:D11"
+      }
+    ]
+  },
+  {
+    "id": "odoo-manufacturing",
+    "name": "Odoo Manufacturing",
+    "url": "https://www.odoo.com/app/manufacturing",
+    "description": {
+      "en": "Manage bills of materials, work orders and production.",
+      "fa": "مدیریت فهرست مواد، دستور کار و تولید."
+    },
+    "courseIds": [
+      "ise-116",
+      "ise-137"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B8:D8"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B11:D11"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B30:D30"
+      }
+    ]
+  },
+  {
+    "id": "mrpeasy",
+    "name": "MRPeasy",
+    "url": "https://www.mrpeasy.com/",
+    "description": {
+      "en": "Material requirements and production planning for manufacturers.",
+      "fa": "برنامه‌ریزی نیازمندی مواد و تولید برای تولیدکنندگان."
+    },
+    "courseIds": [
+      "ise-116",
+      "ise-137"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B8:D8"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B11:D11"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B30:D30"
+      }
+    ]
+  },
+  {
+    "id": "simul8",
+    "name": "Simul8",
+    "url": "https://www.simul8.com/",
+    "description": {
+      "en": "Test process changes with discrete-event simulation.",
+      "fa": "آزمایش تغییرات فرایند با شبیه‌سازی پیشامد گسسته."
+    },
+    "courseIds": [
+      "health-001",
+      "ise-117",
+      "ise-121"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B9:D9"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B58:D58"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B77:D77"
+      }
+    ]
+  },
+  {
+    "id": "ibm-maximo",
+    "name": "IBM Maximo",
+    "url": "https://www.ibm.com/products/maximo",
+    "description": {
+      "en": "Asset lifecycle and maintenance management.",
+      "fa": "مدیریت چرخه عمر دارایی و نگهداری تجهیزات."
+    },
+    "courseIds": [
+      "ise-136"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B10:D10"
+      }
+    ]
+  },
+  {
+    "id": "fiix-cmms",
+    "name": "Fiix CMMS",
+    "url": "https://fiixsoftware.com/",
+    "description": {
+      "en": "Track equipment, maintenance work and work orders.",
+      "fa": "ردیابی تجهیزات، فعالیت نگهداری و دستور کار."
+    },
+    "courseIds": [
+      "ise-136"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B10:D10"
+      }
+    ]
+  },
+  {
+    "id": "r",
+    "name": "R",
+    "url": "https://www.r-project.org/",
+    "description": {
+      "en": "Statistical computing, modeling and graphics.",
+      "fa": "رایانش آماری، مدل‌سازی و ترسیم نمودار."
+    },
+    "courseIds": [
+      "health-002",
+      "ise-101",
+      "ise-102",
+      "ise-107",
+      "ise-108",
+      "ise-139",
+      "ise-142",
+      "sci-104"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B15:D15"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B16:D16"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B37:D37"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B46:D46"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B47:D47"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B52:D52"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B53:D53"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B59:D59"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B78:D78"
+      }
+    ]
+  },
+  {
+    "id": "scipy",
+    "name": "SciPy",
+    "url": "https://scipy.org/",
+    "description": {
+      "en": "Scientific algorithms for optimization, statistics and numerical work.",
+      "fa": "الگوریتم‌های علمی برای بهینه‌سازی، آمار و محاسبات عددی."
+    },
+    "courseIds": [
+      "ise-118",
+      "sci-104",
+      "sci-115"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B15:D15"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B17:D17"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B18:D18"
+      }
+    ]
+  },
+  {
+    "id": "matlab",
+    "name": "MATLAB",
+    "url": "https://www.mathworks.com/products/matlab.html",
+    "description": {
+      "en": "Numerical computing and engineering model development.",
+      "fa": "محاسبات عددی و توسعه مدل‌های مهندسی."
+    },
+    "courseIds": [
+      "ise-118",
+      "sci-104",
+      "sci-115"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B15:D15"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B17:D17"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B18:D18"
+      }
+    ]
+  },
+  {
+    "id": "minitab",
+    "name": "Minitab",
+    "url": "https://www.minitab.com/en-us/",
+    "description": {
+      "en": "Statistical analysis and quality improvement.",
+      "fa": "تحلیل آماری و بهبود کیفیت."
+    },
+    "courseIds": [
+      "ise-107",
+      "ise-108",
+      "ise-132"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B16:D16"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B52:D52"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B53:D53"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B54:D54"
+      }
+    ]
+  },
+  {
+    "id": "ibm-spss-statistics",
+    "name": "IBM SPSS Statistics",
+    "url": "https://www.ibm.com/products/spss-statistics",
+    "description": {
+      "en": "Statistical data analysis through a graphical workflow.",
+      "fa": "تحلیل آماری داده با محیط کار گرافیکی."
+    },
+    "courseIds": [
+      "health-002",
+      "ise-108"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B16:D16"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B52:D52"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B59:D59"
+      }
+    ]
+  },
+  {
+    "id": "jamovi",
+    "name": "jamovi",
+    "url": "https://www.jamovi.org/",
+    "description": {
+      "en": "Accessible graphical tools for statistical analysis.",
+      "fa": "ابزارهای گرافیکی قابل دسترس برای تحلیل آماری."
+    },
+    "courseIds": [
+      "ise-108"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B16:D16"
+      }
+    ]
+  },
+  {
+    "id": "jasp",
+    "name": "JASP",
+    "url": "https://jasp-stats.org/",
+    "description": {
+      "en": "Graphical classical and Bayesian statistical analysis.",
+      "fa": "تحلیل آماری کلاسیک و بیزی با محیط گرافیکی."
+    },
+    "courseIds": [
+      "ise-108"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B16:D16"
+      }
+    ]
+  },
+  {
+    "id": "numpy",
+    "name": "NumPy",
+    "url": "https://numpy.org/",
+    "description": {
+      "en": "Array computing and linear algebra in Python.",
+      "fa": "محاسبات آرایه‌ای و جبر خطی در پایتون."
+    },
+    "courseIds": [
+      "ise-113",
+      "ise-118",
+      "sci-115"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B17:D17"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B18:D18"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B35:D35"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B71:D71"
+      }
+    ]
+  },
+  {
+    "id": "julia",
+    "name": "Julia",
+    "url": "https://julialang.org/",
+    "description": {
+      "en": "A programming language for technical and scientific computing.",
+      "fa": "زبان برنامه‌نویسی برای محاسبات فنی و علمی."
+    },
+    "courseIds": [
+      "ise-118",
+      "sci-115"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B17:D17"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B18:D18"
+      }
+    ]
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "url": "https://www.python.org/",
+    "description": {
+      "en": "General-purpose programming for analysis and automation.",
+      "fa": "برنامه‌نویسی همه‌منظوره برای تحلیل و خودکارسازی."
+    },
+    "courseIds": [
+      "ise-113",
+      "ise-139",
+      "sci-114"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B19:D19"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B35:D35"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B71:D71"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B78:D78"
+      }
+    ]
+  },
+  {
+    "id": "jupyter-notebook",
+    "name": "Jupyter Notebook",
+    "url": "https://jupyter.org/",
+    "description": {
+      "en": "Combine executable code, explanation and results in notebooks.",
+      "fa": "ترکیب کد اجرایی، توضیح و نتایج در دفترچه‌های محاسباتی."
+    },
+    "courseIds": [
+      "sci-114"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B19:D19"
+      }
+    ]
+  },
+  {
+    "id": "visual-studio-code",
+    "name": "Visual Studio Code",
+    "url": "https://code.visualstudio.com/",
+    "description": {
+      "en": "Code editing, debugging and development workflows.",
+      "fa": "ویرایش کد، اشکال‌زدایی و گردش کار توسعه."
+    },
+    "courseIds": [
+      "sci-114"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B19:D19"
+      }
+    ]
+  },
+  {
+    "id": "sqlite",
+    "name": "SQLite",
+    "url": "https://sqlite.org/",
+    "description": {
+      "en": "A compact relational database for local applications and analysis.",
+      "fa": "پایگاه داده رابطه‌ای کم‌حجم برای برنامه‌ها و تحلیل محلی."
+    },
+    "courseIds": [
+      "ise-140"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B20:D20"
+      }
+    ]
+  },
+  {
+    "id": "mysql",
+    "name": "MySQL",
+    "url": "https://www.mysql.com/",
+    "description": {
+      "en": "Relational database management for information systems.",
+      "fa": "مدیریت پایگاه داده رابطه‌ای برای سیستم‌های اطلاعاتی."
+    },
+    "courseIds": [
+      "ise-140"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B20:D20"
+      }
+    ]
+  },
+  {
+    "id": "microsoft-sql-server",
+    "name": "Microsoft SQL Server",
+    "url": "https://www.microsoft.com/en-us/sql-server",
+    "description": {
+      "en": "Store, query and manage organizational data.",
+      "fa": "ذخیره، پرس‌وجو و مدیریت داده سازمانی."
+    },
+    "courseIds": [
+      "ise-140",
+      "ise-145"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B20:D20"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B21:D21"
+      }
+    ]
+  },
+  {
+    "id": "microsoft-access",
+    "name": "Microsoft Access",
+    "url": "https://www.microsoft.com/en-us/microsoft-365/access",
+    "description": {
+      "en": "Desktop databases, forms and reports.",
+      "fa": "پایگاه داده، فرم و گزارش در محیط دسکتاپ."
+    },
+    "courseIds": [
+      "ise-140"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B20:D20"
+      }
+    ]
+  },
+  {
+    "id": "microsoft-power-bi",
+    "name": "Microsoft Power BI",
+    "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi",
+    "description": {
+      "en": "Interactive business dashboards and data reporting.",
+      "fa": "داشبوردهای تعاملی کسب‌وکار و گزارش داده."
+    },
+    "courseIds": [
+      "ise-104",
+      "ise-131",
+      "ise-132",
+      "ise-142",
+      "ise-145"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B21:D21"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B37:D37"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B41:D41"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B54:D54"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B73:D73"
+      }
+    ]
+  },
+  {
+    "id": "power-query",
+    "name": "Power Query",
+    "url": "https://learn.microsoft.com/en-us/power-query/",
+    "description": {
+      "en": "Connect, clean and transform data before analysis.",
+      "fa": "اتصال، پاک‌سازی و تبدیل داده پیش از تحلیل."
+    },
+    "courseIds": [
+      "ise-145"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B21:D21"
+      }
+    ]
+  },
+  {
+    "id": "tableau",
+    "name": "Tableau",
+    "url": "https://www.tableau.com/",
+    "description": {
+      "en": "Explore data through interactive visual analytics.",
+      "fa": "کاوش داده با تحلیل دیداری تعاملی."
+    },
+    "courseIds": [
+      "ise-145"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B21:D21"
+      }
+    ]
+  },
+  {
+    "id": "gams",
+    "name": "GAMS",
+    "url": "https://www.gams.com/",
+    "description": {
+      "en": "Algebraic modeling for mathematical optimization.",
+      "fa": "مدل‌سازی جبری برای بهینه‌سازی ریاضی."
+    },
+    "courseIds": [
+      "ise-109",
+      "ise-110"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B25:D25"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B29:D29"
+      }
+    ]
+  },
+  {
+    "id": "lingo-lindo",
+    "name": "LINGO / LINDO",
+    "url": "https://www.lindo.com/",
+    "description": {
+      "en": "Optimization modeling and solver tools.",
+      "fa": "ابزارهای مدل‌سازی و حل مسائل بهینه‌سازی."
+    },
+    "courseIds": [
+      "ise-109",
+      "ise-110"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B25:D25"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B29:D29"
+      }
+    ]
+  },
+  {
+    "id": "pyomo",
+    "name": "Pyomo",
+    "url": "https://www.pyomo.org/",
+    "description": {
+      "en": "Build mathematical optimization models in Python.",
+      "fa": "ساخت مدل‌های بهینه‌سازی ریاضی در پایتون."
+    },
+    "courseIds": [
+      "ise-109",
+      "ise-110"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B25:D25"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B29:D29"
+      }
+    ]
+  },
+  {
+    "id": "pulp",
+    "name": "PuLP",
+    "url": "https://coin-or.github.io/pulp/",
+    "description": {
+      "en": "Model linear and mixed-integer optimization problems in Python.",
+      "fa": "مدل‌سازی مسائل خطی و عددصحیح مختلط در پایتون."
+    },
+    "courseIds": [
+      "ise-109",
+      "ise-110"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B25:D25"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B29:D29"
+      }
+    ]
+  },
+  {
+    "id": "google-or-tools",
+    "name": "Google OR-Tools",
+    "url": "https://developers.google.com/optimization",
+    "description": {
+      "en": "Optimization tools for routing, scheduling and constraints.",
+      "fa": "ابزار بهینه‌سازی برای مسیریابی، زمان‌بندی و محدودیت‌ها."
+    },
+    "courseIds": [
+      "ise-109",
+      "ise-110"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B25:D25"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B29:D29"
+      }
+    ]
+  },
+  {
+    "id": "gurobi-optimizer",
+    "name": "Gurobi Optimizer",
+    "url": "https://www.gurobi.com/",
+    "description": {
+      "en": "Solve mathematical optimization models.",
+      "fa": "حل مدل‌های بهینه‌سازی ریاضی."
+    },
+    "courseIds": [
+      "ise-109",
+      "ise-110"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B25:D25"
+      }
+    ]
+  },
+  {
+    "id": "sap-integrated-business-planning-sap-ibp",
+    "name": "SAP Integrated Business Planning (SAP IBP)",
+    "url": "https://www.sap.com/products/scm/integrated-business-planning.html",
+    "description": {
+      "en": "Integrated demand, supply and inventory planning.",
+      "fa": "برنامه‌ریزی یکپارچه تقاضا، تأمین و موجودی."
+    },
+    "courseIds": [
+      "ise-137"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B30:D30"
+      }
+    ]
+  },
+  {
+    "id": "anylogistix",
+    "name": "anyLogistix",
+    "url": "https://www.anylogistix.com/",
+    "description": {
+      "en": "Supply-chain network design and simulation.",
+      "fa": "طراحی و شبیه‌سازی شبکه زنجیره تأمین."
+    },
+    "courseIds": [
+      "ise-137"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B30:D30"
+      }
+    ]
+  },
+  {
+    "id": "comfar",
+    "name": "COMFAR",
+    "url": "https://www.unido.org/comfar",
+    "description": {
+      "en": "Financial and economic analysis of investment projects.",
+      "fa": "تحلیل مالی و اقتصادی طرح‌های سرمایه‌گذاری."
+    },
+    "courseIds": [
+      "ise-113",
+      "ise-131"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B35:D35"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B71:D71"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B73:D73"
+      }
+    ]
+  },
+  {
+    "id": "quickbooks",
+    "name": "QuickBooks",
+    "url": "https://quickbooks.intuit.com/",
+    "description": {
+      "en": "Accounting, bookkeeping and business finance workflows.",
+      "fa": "حسابداری، ثبت دفاتر و گردش کار مالی کسب‌وکار."
+    },
+    "courseIds": [
+      "ise-103",
+      "ise-142"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B36:D36"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B37:D37"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B70:D70"
+      }
+    ]
+  },
+  {
+    "id": "tallyprime",
+    "name": "TallyPrime",
+    "url": "https://tallysolutions.com/tally-prime/",
+    "description": {
+      "en": "Accounting and business management software.",
+      "fa": "نرم‌افزار حسابداری و مدیریت کسب‌وکار."
+    },
+    "courseIds": [
+      "ise-103"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B36:D36"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B70:D70"
+      }
+    ]
+  },
+  {
+    "id": "stata",
+    "name": "Stata",
+    "url": "https://www.stata.com/",
+    "description": {
+      "en": "Statistical analysis, econometrics and data management.",
+      "fa": "تحلیل آماری، اقتصادسنجی و مدیریت داده."
+    },
+    "courseIds": [
+      "ise-101",
+      "ise-102",
+      "ise-142"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B37:D37"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B46:D46"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B47:D47"
+      }
+    ]
+  },
+  {
+    "id": "microsoft-project",
+    "name": "Microsoft Project",
+    "url": "https://www.microsoft.com/en-us/microsoft-365/planner/project-management",
+    "description": {
+      "en": "Project planning and task scheduling; the official page reflects the Planner transition.",
+      "fa": "برنامه‌ریزی پروژه و زمان‌بندی وظایف؛ صفحه رسمی گذار به Planner را توضیح می‌دهد."
+    },
+    "courseIds": [
+      "ise-104"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B41:D41"
+      }
+    ]
+  },
+  {
+    "id": "oracle-primavera-p6",
+    "name": "Oracle Primavera P6",
+    "url": "https://www.oracle.com/construction-engineering/primavera-p6/",
+    "description": {
+      "en": "Plan and control complex projects and portfolios.",
+      "fa": "برنامه‌ریزی و کنترل پروژه‌ها و سبدهای پیچیده."
+    },
+    "courseIds": [
+      "ise-104"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B41:D41"
+      }
+    ]
+  },
+  {
+    "id": "miro",
+    "name": "Miro",
+    "url": "https://miro.com/",
+    "description": {
+      "en": "Collaborative process mapping and visual planning.",
+      "fa": "ترسیم مشارکتی فرایند و برنامه‌ریزی دیداری."
+    },
+    "courseIds": [
+      "ise-111"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B45:D45"
+      }
+    ]
+  },
+  {
+    "id": "lucidchart",
+    "name": "Lucidchart",
+    "url": "https://www.lucidchart.com/",
+    "description": {
+      "en": "Create and share flowcharts and system diagrams.",
+      "fa": "ساخت و اشتراک نمودار جریان و دیاگرام سیستم."
+    },
+    "courseIds": [
+      "ise-111"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B45:D45"
+      }
+    ]
+  },
+  {
+    "id": "eviews",
+    "name": "EViews",
+    "url": "https://www.eviews.com/",
+    "description": {
+      "en": "Econometric modeling and time-series analysis.",
+      "fa": "مدل‌سازی اقتصادسنجی و تحلیل سری زمانی."
+    },
+    "courseIds": [
+      "ise-101",
+      "ise-102"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B46:D46"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B47:D47"
+      }
+    ]
+  },
+  {
+    "id": "gretl",
+    "name": "gretl",
+    "url": "https://gretl.sourceforge.net/",
+    "description": {
+      "en": "Open-source econometrics and statistical modeling.",
+      "fa": "اقتصادسنجی و مدل‌سازی آماری متن‌باز."
+    },
+    "courseIds": [
+      "ise-101",
+      "ise-102"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B46:D46"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B47:D47"
+      }
+    ]
+  },
+  {
+    "id": "google-analytics",
+    "name": "Google Analytics",
+    "url": "https://marketingplatform.google.com/about/analytics/",
+    "description": {
+      "en": "Analyze website and application usage.",
+      "fa": "تحلیل استفاده از وب‌سایت و برنامه."
+    },
+    "courseIds": [
+      "ise-141"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B48:D48"
+      }
+    ]
+  },
+  {
+    "id": "google-ads",
+    "name": "Google Ads",
+    "url": "https://business.google.com/en-all/google-ads/",
+    "description": {
+      "en": "Plan and measure digital advertising campaigns.",
+      "fa": "برنامه‌ریزی و سنجش کارزارهای تبلیغات دیجیتال."
+    },
+    "courseIds": [
+      "ise-141"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B48:D48"
+      }
+    ]
+  },
+  {
+    "id": "hubspot",
+    "name": "HubSpot",
+    "url": "https://www.hubspot.com/",
+    "description": {
+      "en": "Customer relationship, sales and marketing workflows.",
+      "fa": "گردش کار ارتباط با مشتری، فروش و بازاریابی."
+    },
+    "courseIds": [
+      "ise-141"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B48:D48"
+      }
+    ]
+  },
+  {
+    "id": "semrush",
+    "name": "Semrush",
+    "url": "https://www.semrush.com/",
+    "description": {
+      "en": "Digital marketing research and search visibility analysis.",
+      "fa": "پژوهش بازاریابی دیجیتال و تحلیل دیده‌شدن در جست‌وجو."
+    },
+    "courseIds": [
+      "ise-141"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B48:D48"
+      }
+    ]
+  },
+  {
+    "id": "jmp",
+    "name": "JMP",
+    "url": "https://www.jmp.com/en/home",
+    "description": {
+      "en": "Exploratory statistics and design of experiments.",
+      "fa": "آمار اکتشافی و طراحی آزمایش‌ها."
+    },
+    "courseIds": [
+      "ise-107",
+      "ise-108",
+      "ise-132"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B52:D52"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B53:D53"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B54:D54"
+      }
+    ]
+  },
+  {
+    "id": "dhis2",
+    "name": "DHIS2",
+    "url": "https://dhis2.org/",
+    "description": {
+      "en": "Collect, manage and analyze health information.",
+      "fa": "گردآوری، مدیریت و تحلیل اطلاعات سلامت."
+    },
+    "courseIds": [
+      "health-001",
+      "health-002"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B58:D58"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B59:D59"
+      }
+    ]
+  },
+  {
+    "id": "epi-info",
+    "name": "Epi Info",
+    "url": "https://www.cdc.gov/epiinfo/",
+    "description": {
+      "en": "Legacy epidemiology software. CDC discontinued development and technical assistance in September 2025.",
+      "fa": "نرم‌افزار قدیمی همه‌گیرشناسی؛ CDC توسعه و پشتیبانی فنی آن را در سپتامبر ۲۰۲۵ متوقف کرده است."
+    },
+    "courseIds": [
+      "health-002"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B59:D59"
+      }
+    ]
+  },
+  {
+    "id": "redcap",
+    "name": "REDCap",
+    "url": "https://projectredcap.org/",
+    "description": {
+      "en": "Research data capture and management.",
+      "fa": "ثبت و مدیریت داده پژوهش."
+    },
+    "courseIds": [
+      "health-003"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B60:D60"
+      }
+    ]
+  },
+  {
+    "id": "qualtrics",
+    "name": "Qualtrics",
+    "url": "https://www.qualtrics.com/",
+    "description": {
+      "en": "Design surveys and analyze responses.",
+      "fa": "طراحی پرسش‌نامه و تحلیل پاسخ‌ها."
+    },
+    "courseIds": [
+      "health-003"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B60:D60"
+      }
+    ]
+  },
+  {
+    "id": "surveymonkey",
+    "name": "SurveyMonkey",
+    "url": "https://www.surveymonkey.com/",
+    "description": {
+      "en": "Online survey creation and response collection.",
+      "fa": "ساخت پرسش‌نامه آنلاین و گردآوری پاسخ."
+    },
+    "courseIds": [
+      "health-003"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B60:D60"
+      }
+    ]
+  },
+  {
+    "id": "zotero",
+    "name": "Zotero",
+    "url": "https://www.zotero.org/",
+    "description": {
+      "en": "Collect references and manage research citations.",
+      "fa": "گردآوری منابع و مدیریت ارجاعات پژوهش."
+    },
+    "courseIds": [
+      "health-003"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B60:D60"
+      }
+    ]
+  },
+  {
+    "id": "mendeley",
+    "name": "Mendeley",
+    "url": "https://www.mendeley.com/",
+    "description": {
+      "en": "Organize research papers and bibliographic references.",
+      "fa": "سازمان‌دهی مقاله‌ها و ارجاعات کتاب‌شناختی."
+    },
+    "courseIds": [
+      "health-003"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B60:D60"
+      }
+    ]
+  },
+  {
+    "id": "spheracloud-ehs-s",
+    "name": "SpheraCloud EHS&S",
+    "url": "https://sphera.com/solutions/environment-health-safety-sustainability/",
+    "description": {
+      "en": "Environmental, health, safety and sustainability management.",
+      "fa": "مدیریت محیط‌زیست، بهداشت، ایمنی و پایداری."
+    },
+    "courseIds": [
+      "ise-135"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B65:D65"
+      }
+    ]
+  },
+  {
+    "id": "velocityehs",
+    "name": "VelocityEHS",
+    "url": "https://www.ehs.com/",
+    "description": {
+      "en": "Workplace environment, health and safety management.",
+      "fa": "مدیریت محیط، بهداشت و ایمنی کار."
+    },
+    "courseIds": [
+      "ise-135"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B65:D65"
+      }
+    ]
+  },
+  {
+    "id": "bowtiexp",
+    "name": "BowTieXP",
+    "url": "https://www.wolterskluwer.com/en-gb/solutions/enablon/bowtie/bowtiexp",
+    "description": {
+      "en": "Visualize hazards, controls and consequences with bow-tie analysis.",
+      "fa": "نمایش مخاطرات، کنترل‌ها و پیامدها با تحلیل پاپیونی."
+    },
+    "courseIds": [
+      "ise-135"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B65:D65"
+      }
+    ]
+  },
+  {
+    "id": "siemens-tecnomatix-process-simulate-human",
+    "name": "Siemens Tecnomatix Process Simulate Human",
+    "url": "https://www.siemens.com/en-us/products/tecnomatix/human-centered-design-simulation/",
+    "description": {
+      "en": "Simulate human tasks and assess ergonomic work design.",
+      "fa": "شبیه‌سازی فعالیت انسان و ارزیابی ارگونومیک طراحی کار."
+    },
+    "courseIds": [
+      "ise-162"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B66:D66"
+      }
+    ]
+  },
+  {
+    "id": "ergofellow",
+    "name": "ErgoFellow",
+    "url": "https://www.fbfsistemas.com/ergonomics.html",
+    "description": {
+      "en": "Tools for ergonomic assessment of work activities.",
+      "fa": "ابزارهای ارزیابی ارگونومیک فعالیت‌های کاری."
+    },
+    "courseIds": [
+      "ise-162"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B66:D66"
+      }
+    ]
+  },
+  {
+    "id": "ergoniza-ergonautas",
+    "name": "Ergoniza / Ergonautas",
+    "url": "https://www.ergonautas.upv.es/",
+    "description": {
+      "en": "Ergonomic assessment methods and workplace analysis.",
+      "fa": "روش‌های ارزیابی ارگونومی و تحلیل محیط کار."
+    },
+    "courseIds": [
+      "ise-162"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B66:D66"
+      }
+    ]
+  },
+  {
+    "id": "expert-choice",
+    "name": "Expert Choice",
+    "url": "https://www.expertchoice.com/",
+    "description": {
+      "en": "Structured multi-criteria decisions and priority setting.",
+      "fa": "تصمیم‌گیری چندمعیاره ساختارمند و تعیین اولویت."
+    },
+    "courseIds": [
+      "ise-139"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B78:D78"
+      }
+    ]
+  },
+  {
+    "id": "vensim",
+    "name": "Vensim",
+    "url": "https://vensim.com/",
+    "description": {
+      "en": "Model feedback and dynamic behavior with system dynamics.",
+      "fa": "مدل‌سازی بازخورد و رفتار پویا با پویایی سیستم."
+    },
+    "courseIds": [
+      "ise-153"
+    ],
+    "sources": [
+      {
+        "file": "workbook",
+        "sheet": "Specialized Softwares",
+        "range": "B79:D79"
+      }
+    ]
+  }
+]

@@ -1,0 +1,847 @@
+[
+  {
+    "row": 3,
+    "section": "Production and Service Systems",
+    "courseIds": [
+      "ise-105"
+    ],
+    "course": "The Methods of Measurement and Management of Work",
+    "names": [
+      "Timer Pro Professional",
+      "MTM software solutions",
+      "Microsoft Excel"
+    ],
+    "urls": [
+      "https://www.acsco.com/",
+      "https://mtm.org/en/",
+      "https://www.microsoft.com/en-us/microsoft-365/excel"
+    ]
+  },
+  {
+    "row": 4,
+    "section": "Production and Service Systems",
+    "courseIds": [
+      "ise-106"
+    ],
+    "course": "Facilities Design",
+    "names": [
+      "AutoCAD (CAD: Computer-Aided Design)",
+      "Microsoft Visio",
+      "Siemens Tecnomatix Factory & Line Design",
+      "FlexSim"
+    ],
+    "urls": [
+      "https://www.autodesk.com/autocad",
+      "https://www.microsoft.com/en-us/microsoft-365/visio",
+      "https://www.siemens.com/en-us/products/tecnomatix/factory-line-design/",
+      "https://www.flexsim.com/"
+    ]
+  },
+  {
+    "row": 5,
+    "section": "Production and Service Systems",
+    "courseIds": [
+      "ise-112"
+    ],
+    "course": "Engineering Design and Drawing",
+    "names": [
+      "AutoCAD",
+      "SOLIDWORKS",
+      "Microsoft Visio"
+    ],
+    "urls": [
+      "https://www.autodesk.com/autocad",
+      "https://www.solidworks.com/",
+      "https://www.microsoft.com/en-us/microsoft-365/visio"
+    ]
+  },
+  {
+    "row": 6,
+    "section": "Production and Service Systems",
+    "courseIds": [
+      "ise-114"
+    ],
+    "course": "Manufacturing Processes",
+    "names": [
+      "FlexSim",
+      "Siemens Tecnomatix Plant Simulation",
+      "Arena Simulation"
+    ],
+    "urls": [
+      "https://www.flexsim.com/",
+      "https://www.siemens.com/en-us/products/tecnomatix/plant-simulation-software/",
+      "https://www.rockwellautomation.com/en-fi/products/software/arena-simulation.html"
+    ]
+  },
+  {
+    "row": 7,
+    "section": "Production and Service Systems",
+    "courseIds": [
+      "ise-115"
+    ],
+    "course": "Principles of Warehouse and Inventory Management",
+    "names": [
+      "Odoo Inventory",
+      "SAP Extended Warehouse Management (SAP EWM)",
+      "AnyLogic Warehouse Simulation",
+      "FlexSim Warehouse Simulation"
+    ],
+    "urls": [
+      "https://www.odoo.com/app/inventory",
+      "https://www.sap.com/products/scm/extended-warehouse-management.html",
+      "https://www.anylogic.com/warehouse-operations/",
+      "https://www.autodesk.com/solutions/design-manufacturing/warehouse-simulation"
+    ]
+  },
+  {
+    "row": 8,
+    "section": "Production and Service Systems",
+    "courseIds": [
+      "ise-116"
+    ],
+    "course": "Production Systems Planning",
+    "names": [
+      "SAP S/4HANA Manufacturing for Planning and Scheduling",
+      "Odoo Manufacturing (MRP)",
+      "MRPeasy",
+      "Microsoft Excel Solver"
+    ],
+    "urls": [
+      "https://www.sap.com/finland/products/scm/manufacturing-for-planning-and-scheduling.html",
+      "https://www.odoo.com/app/manufacturing",
+      "https://www.mrpeasy.com/"
+    ]
+  },
+  {
+    "row": 9,
+    "section": "Production and Service Systems",
+    "courseIds": [
+      "ise-121"
+    ],
+    "course": "Design and Planning of Service Systems",
+    "names": [
+      "AnyLogic",
+      "Arena Simulation",
+      "Simul8"
+    ],
+    "urls": [
+      "https://www.anylogic.com/",
+      "https://www.rockwellautomation.com/en-fi/products/software/arena-simulation.html",
+      "https://www.simul8.com/"
+    ]
+  },
+  {
+    "row": 10,
+    "section": "Production and Service Systems",
+    "courseIds": [
+      "ise-136"
+    ],
+    "course": "Maintenance and Repair Planning",
+    "names": [
+      "IBM Maximo",
+      "Fiix CMMS"
+    ],
+    "urls": [
+      "https://www.ibm.com/products/maximo",
+      "https://fiixsoftware.com/"
+    ]
+  },
+  {
+    "row": 11,
+    "section": "Production and Service Systems",
+    "courseIds": [
+      "ise-137"
+    ],
+    "course": "Production and Inventory Planning and Control",
+    "names": [
+      "SAP S/4HANA Manufacturing for Planning and Scheduling",
+      "Odoo Manufacturing + Inventory",
+      "MRPeasy",
+      "Microsoft Excel Solver"
+    ],
+    "urls": [
+      "https://www.sap.com/finland/products/scm/manufacturing-for-planning-and-scheduling.html",
+      "https://www.odoo.com/app/manufacturing",
+      "https://www.odoo.com/app/inventory",
+      "https://www.mrpeasy.com/"
+    ]
+  },
+  {
+    "row": 15,
+    "section": "Systems Modeling and Data Analytics",
+    "courseIds": [
+      "sci-104"
+    ],
+    "course": "Probability Theory and Its Applications",
+    "names": [
+      "R",
+      "Python SciPy",
+      "MATLAB"
+    ],
+    "urls": [
+      "https://www.r-project.org/",
+      "https://scipy.org/",
+      "https://www.mathworks.com/products/matlab.html"
+    ]
+  },
+  {
+    "row": 16,
+    "section": "Systems Modeling and Data Analytics",
+    "courseIds": [
+      "ise-108"
+    ],
+    "course": "Engineering Statistics",
+    "names": [
+      "Minitab",
+      "IBM SPSS Statistics",
+      "R",
+      "jamovi / JASP"
+    ],
+    "urls": [
+      "https://www.minitab.com/en-us/",
+      "https://www.ibm.com/products/spss-statistics",
+      "https://www.r-project.org/",
+      "https://www.jamovi.org/",
+      "https://jasp-stats.org/"
+    ]
+  },
+  {
+    "row": 17,
+    "section": "Systems Modeling and Data Analytics",
+    "courseIds": [
+      "ise-118"
+    ],
+    "course": "Linear Algebra",
+    "names": [
+      "MATLAB",
+      "NumPy",
+      "SciPy",
+      "Julia"
+    ],
+    "urls": [
+      "https://www.mathworks.com/products/matlab.html",
+      "https://numpy.org/",
+      "https://scipy.org/",
+      "https://julialang.org/"
+    ]
+  },
+  {
+    "row": 18,
+    "section": "Systems Modeling and Data Analytics",
+    "courseIds": [
+      "sci-115"
+    ],
+    "course": "Computer Application in Numerical Analysis",
+    "names": [
+      "MATLAB",
+      "NumPy + SciPy",
+      "Julia"
+    ],
+    "urls": [
+      "https://www.mathworks.com/products/matlab.html",
+      "https://numpy.org/",
+      "https://scipy.org/",
+      "https://julialang.org/"
+    ]
+  },
+  {
+    "row": 19,
+    "section": "Systems Modeling and Data Analytics",
+    "courseIds": [
+      "sci-114"
+    ],
+    "course": "Computer Programming",
+    "names": [
+      "Python",
+      "Jupyter Notebook",
+      "Visual Studio Code"
+    ],
+    "urls": [
+      "https://www.python.org/",
+      "https://jupyter.org/",
+      "https://code.visualstudio.com/docs/datascience/jupyter-notebooks"
+    ]
+  },
+  {
+    "row": 20,
+    "section": "Systems Modeling and Data Analytics",
+    "courseIds": [
+      "ise-140"
+    ],
+    "course": "Management Information Systems (MIS)",
+    "names": [
+      "SQLite",
+      "MySQL",
+      "Microsoft SQL Server",
+      "Microsoft Access"
+    ],
+    "urls": [
+      "https://sqlite.org/",
+      "https://www.mysql.com/",
+      "https://www.microsoft.com/en-us/sql-server",
+      "https://www.microsoft.com/en-us/microsoft-365/access"
+    ]
+  },
+  {
+    "row": 21,
+    "section": "Systems Modeling and Data Analytics",
+    "courseIds": [
+      "ise-145"
+    ],
+    "course": "Business Intelligence and Visualization",
+    "names": [
+      "Microsoft Power BI",
+      "Tableau",
+      "Microsoft SQL Server / Power Query"
+    ],
+    "urls": [
+      "https://www.microsoft.com/en-us/power-platform/products/power-bi",
+      "https://www.tableau.com/",
+      "https://www.microsoft.com/en-us/sql-server"
+    ]
+  },
+  {
+    "row": 25,
+    "section": "Optimization Methods",
+    "courseIds": [
+      "ise-109",
+      "ise-110"
+    ],
+    "course": "Operations Research 1 & 2",
+    "names": [
+      "GAMS",
+      "LINGO / LINDO",
+      "Pyomo",
+      "PuLP",
+      "Google OR-Tools",
+      "Gurobi Optimizer"
+    ],
+    "urls": [
+      "https://www.gams.com/",
+      "https://www.lindo.com/",
+      "https://www.pyomo.org/",
+      "https://coin-or.github.io/pulp/",
+      "https://developers.google.com/optimization",
+      "https://www.gurobi.com/"
+    ]
+  },
+  {
+    "row": 29,
+    "section": "Logistics and Supply Chain",
+    "courseIds": [
+      "ise-109"
+    ],
+    "course": "Operations Research 1",
+    "names": [
+      "GAMS",
+      "LINGO / LINDO",
+      "Pyomo",
+      "PuLP",
+      "Google OR-Tools"
+    ],
+    "urls": [
+      "https://www.gams.com/",
+      "https://www.lindo.com/",
+      "https://www.pyomo.org/",
+      "https://coin-or.github.io/pulp/",
+      "https://developers.google.com/optimization"
+    ]
+  },
+  {
+    "row": 30,
+    "section": "Logistics and Supply Chain",
+    "courseIds": [
+      "ise-137"
+    ],
+    "course": "Production and Inventory Planning and Control",
+    "names": [
+      "SAP Integrated Business Planning (SAP IBP)",
+      "anyLogistix",
+      "Odoo Manufacturing + Inventory",
+      "MRPeasy"
+    ],
+    "urls": [
+      "https://www.sap.com/products/scm/integrated-business-planning.html",
+      "https://www.anylogistix.com/",
+      "https://www.odoo.com/app/manufacturing",
+      "https://www.mrpeasy.com/"
+    ]
+  },
+  {
+    "row": 31,
+    "section": "Logistics and Supply Chain",
+    "courseIds": [
+      "ise-106"
+    ],
+    "course": "Facilities Design",
+    "names": [
+      "FlexSim",
+      "AnyLogic Warehouse Simulation",
+      "AutoCAD",
+      "Microsoft Visio"
+    ],
+    "urls": [
+      "https://www.flexsim.com/",
+      "https://www.anylogic.com/warehouse-operations/",
+      "https://www.autodesk.com/autocad",
+      "https://www.microsoft.com/en-us/microsoft-365/visio"
+    ]
+  },
+  {
+    "row": 35,
+    "section": "Financial Systems",
+    "courseIds": [
+      "ise-113"
+    ],
+    "course": "Engineering Economy",
+    "names": [
+      "Microsoft Excel",
+      "COMFAR",
+      "Python / NumPy Financial Models"
+    ],
+    "urls": [
+      "https://www.microsoft.com/en-us/microsoft-365/excel",
+      "https://www.unido.org/comfar",
+      "https://numpy.org/"
+    ]
+  },
+  {
+    "row": 36,
+    "section": "Financial Systems",
+    "courseIds": [
+      "ise-103"
+    ],
+    "course": "Principles of Accounting and Cost Accounting",
+    "names": [
+      "QuickBooks",
+      "TallyPrime",
+      "Microsoft Excel"
+    ],
+    "urls": [
+      "https://quickbooks.intuit.com/global/accounting-software/",
+      "https://tallysolutions.com/global/tally-prime/",
+      "https://www.microsoft.com/en-us/microsoft-365/excel"
+    ]
+  },
+  {
+    "row": 37,
+    "section": "Financial Systems",
+    "courseIds": [
+      "ise-142"
+    ],
+    "course": "Financial Management",
+    "names": [
+      "Microsoft Excel",
+      "Power BI",
+      "QuickBooks",
+      "Stata / R"
+    ],
+    "urls": [
+      "https://www.microsoft.com/en-us/microsoft-365/excel",
+      "https://www.microsoft.com/en-us/power-platform/products/power-bi",
+      "https://quickbooks.intuit.com/global/accounting-software/",
+      "https://www.stata.com/",
+      "https://www.r-project.org/"
+    ]
+  },
+  {
+    "row": 41,
+    "section": "Project Management",
+    "courseIds": [
+      "ise-104"
+    ],
+    "course": "Project Management and Planning",
+    "names": [
+      "Microsoft Project",
+      "Oracle Primavera P6",
+      "Power BI"
+    ],
+    "urls": [
+      "https://www.microsoft.com/en-us/microsoft-365/planner/project-management",
+      "https://www.oracle.com/construction-engineering/primavera-p6/",
+      "https://www.microsoft.com/en-us/power-platform/products/power-bi"
+    ]
+  },
+  {
+    "row": 45,
+    "section": "Engineering Management",
+    "courseIds": [
+      "ise-111"
+    ],
+    "course": "Principles of Management and Organization Theory",
+    "names": [
+      "Microsoft Visio",
+      "Miro",
+      "Lucidchart"
+    ],
+    "urls": [
+      "https://www.microsoft.com/en-us/microsoft-365/visio",
+      "https://miro.com/",
+      "https://www.lucidchart.com/"
+    ]
+  },
+  {
+    "row": 46,
+    "section": "Engineering Management",
+    "courseIds": [
+      "ise-101"
+    ],
+    "course": "Microeconomics",
+    "names": [
+      "Stata",
+      "EViews",
+      "R",
+      "gretl"
+    ],
+    "urls": [
+      "https://www.stata.com/",
+      "https://www.eviews.com/",
+      "https://www.r-project.org/",
+      "https://gretl.sourceforge.net/"
+    ]
+  },
+  {
+    "row": 47,
+    "section": "Engineering Management",
+    "courseIds": [
+      "ise-102"
+    ],
+    "course": "Macroeconomics",
+    "names": [
+      "EViews",
+      "Stata",
+      "R",
+      "gretl"
+    ],
+    "urls": [
+      "https://www.eviews.com/",
+      "https://www.stata.com/",
+      "https://www.r-project.org/",
+      "https://gretl.sourceforge.net/"
+    ]
+  },
+  {
+    "row": 48,
+    "section": "Engineering Management",
+    "courseIds": [
+      "ise-141"
+    ],
+    "course": "Foundations of Classical and Digital Marketing",
+    "names": [
+      "Google Analytics",
+      "Google Ads",
+      "HubSpot",
+      "Semrush"
+    ],
+    "urls": [
+      "https://marketingplatform.google.com/about/analytics/",
+      "https://business.google.com/en-all/google-ads/",
+      "https://www.hubspot.com/",
+      "https://www.semrush.com/"
+    ]
+  },
+  {
+    "row": 52,
+    "section": "Quality and Productivity",
+    "courseIds": [
+      "ise-108"
+    ],
+    "course": "Engineering Statistics",
+    "names": [
+      "Minitab",
+      "JMP",
+      "R",
+      "IBM SPSS Statistics"
+    ],
+    "urls": [
+      "https://www.minitab.com/en-us/",
+      "https://www.jmp.com/en/home",
+      "https://www.r-project.org/",
+      "https://www.ibm.com/products/spss-statistics"
+    ]
+  },
+  {
+    "row": 53,
+    "section": "Quality and Productivity",
+    "courseIds": [
+      "ise-107"
+    ],
+    "course": "Statistical Quality Control",
+    "names": [
+      "Minitab",
+      "JMP",
+      "R"
+    ],
+    "urls": [
+      "https://www.minitab.com/en-us/",
+      "https://www.jmp.com/en/home",
+      "https://www.r-project.org/"
+    ]
+  },
+  {
+    "row": 54,
+    "section": "Quality and Productivity",
+    "courseIds": [
+      "ise-132"
+    ],
+    "course": "Quality and Productivity Management",
+    "names": [
+      "Minitab",
+      "JMP",
+      "Microsoft Visio",
+      "Power BI"
+    ],
+    "urls": [
+      "https://www.minitab.com/en-us/",
+      "https://www.jmp.com/en/home",
+      "https://www.microsoft.com/en-us/microsoft-365/visio",
+      "https://www.microsoft.com/en-us/power-platform/products/power-bi"
+    ]
+  },
+  {
+    "row": 58,
+    "section": "Healthcare Systems",
+    "courseIds": [
+      "health-001"
+    ],
+    "course": "Introduction to Healthcare Systems",
+    "names": [
+      "AnyLogic",
+      "Arena Simulation",
+      "Simul8",
+      "DHIS2"
+    ],
+    "urls": [
+      "https://www.anylogic.com/",
+      "https://www.rockwellautomation.com/en-fi/products/software/arena-simulation.html",
+      "https://www.simul8.com/",
+      "https://dhis2.org/"
+    ]
+  },
+  {
+    "row": 59,
+    "section": "Healthcare Systems",
+    "courseIds": [
+      "health-002"
+    ],
+    "course": "Biostatistics and Health Indicators",
+    "names": [
+      "R",
+      "Epi Info",
+      "DHIS2",
+      "IBM SPSS Statistics"
+    ],
+    "urls": [
+      "https://www.r-project.org/",
+      "https://www.cdc.gov/epiinfo/index.html",
+      "https://dhis2.org/",
+      "https://www.ibm.com/products/spss-statistics"
+    ]
+  },
+  {
+    "row": 60,
+    "section": "Healthcare Systems",
+    "courseIds": [
+      "health-003"
+    ],
+    "course": "Research Methodology and Design",
+    "names": [
+      "REDCap",
+      "Qualtrics",
+      "SurveyMonkey",
+      "Zotero / Mendeley"
+    ],
+    "urls": [
+      "https://projectredcap.org/about/",
+      "https://www.qualtrics.com/",
+      "https://www.surveymonkey.com/",
+      "https://www.zotero.org/",
+      "https://www.mendeley.com/"
+    ]
+  },
+  {
+    "row": 64,
+    "section": "Health, Safety and Environment (HSE)",
+    "courseIds": [
+      "ise-105"
+    ],
+    "course": "The Methods of Measurement and Management of Work",
+    "names": [
+      "Timer Pro Professional",
+      "MTM software solutions",
+      "Microsoft Excel"
+    ],
+    "urls": [
+      "https://www.acsco.com/",
+      "https://mtm.org/en/",
+      "https://www.microsoft.com/en-us/microsoft-365/excel"
+    ]
+  },
+  {
+    "row": 65,
+    "section": "Health, Safety and Environment (HSE)",
+    "courseIds": [
+      "ise-135"
+    ],
+    "course": "Health, Safety and Environmental Engineering (HSE)",
+    "names": [
+      "SpheraCloud EHS&S",
+      "VelocityEHS",
+      "BowTieXP"
+    ],
+    "urls": [
+      "https://sphera.com/solutions/environment-health-safety-sustainability/",
+      "https://www.ehs.com/",
+      "https://www.wolterskluwer.com/en/solutions/enablon/bowtie/bowtiexp"
+    ]
+  },
+  {
+    "row": 66,
+    "section": "Health, Safety and Environment (HSE)",
+    "courseIds": [
+      "ise-162"
+    ],
+    "course": "Human Factors Engineering",
+    "names": [
+      "Siemens Tecnomatix Human-Centered Design / Process Simulate Human",
+      "ErgoFellow",
+      "Ergoniza / Ergonautas"
+    ],
+    "urls": [
+      "https://www.siemens.com/en-us/products/tecnomatix/human-centered-design-simulation/",
+      "https://www.fbfsistemas.com/ergonomics.html",
+      "https://www.ergonautas.upv.es/ergoniza/app_en/land/index.html?method=reba"
+    ]
+  },
+  {
+    "row": 70,
+    "section": "Feasibility Study",
+    "courseIds": [
+      "ise-103"
+    ],
+    "course": "Principles of Accounting and Cost Accounting",
+    "names": [
+      "QuickBooks",
+      "TallyPrime",
+      "Microsoft Excel"
+    ],
+    "urls": [
+      "https://quickbooks.intuit.com/global/accounting-software/",
+      "https://tallysolutions.com/global/tally-prime/",
+      "https://www.microsoft.com/en-us/microsoft-365/excel"
+    ]
+  },
+  {
+    "row": 71,
+    "section": "Feasibility Study",
+    "courseIds": [
+      "ise-113"
+    ],
+    "course": "Engineering Economy",
+    "names": [
+      "Microsoft Excel",
+      "COMFAR",
+      "Python / NumPy Financial Models"
+    ],
+    "urls": [
+      "https://www.microsoft.com/en-us/microsoft-365/excel",
+      "https://www.unido.org/comfar",
+      "https://numpy.org/"
+    ]
+  },
+  {
+    "row": 72,
+    "section": "Feasibility Study",
+    "courseIds": [
+      "ise-106"
+    ],
+    "course": "Facilities Design",
+    "names": [
+      "AutoCAD",
+      "Microsoft Visio",
+      "FlexSim",
+      "Siemens Tecnomatix Factory & Line Design"
+    ],
+    "urls": [
+      "https://www.autodesk.com/autocad",
+      "https://www.microsoft.com/en-us/microsoft-365/visio",
+      "https://www.flexsim.com/",
+      "https://www.siemens.com/en-us/products/tecnomatix/factory-line-design/"
+    ]
+  },
+  {
+    "row": 73,
+    "section": "Feasibility Study",
+    "courseIds": [
+      "ise-131"
+    ],
+    "course": "Industries Creation Design",
+    "names": [
+      "COMFAR",
+      "Microsoft Excel",
+      "Power BI"
+    ],
+    "urls": [
+      "https://www.unido.org/comfar",
+      "https://www.microsoft.com/en-us/microsoft-365/excel",
+      "https://www.microsoft.com/en-us/power-platform/products/power-bi"
+    ]
+  },
+  {
+    "row": 77,
+    "section": "Research Tools",
+    "courseIds": [
+      "ise-117"
+    ],
+    "course": "Principles of Simulation",
+    "names": [
+      "AnyLogic",
+      "Arena Simulation",
+      "Simul8",
+      "FlexSim"
+    ],
+    "urls": [
+      "https://www.anylogic.com/",
+      "https://www.rockwellautomation.com/en-fi/products/software/arena-simulation.html",
+      "https://www.simul8.com/",
+      "https://www.flexsim.com/"
+    ]
+  },
+  {
+    "row": 78,
+    "section": "Research Tools",
+    "courseIds": [
+      "ise-139"
+    ],
+    "course": "Principles of Decision-Making",
+    "names": [
+      "Expert Choice",
+      "Microsoft Excel",
+      "Python / R"
+    ],
+    "urls": [
+      "https://www.expertchoice.com/",
+      "https://www.microsoft.com/en-us/microsoft-365/excel",
+      "https://www.python.org/",
+      "https://www.r-project.org/"
+    ]
+  },
+  {
+    "row": 79,
+    "section": "Research Tools",
+    "courseIds": [
+      "ise-153"
+    ],
+    "course": "Troubleshooting and Systems Analysis",
+    "names": [
+      "Vensim",
+      "AnyLogic",
+      "Microsoft Visio"
+    ],
+    "urls": [
+      "https://vensim.com/",
+      "https://www.anylogic.com/",
+      "https://www.microsoft.com/en-us/microsoft-365/visio"
+    ]
+  }
+]

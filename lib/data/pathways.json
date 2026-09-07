@@ -1,0 +1,272 @@
+[
+  {
+    "id": "optimization",
+    "courseIds": [
+      "ise-105",
+      "ise-106",
+      "ise-112",
+      "ise-114",
+      "ise-115",
+      "ise-116",
+      "ise-117",
+      "ise-121",
+      "ise-136"
+    ],
+    "supporting": false,
+    "name": {
+      "en": "Systems Optimization",
+      "fa": "بهینه‌سازی سیستم‌ها"
+    },
+    "description": {
+      "en": "Design production and service systems that use time, space and resources more effectively.",
+      "fa": "طراحی سیستم‌های تولیدی و خدماتی برای استفاده بهتر از زمان، فضا و منابع."
+    },
+    "skills": {
+      "en": "Process analysis · Simulation · Facility design",
+      "fa": "تحلیل فرایند · شبیه‌سازی · طرح‌ریزی واحدها"
+    },
+    "careers": {
+      "en": "Operations analyst · Production planner · Process engineer",
+      "fa": "تحلیلگر عملیات · برنامه‌ریز تولید · مهندس فرایند"
+    }
+  },
+  {
+    "id": "healthcare",
+    "courseIds": [
+      "health-001",
+      "health-002",
+      "health-003"
+    ],
+    "supporting": false,
+    "name": {
+      "en": "Healthcare Systems",
+      "fa": "سیستم‌های سلامت"
+    },
+    "description": {
+      "en": "Use systems thinking to improve patient flows, capacity and the delivery of care. These three courses are supplementary workbook mappings.",
+      "fa": "به‌کارگیری تفکر سیستمی برای بهبود جریان بیماران، ظرفیت و ارائه خدمات سلامت. این سه درس، نگاشت تکمیلی کاربرگ هستند."
+    },
+    "skills": {
+      "en": "Health indicators · Study design · Service analysis",
+      "fa": "شاخص‌های سلامت · طراحی پژوهش · تحلیل خدمات"
+    },
+    "careers": {
+      "en": "Healthcare operations analyst · Health services researcher",
+      "fa": "تحلیلگر عملیات سلامت · پژوهشگر خدمات بهداشتی"
+    }
+  },
+  {
+    "id": "logistics",
+    "courseIds": [
+      "ise-109",
+      "ise-137",
+      "ise-106"
+    ],
+    "supporting": false,
+    "name": {
+      "en": "Logistics & Supply Chain",
+      "fa": "لجستیک و زنجیره تأمین"
+    },
+    "description": {
+      "en": "Connect sourcing, production and distribution. Explore the trade-offs between inventory, service and transportation.",
+      "fa": "پیوند تأمین، تولید و توزیع؛ بررسی موازنه میان موجودی، خدمت و حمل‌ونقل."
+    },
+    "skills": {
+      "en": "Optimization · Inventory planning · Network design",
+      "fa": "بهینه‌سازی · برنامه‌ریزی موجودی · طراحی شبکه"
+    },
+    "careers": {
+      "en": "Supply chain analyst · Logistics planner · Inventory analyst",
+      "fa": "تحلیلگر زنجیره تأمین · برنامه‌ریز لجستیک · تحلیلگر موجودی"
+    }
+  },
+  {
+    "id": "data-ai",
+    "courseIds": [
+      "sci-104",
+      "ise-108",
+      "ise-118",
+      "sci-115",
+      "sci-114",
+      "ise-140",
+      "ise-145"
+    ],
+    "supporting": false,
+    "name": {
+      "en": "Data Systems & Artificial Intelligence",
+      "fa": "سیستم‌های داده و هوش مصنوعی"
+    },
+    "description": {
+      "en": "Turn data into explanations and better decisions, combining statistics, programming and information systems.",
+      "fa": "تبدیل داده به شناخت و تصمیم بهتر با ترکیب آمار، برنامه‌نویسی و سیستم‌های اطلاعاتی."
+    },
+    "skills": {
+      "en": "Statistics · Programming · Data visualization",
+      "fa": "آمار · برنامه‌نویسی · دیداری‌سازی داده"
+    },
+    "careers": {
+      "en": "Data analyst · Business intelligence analyst · Analytics engineer",
+      "fa": "تحلیلگر داده · تحلیلگر هوش تجاری · مهندس تحلیل داده"
+    }
+  },
+  {
+    "id": "quality",
+    "courseIds": [
+      "ise-111",
+      "ise-101",
+      "ise-102",
+      "ise-141",
+      "ise-108",
+      "ise-107",
+      "ise-132"
+    ],
+    "supporting": false,
+    "name": {
+      "en": "Engineering & Quality Management",
+      "fa": "مدیریت مهندسی و کیفیت"
+    },
+    "description": {
+      "en": "Understand organizations and reduce process variation to improve the reliability of products and services.",
+      "fa": "شناخت سازمان‌ها و کاهش تغییرپذیری فرایندها برای بهبود قابلیت اتکای محصولات و خدمات."
+    },
+    "skills": {
+      "en": "Statistical quality control · Organizational analysis · Improvement",
+      "fa": "کنترل کیفیت آماری · تحلیل سازمان · بهبود"
+    },
+    "careers": {
+      "en": "Quality engineer · Continuous improvement analyst · Operations coordinator",
+      "fa": "مهندس کیفیت · تحلیلگر بهبود مستمر · هماهنگ‌کننده عملیات"
+    }
+  },
+  {
+    "id": "finance",
+    "courseIds": [
+      "ise-113",
+      "ise-103",
+      "ise-142"
+    ],
+    "supporting": false,
+    "name": {
+      "en": "Financial Systems",
+      "fa": "سیستم‌های مالی"
+    },
+    "description": {
+      "en": "Evaluate projects and financial choices through costs, cash flows and the time value of money.",
+      "fa": "ارزیابی پروژه‌ها و انتخاب‌های مالی با توجه به هزینه، جریان نقدی و ارزش زمانی پول."
+    },
+    "skills": {
+      "en": "Engineering economy · Cost analysis · Financial modeling",
+      "fa": "اقتصاد مهندسی · تحلیل هزینه · مدل‌سازی مالی"
+    },
+    "careers": {
+      "en": "Cost analyst · Project evaluation analyst · Financial planning analyst",
+      "fa": "تحلیلگر هزینه · تحلیلگر ارزیابی پروژه · تحلیلگر برنامه‌ریزی مالی"
+    }
+  },
+  {
+    "id": "hse",
+    "courseIds": [
+      "ise-105",
+      "ise-135",
+      "ise-162"
+    ],
+    "supporting": false,
+    "name": {
+      "en": "Health, Safety & Environment",
+      "fa": "ایمنی، بهداشت و محیط‌زیست"
+    },
+    "description": {
+      "en": "Design work around human capabilities and identify risks in industrial environments.",
+      "fa": "طراحی کار متناسب با توانایی انسان و شناسایی ریسک در محیط‌های صنعتی."
+    },
+    "skills": {
+      "en": "Work analysis · Ergonomics · Hazard identification",
+      "fa": "تحلیل کار · ارگونومی · شناسایی مخاطرات"
+    },
+    "careers": {
+      "en": "HSE analyst · Ergonomics specialist · Workplace improvement engineer",
+      "fa": "تحلیلگر HSE · متخصص ارگونومی · مهندس بهبود محیط کار"
+    }
+  },
+  {
+    "id": "feasibility",
+    "courseIds": [
+      "ise-103",
+      "ise-113",
+      "ise-106",
+      "ise-131"
+    ],
+    "supporting": true,
+    "name": {
+      "en": "Feasibility Studies",
+      "fa": "مطالعات امکان‌سنجی"
+    },
+    "description": {
+      "en": "Bring technical design and economic evaluation together to assess a proposed industrial venture.",
+      "fa": "ترکیب طراحی فنی و ارزیابی اقتصادی برای بررسی یک طرح صنعتی پیشنهادی."
+    },
+    "skills": {
+      "en": "Cost estimation · Facility planning · Investment evaluation",
+      "fa": "برآورد هزینه · طرح‌ریزی واحدها · ارزیابی سرمایه‌گذاری"
+    },
+    "careers": {
+      "en": "Feasibility analyst · Project development analyst",
+      "fa": "تحلیلگر امکان‌سنجی · تحلیلگر توسعه پروژه"
+    }
+  },
+  {
+    "id": "research",
+    "courseIds": [
+      "ise-139",
+      "ise-153"
+    ],
+    "supporting": true,
+    "name": {
+      "en": "Research Methods & Tools",
+      "fa": "روش‌ها و ابزارهای پژوهش"
+    },
+    "description": {
+      "en": "Structure complex problems and compare alternatives through decision methods and systems analysis.",
+      "fa": "ساختاربندی مسائل پیچیده و مقایسه گزینه‌ها با روش‌های تصمیم‌گیری و تحلیل سیستم‌ها."
+    },
+    "skills": {
+      "en": "Decision analysis · Systems thinking",
+      "fa": "تحلیل تصمیم · تفکر سیستمی"
+    },
+    "careers": {
+      "en": "Methods shared across research and consulting roles",
+      "fa": "روش‌های مشترک میان نقش‌های پژوهش و مشاوره"
+    }
+  },
+  {
+    "id": "common",
+    "courseIds": [
+      "sci-101",
+      "sci-102",
+      "ise-119",
+      "ise-122",
+      "ise-123",
+      "ise-124",
+      "ise-128",
+      "ise-129",
+      "ise-130"
+    ],
+    "supporting": true,
+    "name": {
+      "en": "Shared Foundations",
+      "fa": "پایه‌های مشترک"
+    },
+    "description": {
+      "en": "Mathematics, communication and practical experience support every specialization.",
+      "fa": "ریاضیات، ارتباطات و تجربه عملی پشتوانه همه گرایش‌ها هستند."
+    },
+    "skills": {
+      "en": "Quantitative reasoning · Communication · Professional practice",
+      "fa": "استدلال کمی · ارتباطات · تجربه حرفه‌ای"
+    },
+    "careers": {
+      "en": "Transferable skills for engineering and management roles",
+      "fa": "مهارت‌های قابل انتقال به نقش‌های مهندسی و مدیریت"
+    }
+  }
+]

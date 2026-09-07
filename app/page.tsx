@@ -1,17 +1,19 @@
-import { PulseOrbit } from '@/components/pulse-orbit';
-
-export default function Home() {
+'use client';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+export default function Entry() {
+  const router = useRouter();
+  useEffect(() => {
+    let locale = 'en';
+    try {
+      locale = localStorage.getItem('ise-language') === 'fa' ? 'fa' : 'en';
+    } catch {}
+    router.replace(`/${locale}`);
+  }, [router]);
   return (
-    <main className="experience" aria-label="Pulsing orbit artwork">
-      <div className="artwork-frame">
-        <img
-          className="artwork"
-          src="/orbit-reference.svg"
-          alt="Abstract purple orbit artwork"
-        />
-
-        <PulseOrbit />
-      </div>
+    <main className="entry">
+      <Link href="/en">ISE DOMAIN · Enter / ورود</Link>
     </main>
   );
 }

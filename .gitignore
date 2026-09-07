@@ -38,3 +38,7 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local source extraction and validation artifacts
+/tmp/
+*.tsbuildinfo
