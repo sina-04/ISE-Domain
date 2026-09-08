@@ -41,6 +41,8 @@ const navigation = [
   ['resources', 'Resources', 'منابع'],
   ['wikipedia', 'Wikipedia', 'ویکی‌پدیا'],
 ];
+const SUKUNA_PLAYED_KEY = 'ise-sukuna-domain-played';
+type SukunaPhase = 'wallpaper' | 'fire' | 'reveal' | null;
 const subscribeTheme = (listener: () => void) => {
   window.addEventListener('ise-themechange', listener);
   return () => window.removeEventListener('ise-themechange', listener);
@@ -92,7 +94,14 @@ export function DomainApp({
   const theme = useSyncExternalStore(subscribeTheme, readTheme, () => 'dark');
   const [menu, setMenu] = useState(false);
   const [stars, setStars] = useState<number | null>(null);
+  const [audioPending, setAudioPending] = useState<string | null>(null);
+  const [sukunaPhase, setSukunaPhase] = useState<SukunaPhase>(null);
   const themeTransition = useRef(false);
+  const sukunaPlayed = useRef(false);
+  const activeDomainAudio = useRef<HTMLAudioElement | null>(null);
+  const transitionTimers = useRef<number[]>([]);
+  const audioFallbackTimer = useRef<number | null>(null);
+  const sukunaActive = sukunaPhase !== null;
   useEffect(() => {
     document.documentElement.lang = locale;
     document.documentElement.dir = fa ? 'rtl' : 'ltr';
@@ -100,6 +109,41 @@ export function DomainApp({
       localStorage.setItem('ise-language', locale);
     } catch {}
   }, [locale, fa]);
+  useEffect(() => {
+    try {
+      const navigationEntry = performance.getEntriesByType(
+        'navigation',
+      )[0] as PerformanceNavigationTiming | undefined;
+      if (navigationEntry?.type === 'reload') {
+        sessionStorage.removeItem(SUKUNA_PLAYED_KEY);
+      }
+      sukunaPlayed.current =
+        sessionStorage.getItem(SUKUNA_PLAYED_KEY) === 'true';
+    } catch {
+      sukunaPlayed.current = false;
+    }
+  }, []);
+  useEffect(() => {
+    if (!sukunaActive) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [sukunaActive]);
+  useEffect(
+    () => () => {
+      for (const timer of transitionTimers.current) {
+        window.clearTimeout(timer);
+      }
+      if (audioFallbackTimer.current !== null) {
+        window.clearTimeout(audioFallbackTimer.current);
+      }
+      activeDomainAudio.current?.pause();
+      activeDomainAudio.current = null;
+    },
+    [],
+  );
   useEffect(() => {
     let active = true;
     const loadStars = async () => {
@@ -222,6 +266,65 @@ export function DomainApp({
     }
   }
   const href = (id: string) => `/${locale}${id === 'home' ? '' : `/${id}`}`;
+  function stopDomainAudio() {
+    if (audioFallbackTimer.current !== null) {
+      window.clearTimeout(audioFallbackTimer.current);
+      audioFallbackTimer.current = null;
+    }
+    if (activeDomainAudio.current) {
+      activeDomainAudio.current.pause();
+      activeDomainAudio.current.currentTime = 0;
+      activeDomainAudio.current = null;
+    }
+    setAudioPending(null);
+  }
+  function handleDomainClick(
+    event: MouseEvent<HTMLAnchorElement>,
+    category: (typeof categories)[number],
+  ) {
+    if (!category.audio) return;
+
+    event.preventDefault();
+    stopDomainAudio();
+    const destination = withBasePath(
+      `${href('chart')}?view=content&category=${category.id}`,
+    );
+    const audio = new Audio(withBasePath(category.audio));
+    audio.preload = 'auto';
+    activeDomainAudio.current = audio;
+
+    if (category.id === 'math' && !sukunaPlayed.current) {
+      sukunaPlayed.current = true;
+      try {
+        sessionStorage.setItem(SUKUNA_PLAYED_KEY, 'true');
+      } catch {}
+
+      flushSync(() => setSukunaPhase('wallpaper'));
+      void audio.play().catch(() => undefined);
+      const fireTimer = window.setTimeout(() => setSukunaPhase('fire'), 7000);
+      const revealTimer = window.setTimeout(
+        () => setSukunaPhase('reveal'),
+        18000,
+      );
+      const navigateTimer = window.setTimeout(() => {
+        window.location.assign(destination);
+      }, 19600);
+      transitionTimers.current = [fireTimer, revealTimer, navigateTimer];
+      return;
+    }
+
+    setAudioPending(category.id);
+    let finished = false;
+    const navigate = () => {
+      if (finished) return;
+      finished = true;
+      window.location.assign(destination);
+    };
+    audio.addEventListener('ended', navigate, { once: true });
+    audio.addEventListener('error', navigate, { once: true });
+    audioFallbackTimer.current = window.setTimeout(navigate, 30000);
+    void audio.play().catch(navigate);
+  }
   return (
     <div id="top" className="site-shell" dir={fa ? 'rtl' : 'ltr'}>
       <a href="#main" className="skip-link">
@@ -424,6 +527,7 @@ export function DomainApp({
                     key={c.id}
                     href={`${href('chart')}?view=content&category=${c.id}`}
                     className={`domain-card category-${c.id}`}
+                    onClick={(event) => handleDomainClick(event, c)}
                     style={
                       {
                         '--category-color': c.color,
@@ -575,6 +679,26 @@ export function DomainApp({
           </Suspense>
         )}
       </main>
+      {audioPending && !sukunaActive && (
+        <output className="domain-audio-status" aria-live="polite">
+          <span aria-hidden="true" />
+          {t('Domain expansion playing…', 'گسترش قلمرو در حال پخش است…')}
+        </output>
+      )}
+      {sukunaPhase && (
+        <div
+          className={`sukuna-domain-expansion is-${sukunaPhase}`}
+          role="presentation"
+        >
+          <img
+            src={withBasePath('/Sukuna-Domain-Expansion.svg')}
+            alt=""
+            aria-hidden="true"
+          />
+          <div className="sukuna-fire" aria-hidden="true" />
+          <div className="sukuna-reveal" aria-hidden="true" />
+        </div>
+      )}
       <footer className="site-footer">
         <div className="footer-main">
           <Link className="footer-brand" href={href('home')}>

@@ -189,12 +189,33 @@ assert(
   !categoryConfig.includes('character:'),
   'Character labels remain in category data',
 );
+for (const mapping of [
+  "asset: '/Mahito.svg'",
+  "asset: '/Dagon.svg'",
+  "audio: '/audio/gojo-domain-expansion.m4a'",
+  "audio: '/audio/sukuna-domain-expansion.m4a'",
+  "audio: '/audio/mahito-domain-expansion.m4a'",
+  "audio: '/audio/dagon-domain-expansion.m4a'",
+]) {
+  assert(categoryConfig.includes(mapping), `Missing domain media ${mapping}`);
+}
+assert(
+  !categoryConfig.includes('/Megumi-Fushiguro.svg') &&
+    !categoryConfig.includes('/Toji-Fushiguro.svg'),
+  'Replaced domain artwork remains configured',
+);
 for (const asset of [
   'Kento-Nanami.svg',
   'Mei-Mei.svg',
   'Satoru-Gojo-ISE.svg',
   'Ryomen-Sukuna.svg',
-  'Toji-Fushiguro.svg',
+  'Dagon.svg',
+  'Mahito.svg',
+  'Sukuna-Domain-Expansion.svg',
+  'audio/dagon-domain-expansion.m4a',
+  'audio/gojo-domain-expansion.m4a',
+  'audio/mahito-domain-expansion.m4a',
+  'audio/sukuna-domain-expansion.m4a',
   'curriculum-1403.pdf',
 ])
   assert(existsSync(new URL(`../public/${asset}`, import.meta.url)), asset);
