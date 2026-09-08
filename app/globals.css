@@ -773,8 +773,66 @@ svg {
   transform: none;
 }
 .entry {
-  padding: 15vh 10%;
-  font-size: 1.5rem;
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      color-mix(in srgb, var(--accent) 12%, transparent),
+      transparent 28%
+    ),
+    var(--background);
+}
+.entry-loader {
+  position: relative;
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+}
+.entry-loader-orbit {
+  position: absolute;
+  inset: 3px;
+  border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: entry-orbit 0.9s linear infinite;
+}
+.entry-loader-orbit::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+.entry-loader-core {
+  width: 15px;
+  height: 15px;
+  border-radius: 4px;
+  background: var(--foreground);
+  animation: entry-pulse 0.9s ease-in-out infinite alternate;
+}
+@keyframes entry-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes entry-pulse {
+  to {
+    opacity: 0.45;
+    transform: scale(0.72) rotate(45deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .entry-loader-orbit,
+  .entry-loader-core {
+    animation-duration: 2.4s;
+  }
 }
 @media (min-width: 1440px) {
   .main-content {
@@ -1540,7 +1598,7 @@ svg {
 }
 .career-map {
   display: grid;
-  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  grid-template-columns: 1fr;
   gap: 24px;
   margin-bottom: 52px;
 }
@@ -1551,6 +1609,14 @@ svg {
   background: var(--surface);
 }
 .career-map-intro {
+  display: grid;
+  grid-template-areas:
+    'eyebrow stats'
+    'title stats'
+    'copy stats';
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 4px 42px;
   padding: 34px;
   background:
     radial-gradient(
@@ -1560,20 +1626,26 @@ svg {
     ),
     var(--surface);
 }
+.career-map-intro > .overline {
+  grid-area: eyebrow;
+}
 .career-map-intro h2 {
-  max-width: 510px;
+  grid-area: title;
+  max-width: 760px;
   margin: 14px 0;
   font-size: clamp(1.9rem, 3vw, 3rem);
 }
 .career-map-intro > p:last-of-type {
+  grid-area: copy;
   max-width: 560px;
   color: var(--muted);
   font-size: 1rem;
 }
 .career-map-counts {
+  grid-area: stats;
   display: flex;
   gap: 14px;
-  margin-top: 30px;
+  margin: 0;
 }
 .career-map-counts span {
   min-width: 105px;
@@ -1603,7 +1675,8 @@ svg {
 }
 .career-tree > ol {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr);
+  align-items: start;
   gap: 18px;
   list-style: none;
   padding: 22px 0 0;
@@ -1640,6 +1713,14 @@ svg {
   list-style: none;
   padding: 16px 0 0;
   margin: 0;
+}
+.career-tree-domain-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.career-tree-track-traditional .career-tree-domain-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 .career-tree-domains > li > a strong {
   font-size: 0.78rem;
@@ -2899,6 +2980,18 @@ html[lang='fa'] [lang='en'] {
   }
 }
 @media (max-width: 900px) {
+  .career-map-intro {
+    grid-template-areas:
+      'eyebrow'
+      'title'
+      'copy'
+      'stats';
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .career-map-counts {
+    margin-top: 24px;
+  }
   .career-tree > ol {
     grid-template-columns: 1fr;
   }
@@ -2922,6 +3015,10 @@ html[lang='fa'] [lang='en'] {
   .career-card-grid,
   .career-detail-columns {
     grid-template-columns: 1fr;
+  }
+  .career-tree-track-traditional .career-tree-domain-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
   .career-domain-heading {
     grid-template-columns: auto 1fr;

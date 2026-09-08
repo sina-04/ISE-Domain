@@ -130,49 +130,67 @@ export function CareerGuide({
             </span>
           </div>
           <ol className="career-tree-tracks">
-            {careerTracks.map((track, trackIndex) => (
-              <li className="career-tree-track" key={track.id}>
-                <div className="career-tree-track-heading">
-                  <span>{String(trackIndex + 1).padStart(2, '0')}</span>
-                  <strong>{track.name[locale]}</strong>
-                </div>
-                <ol className="career-tree-domains">
-                  {track.domainIds.map((domainId, domainIndex) => {
-                    const domain = careerDomains.find(
-                      (item) => item.id === domainId,
-                    )!;
-                    return (
-                      <li key={domain.id}>
-                        <a href={`#career-domain-${domain.id}`}>
-                          <span>
-                            {trackIndex + 1}.{domainIndex + 1}
-                          </span>
-                          <strong>{domain.name[locale]}</strong>
-                        </a>
-                        <ul>
-                          {domain.careerIds.map((id) => {
-                            const career = careerById[id];
-                            return (
-                              <li key={id}>
-                                <button
-                                  type="button"
-                                  onClick={() => onOpen(career)}
-                                >
-                                  {career.name[locale]}
-                                  {career.abbreviation && (
-                                    <small>{career.abbreviation}</small>
-                                  )}
-                                </button>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </li>
-                    );
-                  })}
-                </ol>
-              </li>
-            ))}
+            {careerTracks.map((track, trackIndex) => {
+              const domainGroups =
+                track.id === 'traditional'
+                  ? [track.domainIds.slice(0, 3), track.domainIds.slice(3)]
+                  : [track.domainIds];
+
+              return (
+                <li
+                  className={`career-tree-track career-tree-track-${track.id}`}
+                  key={track.id}
+                >
+                  <div className="career-tree-track-heading">
+                    <span>{String(trackIndex + 1).padStart(2, '0')}</span>
+                    <strong>{track.name[locale]}</strong>
+                  </div>
+                  <div className="career-tree-domain-columns">
+                    {domainGroups.map((domainIds, groupIndex) => (
+                      <ol
+                        className="career-tree-domains"
+                        key={`${track.id}-${groupIndex}`}
+                      >
+                        {domainIds.map((domainId) => {
+                          const domainIndex = track.domainIds.indexOf(domainId);
+                          const domain = careerDomains.find(
+                            (item) => item.id === domainId,
+                          )!;
+                          return (
+                            <li key={domain.id}>
+                              <a href={`#career-domain-${domain.id}`}>
+                                <span>
+                                  {trackIndex + 1}.{domainIndex + 1}
+                                </span>
+                                <strong>{domain.name[locale]}</strong>
+                              </a>
+                              <ul>
+                                {domain.careerIds.map((id) => {
+                                  const career = careerById[id];
+                                  return (
+                                    <li key={id}>
+                                      <button
+                                        type="button"
+                                        onClick={() => onOpen(career)}
+                                      >
+                                        {career.name[locale]}
+                                        {career.abbreviation && (
+                                          <small>{career.abbreviation}</small>
+                                        )}
+                                      </button>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </li>
+                          );
+                        })}
+                      </ol>
+                    ))}
+                  </div>
+                </li>
+              );
+            })}
           </ol>
         </nav>
       </section>

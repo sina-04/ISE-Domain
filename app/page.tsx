@@ -1,6 +1,5 @@
 'use client';
 import { useEffect } from 'react';
-import Link from '@/components/site-link';
 import { withBasePath } from '@/lib/base-path';
 export default function Entry() {
   useEffect(() => {
@@ -12,7 +11,13 @@ export default function Entry() {
   }, []);
   return (
     <main className="entry">
-      <Link href="/en">ISE DOMAIN · Enter / ورود</Link>
+      <output
+        className="entry-loader"
+        aria-label="Loading ISE Domain / در حال بارگذاری"
+      >
+        <span className="entry-loader-orbit" aria-hidden="true" />
+        <span className="entry-loader-core" aria-hidden="true" />
+      </output>
     </main>
   );
 }
