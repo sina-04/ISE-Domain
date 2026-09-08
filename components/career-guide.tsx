@@ -22,7 +22,7 @@ import Link from '@/components/site-link';
 import {
   careerById,
   careerDomains,
-  careers,
+  careerTracks,
   type CareerProfile,
 } from '@/lib/catalog';
 import type { Locale } from '@/lib/domain-config';
@@ -51,7 +51,9 @@ function CareerCard({
         <BriefcaseBusiness size={20} />
       </span>
       <span className="career-card-copy">
-        <span className="career-card-kicker">{career.abbreviation}</span>
+        {career.abbreviation && (
+          <span className="career-card-kicker">{career.abbreviation}</span>
+        )}
         <strong>{career.name[locale]}</strong>
         <span>{career.summary[locale]}</span>
       </span>
@@ -83,7 +85,6 @@ export function CareerGuide({
   onClose: () => void;
 }) {
   const t = (en: string, fa: string) => (locale === 'fa' ? fa : en);
-  const supplemental = careers.filter((career) => career.supplemental);
 
   return (
     <>
@@ -94,8 +95,8 @@ export function CareerGuide({
           </p>
           <h2 id="career-map-title">
             {t(
-              'Nine domains. Many ways forward.',
-              'نه حوزه؛ مسیرهای گوناگون برای آینده.',
+              'Two branches. Ten domains. Many ways forward.',
+              'دو شاخه، ده حوزه و مسیرهای گوناگون برای آینده.',
             )}
           </h2>
           <p>
@@ -109,11 +110,11 @@ export function CareerGuide({
             aria-label={t('Career guide totals', 'آمار راهنمای شغلی')}
           >
             <span>
-              <strong>{locale === 'fa' ? '۹' : '9'}</strong>
+              <strong>{locale === 'fa' ? '۱۰' : '10'}</strong>
               {t('domains', 'حوزه')}
             </span>
             <span>
-              <strong>{locale === 'fa' ? '۲۶' : '26'}</strong>
+              <strong>{locale === 'fa' ? '۳۰' : '30'}</strong>
               {t('career paths', 'مسیر شغلی')}
             </span>
           </div>
@@ -128,104 +129,112 @@ export function CareerGuide({
               {t('Career & Professional Domains', 'حوزه‌های شغلی و حرفه‌ای')}
             </span>
           </div>
-          <ol>
-            {careerDomains.map((domain, domainIndex) => (
-              <li key={domain.id}>
-                <a href={`#career-domain-${domain.id}`}>
-                  <span>{String(domainIndex + 1).padStart(2, '0')}</span>
-                  <strong>{domain.name[locale]}</strong>
-                </a>
-                <ul>
-                  {domain.careerIds.map((id) => {
-                    const career = careerById[id];
+          <ol className="career-tree-tracks">
+            {careerTracks.map((track, trackIndex) => (
+              <li className="career-tree-track" key={track.id}>
+                <div className="career-tree-track-heading">
+                  <span>{String(trackIndex + 1).padStart(2, '0')}</span>
+                  <strong>{track.name[locale]}</strong>
+                </div>
+                <ol className="career-tree-domains">
+                  {track.domainIds.map((domainId, domainIndex) => {
+                    const domain = careerDomains.find(
+                      (item) => item.id === domainId,
+                    )!;
                     return (
-                      <li key={id}>
-                        <button type="button" onClick={() => onOpen(career)}>
-                          {career.name[locale]}
-                          {career.abbreviation && (
-                            <small>{career.abbreviation}</small>
-                          )}
-                        </button>
+                      <li key={domain.id}>
+                        <a href={`#career-domain-${domain.id}`}>
+                          <span>
+                            {trackIndex + 1}.{domainIndex + 1}
+                          </span>
+                          <strong>{domain.name[locale]}</strong>
+                        </a>
+                        <ul>
+                          {domain.careerIds.map((id) => {
+                            const career = careerById[id];
+                            return (
+                              <li key={id}>
+                                <button
+                                  type="button"
+                                  onClick={() => onOpen(career)}
+                                >
+                                  {career.name[locale]}
+                                  {career.abbreviation && (
+                                    <small>{career.abbreviation}</small>
+                                  )}
+                                </button>
+                              </li>
+                            );
+                          })}
+                        </ul>
                       </li>
                     );
                   })}
-                </ul>
+                </ol>
               </li>
             ))}
           </ol>
         </nav>
       </section>
 
-      <div className="career-domain-list">
-        {careerDomains.map((domain, domainIndex) => (
-          <section
-            className="career-domain-section"
-            id={`career-domain-${domain.id}`}
-            key={domain.id}
-          >
-            <div className="career-domain-heading">
-              <span>{String(domainIndex + 1).padStart(2, '0')}</span>
+      <div className="career-track-list">
+        {careerTracks.map((track, trackIndex) => (
+          <section className="career-track-section" key={track.id}>
+            <div className="career-track-heading">
+              <span>{String(trackIndex + 1).padStart(2, '0')}</span>
               <div>
                 <p className="overline">
-                  {t('PROFESSIONAL DOMAIN', 'حوزه حرفه‌ای')}
+                  {t('ISE CAREER BRANCH', 'شاخه مسیرهای مهندسی صنایع')}
                 </p>
-                <h2>{domain.name[locale]}</h2>
+                <h2>{track.name[locale]}</h2>
               </div>
-              <small>
-                {new Intl.NumberFormat(
-                  locale === 'fa' ? 'fa-IR' : 'en-US',
-                ).format(domain.careerIds.length)}{' '}
-                {t('paths', 'مسیر')}
-              </small>
             </div>
-            <div className="career-card-grid">
-              {domain.careerIds.map((id, careerIndex) => (
-                <CareerCard
-                  key={id}
-                  career={careerById[id]}
-                  locale={locale}
-                  number={`${String(domainIndex + 1).padStart(2, '0')}.${careerIndex + 1}`}
-                  onOpen={onOpen}
-                />
-              ))}
+            <div className="career-domain-list">
+              {track.domainIds.map((domainId, domainIndex) => {
+                const domain = careerDomains.find(
+                  (item) => item.id === domainId,
+                )!;
+                return (
+                  <section
+                    className="career-domain-section"
+                    id={`career-domain-${domain.id}`}
+                    key={domain.id}
+                  >
+                    <div className="career-domain-heading">
+                      <span>
+                        {trackIndex + 1}.{domainIndex + 1}
+                      </span>
+                      <div>
+                        <p className="overline">
+                          {t('PROFESSIONAL DOMAIN', 'حوزه حرفه‌ای')}
+                        </p>
+                        <h3>{domain.name[locale]}</h3>
+                      </div>
+                      <small>
+                        {new Intl.NumberFormat(
+                          locale === 'fa' ? 'fa-IR' : 'en-US',
+                        ).format(domain.careerIds.length)}{' '}
+                        {t('paths', 'مسیر')}
+                      </small>
+                    </div>
+                    <div className="career-card-grid">
+                      {domain.careerIds.map((id, careerIndex) => (
+                        <CareerCard
+                          key={id}
+                          career={careerById[id]}
+                          locale={locale}
+                          number={`${trackIndex + 1}.${domainIndex + 1}.${careerIndex + 1}`}
+                          onOpen={onOpen}
+                        />
+                      ))}
+                    </div>
+                  </section>
+                );
+              })}
             </div>
           </section>
         ))}
       </div>
-
-      <section
-        className="career-related"
-        aria-labelledby="related-careers-title"
-      >
-        <div className="section-heading">
-          <div>
-            <p className="overline">
-              {t('RELATED DIRECTIONS', 'مسیرهای مرتبط')}
-            </p>
-            <h2 id="related-careers-title">
-              {t('EXPLORE THE EDGES', 'افق‌های نزدیک را هم ببینید')}
-              <span className="heading-dot">.</span>
-            </h2>
-          </div>
-          <p>
-            {t(
-              'Three broader roles where an ISE foundation also creates a strong advantage.',
-              'سه نقش گسترده‌تر که پایه مهندسی صنایع در آن‌ها نیز مزیت مهمی ایجاد می‌کند.',
-            )}
-          </p>
-        </div>
-        <div className="career-card-grid career-card-grid-related">
-          {supplemental.map((career, index) => (
-            <CareerCard
-              key={career.id}
-              career={career}
-              locale={locale}
-              number={`R.${index + 1}`}
-              onOpen={onOpen}
-            />
-          ))}
-        </div>
-      </section>
 
       <CareerDialog
         career={selectedCareer}
@@ -296,12 +305,8 @@ function CareerDialog({
                 <X size={21} />
               </DialogClose>
               <div className="career-dialog-meta">
-                <span>{career.abbreviation}</span>
-                <span>
-                  {career.supplemental
-                    ? t('Related career', 'مسیر مرتبط')
-                    : domain?.name[locale]}
-                </span>
+                {career.abbreviation && <span>{career.abbreviation}</span>}
+                <span>{domain?.name[locale]}</span>
               </div>
               <DialogTitle>{career.name[locale]}</DialogTitle>
               <DialogDescription>{career.summary[locale]}</DialogDescription>

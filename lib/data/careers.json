@@ -1,23 +1,89 @@
 {
+  "tracks": [
+    {
+      "id": "traditional",
+      "name": {
+        "en": "Traditional ISE Domains",
+        "fa": "حوزه‌های سنتی مهندسی صنایع"
+      },
+      "domainIds": [
+        "analytics",
+        "project",
+        "quality-safety",
+        "logistics-supply-chain",
+        "production",
+        "modeling-optimization",
+        "management"
+      ]
+    },
+    {
+      "id": "modern",
+      "name": {
+        "en": "Modern ISE Domains",
+        "fa": "حوزه‌های نوین مهندسی صنایع"
+      },
+      "domainIds": ["data", "product", "business"]
+    }
+  ],
   "domains": [
     {
-      "id": "data",
-      "name": { "en": "Data Domain", "fa": "حوزه داده" },
+      "id": "analytics",
+      "trackId": "traditional",
+      "name": { "en": "Analytics Domain", "fa": "حوزه تحلیل" },
       "careerIds": [
-        "data-analytics",
-        "data-science",
-        "business-intelligence",
-        "machine-learning-engineering",
-        "ai-engineering"
+        "industrial-engineer",
+        "feasibility-study-consultation",
+        "capital-market-analyst",
+        "hr-specialist"
       ]
     },
     {
       "id": "project",
+      "trackId": "traditional",
       "name": { "en": "Project Domain", "fa": "حوزه پروژه" },
       "careerIds": ["project-control", "project-management", "agile-scrum"]
     },
     {
+      "id": "quality-safety",
+      "trackId": "traditional",
+      "name": {
+        "en": "Quality & Safety Domain",
+        "fa": "حوزه کیفیت و ایمنی"
+      },
+      "careerIds": [
+        "quality-control",
+        "quality-assurance",
+        "iso-standards",
+        "hse"
+      ]
+    },
+    {
+      "id": "logistics-supply-chain",
+      "trackId": "traditional",
+      "name": {
+        "en": "Logistics and Supply Chain Domain",
+        "fa": "حوزه لجستیک و زنجیره تأمین"
+      },
+      "careerIds": ["logisticians"]
+    },
+    {
+      "id": "production",
+      "trackId": "traditional",
+      "name": { "en": "Production Domain", "fa": "حوزه تولید" },
+      "careerIds": ["production-planning"]
+    },
+    {
+      "id": "modeling-optimization",
+      "trackId": "traditional",
+      "name": {
+        "en": "Mathematical Modeling & Optimization Domain",
+        "fa": "حوزه مدل‌سازی ریاضی و بهینه‌سازی"
+      },
+      "careerIds": ["operations-research-analysis"]
+    },
+    {
       "id": "management",
+      "trackId": "traditional",
       "name": { "en": "Management Domain", "fa": "حوزه مدیریت" },
       "careerIds": [
         "executive-management",
@@ -28,44 +94,27 @@
       ]
     },
     {
-      "id": "product",
-      "name": { "en": "Product", "fa": "محصول" },
-      "careerIds": ["product-design", "product-management", "product-owner"]
-    },
-    {
-      "id": "quality-safety",
-      "name": { "en": "Quality & Safety", "fa": "کیفیت و ایمنی" },
+      "id": "data",
+      "trackId": "modern",
+      "name": { "en": "Data Domain", "fa": "حوزه داده" },
       "careerIds": [
-        "quality-control",
-        "quality-assurance",
-        "iso-standards",
-        "hse"
+        "data-analytics",
+        "data-science",
+        "business-intelligence",
+        "machine-learning-engineering",
+        "ai-engineering"
       ]
     },
     {
-      "id": "production",
-      "name": { "en": "Production", "fa": "تولید" },
-      "careerIds": ["production-planning"]
-    },
-    {
-      "id": "logistics-supply-chain",
-      "name": {
-        "en": "Logistics and Supply Chain",
-        "fa": "لجستیک و زنجیره تأمین"
-      },
-      "careerIds": ["logisticians"]
-    },
-    {
-      "id": "modeling-optimization",
-      "name": {
-        "en": "Mathematical Modeling and Optimization",
-        "fa": "مدل‌سازی ریاضی و بهینه‌سازی"
-      },
-      "careerIds": ["operations-research-analysis"]
+      "id": "product",
+      "trackId": "modern",
+      "name": { "en": "Product Domain", "fa": "حوزه محصول" },
+      "careerIds": ["product-design", "product-management", "product-owner"]
     },
     {
       "id": "business",
-      "name": { "en": "Business", "fa": "کسب‌وکار" },
+      "trackId": "modern",
+      "name": { "en": "Business Domain", "fa": "حوزه کسب‌وکار" },
       "careerIds": [
         "mba-dba",
         "business-process-management",
@@ -606,7 +655,7 @@
       "domainId": "project",
       "supplemental": false,
       "name": { "en": "Agile and Scrum Mastery", "fa": "چابکی و اسکرام" },
-      "abbreviation": "Agile",
+      "abbreviation": "SM",
       "summary": {
         "en": "Help cross-functional teams deliver value in short learning cycles while continuously improving how they work.",
         "fa": "به تیم‌های چندتخصصی کمک می‌کند در چرخه‌های کوتاه یادگیری ارزش تحویل دهند و شیوه کار خود را پیوسته بهبود دهند."
@@ -671,7 +720,7 @@
       "domainId": "management",
       "supplemental": false,
       "name": { "en": "Executive Management", "fa": "مدیریت اجرایی" },
-      "abbreviation": "Executive",
+      "abbreviation": "",
       "summary": {
         "en": "Translate organizational goals into coordinated operations, budgets, people decisions, and measurable performance.",
         "fa": "اهداف سازمان را به عملیات هماهنگ، بودجه، تصمیم‌های نیروی انسانی و عملکرد قابل‌اندازه‌گیری تبدیل می‌کند."
@@ -825,7 +874,7 @@
       "domainId": "management",
       "supplemental": false,
       "name": { "en": "Purchasing Management", "fa": "مدیریت خرید" },
-      "abbreviation": "Purchasing",
+      "abbreviation": "",
       "summary": {
         "en": "Secure the right materials and services at the required quality, timing, cost, and commercial risk.",
         "fa": "مواد و خدمات مناسب را با کیفیت، زمان، هزینه و ریسک تجاری مطلوب تأمین می‌کند."
@@ -904,7 +953,7 @@
       "domainId": "management",
       "supplemental": false,
       "name": { "en": "Strategy Management", "fa": "مدیریت استراتژی" },
-      "abbreviation": "Strategy",
+      "abbreviation": "",
       "summary": {
         "en": "Analyze the organization and its environment, choose priorities, and build systems that turn strategy into measurable execution.",
         "fa": "سازمان و محیط آن را تحلیل می‌کند، اولویت‌ها را برمی‌گزیند و سیستم تبدیل راهبرد به اجرای قابل‌اندازه‌گیری را می‌سازد."
@@ -984,7 +1033,7 @@
       "domainId": "management",
       "supplemental": false,
       "name": { "en": "Warehouse Management", "fa": "مدیریت انبار" },
-      "abbreviation": "Warehouse",
+      "abbreviation": "",
       "summary": {
         "en": "Control inventory, space, safety, people, and information so goods move accurately and efficiently.",
         "fa": "موجودی، فضا، ایمنی، نیروی انسانی و اطلاعات را کنترل می‌کند تا کالا دقیق و کارآمد جریان یابد."
@@ -1204,7 +1253,7 @@
       "id": "product-owner",
       "domainId": "product",
       "supplemental": false,
-      "name": { "en": "Product Owner", "fa": "مالک محصول" },
+      "name": { "en": "Product Ownership", "fa": "مالکیت محصول" },
       "abbreviation": "PO",
       "summary": {
         "en": "Maximize the value of a product by maintaining a clear goal and an ordered, understandable backlog for the delivery team.",
@@ -1666,7 +1715,7 @@
       "domainId": "logistics-supply-chain",
       "supplemental": false,
       "name": { "en": "Logisticians", "fa": "کارشناسان لجستیک" },
-      "abbreviation": "Logistics",
+      "abbreviation": "Log.",
       "summary": {
         "en": "Plan and coordinate the movement, storage, and information flow of goods from origin to customer.",
         "fa": "حرکت، نگهداری و جریان اطلاعات کالا را از مبدأ تا مشتری برنامه‌ریزی و هماهنگ می‌کند."
@@ -1746,7 +1795,7 @@
         "en": "Operations Research Analysis",
         "fa": "تحلیل تحقیق در عملیات"
       },
-      "abbreviation": "OR",
+      "abbreviation": "ORA",
       "summary": {
         "en": "Build mathematical and simulation models that compare decisions and allocate scarce resources under constraints.",
         "fa": "مدل‌های ریاضی و شبیه‌سازی می‌سازد تا تصمیم‌ها را مقایسه و منابع محدود را زیر قیود تخصیص دهد."
@@ -1827,7 +1876,7 @@
         "en": "Master/Doctor of Business Administration",
         "fa": "کارشناسی ارشد/دکتری مدیریت کسب‌وکار"
       },
-      "abbreviation": "MBA / DBA",
+      "abbreviation": "MBA/DBA",
       "summary": {
         "en": "A graduate education path for integrating strategy, finance, marketing, operations, leadership, and applied management research.",
         "fa": "مسیر تحصیلات تکمیلی برای یکپارچه‌کردن استراتژی، مالی، بازاریابی، عملیات، رهبری و پژوهش کاربردی مدیریت است."
@@ -2077,10 +2126,86 @@
       }
     },
     {
+      "id": "feasibility-study-consultation",
+      "domainId": "analytics",
+      "supplemental": false,
+      "name": {
+        "en": "Feasibility Study Consultation",
+        "fa": "مشاوره مطالعات امکان‌سنجی"
+      },
+      "abbreviation": "FS",
+      "summary": {
+        "en": "Evaluate whether a proposed investment or project is technically, commercially, operationally, and financially viable before major resources are committed.",
+        "fa": "پیش از تخصیص منابع اصلی، امکان‌پذیری فنی، تجاری، عملیاتی و مالی یک سرمایه‌گذاری یا پروژه پیشنهادی را ارزیابی می‌کند."
+      },
+      "iseFit": {
+        "en": "Engineering economy, forecasting, process design, capacity analysis, and risk modeling give ISE graduates a strong foundation for integrated feasibility work.",
+        "fa": "اقتصاد مهندسی، پیش‌بینی، طراحی فرایند، تحلیل ظرفیت و مدل‌سازی ریسک، پایه‌ای قوی برای مطالعات یکپارچه امکان‌سنجی به دانش‌آموختگان صنایع می‌دهد."
+      },
+      "dayInLife": {
+        "en": "Gather market and technical assumptions, estimate demand and capacity, build financial scenarios, test risks, and turn the findings into a decision-ready report.",
+        "fa": "فرض‌های بازار و فنی را گردآوری می‌کند، تقاضا و ظرفیت را برآورد، سناریوهای مالی را مدل، ریسک‌ها را آزمون و یافته‌ها را در گزارشی آماده تصمیم ارائه می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Define the scope and assumptions of a feasibility study",
+          "Assess market, technical, operational, and financial viability",
+          "Present risks, scenarios, and a clear investment recommendation"
+        ],
+        "fa": [
+          "تعریف دامنه و فرض‌های مطالعه امکان‌سنجی",
+          "ارزیابی امکان‌پذیری بازار، فنی، عملیاتی و مالی",
+          "ارائه ریسک‌ها، سناریوها و پیشنهاد روشن برای سرمایه‌گذاری"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Market and demand analysis",
+          "Engineering economics and financial modeling",
+          "Risk, sensitivity, and scenario analysis"
+        ],
+        "fa": [
+          "تحلیل بازار و تقاضا",
+          "اقتصاد مهندسی و مدل‌سازی مالی",
+          "تحلیل ریسک، حساسیت و سناریو"
+        ]
+      },
+      "tools": ["Excel", "Financial models", "Market research", "Sensitivity analysis"],
+      "entrySteps": {
+        "en": [
+          "Master engineering economy, forecasting, and project evaluation",
+          "Build a complete feasibility case with documented assumptions",
+          "Enter through consulting, investment planning, or project analysis"
+        ],
+        "fa": [
+          "بر اقتصاد مهندسی، پیش‌بینی و ارزیابی پروژه مسلط شوید",
+          "یک نمونه امکان‌سنجی کامل با فرض‌های مستند تهیه کنید",
+          "از مشاوره، برنامه‌ریزی سرمایه‌گذاری یا تحلیل پروژه وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Junior feasibility analyst",
+          "Feasibility-study consultant",
+          "Senior investment or project consultant"
+        ],
+        "fa": [
+          "تحلیلگر تازه‌کار امکان‌سنجی",
+          "مشاور مطالعات امکان‌سنجی",
+          "مشاور ارشد سرمایه‌گذاری یا پروژه"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Investment analyst", "Project analyst", "Business consultant"],
+        "fa": ["تحلیلگر سرمایه‌گذاری", "تحلیلگر پروژه", "مشاور کسب‌وکار"]
+      },
+      "source": null
+    },
+    {
       "id": "capital-market-analyst",
-      "domainId": "business",
-      "supplemental": true,
-      "name": { "en": "Capital Market Analyst", "fa": "تحلیلگر بازار سرمایه" },
+      "domainId": "analytics",
+      "supplemental": false,
+      "name": { "en": "Capital Market Analysis", "fa": "تحلیل بازار سرمایه" },
       "abbreviation": "CMA",
       "summary": {
         "en": "Evaluate companies, securities, economic conditions, and risk to support informed investment decisions.",
@@ -2153,8 +2278,8 @@
     },
     {
       "id": "hr-specialist",
-      "domainId": "management",
-      "supplemental": true,
+      "domainId": "analytics",
+      "supplemental": false,
       "name": { "en": "HR Specialist", "fa": "کارشناس منابع انسانی" },
       "abbreviation": "HR",
       "summary": {
@@ -2232,10 +2357,10 @@
     },
     {
       "id": "industrial-engineer",
-      "domainId": "management",
-      "supplemental": true,
-      "name": { "en": "Industrial Engineer", "fa": "مهندس صنایع" },
-      "abbreviation": "ISE",
+      "domainId": "analytics",
+      "supplemental": false,
+      "name": { "en": "Industrial Engineering", "fa": "مهندسی صنایع" },
+      "abbreviation": "IE",
       "summary": {
         "en": "Improve integrated systems of people, materials, information, equipment, and energy across products and services.",
         "fa": "سیستم‌های یکپارچه انسان، مواد، اطلاعات، تجهیزات و انرژی را در تولید و خدمات بهبود می‌دهد."

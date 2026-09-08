@@ -94,35 +94,58 @@ for (const t of tools) {
   for (const id of t.courseIds) assert(ids.has(id));
 }
 const careerIds = new Set(careerData.careers.map((career) => career.id));
-assert.equal(careerData.domains.length, 9, 'Career domain count');
-assert.equal(careerData.careers.length, 29, 'Career profile count');
-assert.equal(
-  careerData.careers.filter((career) => !career.supplemental).length,
-  26,
-  'Primary career count',
-);
+assert.equal(careerData.tracks.length, 2, 'Career track count');
+assert.equal(careerData.domains.length, 10, 'Career domain count');
+assert.equal(careerData.careers.length, 30, 'Career profile count');
 assert.equal(
   careerData.careers.filter((career) => career.supplemental).length,
-  3,
-  'Supplemental career count',
+  0,
+  'Obsolete supplemental careers remain',
 );
 assert.equal(careerIds.size, careerData.careers.length, 'Duplicate career IDs');
-const primaryCareerIds = careerData.domains.flatMap(
-  (domain) => domain.careerIds,
+assert.deepEqual(
+  careerData.tracks.map((track) => [track.id, ...track.domainIds]),
+  [
+    [
+      'traditional',
+      'analytics',
+      'project',
+      'quality-safety',
+      'logistics-supply-chain',
+      'production',
+      'modeling-optimization',
+      'management',
+    ],
+    ['modern', 'data', 'product', 'business'],
+  ],
+  'Career track hierarchy',
 );
+const treeCareerIds = careerData.domains.flatMap((domain) => domain.careerIds);
 assert.equal(
-  new Set(primaryCareerIds).size,
-  26,
-  'Primary career tree membership',
+  new Set(treeCareerIds).size,
+  30,
+  'Career tree membership',
 );
-for (const id of primaryCareerIds) {
+for (const id of treeCareerIds) {
   const career = careerData.careers.find((item) => item.id === id);
-  assert(career && !career.supplemental, `Invalid primary career ${id}`);
+  assert(career && !career.supplemental, `Invalid tree career ${id}`);
+}
+const domainIds = new Set(careerData.domains.map((domain) => domain.id));
+for (const track of careerData.tracks) {
+  assert(track.name.en && track.name.fa, `${track.id} name`);
+  for (const id of track.domainIds) assert(domainIds.has(id), `${id} domain`);
 }
 for (const domain of careerData.domains) {
   assert(
     domain.name.en && domain.name.fa && domain.careerIds.length,
     domain.id,
+  );
+  assert.equal(
+    careerData.tracks.find((track) => track.id === domain.trackId)?.domainIds.includes(
+      domain.id,
+    ),
+    true,
+    `${domain.id} track`,
   );
   for (const id of domain.careerIds)
     assert.equal(

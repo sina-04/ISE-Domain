@@ -72,8 +72,14 @@ export interface CareerProfile {
   relatedRoles: { en: string[]; fa: string[] };
   source: CareerSource | null;
 }
+export interface CareerTrack {
+  id: string;
+  name: Text;
+  domainIds: string[];
+}
 export interface CareerDomain {
   id: string;
+  trackId: string;
   name: Text;
   careerIds: string[];
 }
@@ -81,6 +87,7 @@ export const courses = courseData as Course[];
 export const undergraduate = courses.filter((c) => c.group !== 'supplementary');
 export const pathways = pathwayData as Pathway[];
 export const tools = toolData as Tool[];
+export const careerTracks = careerData.tracks as CareerTrack[];
 export const careerDomains = careerData.domains as CareerDomain[];
 export const careers = careerData.careers as CareerProfile[];
 export const careerById = Object.fromEntries(careers.map((c) => [c.id, c]));
