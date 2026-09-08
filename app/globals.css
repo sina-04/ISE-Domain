@@ -300,7 +300,53 @@ svg {
   display: grid;
   grid-template-columns: 1fr 290px;
   gap: 40px;
-  padding: 50px 0 45px;
+  padding: 28px 0 34px;
+  align-items: stretch;
+}
+.intro-main {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 430px;
+  padding: 48px 42px 44px;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
+  border-radius: 12px;
+  background: #09090f;
+  color: #f4f2fa;
+}
+.intro-main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(8, 8, 14, 0.94) 0%, rgba(8, 8, 14, 0.78) 54%, rgba(8, 8, 14, 0.42) 100%),
+    linear-gradient(0deg, rgba(8, 8, 14, 0.68), transparent 55%);
+}
+.intro-art {
+  position: absolute;
+  inset: -14px;
+  z-index: -2;
+  width: calc(100% + 28px);
+  height: calc(100% + 28px);
+  object-fit: cover;
+  object-position: center;
+  filter: blur(5px) saturate(0.82);
+  opacity: 0.58;
+  transform: scale(1.04);
+}
+.intro-main-content {
+  position: relative;
+  z-index: 1;
+  min-height: 336px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.intro-main .overline,
+.intro-main .intro-copy {
+  color: #b9b5c8;
 }
 .overline {
   font-size: 0.6875rem;
@@ -738,6 +784,9 @@ footer > span {
   .intro {
     grid-template-columns: 1fr 210px;
   }
+  .intro-main {
+    padding-inline: 32px;
+  }
   .intro-aside {
     padding-inline-start: 25px;
   }
@@ -792,6 +841,13 @@ footer > span {
   .intro {
     display: block;
     padding: 30px 0;
+  }
+  .intro-main {
+    min-height: 430px;
+    padding: 34px 24px;
+  }
+  .intro-main-content {
+    min-height: 360px;
   }
   .intro h1 {
     font-size: 3.4rem;
@@ -2165,10 +2221,39 @@ html[lang='fa'] .brand {
     clip-path: circle(var(--theme-radius) at var(--theme-x) var(--theme-y));
   }
 }
+
+/* Elements enter once as they cross the viewport, with motion disabled on request. */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+.domain-card.scroll-reveal:nth-child(2n),
+.module-card.scroll-reveal:nth-child(2n) {
+  transition-delay: 70ms;
+}
+.domain-card.scroll-reveal:nth-child(3n),
+.module-card.scroll-reveal:nth-child(3n) {
+  transition-delay: 140ms;
+}
 ::view-transition-group(root) {
   animation-duration: 0s;
 }
 @media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
   ::view-transition-group(root),
   ::view-transition-new(root) {
     animation: none;

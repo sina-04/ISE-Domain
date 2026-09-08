@@ -1,13 +1,14 @@
 'use client';
 import { useEffect } from 'react';
 import Link from '@/components/site-link';
+import { withBasePath } from '@/lib/base-path';
 export default function Entry() {
   useEffect(() => {
     let locale = 'en';
     try {
       locale = localStorage.getItem('ise-language') === 'fa' ? 'fa' : 'en';
     } catch {}
-    window.location.replace(`/${locale}`);
+    window.location.replace(withBasePath(`/${locale}`));
   }, []);
   return (
     <main className="entry">

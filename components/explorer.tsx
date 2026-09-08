@@ -43,6 +43,7 @@ import {
   type Course,
 } from '@/lib/catalog';
 import { resources } from '@/lib/resources';
+import { withBasePath } from '@/lib/base-path';
 const pageNames: Record<string, Text> = {
   chart: { en: 'CHART ANALYSIS', fa: 'تحلیل چارت' },
   majors: { en: 'FIND YOUR DIRECTION', fa: 'مسیر خود را پیدا کنید' },
@@ -85,7 +86,7 @@ function OutLink({
 }) {
   return (
     <a
-      href={href}
+      href={withBasePath(href)}
       target="_blank"
       rel="noopener noreferrer"
       className={`out-link ${className}`}
@@ -140,7 +141,9 @@ export function Explorer({
     window.history.replaceState(
       window.history.state,
       '',
-      `/${locale}/${section}${next.size ? '?' + next.toString() : ''}`,
+      withBasePath(
+        `/${locale}/${section}${next.size ? '?' + next.toString() : ''}`,
+      ),
     );
     window.dispatchEvent(new Event('ise-querychange'));
   };
@@ -517,7 +520,7 @@ export function Explorer({
                         >
                           {cat.asset && (
                             <img
-                              src={cat.asset}
+                              src={withBasePath(cat.asset)}
                               alt=""
                               loading="lazy"
                               className="category-art"
@@ -1037,7 +1040,11 @@ function CourseDialog({
               }
             >
               {cat?.asset && (
-                <img alt="" src={cat.asset} className="category-art" />
+                <img
+                  alt=""
+                  src={withBasePath(cat.asset)}
+                  className="category-art"
+                />
               )}
               <div className="card-shade" />
               <Link

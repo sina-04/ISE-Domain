@@ -46,3 +46,5 @@ Data checks cover course identity, degree and category totals, accounting overla
 ## Deployment
 
 Reuse the existing `.openai/hosting.json` Sites project. Build, push the exact validated source with a short-lived credential, package using the Sites hosting helper, save that commit's version, and deploy to the project's existing audience. Never put source credentials in files or Git configuration.
+
+GitHub Pages is deployed from `.github/workflows/deploy-pages.yml`. The workflow builds a static export with the `/ISE-Domain` asset prefix, creates directory indexes for clean localized routes, and publishes `dist/client` instead of rendering this README as the project homepage.

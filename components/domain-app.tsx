@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 import { categories, type Locale } from '@/lib/domain-config';
 import { Explorer } from '@/components/explorer';
+import { withBasePath } from '@/lib/base-path';
 const navigation = [
   ['home', 'Overview', 'نمای کلی'],
   ['chart', 'Chart Analysis', 'تحلیل چارت'],
@@ -99,6 +100,60 @@ export function DomainApp({
       window.clearInterval(refresh);
     };
   }, []);
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const revealSelector = [
+      '.eyebrow',
+      '.intro',
+      '.stats-strip',
+      '.section-heading',
+      '.domain-card',
+      '.module-card',
+      '.japan-note',
+      '.page-heading',
+      '.explorer-toolbar',
+      '.source-note',
+      '.degree-summary',
+      '.course-group',
+      '.pathway-card',
+      '.supporting-grid',
+      '.tool-card',
+      '.japan-explainer',
+      '.resource-row',
+      '.wiki-row',
+      'footer',
+    ].join(',');
+    const tracked = new WeakSet<Element>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -5% 0px' },
+    );
+    const register = () => {
+      document.querySelectorAll(revealSelector).forEach((element) => {
+        if (tracked.has(element)) return;
+        tracked.add(element);
+        element.classList.add('scroll-reveal');
+        observer.observe(element);
+      });
+    };
+
+    register();
+    const main = document.getElementById('main');
+    const mutations = new MutationObserver(register);
+    if (main) mutations.observe(main, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutations.disconnect();
+    };
+  }, [section]);
   async function toggleTheme(event: MouseEvent<HTMLButtonElement>) {
     if (themeTransition.current) return;
     const next = theme === 'dark' ? 'light' : 'dark';
@@ -210,10 +265,14 @@ export function DomainApp({
           </div>
           <a
             className="language-button"
-            href={`/${fa ? 'en' : 'fa'}${section === 'home' ? '' : `/${section}`}`}
+            href={withBasePath(
+              `/${fa ? 'en' : 'fa'}${section === 'home' ? '' : `/${section}`}`,
+            )}
             onClick={(e) => {
               e.preventDefault();
-              window.location.href = `/${fa ? 'en' : 'fa'}${section === 'home' ? '' : `/${section}`}${window.location.search}`;
+              window.location.href = withBasePath(
+                `/${fa ? 'en' : 'fa'}${section === 'home' ? '' : `/${section}`}${window.location.search}`,
+              );
             }}
             lang={fa ? 'en' : 'fa'}
           >
@@ -248,25 +307,33 @@ export function DomainApp({
               </span>
             </div>
             <section className="intro">
-              <div>
-                <p className="overline">
-                  {t('WELCOME TO YOUR DOMAIN', 'به قلمرو خودتان خوش آمدید')}
-                </p>
-                <h1>
-                  {t('EVERY SYSTEM.', 'دنیای سیستم‌ها،')}
-                  <br />
-                  <span>{t('INFINITE POSSIBILITIES.', 'قلمرو فرصت‌ها.')}</span>
-                </h1>
-                <p className="intro-copy">
-                  {t(
-                    'People. Data. Decisions. Discover the engineering that connects them all — and find where you belong.',
-                    'مهندسی صنایع و سیستم‌ها، انسان‌ها، داده‌ها و فرایندها را به هم پیوند می‌دهد تا تصمیم‌های بهتری بگیریم. از شناخت درس‌ها شروع کنید و مسیر خودتان را بسازید.',
-                  )}
-                </p>
-                <Link className="primary-button" href={href('chart')}>
-                  {t('Explore the curriculum', 'کاوش در برنامه درسی')}
-                  <ArrowUpRight size={18} />
-                </Link>
+              <div className="intro-main">
+                <img
+                  aria-hidden="true"
+                  alt=""
+                  className="intro-art"
+                  src={withBasePath('/JJK-all-in-one.svg')}
+                />
+                <div className="intro-main-content">
+                  <p className="overline">
+                    {t('WELCOME TO YOUR DOMAIN', 'به قلمرو خودتان خوش آمدید')}
+                  </p>
+                  <h1>
+                    {t('EVERY SYSTEM.', 'دنیای سیستم‌ها،')}
+                    <br />
+                    <span>{t('INFINITE POSSIBILITIES.', 'قلمرو فرصت‌ها.')}</span>
+                  </h1>
+                  <p className="intro-copy">
+                    {t(
+                      'People. Data. Decisions. Discover the engineering that connects them all — and find where you belong.',
+                      'مهندسی صنایع و سیستم‌ها، انسان‌ها، داده‌ها و فرایندها را به هم پیوند می‌دهد تا تصمیم‌های بهتری بگیریم. از شناخت درس‌ها شروع کنید و مسیر خودتان را بسازید.',
+                    )}
+                  </p>
+                  <Link className="primary-button" href={href('chart')}>
+                    {t('Explore the curriculum', 'کاوش در برنامه درسی')}
+                    <ArrowUpRight size={18} />
+                  </Link>
+                </div>
               </div>
               <aside className="intro-aside">
                 <span className="vertical-japanese" lang="ja">
@@ -341,7 +408,7 @@ export function DomainApp({
                     {c.asset && (
                       <img
                         loading="lazy"
-                        src={c.asset}
+                        src={withBasePath(c.asset)}
                         alt=""
                         className="category-art"
                       />

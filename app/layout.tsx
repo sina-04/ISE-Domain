@@ -25,7 +25,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `document.documentElement.lang=location.pathname.startsWith('/fa')?'fa':'en';document.documentElement.dir=location.pathname.startsWith('/fa')?'rtl':'ltr';try{document.documentElement.dataset.theme=localStorage.getItem('ise-theme')||'dark'}catch(e){}`,
+            __html: `const fa=/(?:^|\\/)fa(?:\\/|$)/.test(location.pathname);document.documentElement.lang=fa?'fa':'en';document.documentElement.dir=fa?'rtl':'ltr';try{document.documentElement.dataset.theme=localStorage.getItem('ise-theme')||'dark'}catch(e){}`,
           }}
         />
       </head>
