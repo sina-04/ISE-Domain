@@ -18,6 +18,13 @@ import {
 } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import {
   Dialog,
   DialogContent,
   DialogTitle,
@@ -73,6 +80,52 @@ const pageDescriptions: Record<string, Text> = {
     fa: 'نقطه آغاز کنجکاوی؛ مقاله‌های تأییدشده مرتبط با هر درس را به انگلیسی و فارسی کاوش کنید.',
   },
 };
+function FilterSelect({
+  value,
+  label,
+  options,
+  onValueChange,
+  withIcon = false,
+}: {
+  value: string;
+  label: string;
+  options: { value: string; label: string }[];
+  onValueChange: (value: string) => void;
+  withIcon?: boolean;
+}) {
+  return (
+    <div className="select-filter">
+      {withIcon && <SlidersHorizontal size={16} aria-hidden="true" />}
+      <Select
+        value={value}
+        onValueChange={(next) => {
+          if (next !== null) onValueChange(String(next));
+        }}
+      >
+        <SelectTrigger className="filter-select-trigger" aria-label={label}>
+          <SelectValue>
+            {options.find((option) => option.value === value)?.label || value}
+          </SelectValue>
+        </SelectTrigger>
+        <SelectContent
+          className="filter-select-content"
+          align="start"
+          sideOffset={8}
+        >
+          {options.map((option) => (
+            <SelectItem
+              className="filter-select-item"
+              key={option.value}
+              value={option.value}
+            >
+              {option.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </div>
+  );
+}
 function OutLink({
   href,
   children,
@@ -312,36 +365,34 @@ export function Explorer({
           </TabsList>
           <div className="explorer-toolbar">
             {searchBar}
-            <label className="select-filter">
-              <SlidersHorizontal size={16} />
-              <span className="sr-only">
-                {t('Filter courses', 'فیلتر دروس')}
-              </span>
-              <select
-                value={
-                  view === 'content'
-                    ? category
+            <FilterSelect
+              withIcon
+              label={t('Filter courses', 'فیلتر دروس')}
+              value={
+                view === 'content'
+                  ? category
+                  : view === 'official'
+                    ? group
+                    : pathway
+              }
+              onValueChange={(next) =>
+                update({
+                  [view === 'content'
+                    ? 'category'
                     : view === 'official'
-                      ? group
-                      : pathway
-                }
-                onChange={(e) =>
-                  update({
-                    [view === 'content'
-                      ? 'category'
-                      : view === 'official'
-                        ? 'group'
-                        : 'pathway']: e.target.value,
-                  })
-                }
-              >
-                <option value="all">
-                  {t(
+                      ? 'group'
+                      : 'pathway']: next,
+                })
+              }
+              options={[
+                {
+                  value: 'all',
+                  label: t(
                     'All ' + (view === 'pathways' ? 'pathways' : 'categories'),
                     'همه دسته‌ها',
-                  )}
-                </option>
-                {(view === 'content'
+                  ),
+                },
+                ...(view === 'content'
                   ? [
                       ...categories,
                       {
@@ -355,13 +406,9 @@ export function Explorer({
                   : view === 'official'
                     ? officialGroups
                     : pathways.map((p) => ({ id: p.id, title: p.name }))
-                ).map((c) => (
-                  <option value={c.id} key={c.id}>
-                    {c.title[locale]}
-                  </option>
-                ))}
-              </select>
-            </label>
+                ).map((c) => ({ value: c.id, label: c.title[locale] })),
+              ]}
+            />
           </div>
           <TabsContent value={view}>
             {view === 'official' && (
@@ -669,22 +716,18 @@ export function Explorer({
         <>
           <div className="explorer-toolbar">
             {searchBar}
-            <label className="select-filter">
-              <span className="sr-only">
-                {t('Filter by pathway', 'فیلتر بر اساس مسیر')}
-              </span>
-              <select
-                value={pathway}
-                onChange={(e) => update({ pathway: e.target.value })}
-              >
-                <option value="all">{t('All pathways', 'همه مسیرها')}</option>
-                {pathways.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.name[locale]}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <FilterSelect
+              label={t('Filter by pathway', 'فیلتر بر اساس مسیر')}
+              value={pathway}
+              onValueChange={(next) => update({ pathway: next })}
+              options={[
+                { value: 'all', label: t('All pathways', 'همه مسیرها') },
+                ...pathways.map((p) => ({
+                  value: p.id,
+                  label: p.name[locale],
+                })),
+              ]}
+            />
           </div>
           <p className="source-note">
             {t(
@@ -762,25 +805,18 @@ export function Explorer({
         <>
           <div className="explorer-toolbar">
             {searchBar}
-            <label className="select-filter">
-              <span className="sr-only">{t('Resource type', 'نوع منبع')}</span>
-              <select
-                value={params.get('type') || 'all'}
-                onChange={(e) => update({ type: e.target.value })}
-              >
-                {[
+            <FilterSelect
+              label={t('Resource type', 'نوع منبع')}
+              value={params.get('type') || 'all'}
+              onValueChange={(next) => update({ type: next })}
+              options={[
                   ['all', 'All resources', 'همه منابع'],
                   ['book', 'Books', 'کتاب‌ها'],
                   ['blog', 'Blogs & articles', 'وبلاگ و مقاله'],
                   ['official', 'Official resources', 'منابع رسمی'],
                   ['learning', 'Learning guides', 'راهنمای یادگیری'],
-                ].map(([id, en, fa]) => (
-                  <option key={id} value={id}>
-                    {t(en, fa)}
-                  </option>
-                ))}
-              </select>
-            </label>
+                ].map(([id, en, fa]) => ({ value: id, label: t(en, fa) }))}
+            />
             <button
               className={`filter-chip ${params.get('topic') === 'japan' ? 'selected' : ''}`}
               onClick={() =>
@@ -905,22 +941,21 @@ export function Explorer({
         <>
           <div className="explorer-toolbar">
             {searchBar}
-            <label className="select-filter">
-              <span className="sr-only">{t('Course type', 'نوع درس')}</span>
-              <select
-                value={group}
-                onChange={(e) => update({ group: e.target.value })}
-              >
-                <option value="all">
-                  {t('All course types', 'همه انواع دروس')}
-                </option>
-                {officialGroups.map((g) => (
-                  <option value={g.id} key={g.id}>
-                    {g.title[locale]}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <FilterSelect
+              label={t('Course type', 'نوع درس')}
+              value={group}
+              onValueChange={(next) => update({ group: next })}
+              options={[
+                {
+                  value: 'all',
+                  label: t('All course types', 'همه انواع دروس'),
+                },
+                ...officialGroups.map((g) => ({
+                  value: g.id,
+                  label: g.title[locale],
+                })),
+              ]}
+            />
           </div>
           <p className="source-note">
             <Info size={15} />
