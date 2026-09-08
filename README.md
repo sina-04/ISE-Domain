@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./public/readme-cover.svg" alt="ISE Domain — Industrial and Systems Engineering" width="100%" />
+</p>
+
 # ISE Domain
 
 A bilingual, responsive introduction to Industrial and Systems Engineering. Built on the existing React 19 / TypeScript / vinext / Tailwind / Sites project.

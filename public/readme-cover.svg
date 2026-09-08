@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title description">
+  <title id="title">ISE Domain</title>
+  <desc id="description">Industrial and Systems Engineering courses, pathways, tools, and resources.</desc>
+  <defs>
+    <linearGradient id="background" x1="90" y1="24" x2="1180" y2="410" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171A2B"/>
+      <stop offset="0.52" stop-color="#0C0D12"/>
+      <stop offset="1" stop-color="#11131F"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(1040 212) rotate(180) scale(310 245)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8C77F9" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#8C77F9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="130" y1="112" x2="640" y2="306" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C8BEFF"/>
+      <stop offset="1" stop-color="#8C77F9"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#FFFFFF" stroke-opacity="0.035"/>
+    </pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="420" rx="28" fill="url(#background)"/>
+  <rect width="1280" height="420" rx="28" fill="url(#grid)"/>
+  <rect width="1280" height="420" rx="28" fill="url(#aura)"/>
+  <rect x="1" y="1" width="1278" height="418" rx="27" fill="none" stroke="#FFFFFF" stroke-opacity="0.1"/>
+
+  <g transform="translate(92 78)">
+    <rect width="58" height="58" rx="14" fill="#151725" stroke="#AFA0FF" stroke-opacity="0.55"/>
+    <path d="M17 27V17H27M41 27V17H31M17 31V41H27M41 31V41H31" fill="none" stroke="#AFA0FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="92" y="205" fill="#F5F3FF" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="800" letter-spacing="-3">ISE</text>
+  <text x="218" y="205" fill="url(#accent)" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="300" letter-spacing="-3">DOMAIN</text>
+  <text x="96" y="249" fill="#B9B6C9" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" letter-spacing="5">INDUSTRIAL &amp; SYSTEMS ENGINEERING</text>
+  <line x1="94" y1="286" x2="598" y2="286" stroke="#AFA0FF" stroke-opacity="0.45"/>
+  <text x="96" y="326" fill="#8F91A1" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" letter-spacing="2.5">COURSES  /  PATHWAYS  /  TOOLS  /  RESOURCES</text>
+
+  <g fill="none" stroke-linecap="round">
+    <ellipse cx="1038" cy="210" rx="176" ry="74" stroke="#AFA0FF" stroke-opacity="0.34" stroke-width="1.5" transform="rotate(-18 1038 210)"/>
+    <ellipse cx="1038" cy="210" rx="122" ry="184" stroke="#6F62CA" stroke-opacity="0.26" stroke-width="1.5" transform="rotate(46 1038 210)"/>
+    <ellipse cx="1038" cy="210" rx="201" ry="116" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1.5" transform="rotate(32 1038 210)"/>
+    <path d="M852 252C923 169 1017 153 1158 129" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <path d="M902 94C967 177 1078 259 1178 316" stroke="#AFA0FF" stroke-opacity="0.22"/>
+  </g>
+  <g fill="#AFA0FF">
+    <circle cx="1038" cy="210" r="12" filter="url(#glow)"/>
+    <circle cx="909" cy="140" r="5"/>
+    <circle cx="1154" cy="131" r="5"/>
+    <circle cx="1137" cy="299" r="5"/>
+    <circle cx="932" cy="312" r="5"/>
+  </g>
+  <g fill="#F5F3FF">
+    <circle cx="879" cy="247" r="3.5"/>
+    <circle cx="1081" cy="64" r="3.5"/>
+    <circle cx="1213" cy="220" r="3.5"/>
+  </g>
+  <text x="1005" y="218" fill="#0C0D12" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="900">01</text>
+  <text x="962" y="386" fill="#8F91A1" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" letter-spacing="4">EVERY SYSTEM, CONNECTED</text>
+</svg>
