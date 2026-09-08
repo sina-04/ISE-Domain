@@ -44,19 +44,23 @@ import {
   pathways,
   tools,
   courseById,
+  careerById,
   creditsFor,
   formatNumber,
   courseMatches,
   type Course,
+  type CareerProfile,
 } from '@/lib/catalog';
 import { resources } from '@/lib/resources';
 import { withBasePath } from '@/lib/base-path';
+import { CareerGuide } from '@/components/career-guide';
 const pageNames: Record<string, Text> = {
   chart: { en: 'CHART ANALYSIS', fa: 'تحلیل چارت' },
   majors: { en: 'FIND YOUR DIRECTION', fa: 'مسیر خود را پیدا کنید' },
   tools: { en: 'YOUR ENGINEERING TOOLKIT', fa: 'جعبه‌ابزار مهندسی شما' },
   resources: { en: 'KEEP EXPLORING', fa: 'به کاوش ادامه دهید' },
   wikipedia: { en: 'FOLLOW THE KNOWLEDGE', fa: 'دانش را دنبال کنید' },
+  careers: { en: 'CAREER GUIDE', fa: 'راهنمای مسیر شغلی' },
 };
 const pageDescriptions: Record<string, Text> = {
   chart: {
@@ -78,6 +82,10 @@ const pageDescriptions: Record<string, Text> = {
   wikipedia: {
     en: 'A starting point for curiosity. Explore verified articles related to each course in English and Persian.',
     fa: 'نقطه آغاز کنجکاوی؛ مقاله‌های تأییدشده مرتبط با هر درس را به انگلیسی و فارسی کاوش کنید.',
+  },
+  careers: {
+    en: 'See where Industrial and Systems Engineering can take you—and what to build next for each direction.',
+    fa: 'ببینید مهندسی صنایع و سیستم‌ها شما را به کجا می‌برد و برای هر مسیر چه توانمندی‌هایی باید بسازید.',
   },
 };
 function FilterSelect({
@@ -201,10 +209,15 @@ export function Explorer({
     window.dispatchEvent(new Event('ise-querychange'));
   };
   const selected = courseById[params.get('course') || ''];
+  const selectedCareer = careerById[params.get('career') || ''];
   const selectedCat = categories.find((c) => c.id === category);
   const open = (c: Course) => {
     if (!selected) setReturnFocus(document.activeElement as HTMLElement);
     update({ course: c.id });
+  };
+  const openCareer = (career: CareerProfile) => {
+    if (!selectedCareer) setReturnFocus(document.activeElement as HTMLElement);
+    update({ career: career.id });
   };
   const matching = undergraduate.filter((c) => courseMatches(c, query));
   const catCourses = (id: string) =>
@@ -533,10 +546,6 @@ export function Explorer({
                 {
                   id: 'unmapped',
                   title: { en: 'Not yet grouped', fa: 'هنوز دسته‌بندی نشده' },
-                  character: {
-                    en: 'Additional curriculum courses',
-                    fa: 'سایر دروس برنامه درسی',
-                  },
                   asset: '',
                   position: 'center',
                   mobilePosition: 'center',
@@ -574,9 +583,6 @@ export function Explorer({
                             />
                           )}
                           <div className="card-shade" />
-                          <span className="character">
-                            {cat.character[locale]}
-                          </span>
                           <h2>{cat.title[locale]}</h2>
                           <p>
                             {num(list.length)} {t('courses', 'درس')}{' '}
@@ -629,6 +635,16 @@ export function Explorer({
               : totalMatched.length) === 0 && noResults}
           </TabsContent>
         </Tabs>
+      )}
+      {section === 'careers' && (
+        <CareerGuide
+          locale={locale}
+          selectedCareer={selectedCareer}
+          returnFocus={returnFocus}
+          alternateUrl={`/${locale === 'en' ? 'fa' : 'en'}/${section}${searchString}`}
+          onOpen={openCareer}
+          onClose={() => update({ career: null })}
+        />
       )}
       {section === 'majors' && (
         <>
@@ -810,12 +826,12 @@ export function Explorer({
               value={params.get('type') || 'all'}
               onValueChange={(next) => update({ type: next })}
               options={[
-                  ['all', 'All resources', 'همه منابع'],
-                  ['book', 'Books', 'کتاب‌ها'],
-                  ['blog', 'Blogs & articles', 'وبلاگ و مقاله'],
-                  ['official', 'Official resources', 'منابع رسمی'],
-                  ['learning', 'Learning guides', 'راهنمای یادگیری'],
-                ].map(([id, en, fa]) => ({ value: id, label: t(en, fa) }))}
+                ['all', 'All resources', 'همه منابع'],
+                ['book', 'Books', 'کتاب‌ها'],
+                ['blog', 'Blogs & articles', 'وبلاگ و مقاله'],
+                ['official', 'Official resources', 'منابع رسمی'],
+                ['learning', 'Learning guides', 'راهنمای یادگیری'],
+              ].map(([id, en, fa]) => ({ value: id, label: t(en, fa) }))}
             />
             <button
               className={`filter-chip ${params.get('topic') === 'japan' ? 'selected' : ''}`}
@@ -1011,16 +1027,18 @@ export function Explorer({
             .length === 0 && noResults}
         </>
       )}
-      <CourseDialog
-        course={selected}
-        locale={locale}
-        category={section === 'chart' ? selectedCat?.id : undefined}
-        alternateUrl={`/${locale === 'en' ? 'fa' : 'en'}/${section}${searchString}`}
-        useArtwork={section === 'chart'}
-        returnFocus={returnFocus}
-        onClose={() => update({ course: null })}
-        onCourse={open}
-      />
+      {section !== 'careers' && (
+        <CourseDialog
+          course={selected}
+          locale={locale}
+          category={section === 'chart' ? selectedCat?.id : undefined}
+          alternateUrl={`/${locale === 'en' ? 'fa' : 'en'}/${section}${searchString}`}
+          useArtwork={section === 'chart'}
+          returnFocus={returnFocus}
+          onClose={() => update({ course: null })}
+          onCourse={open}
+        />
+      )}
     </>
   );
 }
@@ -1096,7 +1114,7 @@ function CourseDialog({
                 <X size={21} />
               </DialogClose>
               <span className="character">
-                {cat?.character[locale] || t('COURSE PROFILE', 'معرفی درس')}
+                {t('COURSE PROFILE', 'معرفی درس')}
               </span>
               <div className="dialog-meta">
                 <span dir="ltr">

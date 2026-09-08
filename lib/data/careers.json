@@ -1,0 +1,2317 @@
+{
+  "domains": [
+    {
+      "id": "data",
+      "name": { "en": "Data Domain", "fa": "حوزه داده" },
+      "careerIds": [
+        "data-analytics",
+        "data-science",
+        "business-intelligence",
+        "machine-learning-engineering",
+        "ai-engineering"
+      ]
+    },
+    {
+      "id": "project",
+      "name": { "en": "Project Domain", "fa": "حوزه پروژه" },
+      "careerIds": ["project-control", "project-management", "agile-scrum"]
+    },
+    {
+      "id": "management",
+      "name": { "en": "Management Domain", "fa": "حوزه مدیریت" },
+      "careerIds": [
+        "executive-management",
+        "operations-management",
+        "purchasing-management",
+        "strategy-management",
+        "warehouse-management"
+      ]
+    },
+    {
+      "id": "product",
+      "name": { "en": "Product", "fa": "محصول" },
+      "careerIds": ["product-design", "product-management", "product-owner"]
+    },
+    {
+      "id": "quality-safety",
+      "name": { "en": "Quality & Safety", "fa": "کیفیت و ایمنی" },
+      "careerIds": [
+        "quality-control",
+        "quality-assurance",
+        "iso-standards",
+        "hse"
+      ]
+    },
+    {
+      "id": "production",
+      "name": { "en": "Production", "fa": "تولید" },
+      "careerIds": ["production-planning"]
+    },
+    {
+      "id": "logistics-supply-chain",
+      "name": {
+        "en": "Logistics and Supply Chain",
+        "fa": "لجستیک و زنجیره تأمین"
+      },
+      "careerIds": ["logisticians"]
+    },
+    {
+      "id": "modeling-optimization",
+      "name": {
+        "en": "Mathematical Modeling and Optimization",
+        "fa": "مدل‌سازی ریاضی و بهینه‌سازی"
+      },
+      "careerIds": ["operations-research-analysis"]
+    },
+    {
+      "id": "business",
+      "name": { "en": "Business", "fa": "کسب‌وکار" },
+      "careerIds": [
+        "mba-dba",
+        "business-process-management",
+        "business-development-management"
+      ]
+    }
+  ],
+  "careers": [
+    {
+      "id": "data-analytics",
+      "domainId": "data",
+      "supplemental": false,
+      "name": { "en": "Data Analytics", "fa": "تحلیل داده" },
+      "abbreviation": "DA",
+      "summary": {
+        "en": "Turn raw operational data into clear findings, dashboards, and recommendations for decision-makers.",
+        "fa": "داده‌های خام عملیاتی را به یافته‌های روشن، داشبورد و پیشنهادهای قابل‌اقدام برای تصمیم‌گیران تبدیل می‌کند."
+      },
+      "iseFit": {
+        "en": "ISE students already combine statistics, process knowledge, and business judgment—the core of effective analytics.",
+        "fa": "دانشجوی صنایع آمار، شناخت فرایند و قضاوت کسب‌وکار را با هم دارد؛ همان ترکیبی که تحلیل داده مؤثر به آن نیاز دارد."
+      },
+      "dayInLife": {
+        "en": "Clarify a business question, prepare and validate data, explore patterns, then communicate the result through a dashboard or concise report.",
+        "fa": "پرسش کسب‌وکار را روشن می‌کند، داده را آماده و اعتبارسنجی می‌کند، الگوها را می‌یابد و نتیجه را با داشبورد یا گزارشی کوتاه ارائه می‌دهد."
+      },
+      "responsibilities": {
+        "en": [
+          "Clean, combine, and validate datasets",
+          "Build dashboards and recurring reports",
+          "Explain patterns, risks, and opportunities"
+        ],
+        "fa": [
+          "پاک‌سازی، ترکیب و اعتبارسنجی داده‌ها",
+          "ساخت داشبورد و گزارش‌های دوره‌ای",
+          "توضیح الگوها، ریسک‌ها و فرصت‌ها"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Statistics and exploratory analysis",
+          "Data visualization and storytelling",
+          "SQL and spreadsheet modeling"
+        ],
+        "fa": [
+          "آمار و تحلیل اکتشافی",
+          "مصورسازی و روایت داده",
+          "SQL و مدل‌سازی با صفحه‌گسترده"
+        ]
+      },
+      "tools": ["Excel", "SQL", "Power BI", "Python / R"],
+      "entrySteps": {
+        "en": [
+          "Strengthen statistics, Excel, and SQL",
+          "Build two end-to-end portfolio analyses",
+          "Start through an internship or junior analyst role"
+        ],
+        "fa": [
+          "آمار، اکسل و SQL را تقویت کنید",
+          "دو تحلیل کامل برای نمونه‌کار بسازید",
+          "از کارآموزی یا نقش تحلیلگر تازه‌کار شروع کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Data analyst",
+          "Senior analyst or analytics consultant",
+          "Analytics lead or BI manager"
+        ],
+        "fa": [
+          "تحلیلگر داده",
+          "تحلیلگر ارشد یا مشاور تحلیل",
+          "رهبر تحلیل یا مدیر هوش تجاری"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["BI analyst", "Business analyst", "Analytics engineer"],
+        "fa": ["تحلیلگر هوش تجاری", "تحلیلگر کسب‌وکار", "مهندس تحلیل داده"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/data-analyst-expert"
+      }
+    },
+    {
+      "id": "data-science",
+      "domainId": "data",
+      "supplemental": false,
+      "name": { "en": "Data Science", "fa": "علم داده" },
+      "abbreviation": "DS",
+      "summary": {
+        "en": "Use statistical modeling and computation to explain complex behavior, predict outcomes, and test decisions.",
+        "fa": "با مدل‌سازی آماری و محاسبات، رفتارهای پیچیده را توضیح می‌دهد، پیامدها را پیش‌بینی می‌کند و تصمیم‌ها را می‌آزماید."
+      },
+      "iseFit": {
+        "en": "Optimization, probability, simulation, and systems thinking give ISE graduates a strong modeling foundation.",
+        "fa": "بهینه‌سازی، احتمال، شبیه‌سازی و تفکر سیستمی، پایه‌ای مناسب برای مدل‌سازی علم داده می‌سازند."
+      },
+      "dayInLife": {
+        "en": "Frame a measurable question, investigate data quality, design features and experiments, compare models, and translate uncertainty for stakeholders.",
+        "fa": "یک مسئله قابل‌اندازه‌گیری تعریف می‌کند، کیفیت داده را می‌سنجد، ویژگی و آزمایش طراحی می‌کند، مدل‌ها را مقایسه و عدم‌قطعیت را برای ذی‌نفعان توضیح می‌دهد."
+      },
+      "responsibilities": {
+        "en": [
+          "Develop predictive and explanatory models",
+          "Design experiments and validation plans",
+          "Communicate assumptions and uncertainty"
+        ],
+        "fa": [
+          "توسعه مدل‌های پیش‌بینی و تبیینی",
+          "طراحی آزمایش و برنامه اعتبارسنجی",
+          "بیان فرض‌ها و عدم‌قطعیت"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Probability and statistical inference",
+          "Machine learning",
+          "Programming and data engineering basics"
+        ],
+        "fa": [
+          "احتمال و استنباط آماری",
+          "یادگیری ماشین",
+          "برنامه‌نویسی و مبانی مهندسی داده"
+        ]
+      },
+      "tools": ["Python", "Jupyter", "SQL", "scikit-learn"],
+      "entrySteps": {
+        "en": [
+          "Master probability, statistics, and Python",
+          "Complete a reproducible modeling project",
+          "Seek analyst, research, or junior data-science work"
+        ],
+        "fa": [
+          "بر احتمال، آمار و پایتون مسلط شوید",
+          "یک پروژه مدل‌سازی بازتولیدپذیر انجام دهید",
+          "نقش تحلیلی، پژوهشی یا علم داده تازه‌کار بگیرید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Junior data scientist",
+          "Data scientist",
+          "Senior scientist or data-science lead"
+        ],
+        "fa": [
+          "دانشمند داده تازه‌کار",
+          "دانشمند داده",
+          "دانشمند ارشد یا رهبر علم داده"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Data analyst", "ML engineer", "Operations research analyst"],
+        "fa": ["تحلیلگر داده", "مهندس یادگیری ماشین", "تحلیلگر تحقیق در عملیات"]
+      },
+      "source": null
+    },
+    {
+      "id": "business-intelligence",
+      "domainId": "data",
+      "supplemental": false,
+      "name": { "en": "Business Intelligence", "fa": "هوش تجاری" },
+      "abbreviation": "BI",
+      "summary": {
+        "en": "Create trusted metrics and reporting systems that help teams monitor performance and make consistent decisions.",
+        "fa": "شاخص‌ها و سامانه‌های گزارش‌دهی قابل‌اعتماد می‌سازد تا تیم‌ها عملکرد را پایش و تصمیم‌های منسجم‌تری بگیرند."
+      },
+      "iseFit": {
+        "en": "ISE connects process measures, organizational goals, and data—exactly the bridge BI teams maintain.",
+        "fa": "مهندسی صنایع میان سنجه‌های فرایند، اهداف سازمان و داده پیوند می‌سازد؛ همان پلی که تیم هوش تجاری نگه می‌دارد."
+      },
+      "dayInLife": {
+        "en": "Define a KPI with stakeholders, trace its data source, model the data, update a dashboard, and investigate unexpected changes.",
+        "fa": "با ذی‌نفعان KPI را تعریف می‌کند، منبع داده را می‌یابد، مدل داده می‌سازد، داشبورد را به‌روز و تغییرات غیرمنتظره را بررسی می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Define governed metrics and KPIs",
+          "Model reporting data",
+          "Build and maintain dashboards"
+        ],
+        "fa": [
+          "تعریف شاخص‌ها و KPIهای استاندارد",
+          "مدل‌سازی داده گزارش‌دهی",
+          "ساخت و نگهداری داشبوردها"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Dimensional data modeling",
+          "Dashboard design",
+          "Business requirements analysis"
+        ],
+        "fa": ["مدل‌سازی بُعدی داده", "طراحی داشبورد", "تحلیل نیازمندی کسب‌وکار"]
+      },
+      "tools": ["Power BI", "SQL", "Excel", "Tableau"],
+      "entrySteps": {
+        "en": [
+          "Learn SQL and one BI platform",
+          "Model a small warehouse and KPI dashboard",
+          "Apply for BI or reporting analyst roles"
+        ],
+        "fa": [
+          "SQL و یک پلتفرم BI را بیاموزید",
+          "یک انبار داده کوچک و داشبورد KPI بسازید",
+          "برای نقش تحلیلگر BI یا گزارش‌دهی اقدام کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "BI analyst",
+          "Senior BI developer",
+          "BI architect or analytics manager"
+        ],
+        "fa": [
+          "تحلیلگر هوش تجاری",
+          "توسعه‌دهنده ارشد BI",
+          "معمار BI یا مدیر تحلیل"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Data analyst", "Analytics engineer", "Performance analyst"],
+        "fa": ["تحلیلگر داده", "مهندس تحلیل داده", "تحلیلگر عملکرد"]
+      },
+      "source": null
+    },
+    {
+      "id": "machine-learning-engineering",
+      "domainId": "data",
+      "supplemental": false,
+      "name": {
+        "en": "Machine Learning Engineering",
+        "fa": "مهندسی یادگیری ماشین"
+      },
+      "abbreviation": "ML Eng.",
+      "summary": {
+        "en": "Turn validated machine-learning models into reliable, monitored software used by real products and operations.",
+        "fa": "مدل‌های یادگیری ماشین اعتبارسنجی‌شده را به نرم‌افزار قابل‌اعتماد و پایش‌پذیر برای محصول و عملیات واقعی تبدیل می‌کند."
+      },
+      "iseFit": {
+        "en": "Systems design and performance trade-offs help ISE graduates connect model quality with operational reliability.",
+        "fa": "طراحی سیستم و تحلیل موازنه عملکرد به دانش‌آموخته صنایع کمک می‌کند کیفیت مدل را به قابلیت اتکای عملیاتی پیوند دهد."
+      },
+      "dayInLife": {
+        "en": "Prepare a training pipeline, review model performance, package a service, diagnose drift or latency, and coordinate releases with product teams.",
+        "fa": "خط لوله آموزش را آماده می‌کند، عملکرد مدل را می‌سنجد، سرویس می‌سازد، افت مدل یا تأخیر را عیب‌یابی و انتشار را با تیم محصول هماهنگ می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Build training and inference pipelines",
+          "Deploy, monitor, and version models",
+          "Improve reliability, latency, and cost"
+        ],
+        "fa": [
+          "ساخت خطوط لوله آموزش و استنتاج",
+          "استقرار، پایش و نسخه‌بندی مدل‌ها",
+          "بهبود قابلیت اتکا، تأخیر و هزینه"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Software engineering",
+          "ML evaluation",
+          "Cloud and data pipelines"
+        ],
+        "fa": [
+          "مهندسی نرم‌افزار",
+          "ارزیابی یادگیری ماشین",
+          "رایانش ابری و خطوط لوله داده"
+        ]
+      },
+      "tools": ["Python", "Docker", "Git", "MLflow"],
+      "entrySteps": {
+        "en": [
+          "Build strong Python and ML foundations",
+          "Deploy one model with monitoring",
+          "Enter through software, data, or junior ML roles"
+        ],
+        "fa": [
+          "پایه پایتون و ML را قوی کنید",
+          "یک مدل را همراه پایش مستقر کنید",
+          "از نقش نرم‌افزار، داده یا ML تازه‌کار وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Junior ML engineer",
+          "ML engineer",
+          "Senior or platform ML engineer"
+        ],
+        "fa": [
+          "مهندس ML تازه‌کار",
+          "مهندس یادگیری ماشین",
+          "مهندس ارشد یا پلتفرم ML"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Data scientist", "Data engineer", "AI engineer"],
+        "fa": ["دانشمند داده", "مهندس داده", "مهندس هوش مصنوعی"]
+      },
+      "source": null
+    },
+    {
+      "id": "ai-engineering",
+      "domainId": "data",
+      "supplemental": false,
+      "name": {
+        "en": "Artificial Intelligence Engineering",
+        "fa": "مهندسی هوش مصنوعی"
+      },
+      "abbreviation": "AI Eng.",
+      "summary": {
+        "en": "Design AI-enabled applications by combining models, data, evaluation, safeguards, and product requirements.",
+        "fa": "با ترکیب مدل، داده، ارزیابی، محافظ‌ها و نیازمندی محصول، کاربردهای مبتنی بر هوش مصنوعی طراحی می‌کند."
+      },
+      "iseFit": {
+        "en": "ISE’s focus on end-to-end systems helps graduates evaluate whether AI improves the whole process, not only one model score.",
+        "fa": "تمرکز صنایع بر سیستم سرتاسری کمک می‌کند اثر AI بر کل فرایند سنجیده شود، نه فقط یک امتیاز مدل."
+      },
+      "dayInLife": {
+        "en": "Prototype an AI workflow, prepare evaluation cases, connect model and product services, inspect failures, and refine safeguards with domain experts.",
+        "fa": "یک جریان کاری AI را نمونه‌سازی می‌کند، موارد ارزیابی می‌سازد، مدل را به سرویس محصول وصل می‌کند، خطاها را می‌سنجد و محافظ‌ها را با متخصصان حوزه بهبود می‌دهد."
+      },
+      "responsibilities": {
+        "en": [
+          "Integrate AI models into applications",
+          "Create evaluation and safety checks",
+          "Optimize quality, speed, and cost"
+        ],
+        "fa": [
+          "یکپارچه‌سازی مدل‌های AI با کاربردها",
+          "ساخت ارزیابی و کنترل‌های ایمنی",
+          "بهینه‌سازی کیفیت، سرعت و هزینه"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Applied machine learning",
+          "API and software design",
+          "Evaluation and responsible AI"
+        ],
+        "fa": [
+          "یادگیری ماشین کاربردی",
+          "طراحی API و نرم‌افزار",
+          "ارزیابی و هوش مصنوعی مسئولانه"
+        ]
+      },
+      "tools": ["Python", "Model APIs", "Vector databases", "Git"],
+      "entrySteps": {
+        "en": [
+          "Learn software engineering and applied ML",
+          "Build an evaluated AI application",
+          "Target AI product or automation roles"
+        ],
+        "fa": [
+          "مهندسی نرم‌افزار و ML کاربردی را بیاموزید",
+          "یک کاربرد AI ارزیابی‌شده بسازید",
+          "نقش‌های محصول AI یا اتوماسیون را هدف بگیرید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "AI application developer",
+          "AI engineer",
+          "Senior AI or solutions architect"
+        ],
+        "fa": [
+          "توسعه‌دهنده کاربرد AI",
+          "مهندس هوش مصنوعی",
+          "مهندس ارشد AI یا معمار راهکار"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["ML engineer", "Automation engineer", "AI product manager"],
+        "fa": ["مهندس یادگیری ماشین", "مهندس اتوماسیون", "مدیر محصول AI"]
+      },
+      "source": null
+    },
+    {
+      "id": "project-control",
+      "domainId": "project",
+      "supplemental": false,
+      "name": { "en": "Project Control", "fa": "کنترل پروژه" },
+      "abbreviation": "PC",
+      "summary": {
+        "en": "Plan and track schedule, cost, progress, and risk so project leaders can act before deviations become failures.",
+        "fa": "زمان‌بندی، هزینه، پیشرفت و ریسک را برنامه‌ریزی و پایش می‌کند تا انحراف‌ها پیش از تبدیل‌شدن به شکست مدیریت شوند."
+      },
+      "iseFit": {
+        "en": "Planning, optimization, costing, and quantitative control make this one of the most direct ISE career paths.",
+        "fa": "برنامه‌ریزی، بهینه‌سازی، هزینه‌یابی و کنترل کمی، این نقش را به یکی از مستقیم‌ترین مسیرهای مهندسی صنایع تبدیل می‌کند."
+      },
+      "dayInLife": {
+        "en": "Update the schedule, verify progress evidence, calculate deviations, revise forecasts, and brief the project manager on risks and recovery options.",
+        "fa": "برنامه را به‌روز می‌کند، شواهد پیشرفت را می‌سنجد، انحراف‌ها و پیش‌بینی جدید را محاسبه و ریسک‌ها و راه‌های جبران را به مدیر پروژه گزارش می‌دهد."
+      },
+      "responsibilities": {
+        "en": [
+          "Build and maintain project schedules",
+          "Measure cost and progress variance",
+          "Prepare forecasts and control reports"
+        ],
+        "fa": [
+          "ساخت و نگهداری زمان‌بندی پروژه",
+          "اندازه‌گیری انحراف هزینه و پیشرفت",
+          "تهیه پیش‌بینی و گزارش کنترل"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Scheduling and earned value",
+          "Cost control",
+          "Reporting and stakeholder communication"
+        ],
+        "fa": [
+          "زمان‌بندی و ارزش کسب‌شده",
+          "کنترل هزینه",
+          "گزارش‌دهی و ارتباط با ذی‌نفعان"
+        ]
+      },
+      "tools": ["Microsoft Project", "Primavera P6", "Excel", "Power BI"],
+      "entrySteps": {
+        "en": [
+          "Learn scheduling, WBS, and cost basics",
+          "Practice on a realistic project plan",
+          "Start as a planning or project-control intern"
+        ],
+        "fa": [
+          "زمان‌بندی، WBS و مبانی هزینه را بیاموزید",
+          "روی یک برنامه پروژه واقعی تمرین کنید",
+          "از کارآموزی برنامه‌ریزی یا کنترل پروژه شروع کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Project-control specialist",
+          "Senior controller or planner",
+          "Project-controls manager"
+        ],
+        "fa": [
+          "کارشناس کنترل پروژه",
+          "کارشناس ارشد کنترل یا برنامه‌ریزی",
+          "مدیر کنترل پروژه"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Project manager", "Cost engineer", "Planning engineer"],
+        "fa": ["مدیر پروژه", "مهندس هزینه", "مهندس برنامه‌ریزی"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/project-control-specialist"
+      }
+    },
+    {
+      "id": "project-management",
+      "domainId": "project",
+      "supplemental": false,
+      "name": { "en": "Project Management", "fa": "مدیریت پروژه" },
+      "abbreviation": "PM",
+      "summary": {
+        "en": "Coordinate people, scope, schedule, budget, quality, and risk to deliver a defined outcome.",
+        "fa": "افراد، محدوده، زمان، بودجه، کیفیت و ریسک را برای تحویل یک نتیجه مشخص هماهنگ می‌کند."
+      },
+      "iseFit": {
+        "en": "ISE graduates can combine technical planning with process, financial, and human perspectives across a project system.",
+        "fa": "دانش‌آموخته صنایع می‌تواند برنامه‌ریزی فنی را با نگاه فرایندی، مالی و انسانی در کل سیستم پروژه ترکیب کند."
+      },
+      "dayInLife": {
+        "en": "Review priorities, resolve team blockers, manage scope and risks, communicate with sponsors, and keep delivery decisions documented.",
+        "fa": "اولویت‌ها را مرور می‌کند، موانع تیم را برطرف می‌کند، محدوده و ریسک را مدیریت و تصمیم‌های تحویل را با حامیان پروژه مستند می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Define scope, resources, and delivery plans",
+          "Lead the team and manage stakeholders",
+          "Control risk, budget, and change"
+        ],
+        "fa": [
+          "تعریف محدوده، منابع و برنامه تحویل",
+          "رهبری تیم و مدیریت ذی‌نفعان",
+          "کنترل ریسک، بودجه و تغییر"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Leadership and negotiation",
+          "Planning and risk management",
+          "Clear reporting and decision-making"
+        ],
+        "fa": [
+          "رهبری و مذاکره",
+          "برنامه‌ریزی و مدیریت ریسک",
+          "گزارش‌دهی و تصمیم‌گیری روشن"
+        ]
+      },
+      "tools": ["Microsoft Project", "Primavera P6", "Jira", "Office"],
+      "entrySteps": {
+        "en": [
+          "Learn core project frameworks and planning",
+          "Lead a small student or work project",
+          "Enter through coordination or project-control work"
+        ],
+        "fa": [
+          "چارچوب‌های اصلی پروژه و برنامه‌ریزی را بیاموزید",
+          "یک پروژه کوچک دانشجویی یا کاری را رهبری کنید",
+          "از هماهنگی یا کنترل پروژه وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Project coordinator",
+          "Project manager",
+          "Program or portfolio manager"
+        ],
+        "fa": ["هماهنگ‌کننده پروژه", "مدیر پروژه", "مدیر طرح یا سبد پروژه"]
+      },
+      "relatedRoles": {
+        "en": ["Project controller", "Product manager", "Operations manager"],
+        "fa": ["کارشناس کنترل پروژه", "مدیر محصول", "مدیر عملیات"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/project-manager"
+      }
+    },
+    {
+      "id": "agile-scrum",
+      "domainId": "project",
+      "supplemental": false,
+      "name": { "en": "Agile and Scrum Mastery", "fa": "چابکی و اسکرام" },
+      "abbreviation": "Agile",
+      "summary": {
+        "en": "Help cross-functional teams deliver value in short learning cycles while continuously improving how they work.",
+        "fa": "به تیم‌های چندتخصصی کمک می‌کند در چرخه‌های کوتاه یادگیری ارزش تحویل دهند و شیوه کار خود را پیوسته بهبود دهند."
+      },
+      "iseFit": {
+        "en": "Continuous improvement, flow, bottleneck analysis, and facilitation connect directly with ISE methods.",
+        "fa": "بهبود مستمر، جریان، تحلیل گلوگاه و تسهیل‌گری مستقیماً با روش‌های مهندسی صنایع پیوند دارند."
+      },
+      "dayInLife": {
+        "en": "Facilitate team events, surface blockers, coach collaboration, track flow, and turn retrospective insights into practical experiments.",
+        "fa": "رویدادهای تیم را تسهیل می‌کند، موانع را آشکار می‌سازد، همکاری را آموزش می‌دهد، جریان را می‌سنجد و یافته‌های بازنگری را به آزمایش عملی تبدیل می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Facilitate Scrum events",
+          "Remove or escalate delivery impediments",
+          "Coach teams in continuous improvement"
+        ],
+        "fa": [
+          "تسهیل رویدادهای اسکرام",
+          "رفع یا ارجاع موانع تحویل",
+          "مربی‌گری تیم برای بهبود مستمر"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Facilitation and conflict resolution",
+          "Flow metrics",
+          "Servant leadership"
+        ],
+        "fa": ["تسهیل‌گری و حل تعارض", "سنجه‌های جریان", "رهبری خدمت‌گزار"]
+      },
+      "tools": ["Jira", "Azure DevOps", "Miro", "Confluence"],
+      "entrySteps": {
+        "en": [
+          "Learn Agile principles and Scrum accountabilities",
+          "Facilitate a real team project",
+          "Enter through coordination, analysis, or junior Scrum work"
+        ],
+        "fa": [
+          "اصول چابک و مسئولیت‌های اسکرام را بیاموزید",
+          "یک پروژه تیمی واقعی را تسهیل کنید",
+          "از هماهنگی، تحلیل یا نقش اسکرام تازه‌کار وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Team facilitator",
+          "Scrum master",
+          "Agile coach or delivery lead"
+        ],
+        "fa": ["تسهیل‌گر تیم", "اسکرام مستر", "مربی چابک یا رهبر تحویل"]
+      },
+      "relatedRoles": {
+        "en": ["Project manager", "Product owner", "Delivery manager"],
+        "fa": ["مدیر پروژه", "مالک محصول", "مدیر تحویل"]
+      },
+      "source": null
+    },
+    {
+      "id": "executive-management",
+      "domainId": "management",
+      "supplemental": false,
+      "name": { "en": "Executive Management", "fa": "مدیریت اجرایی" },
+      "abbreviation": "Executive",
+      "summary": {
+        "en": "Translate organizational goals into coordinated operations, budgets, people decisions, and measurable performance.",
+        "fa": "اهداف سازمان را به عملیات هماهنگ، بودجه، تصمیم‌های نیروی انسانی و عملکرد قابل‌اندازه‌گیری تبدیل می‌کند."
+      },
+      "iseFit": {
+        "en": "ISE’s organization-wide perspective supports evidence-based decisions across finance, people, process, and technology.",
+        "fa": "نگاه کل‌سازمانی صنایع از تصمیم‌های مبتنی بر شواهد در مالی، منابع انسانی، فرایند و فناوری پشتیبانی می‌کند."
+      },
+      "dayInLife": {
+        "en": "Review performance and financial reports, align department priorities, resolve operational issues, and report decisions to senior stakeholders.",
+        "fa": "گزارش‌های عملکرد و مالی را مرور می‌کند، اولویت واحدها را همسو می‌سازد، مسائل اجرایی را حل و تصمیم‌ها را به مدیران ارشد گزارش می‌دهد."
+      },
+      "responsibilities": {
+        "en": [
+          "Oversee daily organizational performance",
+          "Allocate budgets and resources",
+          "Align teams with strategic priorities"
+        ],
+        "fa": [
+          "نظارت بر عملکرد روزانه سازمان",
+          "تخصیص بودجه و منابع",
+          "همسوسازی تیم‌ها با اولویت‌های راهبردی"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Strategic and financial judgment",
+          "Leadership and communication",
+          "Performance analysis"
+        ],
+        "fa": ["قضاوت راهبردی و مالی", "رهبری و ارتباطات", "تحلیل عملکرد"]
+      },
+      "tools": ["Excel", "Power BI", "ERP", "Project platforms"],
+      "entrySteps": {
+        "en": [
+          "Build experience in an operational function",
+          "Lead projects and small teams",
+          "Develop finance, strategy, and people-management depth"
+        ],
+        "fa": [
+          "در یک واحد عملیاتی تجربه کسب کنید",
+          "پروژه‌ها و تیم‌های کوچک را رهبری کنید",
+          "دانش مالی، راهبرد و مدیریت افراد را عمیق کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Functional specialist or supervisor",
+          "Department manager",
+          "Executive manager"
+        ],
+        "fa": ["کارشناس یا سرپرست واحد", "مدیر واحد", "مدیر اجرایی"]
+      },
+      "relatedRoles": {
+        "en": [
+          "Operations manager",
+          "Strategy manager",
+          "Business development manager"
+        ],
+        "fa": ["مدیر عملیات", "مدیر استراتژی", "مدیر توسعه کسب‌وکار"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/executive-manager"
+      }
+    },
+    {
+      "id": "operations-management",
+      "domainId": "management",
+      "supplemental": false,
+      "name": { "en": "Operation Management", "fa": "مدیریت عملیات" },
+      "abbreviation": "OM",
+      "summary": {
+        "en": "Design and run the processes, resources, and controls that turn inputs into reliable products or services.",
+        "fa": "فرایندها، منابع و کنترل‌هایی را طراحی و اداره می‌کند که ورودی‌ها را به محصول یا خدمت قابل‌اعتماد تبدیل می‌کنند."
+      },
+      "iseFit": {
+        "en": "Operations management sits at the center of ISE: capacity, quality, inventory, people, cost, and continuous improvement.",
+        "fa": "مدیریت عملیات در مرکز صنایع قرار دارد: ظرفیت، کیفیت، موجودی، افراد، هزینه و بهبود مستمر."
+      },
+      "dayInLife": {
+        "en": "Review service or production performance, address bottlenecks, coordinate teams and resources, and launch improvements backed by data.",
+        "fa": "عملکرد تولید یا خدمت را مرور می‌کند، گلوگاه‌ها را برطرف می‌سازد، تیم و منابع را هماهنگ و بهبودهای مبتنی بر داده را اجرا می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Manage operational plans and resources",
+          "Monitor capacity, cost, and service KPIs",
+          "Standardize and improve processes"
+        ],
+        "fa": [
+          "مدیریت برنامه و منابع عملیاتی",
+          "پایش ظرفیت، هزینه و KPIهای خدمت",
+          "استانداردسازی و بهبود فرایندها"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Process and capacity analysis",
+          "Leadership and problem-solving",
+          "KPI design and reporting"
+        ],
+        "fa": [
+          "تحلیل فرایند و ظرفیت",
+          "رهبری و حل مسئله",
+          "طراحی KPI و گزارش‌دهی"
+        ]
+      },
+      "tools": ["Excel", "ERP", "Power BI", "Visio"],
+      "entrySteps": {
+        "en": [
+          "Learn process, quality, and planning fundamentals",
+          "Improve one real workflow and document the result",
+          "Start in operations, supply chain, or planning"
+        ],
+        "fa": [
+          "مبانی فرایند، کیفیت و برنامه‌ریزی را بیاموزید",
+          "یک جریان واقعی را بهبود دهید و نتیجه را مستند کنید",
+          "از عملیات، زنجیره تأمین یا برنامه‌ریزی شروع کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Operations specialist",
+          "Operations supervisor",
+          "Operations manager or director"
+        ],
+        "fa": ["کارشناس عملیات", "سرپرست عملیات", "مدیر یا مدیر ارشد عملیات"]
+      },
+      "relatedRoles": {
+        "en": [
+          "Production planner",
+          "Supply-chain manager",
+          "Executive manager"
+        ],
+        "fa": ["برنامه‌ریز تولید", "مدیر زنجیره تأمین", "مدیر اجرایی"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/operation-manager"
+      }
+    },
+    {
+      "id": "purchasing-management",
+      "domainId": "management",
+      "supplemental": false,
+      "name": { "en": "Purchasing Management", "fa": "مدیریت خرید" },
+      "abbreviation": "Purchasing",
+      "summary": {
+        "en": "Secure the right materials and services at the required quality, timing, cost, and commercial risk.",
+        "fa": "مواد و خدمات مناسب را با کیفیت، زمان، هزینه و ریسک تجاری مطلوب تأمین می‌کند."
+      },
+      "iseFit": {
+        "en": "Forecasting, inventory, quality, cost analysis, and supplier systems are familiar ISE problem areas.",
+        "fa": "پیش‌بینی، موجودی، کیفیت، تحلیل هزینه و سیستم تأمین‌کننده از مسائل آشنای مهندسی صنایع هستند."
+      },
+      "dayInLife": {
+        "en": "Review demand and inventory, evaluate suppliers, negotiate terms, follow orders, resolve quality issues, and report purchasing performance.",
+        "fa": "تقاضا و موجودی را می‌سنجد، تأمین‌کننده را ارزیابی، شرایط را مذاکره، سفارش را پیگیری و مسائل کیفیت و عملکرد خرید را مدیریت می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Select and evaluate suppliers",
+          "Negotiate contracts and purchase terms",
+          "Control orders, cost, quality, and delivery"
+        ],
+        "fa": [
+          "انتخاب و ارزیابی تأمین‌کنندگان",
+          "مذاکره قرارداد و شرایط خرید",
+          "کنترل سفارش، هزینه، کیفیت و تحویل"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Negotiation and commercial analysis",
+          "Supplier performance management",
+          "Inventory and demand understanding"
+        ],
+        "fa": [
+          "مذاکره و تحلیل تجاری",
+          "مدیریت عملکرد تأمین‌کننده",
+          "شناخت موجودی و تقاضا"
+        ]
+      },
+      "tools": ["ERP", "Excel", "E-procurement", "Supplier scorecards"],
+      "entrySteps": {
+        "en": [
+          "Learn procurement and contract fundamentals",
+          "Practice cost and supplier analysis",
+          "Start as a purchasing or sourcing specialist"
+        ],
+        "fa": [
+          "مبانی تدارکات و قرارداد را بیاموزید",
+          "تحلیل هزینه و تأمین‌کننده را تمرین کنید",
+          "از کارشناس خرید یا تأمین شروع کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Purchasing specialist",
+          "Senior buyer or sourcing lead",
+          "Purchasing manager"
+        ],
+        "fa": ["کارشناس خرید", "خریدار ارشد یا رهبر تأمین", "مدیر خرید"]
+      },
+      "relatedRoles": {
+        "en": [
+          "Supply-chain analyst",
+          "Contract specialist",
+          "Warehouse manager"
+        ],
+        "fa": ["تحلیلگر زنجیره تأمین", "کارشناس قرارداد", "مدیر انبار"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/purchasing-manager"
+      }
+    },
+    {
+      "id": "strategy-management",
+      "domainId": "management",
+      "supplemental": false,
+      "name": { "en": "Strategy Management", "fa": "مدیریت استراتژی" },
+      "abbreviation": "Strategy",
+      "summary": {
+        "en": "Analyze the organization and its environment, choose priorities, and build systems that turn strategy into measurable execution.",
+        "fa": "سازمان و محیط آن را تحلیل می‌کند، اولویت‌ها را برمی‌گزیند و سیستم تبدیل راهبرد به اجرای قابل‌اندازه‌گیری را می‌سازد."
+      },
+      "iseFit": {
+        "en": "ISE’s quantitative and systems perspective strengthens strategic diagnosis, KPI design, and execution planning.",
+        "fa": "نگاه کمی و سیستمی صنایع، تشخیص راهبردی، طراحی KPI و برنامه‌ریزی اجرا را تقویت می‌کند."
+      },
+      "dayInLife": {
+        "en": "Research trends, review strategic KPIs, test assumptions with data, facilitate leadership discussions, and follow up on initiatives.",
+        "fa": "روندها را پژوهش می‌کند، KPIهای راهبردی را می‌سنجد، فرض‌ها را با داده می‌آزماید، گفت‌وگوی مدیران را تسهیل و ابتکارها را پیگیری می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Analyze internal and external conditions",
+          "Design strategic goals and KPIs",
+          "Monitor initiatives and recommend corrections"
+        ],
+        "fa": [
+          "تحلیل شرایط داخلی و خارجی",
+          "طراحی اهداف راهبردی و KPI",
+          "پایش ابتکارها و پیشنهاد اصلاح"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Strategic analysis",
+          "Financial and market literacy",
+          "Executive communication"
+        ],
+        "fa": ["تحلیل راهبردی", "سواد مالی و بازار", "ارتباطات مدیریتی"]
+      },
+      "tools": [
+        "Excel",
+        "Power BI",
+        "Balanced Scorecard",
+        "Research databases"
+      ],
+      "entrySteps": {
+        "en": [
+          "Build strong business and financial foundations",
+          "Practice industry and competitor analysis",
+          "Enter through analysis, consulting, or planning"
+        ],
+        "fa": [
+          "پایه کسب‌وکار و مالی را قوی کنید",
+          "تحلیل صنعت و رقیب را تمرین کنید",
+          "از تحلیل، مشاوره یا برنامه‌ریزی وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Strategy analyst",
+          "Senior strategy specialist",
+          "Strategy manager"
+        ],
+        "fa": ["تحلیلگر استراتژی", "کارشناس ارشد استراتژی", "مدیر استراتژی"]
+      },
+      "relatedRoles": {
+        "en": [
+          "Business analyst",
+          "Management consultant",
+          "Executive manager"
+        ],
+        "fa": ["تحلیلگر کسب‌وکار", "مشاور مدیریت", "مدیر اجرایی"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/strategy-manager"
+      }
+    },
+    {
+      "id": "warehouse-management",
+      "domainId": "management",
+      "supplemental": false,
+      "name": { "en": "Warehouse Management", "fa": "مدیریت انبار" },
+      "abbreviation": "Warehouse",
+      "summary": {
+        "en": "Control inventory, space, safety, people, and information so goods move accurately and efficiently.",
+        "fa": "موجودی، فضا، ایمنی، نیروی انسانی و اطلاعات را کنترل می‌کند تا کالا دقیق و کارآمد جریان یابد."
+      },
+      "iseFit": {
+        "en": "Facility layout, inventory control, ergonomics, and operational KPIs make warehousing a natural ISE application.",
+        "fa": "جانمایی، کنترل موجودی، ارگونومی و KPIهای عملیاتی، انبار را به کاربردی طبیعی برای مهندسی صنایع تبدیل می‌کنند."
+      },
+      "dayInLife": {
+        "en": "Review receipts and dispatches, reconcile inventory exceptions, allocate space and labor, inspect safety, and improve picking performance.",
+        "fa": "ورودی و خروجی را مرور می‌کند، مغایرت موجودی را حل، فضا و نیرو را تخصیص، ایمنی را بازرسی و عملکرد برداشت را بهبود می‌دهد."
+      },
+      "responsibilities": {
+        "en": [
+          "Maintain inventory accuracy and traceability",
+          "Plan space, labor, and material flow",
+          "Manage safety and warehouse KPIs"
+        ],
+        "fa": [
+          "حفظ دقت و رهگیری موجودی",
+          "برنامه‌ریزی فضا، نیرو و جریان مواد",
+          "مدیریت ایمنی و KPIهای انبار"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Inventory control",
+          "Warehouse layout and operations",
+          "People and safety management"
+        ],
+        "fa": [
+          "کنترل موجودی",
+          "جانمایی و عملیات انبار",
+          "مدیریت نیروی انسانی و ایمنی"
+        ]
+      },
+      "tools": ["WMS", "ERP", "Excel", "Barcode / RFID"],
+      "entrySteps": {
+        "en": [
+          "Learn inventory and warehouse principles",
+          "Gain hands-on warehouse experience",
+          "Advance through supervision and KPI ownership"
+        ],
+        "fa": [
+          "اصول موجودی و انبار را بیاموزید",
+          "تجربه میدانی انبار به دست آورید",
+          "از سرپرستی و مالکیت KPI پیشرفت کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Warehouse operator or specialist",
+          "Warehouse supervisor",
+          "Warehouse manager"
+        ],
+        "fa": ["متصدی یا کارشناس انبار", "سرپرست انبار", "مدیر انبار"]
+      },
+      "relatedRoles": {
+        "en": ["Inventory analyst", "Logistics planner", "Purchasing manager"],
+        "fa": ["تحلیلگر موجودی", "برنامه‌ریز لجستیک", "مدیر خرید"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/warehouse-manager"
+      }
+    },
+    {
+      "id": "product-design",
+      "domainId": "product",
+      "supplemental": false,
+      "name": { "en": "Product Design", "fa": "طراحی محصول" },
+      "abbreviation": "PD",
+      "summary": {
+        "en": "Research user needs and design useful, understandable product experiences that also meet business and technical constraints.",
+        "fa": "نیازهای کاربر را پژوهش و تجربه‌ای کاربردی و قابل‌فهم طراحی می‌کند که محدودیت‌های کسب‌وکار و فناوری را نیز برآورده سازد."
+      },
+      "iseFit": {
+        "en": "Human factors, process analysis, experimentation, and systems thinking help ISE students design beyond surface appearance.",
+        "fa": "عوامل انسانی، تحلیل فرایند، آزمایش و تفکر سیستمی کمک می‌کند طراحی فراتر از ظاهر محصول باشد."
+      },
+      "dayInLife": {
+        "en": "Interview users, map a workflow, sketch alternatives, prototype an interaction, test usability, and refine the design with product and engineering peers.",
+        "fa": "با کاربر گفت‌وگو می‌کند، جریان را ترسیم، راه‌حل‌ها را طراحی، تعامل را نمونه‌سازی، کاربردپذیری را آزمون و طرح را با تیم محصول و فنی اصلاح می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Research users and define problems",
+          "Create flows, wireframes, and prototypes",
+          "Test and document design decisions"
+        ],
+        "fa": [
+          "پژوهش کاربر و تعریف مسئله",
+          "ساخت جریان، وایرفریم و نمونه اولیه",
+          "آزمون و مستندسازی تصمیم‌های طراحی"
+        ]
+      },
+      "skills": {
+        "en": [
+          "User research",
+          "Interaction and visual design",
+          "Usability testing"
+        ],
+        "fa": ["پژوهش کاربر", "طراحی تعامل و بصری", "آزمون کاربردپذیری"]
+      },
+      "tools": ["Figma", "FigJam", "Prototyping tools", "Analytics"],
+      "entrySteps": {
+        "en": [
+          "Learn UX foundations and visual hierarchy",
+          "Build case studies showing process and evidence",
+          "Seek design internships or junior product roles"
+        ],
+        "fa": [
+          "مبانی UX و سلسله‌مراتب بصری را بیاموزید",
+          "مطالعات موردی با فرایند و شواهد بسازید",
+          "کارآموزی طراحی یا نقش محصول تازه‌کار بگیرید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Junior product designer",
+          "Product designer",
+          "Senior designer or design lead"
+        ],
+        "fa": ["طراح محصول تازه‌کار", "طراح محصول", "طراح ارشد یا رهبر طراحی"]
+      },
+      "relatedRoles": {
+        "en": ["UX researcher", "Product manager", "Service designer"],
+        "fa": ["پژوهشگر تجربه کاربر", "مدیر محصول", "طراح خدمت"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/product-designer"
+      }
+    },
+    {
+      "id": "product-management",
+      "domainId": "product",
+      "supplemental": false,
+      "name": { "en": "Product Management", "fa": "مدیریت محصول" },
+      "abbreviation": "PM",
+      "summary": {
+        "en": "Choose which customer and business problems a product should solve, then align teams around outcomes and priorities.",
+        "fa": "تعیین می‌کند محصول کدام مسئله مشتری و کسب‌وکار را حل کند و تیم‌ها را حول پیامدها و اولویت‌ها همسو می‌سازد."
+      },
+      "iseFit": {
+        "en": "ISE students can balance customer value, process feasibility, economics, data, and cross-functional constraints.",
+        "fa": "دانشجوی صنایع می‌تواند ارزش مشتری، امکان‌پذیری فرایند، اقتصاد، داده و محدودیت‌های چندتخصصی را موازنه کند."
+      },
+      "dayInLife": {
+        "en": "Study customer evidence and metrics, refine priorities, clarify requirements, coordinate design and engineering, and evaluate released outcomes.",
+        "fa": "شواهد مشتری و سنجه‌ها را بررسی می‌کند، اولویت و نیازمندی را روشن، طراحی و فنی را هماهنگ و پیامد انتشار را ارزیابی می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Define product direction and outcomes",
+          "Prioritize opportunities and requirements",
+          "Align customers, business, design, and engineering"
+        ],
+        "fa": [
+          "تعریف جهت و پیامدهای محصول",
+          "اولویت‌بندی فرصت‌ها و نیازمندی‌ها",
+          "همسوسازی مشتری، کسب‌وکار، طراحی و فنی"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Customer discovery",
+          "Prioritization and product strategy",
+          "Analytics and stakeholder communication"
+        ],
+        "fa": [
+          "کشف مشتری",
+          "اولویت‌بندی و استراتژی محصول",
+          "تحلیل و ارتباط با ذی‌نفعان"
+        ]
+      },
+      "tools": ["Analytics", "Jira", "Figma", "Roadmapping tools"],
+      "entrySteps": {
+        "en": [
+          "Learn product discovery and metrics",
+          "Ship or analyze a small product",
+          "Enter through analysis, operations, design, or associate PM work"
+        ],
+        "fa": [
+          "کشف محصول و سنجه‌ها را بیاموزید",
+          "یک محصول کوچک را عرضه یا تحلیل کنید",
+          "از تحلیل، عملیات، طراحی یا نقش دستیار مدیر محصول وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Associate product manager",
+          "Product manager",
+          "Senior or group product manager"
+        ],
+        "fa": ["دستیار مدیر محصول", "مدیر محصول", "مدیر محصول ارشد یا گروه"]
+      },
+      "relatedRoles": {
+        "en": ["Product owner", "Business analyst", "Product designer"],
+        "fa": ["مالک محصول", "تحلیلگر کسب‌وکار", "طراح محصول"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/product-manager"
+      }
+    },
+    {
+      "id": "product-owner",
+      "domainId": "product",
+      "supplemental": false,
+      "name": { "en": "Product Owner", "fa": "مالک محصول" },
+      "abbreviation": "PO",
+      "summary": {
+        "en": "Maximize the value of a product by maintaining a clear goal and an ordered, understandable backlog for the delivery team.",
+        "fa": "با هدف روشن و بک‌لاگ مرتب و قابل‌فهم برای تیم تحویل، ارزش محصول را بیشینه می‌کند."
+      },
+      "iseFit": {
+        "en": "Prioritization, value analysis, requirements, and workflow design align closely with ISE decision skills.",
+        "fa": "اولویت‌بندی، تحلیل ارزش، نیازمندی‌ها و طراحی جریان کار با مهارت‌های تصمیم‌گیری صنایع همسو است."
+      },
+      "dayInLife": {
+        "en": "Clarify product goals, refine backlog items, answer team questions, review completed work, and reorder priorities using evidence and feedback.",
+        "fa": "هدف محصول را روشن می‌کند، اقلام بک‌لاگ را پالایش، به پرسش‌های تیم پاسخ، کار تکمیل‌شده را مرور و اولویت‌ها را با شواهد و بازخورد مرتب می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Own and order the product backlog",
+          "Clarify value and acceptance expectations",
+          "Connect stakeholders with the delivery team"
+        ],
+        "fa": [
+          "مالکیت و مرتب‌سازی بک‌لاگ محصول",
+          "روشن‌کردن ارزش و معیار پذیرش",
+          "پیوند ذی‌نفعان با تیم تحویل"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Prioritization",
+          "Requirements and acceptance criteria",
+          "Collaboration and negotiation"
+        ],
+        "fa": ["اولویت‌بندی", "نیازمندی و معیار پذیرش", "همکاری و مذاکره"]
+      },
+      "tools": ["Jira", "Azure DevOps", "Confluence", "Analytics"],
+      "entrySteps": {
+        "en": [
+          "Learn Scrum and product-value concepts",
+          "Practice backlog refinement on a team project",
+          "Enter through business analysis or product coordination"
+        ],
+        "fa": [
+          "اسکرام و مفهوم ارزش محصول را بیاموزید",
+          "پالایش بک‌لاگ را در یک پروژه تیمی تمرین کنید",
+          "از تحلیل کسب‌وکار یا هماهنگی محصول وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Business analyst or product coordinator",
+          "Product owner",
+          "Senior product owner or product manager"
+        ],
+        "fa": [
+          "تحلیلگر کسب‌وکار یا هماهنگ‌کننده محصول",
+          "مالک محصول",
+          "مالک محصول ارشد یا مدیر محصول"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Product manager", "Scrum master", "Business analyst"],
+        "fa": ["مدیر محصول", "اسکرام مستر", "تحلیلگر کسب‌وکار"]
+      },
+      "source": null
+    },
+    {
+      "id": "quality-control",
+      "domainId": "quality-safety",
+      "supplemental": false,
+      "name": { "en": "Quality Control", "fa": "کنترل کیفیت" },
+      "abbreviation": "QC",
+      "summary": {
+        "en": "Inspect and measure outputs to determine whether products and processes meet defined specifications.",
+        "fa": "خروجی‌ها را بازرسی و اندازه‌گیری می‌کند تا انطباق محصول و فرایند با مشخصات تعیین‌شده روشن شود."
+      },
+      "iseFit": {
+        "en": "Statistical quality control, measurement systems, process capability, and improvement are core ISE subjects.",
+        "fa": "کنترل کیفیت آماری، سیستم‌های اندازه‌گیری، قابلیت فرایند و بهبود از موضوعات اصلی صنایع هستند."
+      },
+      "dayInLife": {
+        "en": "Review specifications, sample production, measure characteristics, document defects, investigate causes, and coordinate corrective action.",
+        "fa": "مشخصات را بررسی، از تولید نمونه‌گیری، ویژگی‌ها را اندازه‌گیری، عیب‌ها را ثبت، علت را تحلیل و اقدام اصلاحی را هماهنگ می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Inspect materials, processes, and outputs",
+          "Record defects and measurement results",
+          "Support root-cause and corrective actions"
+        ],
+        "fa": [
+          "بازرسی مواد، فرایند و خروجی",
+          "ثبت عیب و نتیجه اندازه‌گیری",
+          "پشتیبانی از ریشه‌یابی و اقدام اصلاحی"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Measurement and drawing interpretation",
+          "Statistical process control",
+          "Attention to evidence and standards"
+        ],
+        "fa": [
+          "اندازه‌گیری و نقشه‌خوانی",
+          "کنترل آماری فرایند",
+          "دقت به شواهد و استانداردها"
+        ]
+      },
+      "tools": ["SPC software", "Excel", "Minitab", "Measurement instruments"],
+      "entrySteps": {
+        "en": [
+          "Learn quality tools and production basics",
+          "Practice inspection and SPC analysis",
+          "Start through a QC internship or junior role"
+        ],
+        "fa": [
+          "ابزارهای کیفیت و مبانی تولید را بیاموزید",
+          "بازرسی و تحلیل SPC را تمرین کنید",
+          "از کارآموزی یا نقش تازه‌کار QC شروع کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "QC inspector or specialist",
+          "Senior quality specialist",
+          "QC supervisor or manager"
+        ],
+        "fa": [
+          "بازرس یا کارشناس QC",
+          "کارشناس ارشد کیفیت",
+          "سرپرست یا مدیر کنترل کیفیت"
+        ]
+      },
+      "relatedRoles": {
+        "en": [
+          "Quality assurance specialist",
+          "Process engineer",
+          "Supplier quality engineer"
+        ],
+        "fa": ["کارشناس تضمین کیفیت", "مهندس فرایند", "مهندس کیفیت تأمین‌کننده"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/quality-control-expert"
+      }
+    },
+    {
+      "id": "quality-assurance",
+      "domainId": "quality-safety",
+      "supplemental": false,
+      "name": { "en": "Quality Assurance", "fa": "تضمین کیفیت" },
+      "abbreviation": "QA",
+      "summary": {
+        "en": "Design the processes, controls, audits, and learning loops that prevent defects and sustain consistent quality.",
+        "fa": "فرایندها، کنترل‌ها، ممیزی‌ها و حلقه‌های یادگیری را طراحی می‌کند تا از عیب پیشگیری و کیفیت پایدار شود."
+      },
+      "iseFit": {
+        "en": "Process design, standard work, risk analysis, and continuous improvement directly use ISE training.",
+        "fa": "طراحی فرایند، کار استاندارد، تحلیل ریسک و بهبود مستمر مستقیماً از آموزش صنایع استفاده می‌کنند."
+      },
+      "dayInLife": {
+        "en": "Audit a process, review nonconformities, update procedures, analyze recurring risks, and verify that corrective actions remain effective.",
+        "fa": "یک فرایند را ممیزی می‌کند، عدم‌انطباق‌ها را می‌سنجد، رویه‌ها را به‌روز، ریسک‌های تکراری را تحلیل و اثربخشی اقدام اصلاحی را تأیید می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Maintain quality systems and procedures",
+          "Plan audits and corrective actions",
+          "Prevent recurrence through risk-based improvement"
+        ],
+        "fa": [
+          "نگهداری سیستم و رویه‌های کیفیت",
+          "برنامه‌ریزی ممیزی و اقدام اصلاحی",
+          "پیشگیری از تکرار با بهبود مبتنی بر ریسک"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Process auditing",
+          "Root-cause and risk analysis",
+          "Documentation and change control"
+        ],
+        "fa": [
+          "ممیزی فرایند",
+          "ریشه‌یابی و تحلیل ریسک",
+          "مستندسازی و کنترل تغییر"
+        ]
+      },
+      "tools": ["QMS", "FMEA", "CAPA", "Minitab"],
+      "entrySteps": {
+        "en": [
+          "Learn quality systems and audit principles",
+          "Practice root-cause and CAPA cases",
+          "Enter through QC, process, or QA roles"
+        ],
+        "fa": [
+          "سیستم‌های کیفیت و اصول ممیزی را بیاموزید",
+          "ریشه‌یابی و CAPA را روی مسئله واقعی تمرین کنید",
+          "از QC، فرایند یا نقش QA وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "QA specialist",
+          "Senior QA or auditor",
+          "Quality-systems manager"
+        ],
+        "fa": ["کارشناس QA", "کارشناس ارشد QA یا ممیز", "مدیر سیستم‌های کیفیت"]
+      },
+      "relatedRoles": {
+        "en": [
+          "QC specialist",
+          "ISO auditor",
+          "Continuous-improvement analyst"
+        ],
+        "fa": ["کارشناس QC", "ممیز ISO", "تحلیلگر بهبود مستمر"]
+      },
+      "source": null
+    },
+    {
+      "id": "iso-standards",
+      "domainId": "quality-safety",
+      "supplemental": false,
+      "name": { "en": "ISO and Standards", "fa": "ISO و استانداردها" },
+      "abbreviation": "ISO",
+      "summary": {
+        "en": "Interpret management-system standards and help organizations document, implement, audit, and improve compliant processes.",
+        "fa": "استانداردهای سیستم مدیریت را تفسیر و به سازمان کمک می‌کند فرایندهای منطبق را مستند، اجرا، ممیزی و بهبود دهد."
+      },
+      "iseFit": {
+        "en": "ISE process mapping and systems thinking make standards practical operating systems rather than paperwork.",
+        "fa": "نقشه‌برداری فرایند و تفکر سیستمی صنایع، استاندارد را از کاغذبازی به سیستم عملیاتی تبدیل می‌کند."
+      },
+      "dayInLife": {
+        "en": "Map a requirement to current practice, interview process owners, update documents, prepare an audit, and follow corrective actions.",
+        "fa": "الزام استاندارد را با عمل موجود تطبیق می‌دهد، با مالک فرایند گفت‌وگو، مستندات را به‌روز، ممیزی را آماده و اقدامات اصلاحی را پیگیری می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Translate standards into processes and controls",
+          "Maintain documented information",
+          "Coordinate audits and improvements"
+        ],
+        "fa": [
+          "تبدیل استاندارد به فرایند و کنترل",
+          "نگهداری اطلاعات مدون",
+          "هماهنگی ممیزی و بهبود"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Standards interpretation",
+          "Process mapping and auditing",
+          "Documentation and facilitation"
+        ],
+        "fa": [
+          "تفسیر استاندارد",
+          "مدل‌سازی فرایند و ممیزی",
+          "مستندسازی و تسهیل‌گری"
+        ]
+      },
+      "tools": [
+        "ISO 9001",
+        "Process maps",
+        "Audit checklists",
+        "Document control"
+      ],
+      "entrySteps": {
+        "en": [
+          "Study one management-system standard deeply",
+          "Take internal-auditor training",
+          "Support documentation or audit work"
+        ],
+        "fa": [
+          "یک استاندارد سیستم مدیریت را عمیق بخوانید",
+          "دوره ممیزی داخلی بگذرانید",
+          "در مستندسازی یا ممیزی همکاری کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Standards or documentation specialist",
+          "Internal or lead auditor",
+          "Management-systems manager or consultant"
+        ],
+        "fa": [
+          "کارشناس استاندارد یا مستندسازی",
+          "ممیز داخلی یا سرممیز",
+          "مدیر سیستم‌ها یا مشاور"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["QA specialist", "Process analyst", "HSE specialist"],
+        "fa": ["کارشناس QA", "تحلیلگر فرایند", "کارشناس HSE"]
+      },
+      "source": null
+    },
+    {
+      "id": "hse",
+      "domainId": "quality-safety",
+      "supplemental": false,
+      "name": {
+        "en": "Health, Safety and Environment",
+        "fa": "بهداشت، ایمنی و محیط زیست"
+      },
+      "abbreviation": "HSE",
+      "summary": {
+        "en": "Identify workplace hazards, reduce risk, prepare emergency responses, and protect people and the environment.",
+        "fa": "خطرهای محیط کار را شناسایی، ریسک را کاهش، واکنش اضطراری را آماده و از انسان و محیط زیست محافظت می‌کند."
+      },
+      "iseFit": {
+        "en": "Ergonomics, risk analysis, facility design, human factors, and process control all support HSE practice.",
+        "fa": "ارگونومی، تحلیل ریسک، طراحی تسهیلات، عوامل انسانی و کنترل فرایند همگی از کار HSE پشتیبانی می‌کنند."
+      },
+      "dayInLife": {
+        "en": "Inspect work areas, assess a task’s risk, investigate incidents, coach employees, check legal compliance, and update emergency records.",
+        "fa": "محیط را بازرسی می‌کند، ریسک فعالیت را می‌سنجد، حادثه را بررسی، کارکنان را آموزش، انطباق قانونی را کنترل و سوابق اضطراری را به‌روز می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Assess hazards and operational risks",
+          "Investigate incidents and prevent recurrence",
+          "Train teams and coordinate emergency readiness"
+        ],
+        "fa": [
+          "ارزیابی خطر و ریسک عملیاتی",
+          "بررسی حادثه و پیشگیری از تکرار",
+          "آموزش تیم و هماهنگی آمادگی اضطراری"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Risk-assessment methods",
+          "Incident investigation",
+          "Safety regulation and communication"
+        ],
+        "fa": ["روش‌های ارزیابی ریسک", "بررسی حادثه", "مقررات و ارتباطات ایمنی"]
+      },
+      "tools": [
+        "FMEA / FTA",
+        "Safety checklists",
+        "REBA / OWAS",
+        "Incident systems"
+      ],
+      "entrySteps": {
+        "en": [
+          "Study safety, environment, and risk basics",
+          "Complete practical HSE training",
+          "Gain field experience through an internship"
+        ],
+        "fa": [
+          "مبانی ایمنی، محیط زیست و ریسک را بیاموزید",
+          "آموزش عملی HSE بگذرانید",
+          "از طریق کارآموزی تجربه میدانی کسب کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "HSE intern or technician",
+          "HSE specialist",
+          "HSE supervisor or manager"
+        ],
+        "fa": ["کارآموز یا تکنسین HSE", "کارشناس HSE", "سرپرست یا مدیر HSE"]
+      },
+      "relatedRoles": {
+        "en": [
+          "Safety engineer",
+          "Ergonomics specialist",
+          "Environmental specialist"
+        ],
+        "fa": ["مهندس ایمنی", "کارشناس ارگونومی", "کارشناس محیط زیست"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/hse-expert"
+      }
+    },
+    {
+      "id": "production-planning",
+      "domainId": "production",
+      "supplemental": false,
+      "name": { "en": "Production Planning", "fa": "برنامه‌ریزی تولید" },
+      "abbreviation": "PP",
+      "summary": {
+        "en": "Balance demand, materials, capacity, and timing to create feasible production plans and respond to disruption.",
+        "fa": "تقاضا، مواد، ظرفیت و زمان را موازنه می‌کند تا برنامه تولید شدنی بسازد و به اختلال‌ها پاسخ دهد."
+      },
+      "iseFit": {
+        "en": "Forecasting, inventory, scheduling, capacity, and operations research make this a classic ISE role.",
+        "fa": "پیش‌بینی، موجودی، زمان‌بندی، ظرفیت و تحقیق در عملیات، این نقش را به مسیر کلاسیک صنایع تبدیل می‌کنند."
+      },
+      "dayInLife": {
+        "en": "Review demand and stock, update the production schedule, coordinate shortages with purchasing, resolve capacity conflicts, and report plan attainment.",
+        "fa": "تقاضا و موجودی را مرور می‌کند، برنامه تولید را به‌روز، کمبودها را با خرید هماهنگ، تعارض ظرفیت را حل و تحقق برنامه را گزارش می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Create production and material plans",
+          "Coordinate capacity, inventory, and supply",
+          "Track schedule attainment and revise forecasts"
+        ],
+        "fa": [
+          "تهیه برنامه تولید و مواد",
+          "هماهنگی ظرفیت، موجودی و تأمین",
+          "پایش تحقق برنامه و بازنگری پیش‌بینی"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Demand and capacity planning",
+          "Scheduling and inventory control",
+          "Cross-functional coordination"
+        ],
+        "fa": [
+          "برنامه‌ریزی تقاضا و ظرفیت",
+          "زمان‌بندی و کنترل موجودی",
+          "هماهنگی بین‌واحدی"
+        ]
+      },
+      "tools": ["ERP / MRP", "Excel", "APS", "Power BI"],
+      "entrySteps": {
+        "en": [
+          "Learn production, inventory, and MRP concepts",
+          "Model a small production plan",
+          "Start as a planning or operations intern"
+        ],
+        "fa": [
+          "مفاهیم تولید، موجودی و MRP را بیاموزید",
+          "یک برنامه تولید کوچک مدل کنید",
+          "از کارآموزی برنامه‌ریزی یا عملیات شروع کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Planning specialist",
+          "Senior production planner",
+          "Planning manager"
+        ],
+        "fa": ["کارشناس برنامه‌ریزی", "برنامه‌ریز ارشد تولید", "مدیر برنامه‌ریزی"]
+      },
+      "relatedRoles": {
+        "en": ["Inventory analyst", "Supply planner", "Operations manager"],
+        "fa": ["تحلیلگر موجودی", "برنامه‌ریز تأمین", "مدیر عملیات"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the related JobVision career guide",
+          "fa": "مطالعه راهنمای مرتبط جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/planning-expert"
+      }
+    },
+    {
+      "id": "logisticians",
+      "domainId": "logistics-supply-chain",
+      "supplemental": false,
+      "name": { "en": "Logisticians", "fa": "کارشناسان لجستیک" },
+      "abbreviation": "Logistics",
+      "summary": {
+        "en": "Plan and coordinate the movement, storage, and information flow of goods from origin to customer.",
+        "fa": "حرکت، نگهداری و جریان اطلاعات کالا را از مبدأ تا مشتری برنامه‌ریزی و هماهنگ می‌کند."
+      },
+      "iseFit": {
+        "en": "Network design, inventory, transportation, optimization, and service levels are central ISE applications.",
+        "fa": "طراحی شبکه، موجودی، حمل‌ونقل، بهینه‌سازی و سطح خدمت از کاربردهای مرکزی صنایع هستند."
+      },
+      "dayInLife": {
+        "en": "Track shipments and stock, solve delivery exceptions, compare routes and carriers, coordinate warehouses, and analyze cost and service performance.",
+        "fa": "محموله و موجودی را ردیابی، استثناهای تحویل را حل، مسیر و حمل‌کننده را مقایسه، انبارها را هماهنگ و هزینه و خدمت را تحلیل می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Coordinate transportation and distribution",
+          "Monitor inventory and delivery performance",
+          "Improve routes, networks, and logistics cost"
+        ],
+        "fa": [
+          "هماهنگی حمل‌ونقل و توزیع",
+          "پایش موجودی و عملکرد تحویل",
+          "بهبود مسیر، شبکه و هزینه لجستیک"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Network and route analysis",
+          "Inventory and service-level planning",
+          "Vendor and exception management"
+        ],
+        "fa": [
+          "تحلیل شبکه و مسیر",
+          "برنامه‌ریزی موجودی و سطح خدمت",
+          "مدیریت پیمانکار و استثنا"
+        ]
+      },
+      "tools": ["TMS", "WMS", "ERP", "GIS / Excel"],
+      "entrySteps": {
+        "en": [
+          "Learn supply-chain and transportation basics",
+          "Analyze a route or distribution case",
+          "Enter through logistics, inventory, or warehouse operations"
+        ],
+        "fa": [
+          "مبانی زنجیره تأمین و حمل‌ونقل را بیاموزید",
+          "یک مسئله مسیر یا توزیع را تحلیل کنید",
+          "از لجستیک، موجودی یا عملیات انبار وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Logistics coordinator",
+          "Logistics analyst or planner",
+          "Logistics manager"
+        ],
+        "fa": [
+          "هماهنگ‌کننده لجستیک",
+          "تحلیلگر یا برنامه‌ریز لجستیک",
+          "مدیر لجستیک"
+        ]
+      },
+      "relatedRoles": {
+        "en": [
+          "Supply-chain analyst",
+          "Warehouse manager",
+          "Transportation planner"
+        ],
+        "fa": ["تحلیلگر زنجیره تأمین", "مدیر انبار", "برنامه‌ریز حمل‌ونقل"]
+      },
+      "source": null
+    },
+    {
+      "id": "operations-research-analysis",
+      "domainId": "modeling-optimization",
+      "supplemental": false,
+      "name": {
+        "en": "Operations Research Analysis",
+        "fa": "تحلیل تحقیق در عملیات"
+      },
+      "abbreviation": "OR",
+      "summary": {
+        "en": "Build mathematical and simulation models that compare decisions and allocate scarce resources under constraints.",
+        "fa": "مدل‌های ریاضی و شبیه‌سازی می‌سازد تا تصمیم‌ها را مقایسه و منابع محدود را زیر قیود تخصیص دهد."
+      },
+      "iseFit": {
+        "en": "Operations research is a foundational ISE discipline connecting optimization, probability, simulation, and decision science.",
+        "fa": "تحقیق در عملیات از پایه‌های صنایع است و بهینه‌سازی، احتمال، شبیه‌سازی و علم تصمیم را به هم متصل می‌کند."
+      },
+      "dayInLife": {
+        "en": "Translate an operational question into variables and constraints, prepare data, test models and scenarios, and explain trade-offs to decision-makers.",
+        "fa": "مسئله عملیاتی را به متغیر و قید تبدیل می‌کند، داده را آماده، مدل و سناریوها را می‌آزماید و موازنه‌ها را برای تصمیم‌گیران توضیح می‌دهد."
+      },
+      "responsibilities": {
+        "en": [
+          "Formulate optimization or simulation models",
+          "Analyze scenarios and sensitivity",
+          "Turn model results into implementable decisions"
+        ],
+        "fa": [
+          "فرمول‌بندی مدل بهینه‌سازی یا شبیه‌سازی",
+          "تحلیل سناریو و حساسیت",
+          "تبدیل نتیجه مدل به تصمیم قابل‌اجرا"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Mathematical modeling",
+          "Optimization and simulation",
+          "Programming and decision communication"
+        ],
+        "fa": [
+          "مدل‌سازی ریاضی",
+          "بهینه‌سازی و شبیه‌سازی",
+          "برنامه‌نویسی و ارتباط تصمیم"
+        ]
+      },
+      "tools": [
+        "Python",
+        "Gurobi / CPLEX",
+        "Excel Solver",
+        "Simulation software"
+      ],
+      "entrySteps": {
+        "en": [
+          "Master linear models, probability, and simulation",
+          "Solve an applied optimization case",
+          "Seek analyst, research, or decision-science roles"
+        ],
+        "fa": [
+          "مدل خطی، احتمال و شبیه‌سازی را مسلط شوید",
+          "یک مسئله کاربردی بهینه‌سازی حل کنید",
+          "نقش تحلیل، پژوهش یا علم تصمیم بگیرید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "OR analyst",
+          "Senior optimization scientist",
+          "Decision-science lead"
+        ],
+        "fa": [
+          "تحلیلگر تحقیق در عملیات",
+          "متخصص ارشد بهینه‌سازی",
+          "رهبر علم تصمیم"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Data scientist", "Supply-chain analyst", "Planning engineer"],
+        "fa": ["دانشمند داده", "تحلیلگر زنجیره تأمین", "مهندس برنامه‌ریزی"]
+      },
+      "source": null
+    },
+    {
+      "id": "mba-dba",
+      "domainId": "business",
+      "supplemental": false,
+      "name": {
+        "en": "Master/Doctor of Business Administration",
+        "fa": "کارشناسی ارشد/دکتری مدیریت کسب‌وکار"
+      },
+      "abbreviation": "MBA / DBA",
+      "summary": {
+        "en": "A graduate education path for integrating strategy, finance, marketing, operations, leadership, and applied management research.",
+        "fa": "مسیر تحصیلات تکمیلی برای یکپارچه‌کردن استراتژی، مالی، بازاریابی، عملیات، رهبری و پژوهش کاربردی مدیریت است."
+      },
+      "iseFit": {
+        "en": "ISE graduates bring quantitative operations depth and can use MBA or DBA study to broaden commercial and leadership capability.",
+        "fa": "دانش‌آموخته صنایع عمق کمی و عملیاتی دارد و با MBA یا DBA می‌تواند توان تجاری و رهبری خود را گسترش دهد."
+      },
+      "dayInLife": {
+        "en": "This is an education pathway rather than one job: learners analyze cases, lead team projects, connect theory to organizational problems, and build professional networks.",
+        "fa": "این یک مسیر آموزشی است نه یک شغل واحد؛ فراگیران مطالعات موردی را تحلیل، پروژه تیمی را رهبری، نظریه را به مسئله سازمانی وصل و شبکه حرفه‌ای می‌سازند."
+      },
+      "responsibilities": {
+        "en": [
+          "Select a program aligned with career goals",
+          "Apply cross-functional business frameworks",
+          "Turn study projects into organizational impact"
+        ],
+        "fa": [
+          "انتخاب برنامه همسو با هدف شغلی",
+          "کاربرد چارچوب‌های چندوظیفه‌ای کسب‌وکار",
+          "تبدیل پروژه تحصیلی به اثر سازمانی"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Business and financial literacy",
+          "Leadership and strategy",
+          "Applied research and communication"
+        ],
+        "fa": [
+          "سواد کسب‌وکار و مالی",
+          "رهبری و استراتژی",
+          "پژوهش کاربردی و ارتباطات"
+        ]
+      },
+      "tools": [
+        "Case analysis",
+        "Financial models",
+        "Research methods",
+        "Presentations"
+      ],
+      "entrySteps": {
+        "en": [
+          "Clarify the role the degree should unlock",
+          "Compare curriculum, faculty, format, and cost",
+          "Build relevant work experience before or during study"
+        ],
+        "fa": [
+          "نقشی را که مدرک باید ممکن کند روشن کنید",
+          "برنامه درسی، استاد، شیوه و هزینه را مقایسه کنید",
+          "پیش یا هم‌زمان با تحصیل تجربه مرتبط بسازید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Functional specialist",
+          "Cross-functional manager",
+          "Executive, consultant, or applied researcher"
+        ],
+        "fa": [
+          "کارشناس تخصصی",
+          "مدیر چندوظیفه‌ای",
+          "مدیر ارشد، مشاور یا پژوهشگر کاربردی"
+        ]
+      },
+      "relatedRoles": {
+        "en": [
+          "Executive manager",
+          "Strategy manager",
+          "Management consultant"
+        ],
+        "fa": ["مدیر اجرایی", "مدیر استراتژی", "مشاور مدیریت"]
+      },
+      "source": null
+    },
+    {
+      "id": "business-process-management",
+      "domainId": "business",
+      "supplemental": false,
+      "name": {
+        "en": "Business Process Management/Modeling",
+        "fa": "مدیریت و مدل‌سازی فرایندهای کسب‌وکار"
+      },
+      "abbreviation": "BPM",
+      "summary": {
+        "en": "Discover, model, measure, redesign, and govern how work flows across an organization.",
+        "fa": "جریان کار در سازمان را کشف، مدل، اندازه‌گیری، بازطراحی و راهبری می‌کند."
+      },
+      "iseFit": {
+        "en": "Methods engineering, systems analysis, measurement, and improvement give ISE students a direct advantage in BPM.",
+        "fa": "مهندسی روش‌ها، تحلیل سیستم، اندازه‌گیری و بهبود، مزیتی مستقیم برای دانشجوی صنایع در BPM می‌سازد."
+      },
+      "dayInLife": {
+        "en": "Interview process owners, map the current workflow, analyze delays and handoffs, design a better state, and track implementation measures.",
+        "fa": "با مالکان فرایند مصاحبه می‌کند، وضعیت موجود را ترسیم، تأخیر و تحویل کار را تحلیل، وضعیت بهتر را طراحی و سنجه‌های اجرا را پیگیری می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Map and document business processes",
+          "Analyze waste, controls, and bottlenecks",
+          "Design and govern improved workflows"
+        ],
+        "fa": [
+          "مدل‌سازی و مستندسازی فرایندها",
+          "تحلیل اتلاف، کنترل و گلوگاه",
+          "طراحی و راهبری جریان کار بهبود‌یافته"
+        ]
+      },
+      "skills": {
+        "en": [
+          "BPMN and process discovery",
+          "Data and root-cause analysis",
+          "Facilitation and change management"
+        ],
+        "fa": [
+          "BPMN و کشف فرایند",
+          "تحلیل داده و ریشه‌یابی",
+          "تسهیل‌گری و مدیریت تغییر"
+        ]
+      },
+      "tools": ["Visio", "Visual Paradigm", "BPM suites", "Power BI"],
+      "entrySteps": {
+        "en": [
+          "Learn process mapping and BPMN",
+          "Model and improve one real workflow",
+          "Start in systems, methods, quality, or business analysis"
+        ],
+        "fa": [
+          "مدل‌سازی فرایند و BPMN را بیاموزید",
+          "یک جریان واقعی را مدل و بهبود دهید",
+          "از سیستم‌ها و روش‌ها، کیفیت یا تحلیل کسب‌وکار وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Process analyst",
+          "Senior BPM specialist",
+          "Process excellence manager or consultant"
+        ],
+        "fa": [
+          "تحلیلگر فرایند",
+          "کارشناس ارشد BPM",
+          "مدیر تعالی فرایند یا مشاور"
+        ]
+      },
+      "relatedRoles": {
+        "en": [
+          "Systems and methods specialist",
+          "Business analyst",
+          "Quality-assurance specialist"
+        ],
+        "fa": [
+          "کارشناس سیستم‌ها و روش‌ها",
+          "تحلیلگر کسب‌وکار",
+          "کارشناس تضمین کیفیت"
+        ]
+      },
+      "source": {
+        "label": {
+          "en": "Read the related JobVision career guide",
+          "fa": "مطالعه راهنمای مرتبط جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/systems-methods-expert"
+      }
+    },
+    {
+      "id": "business-development-management",
+      "domainId": "business",
+      "supplemental": false,
+      "name": {
+        "en": "Business Development Management",
+        "fa": "مدیریت توسعه کسب‌وکار"
+      },
+      "abbreviation": "BDM",
+      "summary": {
+        "en": "Find and develop growth opportunities through markets, partnerships, commercial offers, and coordinated execution.",
+        "fa": "فرصت‌های رشد را از مسیر بازار، شراکت، پیشنهاد تجاری و اجرای هماهنگ پیدا و توسعه می‌دهد."
+      },
+      "iseFit": {
+        "en": "ISE combines market evidence, financial analysis, project coordination, and process design needed to make growth repeatable.",
+        "fa": "صنایع شواهد بازار، تحلیل مالی، هماهنگی پروژه و طراحی فرایند لازم برای رشد تکرارپذیر را ترکیب می‌کند."
+      },
+      "dayInLife": {
+        "en": "Research a market, evaluate an opportunity, meet a prospective partner, shape a commercial case, and coordinate next steps with sales, product, and finance.",
+        "fa": "بازار را پژوهش می‌کند، فرصت را می‌سنجد، با شریک احتمالی مذاکره، پرونده تجاری را شکل و گام بعد را با فروش، محصول و مالی هماهنگ می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Analyze markets and growth opportunities",
+          "Build partnerships and commercial proposals",
+          "Coordinate and measure development initiatives"
+        ],
+        "fa": [
+          "تحلیل بازار و فرصت رشد",
+          "ساخت شراکت و پیشنهاد تجاری",
+          "هماهنگی و سنجش ابتکارهای توسعه"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Market and financial analysis",
+          "Negotiation and relationship building",
+          "Business planning and KPI management"
+        ],
+        "fa": [
+          "تحلیل بازار و مالی",
+          "مذاکره و رابطه‌سازی",
+          "برنامه کسب‌وکار و مدیریت KPI"
+        ]
+      },
+      "tools": ["CRM", "Excel", "Power BI", "Project platforms"],
+      "entrySteps": {
+        "en": [
+          "Learn market, finance, and sales fundamentals",
+          "Analyze a growth opportunity end to end",
+          "Enter through sales, marketing, or market analysis"
+        ],
+        "fa": [
+          "مبانی بازار، مالی و فروش را بیاموزید",
+          "یک فرصت رشد را سرتاسری تحلیل کنید",
+          "از فروش، بازاریابی یا تحلیل بازار وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Business-development specialist",
+          "Senior specialist or partnership lead",
+          "Business-development manager"
+        ],
+        "fa": [
+          "کارشناس توسعه کسب‌وکار",
+          "کارشناس ارشد یا رهبر شراکت",
+          "مدیر توسعه کسب‌وکار"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Strategy analyst", "Sales manager", "Product manager"],
+        "fa": ["تحلیلگر استراتژی", "مدیر فروش", "مدیر محصول"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/business-development-manager"
+      }
+    },
+    {
+      "id": "capital-market-analyst",
+      "domainId": "business",
+      "supplemental": true,
+      "name": { "en": "Capital Market Analyst", "fa": "تحلیلگر بازار سرمایه" },
+      "abbreviation": "CMA",
+      "summary": {
+        "en": "Evaluate companies, securities, economic conditions, and risk to support informed investment decisions.",
+        "fa": "شرکت‌ها، اوراق بهادار، شرایط اقتصادی و ریسک را برای پشتیبانی از تصمیم سرمایه‌گذاری آگاهانه ارزیابی می‌کند."
+      },
+      "iseFit": {
+        "en": "Engineering economy, statistics, optimization, and data analysis transfer well to disciplined financial modeling.",
+        "fa": "اقتصاد مهندسی، آمار، بهینه‌سازی و تحلیل داده به مدل‌سازی مالی منضبط منتقل می‌شوند."
+      },
+      "dayInLife": {
+        "en": "Review market news and financial statements, update valuation models, test scenarios, and write a clear investment or risk note.",
+        "fa": "اخبار بازار و صورت‌های مالی را مرور می‌کند، مدل ارزش‌گذاری را به‌روز، سناریوها را می‌آزماید و یادداشت سرمایه‌گذاری یا ریسک می‌نویسد."
+      },
+      "responsibilities": {
+        "en": [
+          "Analyze financial statements and markets",
+          "Build valuation and risk models",
+          "Prepare evidence-based investment reports"
+        ],
+        "fa": [
+          "تحلیل صورت‌های مالی و بازار",
+          "ساخت مدل ارزش‌گذاری و ریسک",
+          "تهیه گزارش سرمایه‌گذاری مبتنی بر شواهد"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Fundamental and quantitative analysis",
+          "Financial modeling",
+          "Economic and regulatory literacy"
+        ],
+        "fa": ["تحلیل بنیادی و کمی", "مدل‌سازی مالی", "سواد اقتصادی و مقرراتی"]
+      },
+      "tools": ["Excel", "Financial databases", "TradingView", "Python / R"],
+      "entrySteps": {
+        "en": [
+          "Learn accounting, valuation, and market structure",
+          "Build a documented company analysis",
+          "Enter through research, brokerage, or investment internships"
+        ],
+        "fa": [
+          "حسابداری، ارزش‌گذاری و ساختار بازار را بیاموزید",
+          "تحلیل مستند یک شرکت را بسازید",
+          "از پژوهش، کارگزاری یا کارآموزی سرمایه‌گذاری وارد شوید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Junior market analyst",
+          "Capital-market analyst",
+          "Senior analyst or portfolio specialist"
+        ],
+        "fa": [
+          "تحلیلگر تازه‌کار بازار",
+          "تحلیلگر بازار سرمایه",
+          "تحلیلگر ارشد یا کارشناس سبد"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Financial analyst", "Risk analyst", "Portfolio analyst"],
+        "fa": ["تحلیلگر مالی", "تحلیلگر ریسک", "تحلیلگر سبد"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/capital-market-analyst"
+      }
+    },
+    {
+      "id": "hr-specialist",
+      "domainId": "management",
+      "supplemental": true,
+      "name": { "en": "HR Specialist", "fa": "کارشناس منابع انسانی" },
+      "abbreviation": "HR",
+      "summary": {
+        "en": "Support the employee lifecycle through workforce planning, recruiting, development, policies, records, and people analytics.",
+        "fa": "چرخه عمر کارکنان را با برنامه‌ریزی نیرو، جذب، توسعه، خط‌مشی، سوابق و تحلیل منابع انسانی پشتیبانی می‌کند."
+      },
+      "iseFit": {
+        "en": "Work design, ergonomics, organization, statistics, and process improvement help ISE graduates improve people systems.",
+        "fa": "طراحی کار، ارگونومی، سازمان، آمار و بهبود فرایند به دانش‌آموخته صنایع برای بهبود سیستم‌های انسانی کمک می‌کنند."
+      },
+      "dayInLife": {
+        "en": "Review staffing needs, screen candidates, answer employee questions, update records, coordinate training, and analyze a people metric.",
+        "fa": "نیاز نیرو را مرور می‌کند، داوطلبان را غربال، به پرسش کارکنان پاسخ، سوابق را به‌روز، آموزش را هماهنگ و یک سنجه انسانی را تحلیل می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Coordinate recruitment and onboarding",
+          "Maintain policies and employee records",
+          "Support learning, performance, and people analytics"
+        ],
+        "fa": [
+          "هماهنگی جذب و ورود کارکنان",
+          "نگهداری خط‌مشی و سوابق کارکنان",
+          "پشتیبانی از یادگیری، عملکرد و تحلیل منابع انسانی"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Interviewing and communication",
+          "Labor-law and policy literacy",
+          "HR process and data analysis"
+        ],
+        "fa": [
+          "مصاحبه و ارتباطات",
+          "سواد قانون کار و خط‌مشی",
+          "تحلیل فرایند و داده منابع انسانی"
+        ]
+      },
+      "tools": ["HRIS", "ATS", "Office", "Power BI"],
+      "entrySteps": {
+        "en": [
+          "Learn core HR processes and labor rules",
+          "Practice structured interviews and HR analytics",
+          "Start through an HR internship or coordinator role"
+        ],
+        "fa": [
+          "فرایندهای اصلی HR و قوانین کار را بیاموزید",
+          "مصاحبه ساختاریافته و تحلیل HR را تمرین کنید",
+          "از کارآموزی یا هماهنگی منابع انسانی شروع کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "HR coordinator",
+          "HR specialist",
+          "Senior specialist or HR business partner"
+        ],
+        "fa": [
+          "هماهنگ‌کننده منابع انسانی",
+          "کارشناس منابع انسانی",
+          "کارشناس ارشد یا شریک تجاری HR"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Recruiter", "People analyst", "Learning specialist"],
+        "fa": ["کارشناس جذب", "تحلیلگر منابع انسانی", "کارشناس آموزش"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/hr-specialist"
+      }
+    },
+    {
+      "id": "industrial-engineer",
+      "domainId": "management",
+      "supplemental": true,
+      "name": { "en": "Industrial Engineer", "fa": "مهندس صنایع" },
+      "abbreviation": "ISE",
+      "summary": {
+        "en": "Improve integrated systems of people, materials, information, equipment, and energy across products and services.",
+        "fa": "سیستم‌های یکپارچه انسان، مواد، اطلاعات، تجهیزات و انرژی را در تولید و خدمات بهبود می‌دهد."
+      },
+      "iseFit": {
+        "en": "This is the broad professional identity behind the specialized paths on this page.",
+        "fa": "این هویت حرفه‌ای گسترده، پشت مسیرهای تخصصی همین صفحه قرار دارد."
+      },
+      "dayInLife": {
+        "en": "Observe a process, collect data, identify waste or variation, model alternatives, coordinate a change, and verify the result.",
+        "fa": "فرایند را مشاهده می‌کند، داده گرد می‌آورد، اتلاف یا تغییرپذیری را می‌یابد، گزینه‌ها را مدل، تغییر را هماهنگ و نتیجه را تأیید می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Analyze and redesign systems",
+          "Improve productivity, quality, and safety",
+          "Support planning and evidence-based decisions"
+        ],
+        "fa": [
+          "تحلیل و بازطراحی سیستم‌ها",
+          "بهبود بهره‌وری، کیفیت و ایمنی",
+          "پشتیبانی از برنامه‌ریزی و تصمیم مبتنی بر شواهد"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Systems and process analysis",
+          "Statistics and optimization",
+          "Communication and change implementation"
+        ],
+        "fa": [
+          "تحلیل سیستم و فرایند",
+          "آمار و بهینه‌سازی",
+          "ارتباطات و اجرای تغییر"
+        ]
+      },
+      "tools": ["Excel", "Simulation", "Optimization tools", "Process mapping"],
+      "entrySteps": {
+        "en": [
+          "Build a balanced foundation across ISE subjects",
+          "Complete a measurable improvement project",
+          "Choose an entry function aligned with your strengths"
+        ],
+        "fa": [
+          "پایه متوازن در درس‌های صنایع بسازید",
+          "یک پروژه بهبود قابل‌اندازه‌گیری انجام دهید",
+          "یک واحد ورودی همسو با توانایی خود انتخاب کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Industrial-engineering intern",
+          "Industrial engineer or specialist",
+          "Senior engineer, consultant, or manager"
+        ],
+        "fa": [
+          "کارآموز مهندسی صنایع",
+          "مهندس صنایع یا کارشناس تخصصی",
+          "مهندس ارشد، مشاور یا مدیر"
+        ]
+      },
+      "relatedRoles": {
+        "en": [
+          "Process engineer",
+          "Operations analyst",
+          "Continuous-improvement specialist"
+        ],
+        "fa": ["مهندس فرایند", "تحلیلگر عملیات", "کارشناس بهبود مستمر"]
+      },
+      "source": {
+        "label": {
+          "en": "Read the JobVision career guide",
+          "fa": "مطالعه راهنمای شغلی جاب‌ویژن"
+        },
+        "url": "https://jobvision.ir/career-guide/industrial"
+      }
+    }
+  ]
+}

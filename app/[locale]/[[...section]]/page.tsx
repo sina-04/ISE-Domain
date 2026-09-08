@@ -2,7 +2,14 @@ import { notFound } from 'next/navigation';
 import { DomainApp } from '@/components/domain-app';
 
 const locales = ['en', 'fa'] as const;
-const sections = ['chart', 'majors', 'tools', 'resources', 'wikipedia'] as const;
+const sections = [
+  'chart',
+  'majors',
+  'careers',
+  'tools',
+  'resources',
+  'wikipedia',
+] as const;
 
 export const dynamicParams = false;
 

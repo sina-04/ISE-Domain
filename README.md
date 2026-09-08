@@ -16,7 +16,7 @@ A bilingual, responsive introduction to Industrial and Systems Engineering. Buil
 
 ## Routes and preferences
 
-`/en` and `/fa` contain the overview. Each locale has `/chart`, `/majors`, `/tools`, `/resources`, and `/wikipedia` routes. The root route restores the previous language, defaulting to English. Dark mode is the initial theme; preferences are saved in browser local storage.
+`/en` and `/fa` contain the overview. Each locale has `/chart`, `/majors`, `/careers`, `/tools`, `/resources`, and `/wikipedia` routes. The root route restores the previous language, defaulting to English. Dark mode is the initial theme; preferences are saved in browser local storage.
 
 Chart views and filters use URL parameters (`view`, `category`, `group`, `pathway`, `q`, `course`). Filters update immediately without server requests. Language links retain query parameters, including the selected course. There is no account system, database, or runtime AI service.
 
@@ -29,6 +29,7 @@ Module links use native document navigation through `components/site-link.tsx`. 
 - Missing elective credits, prerequisite relationships and source references are enriched from the supplied 1403 PDF. The elective pool's sum is distinct from the 22-credit graduation requirement.
 - Bilingual introductions are editorial summaries. Workbook degree groupings and PDF syllabus details remain distinct.
 - `lib/data/courses.json`, `pathways.json`, and `tools.json` are the published typed catalog. Source records retain sheet/range or PDF page references. The public PDF is a byte-for-byte copy; the source workbook and its personal commentary are not published.
+- `lib/data/careers.json` contains the bilingual nine-domain career map, 26 primary career guides, three related profiles, and the supplied JobVision source links. Source-backed text is paraphrased into an evergreen format without volatile market statistics.
 - `scripts/course-content.tsv`, `pathway-content.json`, and `tool-content.tsv` hold editable descriptions and mappings. Run `scripts/import-catalog.py` with Python containing openpyxl and pypdf, then `scripts/enrich-catalog.py` (requires internet access) to rebuild JSON. Keep the original workbook and PDF in the project root when rebuilding.
 - The enrichment script verifies Wikipedia article existence, follows redirects, excludes disambiguation pages, and validates Persian language links. Missing Persian articles are displayed honestly. Links are related-topic articles, not university course pages.
 - `lib/resources.ts` holds the curated library and source URLs. Two Persian books link to their curriculum bibliography, not unauthorized book copies.
@@ -41,7 +42,7 @@ Edit `categories` in `lib/domain-config.ts` to change the asset URL, desktop foc
 
 ## Validation
 
-Data checks cover course identity, degree and category totals, accounting overlap, supplementary-course separation, prerequisite and pathway references, software consolidation, bilingual content and Wikipedia destinations. Browser QA covers responsive layouts, language/theme controls, search, filters and course dialogs. Reduced-motion media queries disable decorative transitions. Native links and accessible Base UI tabs/dialogs support keyboard use.
+Data checks cover course identity, degree and category totals, accounting overlap, supplementary-course separation, prerequisite and pathway references, software consolidation, the complete bilingual career hierarchy, and external destinations. Browser QA covers responsive layouts, language/theme controls, search, filters, course dialogs, and URL-backed career dialogs. Reduced-motion media queries disable decorative transitions. Native links and accessible Base UI tabs/dialogs support keyboard use.
 
 ## Deployment
 

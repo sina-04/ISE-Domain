@@ -5,7 +5,6 @@ export const categories = [
   {
     id: 'finance',
     title: bilingual('Economics & Finance', 'اقتصاد و امور مالی'),
-    character: bilingual('Kento Nanami', 'کنتو نانامی'),
     caption: bilingual(
       'Find the value in every decision.',
       'ارزش هر تصمیم را پیدا کنید.',
@@ -19,7 +18,6 @@ export const categories = [
   {
     id: 'management',
     title: bilingual('Humanities & Management', 'علوم انسانی و مدیریت'),
-    character: bilingual('Mei Mei', 'می می'),
     caption: bilingual(
       'Understand the people behind systems.',
       'انسان‌های پشت سیستم‌ها را بشناسید.',
@@ -33,7 +31,6 @@ export const categories = [
   {
     id: 'core',
     title: bilingual('Industrial Engineering Core', 'هسته مرکزی مهندسی صنایع'),
-    character: bilingual('Satoru Gojo', 'ساتورو گوجو'),
     caption: bilingual(
       'Build better. Think beyond limits.',
       'بهتر بسازید؛ فراتر از محدودیت‌ها بیندیشید.',
@@ -47,7 +44,6 @@ export const categories = [
   {
     id: 'math',
     title: bilingual('Mathematics', 'ریاضیات'),
-    character: bilingual('Ryomen Sukuna', 'ریومن سوکونا'),
     caption: bilingual(
       'Master the language of possibility.',
       'زبان احتمال و امکان را بیاموزید.',
@@ -61,7 +57,6 @@ export const categories = [
   {
     id: 'programming',
     title: bilingual('Programming & Software', 'برنامه‌نویسی و نرم‌افزار'),
-    character: bilingual('Toji Fushiguro', 'توجی فوشیگورو'),
     caption: bilingual(
       'Turn your ideas into working tools.',
       'ایده‌هایتان را به ابزارهای کاربردی تبدیل کنید.',
@@ -75,7 +70,6 @@ export const categories = [
   {
     id: 'other',
     title: bilingual('Engineering Foundations', 'مکانیک و برق'),
-    character: bilingual('Mechanical & Electrical', 'دروس مکانیک و برق'),
     caption: bilingual(
       'Know how the physical world works.',
       'کارکرد جهان فیزیکی را بشناسید.',

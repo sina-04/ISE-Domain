@@ -1,6 +1,7 @@
 import courseData from './data/courses.json';
 import pathwayData from './data/pathways.json';
 import toolData from './data/tools.json';
+import careerData from './data/careers.json';
 import { type Text, type Locale, normalizeSearch } from './domain-config';
 export interface Source {
   file: string;
@@ -50,10 +51,39 @@ export interface Tool {
   courseIds: string[];
   sources: Source[];
 }
+export interface CareerSource {
+  label: Text;
+  url: string;
+}
+export interface CareerProfile {
+  id: string;
+  domainId: string;
+  supplemental: boolean;
+  name: Text;
+  abbreviation: string;
+  summary: Text;
+  iseFit: Text;
+  dayInLife: Text;
+  responsibilities: { en: string[]; fa: string[] };
+  skills: { en: string[]; fa: string[] };
+  tools: string[];
+  entrySteps: { en: string[]; fa: string[] };
+  progression: { en: string[]; fa: string[] };
+  relatedRoles: { en: string[]; fa: string[] };
+  source: CareerSource | null;
+}
+export interface CareerDomain {
+  id: string;
+  name: Text;
+  careerIds: string[];
+}
 export const courses = courseData as Course[];
 export const undergraduate = courses.filter((c) => c.group !== 'supplementary');
 export const pathways = pathwayData as Pathway[];
 export const tools = toolData as Tool[];
+export const careerDomains = careerData.domains as CareerDomain[];
+export const careers = careerData.careers as CareerProfile[];
+export const careerById = Object.fromEntries(careers.map((c) => [c.id, c]));
 export const courseById = Object.fromEntries(courses.map((c) => [c.id, c]));
 export function courseMatches(course: Course, query: string) {
   return normalizeSearch(

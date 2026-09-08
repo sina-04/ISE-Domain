@@ -6,7 +6,8 @@ const json = (name) =>
   );
 const courses = json('courses'),
   tools = json('tools'),
-  pathways = json('pathways');
+  pathways = json('pathways'),
+  careerData = json('careers');
 const ids = new Set(courses.map((c) => c.id));
 assert.equal(ids.size, courses.length, 'Duplicate course IDs');
 assert.equal(courses.length, 84);
@@ -92,6 +93,79 @@ for (const t of tools) {
   assert(new URL(t.url).protocol === 'https:');
   for (const id of t.courseIds) assert(ids.has(id));
 }
+const careerIds = new Set(careerData.careers.map((career) => career.id));
+assert.equal(careerData.domains.length, 9, 'Career domain count');
+assert.equal(careerData.careers.length, 29, 'Career profile count');
+assert.equal(
+  careerData.careers.filter((career) => !career.supplemental).length,
+  26,
+  'Primary career count',
+);
+assert.equal(
+  careerData.careers.filter((career) => career.supplemental).length,
+  3,
+  'Supplemental career count',
+);
+assert.equal(careerIds.size, careerData.careers.length, 'Duplicate career IDs');
+const primaryCareerIds = careerData.domains.flatMap(
+  (domain) => domain.careerIds,
+);
+assert.equal(
+  new Set(primaryCareerIds).size,
+  26,
+  'Primary career tree membership',
+);
+for (const id of primaryCareerIds) {
+  const career = careerData.careers.find((item) => item.id === id);
+  assert(career && !career.supplemental, `Invalid primary career ${id}`);
+}
+for (const domain of careerData.domains) {
+  assert(
+    domain.name.en && domain.name.fa && domain.careerIds.length,
+    domain.id,
+  );
+  for (const id of domain.careerIds)
+    assert.equal(
+      careerData.careers.find((career) => career.id === id)?.domainId,
+      domain.id,
+      `${id} domain`,
+    );
+}
+for (const career of careerData.careers) {
+  for (const field of ['name', 'summary', 'iseFit', 'dayInLife'])
+    assert(career[field].en && career[field].fa, `${career.id} ${field}`);
+  for (const field of [
+    'responsibilities',
+    'skills',
+    'entrySteps',
+    'progression',
+    'relatedRoles',
+  ])
+    assert(
+      career[field].en.length >= 3 && career[field].fa.length >= 3,
+      `${career.id} ${field}`,
+    );
+  assert(career.tools.length >= 3, `${career.id} tools`);
+}
+const careerSources = careerData.careers.filter((career) => career.source);
+assert.equal(careerSources.length, 18, 'JobVision source count');
+for (const career of careerSources) {
+  const source = new URL(career.source.url);
+  assert.equal(source.protocol, 'https:', `${career.id} source protocol`);
+  assert.equal(source.hostname, 'jobvision.ir', `${career.id} source hostname`);
+  assert(
+    career.source.label.en && career.source.label.fa,
+    `${career.id} source label`,
+  );
+}
+const categoryConfig = readFileSync(
+  new URL('../lib/domain-config.ts', import.meta.url),
+  'utf8',
+);
+assert(
+  !categoryConfig.includes('character:'),
+  'Character labels remain in category data',
+);
 for (const asset of [
   'Kento-Nanami.svg',
   'Mei-Mei.svg',
@@ -102,5 +176,5 @@ for (const asset of [
 ])
   assert(existsSync(new URL(`../public/${asset}`, import.meta.url)), asset);
 console.log(
-  `Validated ${courses.length} courses, degree and subject totals, ${pathways.length} pathway groups, ${tools.length} tools, bilingual content, relationships and Wikipedia destinations.`,
+  `Validated ${courses.length} courses, degree and subject totals, ${pathways.length} pathway groups, ${tools.length} tools, ${careerData.careers.length} bilingual career profiles, relationships and destinations.`,
 );

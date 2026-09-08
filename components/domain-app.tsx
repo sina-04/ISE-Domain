@@ -27,6 +27,7 @@ import {
   Star,
   Sparkles,
   ArrowUp,
+  BriefcaseBusiness,
 } from 'lucide-react';
 import { categories, type Locale } from '@/lib/domain-config';
 import { Explorer } from '@/components/explorer';
@@ -35,6 +36,7 @@ const navigation = [
   ['home', 'Overview', 'نمای کلی'],
   ['chart', 'Chart Analysis', 'تحلیل چارت'],
   ['majors', 'Master’s Majors', 'گرایش‌های ارشد'],
+  ['careers', 'Career Guide', 'راهنمای شغلی'],
   ['tools', 'Tools & Software', 'ابزار و نرم‌افزار'],
   ['resources', 'Resources', 'منابع'],
   ['wikipedia', 'Wikipedia', 'ویکی‌پدیا'],
@@ -139,6 +141,9 @@ export function DomainApp({
       '.degree-summary',
       '.course-group',
       '.pathway-card',
+      '.career-map',
+      '.career-domain-section',
+      '.career-card',
       '.supporting-grid',
       '.tool-card',
       '.japan-explainer',
@@ -449,7 +454,6 @@ export function DomainApp({
                       <ArrowUpRight size={20} />
                     </div>
                     <div className="card-bottom">
-                      <span className="character">{c.character[locale]}</span>
                       <h3>{c.title[locale]}</h3>
                       <p>{c.caption[locale]}</p>
                       <span className="card-explore">
@@ -483,6 +487,14 @@ export function DomainApp({
                     fa: 'گرایش خود را پیدا کنید',
                     desc: 'From optimization to financial systems.',
                     per: 'از بهینه‌سازی تا سیستم‌های مالی.',
+                  },
+                  {
+                    Icon: BriefcaseBusiness,
+                    id: 'careers',
+                    en: 'Explore career paths',
+                    fa: 'مسیرهای شغلی را کشف کنید',
+                    desc: 'From data and projects to operations and business.',
+                    per: 'از داده و پروژه تا عملیات و کسب‌وکار.',
                   },
                   {
                     Icon: Wrench,
