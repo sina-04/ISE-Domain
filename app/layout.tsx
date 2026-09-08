@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Barlow_Condensed, Manrope, Vazirmatn } from 'next/font/google';
+import { Barlow_Condensed, Manrope } from 'next/font/google';
 import './globals.css';
 const display = Barlow_Condensed({
   weight: ['500', '600', '700', '800'],
@@ -7,7 +7,6 @@ const display = Barlow_Condensed({
   variable: '--font-display',
 });
 const body = Manrope({ subsets: ['latin'], variable: '--font-body' });
-const persian = Vazirmatn({ subsets: ['arabic'], variable: '--font-persian' });
 export const metadata: Metadata = {
   title: {
     default: 'ISE Domain — Industrial & Systems Engineering',
@@ -30,11 +29,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={`${display.variable} ${body.variable} ${persian.variable}`}
-      >
-        {children}
-      </body>
+      <body className={`${display.variable} ${body.variable}`}>{children}</body>
     </html>
   );
 }

@@ -1,7 +1,36 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
+@font-face {
+  font-family: 'Sahel';
+  src: url('/fonts/Sahel.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sahel';
+  src: url('/fonts/Sahel-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sahel';
+  src: url('/fonts/Sahel-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sahel';
+  src: url('/fonts/Sahel-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
+  --font-persian: 'Sahel';
   --background: #0c0d12;
   --surface: #13151d;
   --surface-raised: #1b1d28;
@@ -41,7 +70,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-body), var(--font-persian), sans-serif;
   font-size: 1rem;
   line-height: 1.7;
 }
@@ -183,6 +212,43 @@ svg {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.github-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  direction: ltr;
+}
+.github-link {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 6px 9px;
+  color: var(--muted);
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.75rem;
+  line-height: 1;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+}
+.github-link:hover {
+  color: var(--foreground);
+  border-color: var(--accent);
+  background: var(--surface);
+}
+.github-stars svg {
+  color: var(--accent);
+  fill: color-mix(in srgb, var(--accent) 24%, transparent);
+}
+.star-count {
+  min-width: 1ch;
+  font-variant-numeric: tabular-nums;
 }
 .language-button {
   display: flex;
@@ -1966,5 +2032,145 @@ footer > span {
 @media (max-width: 950px) {
   .main-nav.open {
     top: 100%;
+  }
+}
+
+/* Locale rules also cover portaled dialogs and Persian text on English pages. */
+html[lang='fa'] body {
+  --font-body: 'Sahel';
+  --font-display: 'Sahel';
+  --font-sans: 'Sahel';
+  font-family: 'Sahel', sans-serif;
+}
+[lang='fa'],
+.language-button[lang='fa'] {
+  font-family: 'Sahel', sans-serif;
+  letter-spacing: 0;
+}
+html[lang='fa'] :is(h1, h2, h3, .stats-strip strong),
+html[lang='fa'] .dialog-title[data-slot='dialog-title'] {
+  font-family: 'Sahel', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+html[lang='fa'] :is(button, input, select, textarea) {
+  font-family: 'Sahel', sans-serif;
+}
+html[lang='fa']
+  :is(.overline, .eyebrow, .small-label, .character, .course-code) {
+  letter-spacing: 0;
+}
+html[lang='fa'] .intro {
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 270px);
+  gap: clamp(30px, 5vw, 80px);
+  align-items: center;
+  padding-block: 64px 58px;
+}
+html[lang='fa'] .intro > div:first-child {
+  min-width: 0;
+}
+html[lang='fa'] .intro h1 {
+  font-size: clamp(2.4rem, 4.5vw, 4.1rem);
+  line-height: 1.55;
+  letter-spacing: 0;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+html[lang='fa'] .intro-copy {
+  font-size: 1.125rem;
+  line-height: 2;
+  max-width: 58ch;
+  margin-top: 22px;
+}
+html[lang='fa'] .intro-aside {
+  min-width: 0;
+  overflow: hidden;
+  padding-inline-start: 34px;
+  padding-inline-end: 42px;
+}
+html[lang='fa'] .intro-aside .domain-mark {
+  font-size: clamp(3.4rem, 4vw, 4.35rem);
+  letter-spacing: -6px;
+}
+html[lang='fa'] .domain-mark span {
+  font-family: 'Sahel', sans-serif;
+  letter-spacing: 0;
+}
+html[lang='fa'] .stats-strip strong {
+  line-height: 1.35;
+}
+html[lang='fa'] .language-button[lang='en'],
+html[lang='fa'] .brand {
+  font-family: sans-serif;
+}
+@media (max-width: 950px) {
+  html[lang='fa'] .intro {
+    grid-template-columns: minmax(0, 1fr) 190px;
+    gap: 28px;
+  }
+  .github-handle {
+    display: none;
+  }
+  .github-profile {
+    padding-inline: 8px;
+  }
+}
+@media (max-width: 600px) {
+  html[lang='fa'] .intro {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 36px;
+  }
+  html[lang='fa'] .intro h1 {
+    font-size: clamp(2rem, 8.5vw, 2.8rem);
+    line-height: 1.65;
+  }
+  html[lang='fa'] .intro-copy {
+    font-size: 1rem;
+  }
+  .github-actions {
+    gap: 3px;
+  }
+  .github-link {
+    min-height: 34px;
+    padding: 5px 7px;
+  }
+  .github-stars {
+    gap: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .site-header {
+    gap: 12px;
+  }
+}
+
+/* Reveal the new theme from the toggle's actual viewport position in either direction. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 2;
+  animation: theme-reveal 520ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+@keyframes theme-reveal {
+  from {
+    clip-path: circle(0px at var(--theme-x) var(--theme-y));
+  }
+  to {
+    clip-path: circle(var(--theme-radius) at var(--theme-x) var(--theme-y));
+  }
+}
+::view-transition-group(root) {
+  animation-duration: 0s;
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(root),
+  ::view-transition-new(root) {
+    animation: none;
   }
 }

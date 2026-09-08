@@ -1018,6 +1018,8 @@ function CourseDialog({
       }}
     >
       <DialogContent
+        lang={locale}
+        dir={locale === 'fa' ? 'rtl' : 'ltr'}
         finalFocus={() => returnFocus}
         className="course-dialog"
         showCloseButton={false}
@@ -1118,7 +1120,14 @@ function CourseDialog({
                   </>
                 )}
                 {course.standing && (
-                  <p className="standing-note">{course.standing[locale]}</p>
+                  <p className="standing-note">
+                    {locale === 'fa'
+                      ? course.standing.fa.replace(
+                          /\d/g,
+                          (d) => '۰۱۲۳۴۵۶۷۸۹'[Number(d)],
+                        )
+                      : course.standing.en}
+                  </p>
                 )}
               </section>
               <section>
