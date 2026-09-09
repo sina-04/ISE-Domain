@@ -45,6 +45,7 @@ import {
   tools,
   courseById,
   careerById,
+  careerDomains,
   creditsFor,
   formatNumber,
   courseMatches,
@@ -255,6 +256,7 @@ export function Explorer({
   const pathway = params.get('pathway') || 'all';
   const group = params.get('group') || 'all';
   const resourceBasis = params.get('based') || 'all';
+  const resourceScope = params.get('scope') || 'all';
   const search = query;
   const [returnFocus, setReturnFocus] = useState<HTMLElement | null>(null);
   const update = (values: Record<string, string | null>) => {
@@ -394,6 +396,8 @@ export function Explorer({
             pathway: null,
             type: null,
             topic: null,
+            based: null,
+            scope: null,
           });
         }}
       >
@@ -401,6 +405,32 @@ export function Explorer({
       </button>
     </div>
   );
+  const matchesResourceBasis = (resource: Resource) => {
+    if (resourceBasis === 'content') {
+      return (
+        resource.categories.length > 0 &&
+        (resourceScope === 'all' ||
+          resource.categories.includes(resourceScope))
+      );
+    }
+    if (resourceBasis === 'majors') {
+      return (
+        (resource.pathwayIds?.length || 0) > 0 &&
+        (resourceScope === 'all' ||
+          resource.pathwayIds?.includes(resourceScope))
+      );
+    }
+    if (resourceBasis === 'careers') {
+      return (
+        (resource.careerIds?.length || 0) > 0 &&
+        (resourceScope === 'all' ||
+          resource.careerIds?.some(
+            (id) => careerById[id]?.domainId === resourceScope,
+          ))
+      );
+    }
+    return true;
+  };
   return (
     <>
       <div className="page-heading">
@@ -897,7 +927,7 @@ export function Explorer({
             <FilterSelect
               label={t('Based on', 'بر اساس')}
               value={resourceBasis}
-              onValueChange={(next) => update({ based: next })}
+              onValueChange={(next) => update({ based: next, scope: null })}
               options={[
                 ['all', 'Based on…', 'بر اساس…'],
                 ['content', 'Content Categories', 'دسته‌بندی‌های محتوایی'],
@@ -905,6 +935,58 @@ export function Explorer({
                 ['careers', 'Career Guide', 'راهنمای شغلی'],
               ].map(([id, en, fa]) => ({ value: id, label: t(en, fa) }))}
             />
+            {resourceBasis !== 'all' && (
+              <FilterSelect
+                label={t('Related area', 'حوزه مرتبط')}
+                value={resourceScope}
+                onValueChange={(next) => update({ scope: next })}
+                options={
+                  resourceBasis === 'content'
+                    ? [
+                        {
+                          value: 'all',
+                          label: t(
+                            'All content categories',
+                            'همه دسته‌بندی‌های محتوایی',
+                          ),
+                        },
+                        ...categories.map((category) => ({
+                          value: category.id,
+                          label: category.title[locale],
+                        })),
+                      ]
+                    : resourceBasis === 'majors'
+                      ? [
+                          {
+                            value: 'all',
+                            label: t(
+                              "All master's majors",
+                              'همه گرایش‌های ارشد',
+                            ),
+                          },
+                          ...pathways
+                            .filter((pathway) => !pathway.supporting)
+                            .map((pathway) => ({
+                              value: pathway.id,
+                              label: pathway.name[locale],
+                            })),
+                        ]
+                      : [
+                          {
+                            value: 'all',
+                            label: t(
+                              'All career domains',
+                              'همه حوزه‌های شغلی',
+                            ),
+                          },
+                          ...careerDomains.map((domain) => ({
+                            value: domain.id,
+                            label: domain.name[locale],
+                          })),
+                        ]
+                }
+              />
+            )}
             <FilterSelect
               label={t('Resource type', 'نوع منبع')}
               value={params.get('type') || 'all'}
@@ -958,12 +1040,7 @@ export function Explorer({
                 (r) =>
                   (!params.get('type') || r.type === params.get('type')) &&
                   (!params.get('topic') || r.japan) &&
-                  (resourceBasis === 'all' ||
-                    (resourceBasis === 'content' && r.categories.length > 0) ||
-                    (resourceBasis === 'majors' &&
-                      (r.pathwayIds?.length || 0) > 0) ||
-                    (resourceBasis === 'careers' &&
-                      (r.careerIds?.length || 0) > 0)) &&
+                  matchesResourceBasis(r) &&
                   normalizeSearch(
                     r.title.en +
                       r.title.fa +
@@ -996,7 +1073,12 @@ export function Explorer({
                           }[r.type],
                         )}
                       </span>
-                      <span>{r.language === 'en' ? 'English' : 'فارسی'}</span>
+                      <span
+                        lang={r.language === 'en' ? 'en' : 'fa'}
+                        dir={r.language === 'en' ? 'ltr' : 'rtl'}
+                      >
+                        {r.language === 'en' ? 'English' : 'فارسی'}
+                      </span>
                       {r.japan && <span>日本</span>}
                     </div>
                     <h2>{r.title[locale]}</h2>
@@ -1027,12 +1109,7 @@ export function Explorer({
             (r) =>
               (!params.get('type') || r.type === params.get('type')) &&
               (!params.get('topic') || r.japan) &&
-              (resourceBasis === 'all' ||
-                (resourceBasis === 'content' && r.categories.length > 0) ||
-                (resourceBasis === 'majors' &&
-                  (r.pathwayIds?.length || 0) > 0) ||
-                (resourceBasis === 'careers' &&
-                  (r.careerIds?.length || 0) > 0)) &&
+              matchesResourceBasis(r) &&
               normalizeSearch(
                 r.title.en +
                   r.title.fa +
