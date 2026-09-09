@@ -576,11 +576,36 @@ svg {
   inset: 22% -8% -24%;
   opacity: 0;
   background:
-    radial-gradient(ellipse at 10% 100%, #ffd25a 0 3%, #ff4d16 10%, transparent 34%),
-    radial-gradient(ellipse at 32% 102%, #fff0a4 0 2%, #e32612 11%, transparent 37%),
-    radial-gradient(ellipse at 54% 100%, #ffcd45 0 4%, #ff3214 12%, transparent 38%),
-    radial-gradient(ellipse at 76% 104%, #ffe488 0 3%, #d91f0c 12%, transparent 36%),
-    radial-gradient(ellipse at 94% 100%, #ffc83d 0 3%, #f33a12 11%, transparent 34%);
+    radial-gradient(
+      ellipse at 10% 100%,
+      #ffd25a 0 3%,
+      #ff4d16 10%,
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 32% 102%,
+      #fff0a4 0 2%,
+      #e32612 11%,
+      transparent 37%
+    ),
+    radial-gradient(
+      ellipse at 54% 100%,
+      #ffcd45 0 4%,
+      #ff3214 12%,
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 76% 104%,
+      #ffe488 0 3%,
+      #d91f0c 12%,
+      transparent 36%
+    ),
+    radial-gradient(
+      ellipse at 94% 100%,
+      #ffc83d 0 3%,
+      #f33a12 11%,
+      transparent 34%
+    );
   filter: blur(8px) saturate(1.35);
   mix-blend-mode: screen;
   transform-origin: 50% 100%;
@@ -591,6 +616,43 @@ svg {
   animation:
     sukuna-fire-rise 1.1s ease-out both,
     sukuna-fire-flicker 0.26s 1.1s ease-in-out infinite alternate;
+}
+.sukuna-fire-waves {
+  position: absolute;
+  inset: 32% -10% -4%;
+  opacity: 0;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 10px rgba(255, 78, 20, 0.9));
+}
+.sukuna-fire-waves svg {
+  width: 120%;
+  height: 100%;
+  overflow: visible;
+}
+.sukuna-fire-waves path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 11;
+  vector-effect: non-scaling-stroke;
+}
+.sukuna-fire-waves path:nth-child(1) {
+  stroke: rgba(255, 226, 119, 0.82);
+  animation: sukuna-wave-drift 2.8s linear infinite;
+}
+.sukuna-fire-waves path:nth-child(2) {
+  stroke: rgba(255, 91, 30, 0.76);
+  stroke-width: 16;
+  animation: sukuna-wave-drift 3.7s -1.2s linear infinite reverse;
+}
+.sukuna-fire-waves path:nth-child(3) {
+  stroke: rgba(205, 21, 12, 0.72);
+  stroke-width: 21;
+  animation: sukuna-wave-drift 4.6s -2.1s linear infinite;
+}
+.sukuna-domain-expansion.is-fire .sukuna-fire-waves,
+.sukuna-domain-expansion.is-reveal .sukuna-fire-waves {
+  opacity: 0.92;
+  animation: sukuna-waves-rise 1.6s ease-out both;
 }
 .sukuna-reveal {
   position: absolute;
@@ -606,7 +668,7 @@ svg {
   transform: translate(-50%, -50%) scale(0);
 }
 .sukuna-domain-expansion.is-reveal .sukuna-reveal {
-  animation: sukuna-clear 1.6s cubic-bezier(0.72, 0, 0.2, 1) forwards;
+  animation: sukuna-clear 5s cubic-bezier(0.62, 0, 0.23, 1) forwards;
 }
 @keyframes sukuna-wallpaper-breathe {
   from {
@@ -636,6 +698,27 @@ svg {
     transform: translateY(-1.5%) scaleX(1.02) scaleY(1.05);
   }
 }
+@keyframes sukuna-waves-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28%) scaleY(0.68);
+  }
+  to {
+    opacity: 0.92;
+    transform: translateY(0) scaleY(1);
+  }
+}
+@keyframes sukuna-wave-drift {
+  0% {
+    transform: translate3d(-5%, 2%, 0) scaleY(0.88);
+  }
+  50% {
+    transform: translate3d(0, -3%, 0) scaleY(1.12);
+  }
+  100% {
+    transform: translate3d(5%, 2%, 0) scaleY(0.88);
+  }
+}
 @keyframes sukuna-clear {
   from {
     transform: translate(-50%, -50%) scale(0);
@@ -649,6 +732,9 @@ svg {
   .sukuna-domain-expansion > img,
   .sukuna-domain-expansion.is-fire .sukuna-fire,
   .sukuna-domain-expansion.is-reveal .sukuna-fire,
+  .sukuna-domain-expansion.is-fire .sukuna-fire-waves,
+  .sukuna-domain-expansion.is-reveal .sukuna-fire-waves,
+  .sukuna-fire-waves path,
   .sukuna-domain-expansion.is-reveal .sukuna-reveal {
     animation: none;
   }

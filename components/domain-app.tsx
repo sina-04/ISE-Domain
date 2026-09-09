@@ -92,6 +92,7 @@ export function DomainApp({
   const fa = locale === 'fa';
   const t = (en: string, per: string) => (fa ? per : en);
   const theme = useSyncExternalStore(subscribeTheme, readTheme, () => 'dark');
+  const [activeSection, setActiveSection] = useState(section);
   const [menu, setMenu] = useState(false);
   const [stars, setStars] = useState<number | null>(null);
   const [audioPending, setAudioPending] = useState<string | null>(null);
@@ -100,7 +101,6 @@ export function DomainApp({
   const sukunaPlayed = useRef(false);
   const activeDomainAudio = useRef<HTMLAudioElement | null>(null);
   const transitionTimers = useRef<number[]>([]);
-  const audioFallbackTimer = useRef<number | null>(null);
   const sukunaActive = sukunaPhase !== null;
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -111,9 +111,9 @@ export function DomainApp({
   }, [locale, fa]);
   useEffect(() => {
     try {
-      const navigationEntry = performance.getEntriesByType(
-        'navigation',
-      )[0] as PerformanceNavigationTiming | undefined;
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as
+        | PerformanceNavigationTiming
+        | undefined;
       if (navigationEntry?.type === 'reload') {
         sessionStorage.removeItem(SUKUNA_PLAYED_KEY);
       }
@@ -131,13 +131,20 @@ export function DomainApp({
       document.body.style.overflow = previousOverflow;
     };
   }, [sukunaActive]);
+  useEffect(() => {
+    const syncSectionFromLocation = () => {
+      const parts = window.location.pathname.split('/').filter(Boolean);
+      const localeIndex = parts.lastIndexOf(locale);
+      setActiveSection(parts[localeIndex + 1] || 'home');
+    };
+    window.addEventListener('popstate', syncSectionFromLocation);
+    return () =>
+      window.removeEventListener('popstate', syncSectionFromLocation);
+  }, [locale]);
   useEffect(
     () => () => {
       for (const timer of transitionTimers.current) {
         window.clearTimeout(timer);
-      }
-      if (audioFallbackTimer.current !== null) {
-        window.clearTimeout(audioFallbackTimer.current);
       }
       activeDomainAudio.current?.pause();
       activeDomainAudio.current = null;
@@ -224,7 +231,7 @@ export function DomainApp({
       observer.disconnect();
       mutations.disconnect();
     };
-  }, [section]);
+  }, [activeSection]);
   async function toggleTheme(event: MouseEvent<HTMLButtonElement>) {
     if (themeTransition.current) return;
     const next = theme === 'dark' ? 'light' : 'dark';
@@ -267,16 +274,21 @@ export function DomainApp({
   }
   const href = (id: string) => `/${locale}${id === 'home' ? '' : `/${id}`}`;
   function stopDomainAudio() {
-    if (audioFallbackTimer.current !== null) {
-      window.clearTimeout(audioFallbackTimer.current);
-      audioFallbackTimer.current = null;
-    }
     if (activeDomainAudio.current) {
       activeDomainAudio.current.pause();
       activeDomainAudio.current.currentTime = 0;
       activeDomainAudio.current = null;
     }
     setAudioPending(null);
+  }
+  function showDomain(categoryId: string) {
+    const destination = withBasePath(
+      `${href('chart')}?view=content&category=${categoryId}`,
+    );
+    window.history.pushState(window.history.state, '', destination);
+    window.dispatchEvent(new Event('ise-querychange'));
+    setActiveSection('chart');
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }
   function handleDomainClick(
     event: MouseEvent<HTMLAnchorElement>,
@@ -286,12 +298,17 @@ export function DomainApp({
 
     event.preventDefault();
     stopDomainAudio();
-    const destination = withBasePath(
-      `${href('chart')}?view=content&category=${category.id}`,
-    );
     const audio = new Audio(withBasePath(category.audio));
     audio.preload = 'auto';
     activeDomainAudio.current = audio;
+    setAudioPending(category.id);
+    const finishAudio = () => {
+      if (activeDomainAudio.current !== audio) return;
+      activeDomainAudio.current = null;
+      setAudioPending(null);
+    };
+    audio.addEventListener('ended', finishAudio, { once: true });
+    audio.addEventListener('error', finishAudio, { once: true });
 
     if (category.id === 'math' && !sukunaPlayed.current) {
       sukunaPlayed.current = true;
@@ -300,30 +317,20 @@ export function DomainApp({
       } catch {}
 
       flushSync(() => setSukunaPhase('wallpaper'));
-      void audio.play().catch(() => undefined);
+      void audio.play().catch(finishAudio);
       const fireTimer = window.setTimeout(() => setSukunaPhase('fire'), 7000);
-      const revealTimer = window.setTimeout(
-        () => setSukunaPhase('reveal'),
-        18000,
-      );
-      const navigateTimer = window.setTimeout(() => {
-        window.location.assign(destination);
-      }, 19600);
-      transitionTimers.current = [fireTimer, revealTimer, navigateTimer];
+      const revealTimer = window.setTimeout(() => {
+        showDomain(category.id);
+        setSukunaPhase('reveal');
+      }, 18000);
+      const clearTimer = window.setTimeout(() => setSukunaPhase(null), 23000);
+      transitionTimers.current = [fireTimer, revealTimer, clearTimer];
       return;
     }
 
-    setAudioPending(category.id);
-    let finished = false;
-    const navigate = () => {
-      if (finished) return;
-      finished = true;
-      window.location.assign(destination);
-    };
-    audio.addEventListener('ended', navigate, { once: true });
-    audio.addEventListener('error', navigate, { once: true });
-    audioFallbackTimer.current = window.setTimeout(navigate, 30000);
-    void audio.play().catch(navigate);
+    const playback = audio.play();
+    showDomain(category.id);
+    void playback.catch(finishAudio);
   }
   return (
     <div id="top" className="site-shell" dir={fa ? 'rtl' : 'ltr'}>
@@ -347,8 +354,8 @@ export function DomainApp({
           {navigation.map(([id, en, per]) => (
             <Link
               onClick={() => setMenu(false)}
-              aria-current={section === id ? 'page' : undefined}
-              className={section === id ? 'active' : ''}
+              aria-current={activeSection === id ? 'page' : undefined}
+              className={activeSection === id ? 'active' : ''}
               key={id}
               href={href(id)}
             >
@@ -396,12 +403,12 @@ export function DomainApp({
           <a
             className="language-button"
             href={withBasePath(
-              `/${fa ? 'en' : 'fa'}${section === 'home' ? '' : `/${section}`}`,
+              `/${fa ? 'en' : 'fa'}${activeSection === 'home' ? '' : `/${activeSection}`}`,
             )}
             onClick={(e) => {
               e.preventDefault();
               window.location.href = withBasePath(
-                `/${fa ? 'en' : 'fa'}${section === 'home' ? '' : `/${section}`}${window.location.search}`,
+                `/${fa ? 'en' : 'fa'}${activeSection === 'home' ? '' : `/${activeSection}`}${window.location.search}`,
               );
             }}
             lang={fa ? 'en' : 'fa'}
@@ -427,7 +434,7 @@ export function DomainApp({
         </div>
       </header>
       <main id="main" className="main-content">
-        {section === 'home' ? (
+        {activeSection === 'home' ? (
           <>
             <div className="eyebrow">
               <span className="live-dot" />
@@ -675,7 +682,7 @@ export function DomainApp({
               </p>
             }
           >
-            <Explorer locale={locale} section={section} />
+            <Explorer locale={locale} section={activeSection} />
           </Suspense>
         )}
       </main>
@@ -696,6 +703,13 @@ export function DomainApp({
             aria-hidden="true"
           />
           <div className="sukuna-fire" aria-hidden="true" />
+          <div className="sukuna-fire-waves" aria-hidden="true">
+            <svg viewBox="0 0 1200 320" preserveAspectRatio="none">
+              <path d="M-120 100 C-70 28 -20 28 30 100 S130 172 180 100 S280 28 330 100 S430 172 480 100 S580 28 630 100 S730 172 780 100 S880 28 930 100 S1030 172 1080 100 S1180 28 1230 100 S1330 172 1380 100" />
+              <path d="M-120 174 C-60 92 0 92 60 174 S180 256 240 174 S360 92 420 174 S540 256 600 174 S720 92 780 174 S900 256 960 174 S1080 92 1140 174 S1260 256 1320 174" />
+              <path d="M-120 238 C-80 184 -40 184 0 238 S80 292 120 238 S200 184 240 238 S320 292 360 238 S440 184 480 238 S560 292 600 238 S680 184 720 238 S800 292 840 238 S920 184 960 238 S1040 292 1080 238 S1160 184 1200 238 S1280 292 1320 238" />
+            </svg>
+          </div>
           <div className="sukuna-reveal" aria-hidden="true" />
         </div>
       )}
