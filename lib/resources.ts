@@ -8,10 +8,241 @@ export interface Resource {
   language: string;
   url: string;
   categories: string[];
+  pathwayIds?: string[];
+  courseIds?: string[];
+  careerIds?: string[];
   japan?: boolean;
   pdfPage?: number;
 }
 export const resources: Resource[] = [
+  {
+    id: 'optexpert',
+    title: b('OptExpert', 'اپت‌اکسپرت'),
+    author: b('OptExpert', 'اپت‌اکسپرت'),
+    description: b(
+      'Courses and practical material for operations research and optimization.',
+      'دوره‌ها و محتوای کاربردی برای تحقیق در عملیات و بهینه‌سازی.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://optexpert.org/',
+    categories: ['math'],
+    pathwayIds: ['optimization', 'logistics'],
+    courseIds: ['ise-109', 'ise-110'],
+  },
+  {
+    id: 'optexpert-optimization-modeling',
+    title: b('Optimization Modeling', 'مدل‌سازی بهینه‌سازی'),
+    author: b('OptExpert', 'اپت‌اکسپرت'),
+    description: b(
+      'A focused course on formulating and implementing optimization models.',
+      'دوره‌ای متمرکز بر صورت‌بندی و پیاده‌سازی مدل‌های بهینه‌سازی.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://optexpert.org/courses/optimization-modeling/',
+    categories: ['math'],
+    pathwayIds: ['optimization', 'logistics'],
+    courseIds: ['ise-109', 'ise-110'],
+  },
+  {
+    id: 'pyomo-channel',
+    title: b('Pyomo Learning Channel', 'کانال آموزشی Pyomo'),
+    author: b('Telegram', 'تلگرام'),
+    description: b(
+      'Learning material for optimization modeling with Python and Pyomo.',
+      'محتوای آموزشی مدل‌سازی بهینه‌سازی با پایتون و Pyomo.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://t.me/pyomochannel',
+    categories: ['math', 'programming'],
+    pathwayIds: ['optimization', 'logistics'],
+    courseIds: ['ise-109', 'ise-110'],
+  },
+  {
+    id: 'optexpert-vrp-python',
+    title: b(
+      'Vehicle Routing Problems with Python',
+      'مسئله مسیریابی وسایل نقلیه با پایتون',
+    ),
+    author: b('OptExpert', 'اپت‌اکسپرت'),
+    description: b(
+      'A practical course on vehicle routing models and Python implementation.',
+      'دوره‌ای کاربردی درباره مدل‌های مسیریابی وسایل نقلیه و پیاده‌سازی با پایتون.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://optexpert.org/courses/vrp-python/',
+    categories: ['core', 'programming'],
+    pathwayIds: ['logistics'],
+    courseIds: ['ise-138'],
+  },
+  {
+    id: 'optexpert-health-optimization',
+    title: b('Healthcare Optimization', 'بهینه‌سازی در سلامت'),
+    author: b('OptExpert', 'اپت‌اکسپرت'),
+    description: b(
+      'Applied optimization concepts and models for healthcare systems.',
+      'مفاهیم و مدل‌های کاربردی بهینه‌سازی برای سیستم‌های سلامت.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://optexpert.org/courses/health-opt/',
+    categories: ['other'],
+    pathwayIds: ['healthcare'],
+    courseIds: ['health-001'],
+  },
+  {
+    id: 'pouriya-baghdadi',
+    title: b('Data Analytics Learning Channel', 'کانال آموزشی تحلیل داده'),
+    author: b('Pouriya Baghdadi · Telegram', 'پوریا بغدادی · تلگرام'),
+    description: b(
+      'Persian learning material for data analytics and business intelligence.',
+      'محتوای آموزشی فارسی برای تحلیل داده و هوش تجاری.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://t.me/pouriyabaghdadi',
+    categories: ['programming'],
+    pathwayIds: ['data-ai'],
+    careerIds: ['data-analytics', 'business-intelligence'],
+  },
+  {
+    id: 'tahlilgary',
+    title: b('Tahlilgary', 'تحلیلگری'),
+    author: b('Tahlilgary', 'تحلیلگری'),
+    description: b(
+      'Persian courses and articles for data analysis and business intelligence.',
+      'دوره‌ها و مقاله‌های فارسی در زمینه تحلیل داده و هوش تجاری.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://www.tahlilgary.com/',
+    categories: ['programming'],
+    pathwayIds: ['data-ai'],
+    careerIds: ['data-analytics', 'business-intelligence'],
+  },
+  {
+    id: 'bahmani-class360',
+    title: b('Industrial Engineering · Class 360', 'مهندسی صنایع · کلاس ۳۶۰'),
+    author: b('Bahmani IE', 'بهمنی صنایع'),
+    description: b(
+      'A Persian learning resource for the Industrial Engineering career path.',
+      'منبع آموزشی فارسی برای مسیر شغلی مهندسی صنایع.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://bahmaniie.ir/mr-class360',
+    categories: ['core'],
+    pathwayIds: ['optimization'],
+    careerIds: ['industrial-engineer'],
+  },
+  {
+    id: 'bahmani-alfa-msp-2',
+    title: b('Alfa MSP 2', 'آلفا MSP ۲'),
+    author: b('Bahmani IE', 'بهمنی صنایع'),
+    description: b(
+      'Project-control training centered on Microsoft Project workflows.',
+      'آموزش کنترل پروژه با تمرکز بر گردش کار Microsoft Project.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://bahmaniie.ir/alfa-msp-2',
+    categories: ['management'],
+    pathwayIds: ['optimization', 'finance'],
+    careerIds: ['project-control'],
+  },
+  {
+    id: 'bahmani-alfa-msp',
+    title: b('Alfa MSP', 'آلفا MSP'),
+    author: b('Bahmani IE', 'بهمنی صنایع'),
+    description: b(
+      'A Persian Microsoft Project course for project planning and control.',
+      'دوره فارسی Microsoft Project برای برنامه‌ریزی و کنترل پروژه.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://bahmaniie.ir/alfa-msp',
+    categories: ['management'],
+    pathwayIds: ['optimization', 'finance'],
+    careerIds: ['project-control'],
+  },
+  {
+    id: 'bahmani-god-of-project',
+    title: b('God of Project', 'خدای پروژه'),
+    author: b('Bahmani IE', 'بهمنی صنایع'),
+    description: b(
+      'A broader Persian learning program for project management and control.',
+      'برنامه آموزشی جامع‌تر برای مدیریت و کنترل پروژه.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://bahmaniie.ir/god-of-project',
+    categories: ['management'],
+    pathwayIds: ['optimization', 'finance'],
+    careerIds: ['project-control'],
+  },
+  {
+    id: 'bahmani-work-study',
+    title: b('Work Study', 'کارسنجی و زمان‌سنجی'),
+    author: b('Bahmani IE', 'بهمنی صنایع'),
+    description: b(
+      'A Persian course on work measurement, method study, and productivity.',
+      'دوره فارسی درباره اندازه‌گیری کار، روش‌سنجی و بهره‌وری.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://bahmaniie.ir/work-study',
+    categories: ['core'],
+    pathwayIds: ['optimization', 'hse'],
+    courseIds: ['ise-105'],
+  },
+  {
+    id: 'bahmani-production-planning',
+    title: b('Production Planning', 'برنامه‌ریزی تولید'),
+    author: b('Bahmani IE', 'بهمنی صنایع'),
+    description: b(
+      'A Persian learning resource for production planning and control roles.',
+      'منبع آموزشی فارسی برای نقش‌های برنامه‌ریزی و کنترل تولید.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://bahmaniie.ir/mr-tolid',
+    categories: ['core'],
+    pathwayIds: ['logistics'],
+    careerIds: ['production-planning'],
+  },
+  {
+    id: 'bahmani-iso',
+    title: b('ISO and Standards', 'ISO و استانداردها'),
+    author: b('Bahmani IE', 'بهمنی صنایع'),
+    description: b(
+      'A Persian learning resource for ISO standards and management systems.',
+      'منبع آموزشی فارسی برای استانداردهای ISO و سیستم‌های مدیریتی.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://bahmaniie.ir/mr-iso-01',
+    categories: ['management', 'core'],
+    pathwayIds: ['quality'],
+    careerIds: ['iso-standards'],
+  },
+  {
+    id: 'bahmani-quality-assurance',
+    title: b('Quality Assurance', 'تضمین کیفیت'),
+    author: b('Bahmani IE', 'بهمنی صنایع'),
+    description: b(
+      'A Persian learning resource for quality-assurance systems and practice.',
+      'منبع آموزشی فارسی برای سیستم‌ها و فعالیت‌های تضمین کیفیت.',
+    ),
+    type: 'learning',
+    language: 'fa',
+    url: 'https://bahmaniie.ir/master-qa',
+    categories: ['core'],
+    pathwayIds: ['quality'],
+    careerIds: ['quality-assurance'],
+  },
   {
     id: 'python-book',
     title: b('Python for Data Analysis', 'پایتون برای تحلیل داده'),
@@ -223,3 +454,9 @@ export const resources: Resource[] = [
     categories: ['math', 'core', 'other'],
   },
 ];
+
+export const resourcesForCourse = (courseId: string) =>
+  resources.filter((resource) => resource.courseIds?.includes(courseId));
+
+export const resourcesForCareer = (careerId: string) =>
+  resources.filter((resource) => resource.careerIds?.includes(careerId));

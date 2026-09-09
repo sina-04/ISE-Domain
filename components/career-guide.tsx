@@ -4,6 +4,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   BriefcaseBusiness,
+  BookOpen,
   CheckCircle2,
   Compass,
   Network,
@@ -26,6 +27,7 @@ import {
   type CareerProfile,
 } from '@/lib/catalog';
 import type { Locale } from '@/lib/domain-config';
+import { resourcesForCareer } from '@/lib/resources';
 
 function CareerCard({
   career,
@@ -59,6 +61,15 @@ function CareerCard({
       </span>
       <span className="career-card-skills">
         {career.skills[locale].slice(0, 2).join(' · ')}
+      </span>
+      <span
+        className={`card-resource-badge career-resource-badge ${resourcesForCareer(career.id).length ? 'has-resources' : ''}`}
+      >
+        <BookOpen size={13} aria-hidden="true" />
+        {t('Resources', 'منابع')}
+        {resourcesForCareer(career.id).length > 0 && (
+          <small>{resourcesForCareer(career.id).length}</small>
+        )}
       </span>
       <ArrowUpRight
         className="career-card-arrow"
@@ -405,6 +416,36 @@ function CareerDialog({
                     <span key={role}>{role}</span>
                   ))}
                 </div>
+              </section>
+              <section>
+                <h3>
+                  <BookOpen size={18} />
+                  {t('Resources', 'منابع')}
+                </h3>
+                {resourcesForCareer(career.id).length > 0 ? (
+                  <div className="dialog-resource-list">
+                    {resourcesForCareer(career.id).map((resource) => (
+                      <a
+                        className="out-link"
+                        key={resource.id}
+                        href={resource.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {resource.title[locale]}
+                        <ArrowUpRight size={15} aria-hidden="true" />
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <Link
+                    className="dialog-resource-browse"
+                    href={`/${locale}/resources?based=careers`}
+                  >
+                    {t('Browse career resources', 'مشاهده منابع شغلی')}
+                    <ArrowUpRight size={14} aria-hidden="true" />
+                  </Link>
+                )}
               </section>
               {career.source && (
                 <a

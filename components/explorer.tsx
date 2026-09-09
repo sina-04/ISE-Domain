@@ -51,7 +51,11 @@ import {
   type Course,
   type CareerProfile,
 } from '@/lib/catalog';
-import { resources } from '@/lib/resources';
+import {
+  resources,
+  resourcesForCourse,
+  type Resource,
+} from '@/lib/resources';
 import { withBasePath } from '@/lib/base-path';
 import { CareerGuide } from '@/components/career-guide';
 const pageNames: Record<string, Text> = {
@@ -158,6 +162,65 @@ function OutLink({
     </a>
   );
 }
+
+function ResourceConnections({
+  resource,
+  basis,
+  locale,
+}: {
+  resource: Resource;
+  basis: string;
+  locale: Locale;
+}) {
+  if (basis === 'majors') {
+    return (
+      <div className="resource-subjects">
+        {resource.pathwayIds?.map((id) => {
+          const pathway = pathways.find((item) => item.id === id);
+          return pathway ? (
+            <Link
+              key={id}
+              href={`/${locale}/chart?view=pathways&pathway=${id}`}
+            >
+              {pathway.name[locale]}
+            </Link>
+          ) : null;
+        })}
+      </div>
+    );
+  }
+
+  if (basis === 'careers') {
+    return (
+      <div className="resource-subjects">
+        {resource.careerIds?.map((id) => {
+          const career = careerById[id];
+          return career ? (
+            <Link key={id} href={`/${locale}/careers?career=${id}`}>
+              {career.name[locale]}
+            </Link>
+          ) : null;
+        })}
+      </div>
+    );
+  }
+
+  return (
+    <div className="resource-subjects">
+      {resource.categories.map((id) => {
+        const category = categories.find((item) => item.id === id);
+        return category ? (
+          <Link
+            key={id}
+            href={`/${locale}/chart?view=content&category=${id}`}
+          >
+            {category.title[locale]}
+          </Link>
+        ) : null;
+      })}
+    </div>
+  );
+}
 const subscribeQuery = (listener: () => void) => {
   window.addEventListener('popstate', listener);
   window.addEventListener('ise-querychange', listener);
@@ -191,6 +254,7 @@ export function Explorer({
   const category = params.get('category') || 'all';
   const pathway = params.get('pathway') || 'all';
   const group = params.get('group') || 'all';
+  const resourceBasis = params.get('based') || 'all';
   const search = query;
   const [returnFocus, setReturnFocus] = useState<HTMLElement | null>(null);
   const update = (values: Record<string, string | null>) => {
@@ -293,6 +357,15 @@ export function Explorer({
         >
           {c.name[locale === 'en' ? 'fa' : 'en']}
         </small>
+        <span
+          className={`card-resource-badge course-resource-badge ${resourcesForCourse(c.id).length ? 'has-resources' : ''}`}
+        >
+          <BookOpen size={13} aria-hidden="true" />
+          {t('Resources', 'منابع')}
+          {resourcesForCourse(c.id).length > 0 && (
+            <small>{num(resourcesForCourse(c.id).length)}</small>
+          )}
+        </span>
       </span>
       <span className="course-credit">
         {num(c.credits)}
@@ -822,6 +895,17 @@ export function Explorer({
           <div className="explorer-toolbar">
             {searchBar}
             <FilterSelect
+              label={t('Based on', 'بر اساس')}
+              value={resourceBasis}
+              onValueChange={(next) => update({ based: next })}
+              options={[
+                ['all', 'Based on…', 'بر اساس…'],
+                ['content', 'Content Categories', 'دسته‌بندی‌های محتوایی'],
+                ['majors', "Master's Majors", 'گرایش‌های ارشد'],
+                ['careers', 'Career Guide', 'راهنمای شغلی'],
+              ].map(([id, en, fa]) => ({ value: id, label: t(en, fa) }))}
+            />
+            <FilterSelect
               label={t('Resource type', 'نوع منبع')}
               value={params.get('type') || 'all'}
               onValueChange={(next) => update({ type: next })}
@@ -874,6 +958,12 @@ export function Explorer({
                 (r) =>
                   (!params.get('type') || r.type === params.get('type')) &&
                   (!params.get('topic') || r.japan) &&
+                  (resourceBasis === 'all' ||
+                    (resourceBasis === 'content' && r.categories.length > 0) ||
+                    (resourceBasis === 'majors' &&
+                      (r.pathwayIds?.length || 0) > 0) ||
+                    (resourceBasis === 'careers' &&
+                      (r.careerIds?.length || 0) > 0)) &&
                   normalizeSearch(
                     r.title.en +
                       r.title.fa +
@@ -912,16 +1002,11 @@ export function Explorer({
                     <h2>{r.title[locale]}</h2>
                     <p className="resource-author">{r.author[locale]}</p>
                     <p>{r.description[locale]}</p>
-                    <div className="resource-subjects">
-                      {r.categories.map((id) => (
-                        <Link
-                          key={id}
-                          href={`/${locale}/chart?view=content&category=${id}`}
-                        >
-                          {categories.find((c) => c.id === id)!.title[locale]}
-                        </Link>
-                      ))}
-                    </div>
+                    <ResourceConnections
+                      resource={r}
+                      basis={resourceBasis}
+                      locale={locale}
+                    />
                     {r.pdfPage && (
                       <small>
                         {t(
@@ -942,6 +1027,12 @@ export function Explorer({
             (r) =>
               (!params.get('type') || r.type === params.get('type')) &&
               (!params.get('topic') || r.japan) &&
+              (resourceBasis === 'all' ||
+                (resourceBasis === 'content' && r.categories.length > 0) ||
+                (resourceBasis === 'majors' &&
+                  (r.pathwayIds?.length || 0) > 0) ||
+                (resourceBasis === 'careers' &&
+                  (r.careerIds?.length || 0) > 0)) &&
               normalizeSearch(
                 r.title.en +
                   r.title.fa +
@@ -1230,6 +1321,26 @@ function CourseDialog({
                       'در کاربرگ، نرم‌افزار مشخصی به این درس مرتبط نشده است.',
                     )}
                   </p>
+                )}
+              </section>
+              <section>
+                <h3>{t('Resources', 'منابع')}</h3>
+                {resourcesForCourse(course.id).length > 0 ? (
+                  <div className="dialog-resource-list">
+                    {resourcesForCourse(course.id).map((resource) => (
+                      <OutLink key={resource.id} href={resource.url}>
+                        {resource.title[locale]}
+                      </OutLink>
+                    ))}
+                  </div>
+                ) : (
+                  <Link
+                    className="dialog-resource-browse"
+                    href={`/${locale}/resources?based=content`}
+                  >
+                    {t('Browse related resources', 'مشاهده منابع مرتبط')}
+                    <ArrowUpRight size={14} aria-hidden="true" />
+                  </Link>
                 )}
               </section>
               {course.categories.includes('core') && (

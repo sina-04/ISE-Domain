@@ -28,6 +28,7 @@ import {
   Sparkles,
   ArrowUp,
   BriefcaseBusiness,
+  Mail,
 } from 'lucide-react';
 import { categories, type Locale } from '@/lib/domain-config';
 import { Explorer } from '@/components/explorer';
@@ -792,6 +793,14 @@ export function DomainApp({
               title="Telegram"
             >
               <TelegramMark />
+            </a>
+            <a
+              className="social-link email-link"
+              href="mailto:sina.rezaei.04@gmail.com"
+              aria-label="Email Sina Rezaei"
+              title="sina.rezaei.04@gmail.com"
+            >
+              <Mail size={18} />
             </a>
           </nav>
         </div>
