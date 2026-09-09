@@ -43,6 +43,14 @@ const navigation = [
 ];
 const SUKUNA_PLAYED_KEY = 'ise-sukuna-domain-played';
 type SukunaPhase = 'wallpaper' | 'fire' | 'reveal' | null;
+const PIXEL_FLAMES = Array.from({ length: 34 }, (_, index) => ({
+  x: `${((index + 0.5) / 34) * 100}%`,
+  wave: `${5 + Math.round((Math.sin(index * 0.72) + 1) * 4)}%`,
+  delay: `${-((index % 9) * 0.11)}s`,
+  duration: `${0.82 + (index % 5) * 0.08}s`,
+  drift: `${index % 2 === 0 ? 11 : -11}px`,
+  scale: `${0.72 + (index % 4) * 0.1}`,
+}));
 const subscribeTheme = (listener: () => void) => {
   window.addEventListener('ise-themechange', listener);
   return () => window.removeEventListener('ise-themechange', listener);
@@ -703,12 +711,22 @@ export function DomainApp({
             aria-hidden="true"
           />
           <div className="sukuna-fire" aria-hidden="true" />
-          <div className="sukuna-fire-waves" aria-hidden="true">
-            <svg viewBox="0 0 1200 320" preserveAspectRatio="none">
-              <path d="M-120 100 C-70 28 -20 28 30 100 S130 172 180 100 S280 28 330 100 S430 172 480 100 S580 28 630 100 S730 172 780 100 S880 28 930 100 S1030 172 1080 100 S1180 28 1230 100 S1330 172 1380 100" />
-              <path d="M-120 174 C-60 92 0 92 60 174 S180 256 240 174 S360 92 420 174 S540 256 600 174 S720 92 780 174 S900 256 960 174 S1080 92 1140 174 S1260 256 1320 174" />
-              <path d="M-120 238 C-80 184 -40 184 0 238 S80 292 120 238 S200 184 240 238 S320 292 360 238 S440 184 480 238 S560 292 600 238 S680 184 720 238 S800 292 840 238 S920 184 960 238 S1040 292 1080 238 S1160 184 1200 238 S1280 292 1320 238" />
-            </svg>
+          <div className="sukuna-pixel-fire" aria-hidden="true">
+            {PIXEL_FLAMES.map((flame, index) => (
+              <span
+                key={index}
+                style={
+                  {
+                    '--flame-x': flame.x,
+                    '--flame-wave': flame.wave,
+                    '--flame-delay': flame.delay,
+                    '--flame-duration': flame.duration,
+                    '--flame-drift': flame.drift,
+                    '--flame-scale': flame.scale,
+                  } as React.CSSProperties
+                }
+              />
+            ))}
           </div>
           <div className="sukuna-reveal" aria-hidden="true" />
         </div>
