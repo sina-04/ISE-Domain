@@ -15,6 +15,8 @@ import {
   Info,
   Code2,
   ChevronRight,
+  ChevronDown,
+  Check,
 } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import {
@@ -24,6 +26,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import {
   Dialog,
   DialogContent,
@@ -219,6 +231,120 @@ function ResourceConnections({
           </Link>
         ) : null;
       })}
+    </div>
+  );
+}
+
+function ResourceNestedFilter({
+  locale,
+  basis,
+  scope,
+  onChange,
+}: {
+  locale: Locale;
+  basis: string;
+  scope: string;
+  onChange: (basis: string, scope: string) => void;
+}) {
+  const t = (en: string, fa: string) => (locale === 'fa' ? fa : en);
+  const groups = [
+    {
+      id: 'content',
+      label: t('Content Categories', 'دسته‌بندی‌های محتوایی'),
+      allLabel: t('All content categories', 'همه دسته‌بندی‌های محتوایی'),
+      items: categories.map((category) => ({
+        value: category.id,
+        label: category.title[locale],
+      })),
+    },
+    {
+      id: 'majors',
+      label: t("Master's Majors", 'گرایش‌های ارشد'),
+      allLabel: t("All master's majors", 'همه گرایش‌های ارشد'),
+      items: pathways
+        .filter((pathway) => !pathway.supporting)
+        .map((pathway) => ({
+          value: pathway.id,
+          label: pathway.name[locale],
+        })),
+    },
+    {
+      id: 'careers',
+      label: t('Career Guide', 'راهنمای شغلی'),
+      allLabel: t('All career domains', 'همه حوزه‌های شغلی'),
+      items: careerDomains.map((domain) => ({
+        value: domain.id,
+        label: domain.name[locale],
+      })),
+    },
+  ];
+  const activeGroup = groups.find((group) => group.id === basis);
+  const activeItem = activeGroup?.items.find((item) => item.value === scope);
+  const triggerLabel = activeGroup
+    ? `${activeGroup.label} · ${activeItem?.label || activeGroup.allLabel}`
+    : t('Based on…', 'بر اساس…');
+
+  return (
+    <div className="select-filter nested-resource-filter">
+      <SlidersHorizontal size={16} aria-hidden="true" />
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          className="nested-resource-trigger"
+          aria-label={t('Filter resources based on', 'فیلتر منابع بر اساس')}
+        >
+          <span>{triggerLabel}</span>
+          <ChevronDown size={16} aria-hidden="true" />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent
+          className="nested-resource-content"
+          align="start"
+          sideOffset={8}
+        >
+          <DropdownMenuItem
+            className="nested-resource-item"
+            onClick={() => onChange('all', 'all')}
+          >
+            {basis === 'all' && <Check size={15} aria-hidden="true" />}
+            {t('All resources', 'همه منابع')}
+          </DropdownMenuItem>
+          <DropdownMenuSeparator className="nested-resource-separator" />
+          {groups.map((group) => (
+            <DropdownMenuSub key={group.id}>
+              <DropdownMenuSubTrigger
+                className={`nested-resource-item ${basis === group.id ? 'selected' : ''}`}
+              >
+                {group.label}
+              </DropdownMenuSubTrigger>
+              <DropdownMenuSubContent
+                className="nested-resource-sub-content"
+                side={locale === 'fa' ? 'left' : 'right'}
+              >
+                <DropdownMenuItem
+                  className="nested-resource-item"
+                  onClick={() => onChange(group.id, 'all')}
+                >
+                  {basis === group.id && scope === 'all' && (
+                    <Check size={15} aria-hidden="true" />
+                  )}
+                  {group.allLabel}
+                </DropdownMenuItem>
+                {group.items.map((item) => (
+                  <DropdownMenuItem
+                    className="nested-resource-item"
+                    key={item.value}
+                    onClick={() => onChange(group.id, item.value)}
+                  >
+                    {basis === group.id && scope === item.value && (
+                      <Check size={15} aria-hidden="true" />
+                    )}
+                    {item.label}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuSubContent>
+            </DropdownMenuSub>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }
@@ -924,69 +1050,14 @@ export function Explorer({
         <>
           <div className="explorer-toolbar">
             {searchBar}
-            <FilterSelect
-              label={t('Based on', 'بر اساس')}
-              value={resourceBasis}
-              onValueChange={(next) => update({ based: next, scope: null })}
-              options={[
-                ['all', 'Based on…', 'بر اساس…'],
-                ['content', 'Content Categories', 'دسته‌بندی‌های محتوایی'],
-                ['majors', "Master's Majors", 'گرایش‌های ارشد'],
-                ['careers', 'Career Guide', 'راهنمای شغلی'],
-              ].map(([id, en, fa]) => ({ value: id, label: t(en, fa) }))}
+            <ResourceNestedFilter
+              locale={locale}
+              basis={resourceBasis}
+              scope={resourceScope}
+              onChange={(nextBasis, nextScope) =>
+                update({ based: nextBasis, scope: nextScope })
+              }
             />
-            {resourceBasis !== 'all' && (
-              <FilterSelect
-                label={t('Related area', 'حوزه مرتبط')}
-                value={resourceScope}
-                onValueChange={(next) => update({ scope: next })}
-                options={
-                  resourceBasis === 'content'
-                    ? [
-                        {
-                          value: 'all',
-                          label: t(
-                            'All content categories',
-                            'همه دسته‌بندی‌های محتوایی',
-                          ),
-                        },
-                        ...categories.map((category) => ({
-                          value: category.id,
-                          label: category.title[locale],
-                        })),
-                      ]
-                    : resourceBasis === 'majors'
-                      ? [
-                          {
-                            value: 'all',
-                            label: t(
-                              "All master's majors",
-                              'همه گرایش‌های ارشد',
-                            ),
-                          },
-                          ...pathways
-                            .filter((pathway) => !pathway.supporting)
-                            .map((pathway) => ({
-                              value: pathway.id,
-                              label: pathway.name[locale],
-                            })),
-                        ]
-                      : [
-                          {
-                            value: 'all',
-                            label: t(
-                              'All career domains',
-                              'همه حوزه‌های شغلی',
-                            ),
-                          },
-                          ...careerDomains.map((domain) => ({
-                            value: domain.id,
-                            label: domain.name[locale],
-                          })),
-                        ]
-                }
-              />
-            )}
             <FilterSelect
               label={t('Resource type', 'نوع منبع')}
               value={params.get('type') || 'all'}

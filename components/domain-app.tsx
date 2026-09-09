@@ -44,13 +44,15 @@ const navigation = [
 ];
 const SUKUNA_PLAYED_KEY = 'ise-sukuna-domain-played';
 type SukunaPhase = 'wallpaper' | 'fire' | 'reveal' | null;
-const PIXEL_FLAMES = Array.from({ length: 34 }, (_, index) => ({
-  x: `${((index + 0.5) / 34) * 100}%`,
-  wave: `${5 + Math.round((Math.sin(index * 0.72) + 1) * 4)}%`,
-  delay: `${-((index % 9) * 0.11)}s`,
-  duration: `${0.82 + (index % 5) * 0.08}s`,
-  drift: `${index % 2 === 0 ? 11 : -11}px`,
-  scale: `${0.72 + (index % 4) * 0.1}`,
+const SUKUNA_EMBERS = Array.from({ length: 56 }, (_, index) => ({
+  x: `${(index * 37 + 11) % 101}%`,
+  base: `${2 + ((index * 17) % 35)}%`,
+  size: `${2 + (index % 4)}px`,
+  delay: `${-((index % 14) * 0.29)}s`,
+  duration: `${2.4 + (index % 7) * 0.34}s`,
+  drift: `${(index % 2 === 0 ? 1 : -1) * (18 + (index % 5) * 11)}px`,
+  rise: `${42 + (index % 6) * 9}vh`,
+  color: ['#ff2f12', '#ff6a16', '#ff9d18', '#ffd34d'][index % 4],
 }));
 const subscribeTheme = (listener: () => void) => {
   window.addEventListener('ise-themechange', listener);
@@ -711,25 +713,46 @@ export function DomainApp({
             alt=""
             aria-hidden="true"
           />
-          <div className="sukuna-fire" aria-hidden="true" />
-          <div className="sukuna-pixel-fire" aria-hidden="true">
-            {PIXEL_FLAMES.map((flame, index) => (
+          <div className="sukuna-lights" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="sukuna-embers" aria-hidden="true">
+            {SUKUNA_EMBERS.map((ember, index) => (
               <span
                 key={index}
                 style={
                   {
-                    '--flame-x': flame.x,
-                    '--flame-wave': flame.wave,
-                    '--flame-delay': flame.delay,
-                    '--flame-duration': flame.duration,
-                    '--flame-drift': flame.drift,
-                    '--flame-scale': flame.scale,
+                    '--ember-x': ember.x,
+                    '--ember-base': ember.base,
+                    '--ember-size': ember.size,
+                    '--ember-delay': ember.delay,
+                    '--ember-duration': ember.duration,
+                    '--ember-drift': ember.drift,
+                    '--ember-rise': ember.rise,
+                    '--ember-color': ember.color,
                   } as React.CSSProperties
                 }
               />
             ))}
           </div>
           <div className="sukuna-reveal" aria-hidden="true" />
+          <div className="sukuna-subtitles" aria-hidden="true">
+            <p className="sukuna-subtitle sukuna-subtitle-domain">
+              <span lang="en">Domain Expansion</span>
+              <span lang="ja">領域展開</span>
+            </p>
+            <p className="sukuna-subtitle sukuna-subtitle-shrine">
+              <span lang="en">Malevolent Shrine</span>
+              <span lang="ja">伏魔御廚子</span>
+            </p>
+            <p className="sukuna-subtitle sukuna-subtitle-open">
+              <span lang="en">Open!</span>
+              <span lang="ja">開</span>
+            </p>
+          </div>
         </div>
       )}
       <footer className="site-footer">
