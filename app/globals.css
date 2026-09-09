@@ -5,18 +5,18 @@
   --font-persian: 'Sahel';
   --font-body: var(--font-latin-body);
   --font-display: var(--font-latin-display);
-  --background: #0c0d12;
-  --surface: #13151d;
-  --surface-raised: #1b1d28;
+  --background: #171821;
+  --surface: #1e202a;
+  --surface-raised: #272a36;
   --foreground: #f3f2f8;
-  --muted: #9b9daa;
-  --line: #282b36;
+  --muted: #a6a8b5;
+  --line: #353846;
   --accent: #afa0ff;
   --accent-strong: #8c77f9;
   --font-sans: var(--font-body);
-  --popover: #181a24;
+  --popover: #1e202a;
   --popover-foreground: #f3f2f8;
-  --muted-foreground: #a5a7b4;
+  --muted-foreground: #a6a8b5;
   color-scheme: dark;
 }
 :root[data-theme='light'] {
@@ -242,6 +242,9 @@ svg {
 .menu-button {
   display: none;
 }
+.mobile-github-actions {
+  display: none;
+}
 .main-content {
   max-width: 1280px;
   margin: auto;
@@ -285,7 +288,7 @@ svg {
   padding: 48px 42px 44px;
   border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
   border-radius: 12px;
-  background: #09090f;
+  background: #11131a;
   color: #f4f2fa;
 }
 .intro-main::after {
@@ -296,11 +299,11 @@ svg {
   background:
     linear-gradient(
       90deg,
-      rgba(8, 8, 14, 0.94) 0%,
-      rgba(8, 8, 14, 0.78) 54%,
-      rgba(8, 8, 14, 0.42) 100%
+      rgba(8, 8, 14, 0.86) 0%,
+      rgba(8, 8, 14, 0.66) 54%,
+      rgba(8, 8, 14, 0.36) 100%
     ),
-    linear-gradient(0deg, rgba(8, 8, 14, 0.68), transparent 55%);
+    linear-gradient(0deg, rgba(8, 8, 14, 0.58), transparent 55%);
 }
 .intro-art {
   position: absolute;
@@ -310,8 +313,8 @@ svg {
   height: calc(100% + 28px);
   object-fit: cover;
   object-position: center;
-  filter: blur(5px) saturate(0.82);
-  opacity: 0.58;
+  filter: blur(3px) saturate(0.9);
+  opacity: 0.65;
   transform: scale(1.04);
 }
 .intro-main-content {
@@ -641,8 +644,8 @@ svg {
     0 0 5px var(--ember-color),
     0 0 13px color-mix(in srgb, var(--ember-color) 70%, transparent);
   opacity: 0;
-  animation: sukuna-ember-rise var(--ember-duration) var(--ember-delay)
-    ease-out infinite;
+  animation: sukuna-ember-rise var(--ember-duration) var(--ember-delay) ease-out
+    infinite;
 }
 .sukuna-domain-expansion.is-fire .sukuna-embers,
 .sukuna-domain-expansion.is-reveal .sukuna-embers {
@@ -3565,5 +3568,80 @@ html[lang='fa'] [lang='en'] {
   ::view-transition-group(root),
   ::view-transition-new(root) {
     animation: none;
+  }
+}
+
+/* Mobile readability and control sizing */
+@media (max-width: 600px) {
+  .brand small,
+  .github-actions {
+    display: none;
+  }
+  .language-button,
+  .icon-button {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+  }
+  .stats-strip span,
+  .card-top span,
+  .character,
+  .section-heading .overline {
+    font-size: 0.8125rem;
+  }
+  .section-heading .text-link,
+  .card-explore {
+    font-size: 0.875rem;
+  }
+  .card-bottom p,
+  .module-card p,
+  .japan-note p:not(.overline) {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+  .intro-copy {
+    line-height: 1.7;
+  }
+  .primary-button {
+    min-height: 44px;
+    font-size: 0.9375rem;
+  }
+  .site-footer {
+    font-size: 0.875rem;
+  }
+  .mobile-github-actions {
+    display: grid;
+    gap: 2px;
+    margin-top: 8px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+  }
+  .main-nav .mobile-github-actions a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    color: var(--muted);
+  }
+  .main-nav .mobile-github-actions a:hover {
+    color: var(--foreground);
+  }
+  .mobile-star-count {
+    margin-inline-start: auto;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

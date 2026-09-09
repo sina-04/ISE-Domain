@@ -373,6 +373,31 @@ export function DomainApp({
               {t(en, per)}
             </Link>
           ))}
+          <div className="mobile-github-actions">
+            <a
+              href="https://github.com/sina-04"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setMenu(false)}
+            >
+              <GitHubMark size={18} />
+              {t('GitHub profile', 'پروفایل گیت‌هاب')}
+            </a>
+            <a
+              href="https://github.com/sina-04/ISE-Domain"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setMenu(false)}
+            >
+              <Star size={17} aria-hidden="true" />
+              {t('Project repository', 'مخزن پروژه')}
+              {stars !== null && (
+                <span className="mobile-star-count" aria-hidden="true">
+                  {stars.toLocaleString(fa ? 'fa-IR' : 'en-US')}
+                </span>
+              )}
+            </a>
+          </div>
         </nav>
         <div className="header-actions">
           <div className="github-actions">
