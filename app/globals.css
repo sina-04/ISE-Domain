@@ -709,14 +709,14 @@ svg {
   line-height: 1.1;
 }
 .sukuna-subtitle-domain {
-  animation: sukuna-subtitle-fade 7s 1s ease both;
+  animation: sukuna-subtitle-fade 4s 2s ease both;
 }
 .sukuna-subtitle-shrine {
-  animation: sukuna-subtitle-fade 11s 8s ease both;
+  animation: sukuna-subtitle-fade 12s 6s ease both;
 }
 .sukuna-subtitle-open {
   color: #fff0cf;
-  animation: sukuna-final-subtitle 4s 19s ease both;
+  animation: sukuna-final-subtitle 5s 18s ease both;
 }
 @keyframes sukuna-wallpaper-breathe {
   from {
