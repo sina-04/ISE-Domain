@@ -1,0 +1,242 @@
+[
+  {
+    "careerId": "data-analytics",
+    "score": 9,
+    "occupation": "Data scientists",
+    "sourceScore": 9,
+    "globalRank": 11,
+    "estimated": true
+  },
+  {
+    "careerId": "data-science",
+    "score": 9,
+    "occupation": "Data scientists",
+    "sourceScore": 9,
+    "globalRank": 11,
+    "estimated": false
+  },
+  {
+    "careerId": "business-intelligence",
+    "score": 8,
+    "occupation": "Computer systems analysts",
+    "sourceScore": 8,
+    "globalRank": 36,
+    "estimated": true
+  },
+  {
+    "careerId": "machine-learning-engineering",
+    "score": 9,
+    "occupation": "Software developers, quality assurance analysts, and testers",
+    "sourceScore": 9,
+    "globalRank": 4,
+    "estimated": true
+  },
+  {
+    "careerId": "ai-engineering",
+    "score": 9,
+    "occupation": "Software developers, quality assurance analysts, and testers",
+    "sourceScore": 9,
+    "globalRank": 4,
+    "estimated": true
+  },
+  {
+    "careerId": "project-control",
+    "score": 7,
+    "occupation": "Project management specialists",
+    "sourceScore": 7,
+    "globalRank": 68,
+    "estimated": true
+  },
+  {
+    "careerId": "project-management",
+    "score": 7,
+    "occupation": "Project management specialists",
+    "sourceScore": 7,
+    "globalRank": 68,
+    "estimated": false
+  },
+  {
+    "careerId": "agile-scrum",
+    "score": 7,
+    "occupation": "Project management specialists",
+    "sourceScore": 7,
+    "globalRank": 68,
+    "estimated": true
+  },
+  {
+    "careerId": "executive-management",
+    "score": 6,
+    "occupation": "Top executives",
+    "sourceScore": 6,
+    "globalRank": 131,
+    "estimated": false
+  },
+  {
+    "careerId": "operations-management",
+    "score": 6,
+    "occupation": "Industrial production managers",
+    "sourceScore": 6,
+    "globalRank": 140,
+    "estimated": true
+  },
+  {
+    "careerId": "purchasing-management",
+    "score": 7,
+    "occupation": "Purchasing managers, buyers, and purchasing agents",
+    "sourceScore": 7,
+    "globalRank": 74,
+    "estimated": false
+  },
+  {
+    "careerId": "strategy-management",
+    "score": 7,
+    "occupation": "Management analysts",
+    "sourceScore": 7,
+    "globalRank": 67,
+    "estimated": true
+  },
+  {
+    "careerId": "warehouse-management",
+    "score": 6,
+    "occupation": "Transportation, storage, and distribution managers",
+    "sourceScore": 6,
+    "globalRank": 142,
+    "estimated": true
+  },
+  {
+    "careerId": "product-design",
+    "score": 8,
+    "occupation": "Industrial designers",
+    "sourceScore": 8,
+    "globalRank": 54,
+    "estimated": false
+  },
+  {
+    "careerId": "product-management",
+    "score": 8,
+    "occupation": "Advertising, promotions, and marketing managers",
+    "sourceScore": 8,
+    "globalRank": 38,
+    "estimated": true
+  },
+  {
+    "careerId": "product-owner",
+    "score": 7,
+    "occupation": "Project management specialists",
+    "sourceScore": 7,
+    "globalRank": 68,
+    "estimated": true
+  },
+  {
+    "careerId": "quality-control",
+    "score": 5,
+    "occupation": "Quality control inspectors",
+    "sourceScore": 5,
+    "globalRank": 169,
+    "estimated": false
+  },
+  {
+    "careerId": "quality-assurance",
+    "score": 6,
+    "occupation": "Quality control inspectors",
+    "sourceScore": 5,
+    "globalRank": 169,
+    "estimated": true
+  },
+  {
+    "careerId": "iso-standards",
+    "score": 8,
+    "occupation": "Compliance officers",
+    "sourceScore": 8,
+    "globalRank": 39,
+    "estimated": true
+  },
+  {
+    "careerId": "hse",
+    "score": 5,
+    "occupation": "Occupational health and safety specialists and technicians",
+    "sourceScore": 5,
+    "globalRank": 180,
+    "estimated": false
+  },
+  {
+    "careerId": "production-planning",
+    "score": 6,
+    "occupation": "Industrial production managers",
+    "sourceScore": 6,
+    "globalRank": 140,
+    "estimated": true
+  },
+  {
+    "careerId": "logisticians",
+    "score": 7,
+    "occupation": "Logisticians",
+    "sourceScore": 7,
+    "globalRank": 83,
+    "estimated": false
+  },
+  {
+    "careerId": "operations-research-analysis",
+    "score": 9,
+    "occupation": "Operations research analysts",
+    "sourceScore": 9,
+    "globalRank": 21,
+    "estimated": false
+  },
+  {
+    "careerId": "mba-dba",
+    "score": 6,
+    "occupation": "Top executives",
+    "sourceScore": 6,
+    "globalRank": 131,
+    "estimated": true
+  },
+  {
+    "careerId": "business-process-management",
+    "score": 7,
+    "occupation": "Management analysts",
+    "sourceScore": 7,
+    "globalRank": 67,
+    "estimated": true
+  },
+  {
+    "careerId": "business-development-management",
+    "score": 7,
+    "occupation": "Sales managers",
+    "sourceScore": 7,
+    "globalRank": 73,
+    "estimated": true
+  },
+  {
+    "careerId": "feasibility-study-consultation",
+    "score": 7,
+    "occupation": "Management analysts",
+    "sourceScore": 7,
+    "globalRank": 67,
+    "estimated": true
+  },
+  {
+    "careerId": "capital-market-analyst",
+    "score": 9,
+    "occupation": "Financial analysts",
+    "sourceScore": 9,
+    "globalRank": 8,
+    "estimated": false
+  },
+  {
+    "careerId": "hr-specialist",
+    "score": 7,
+    "occupation": "Human resources specialists",
+    "sourceScore": 7,
+    "globalRank": 70,
+    "estimated": false
+  },
+  {
+    "careerId": "industrial-engineer",
+    "score": 7,
+    "occupation": "Industrial engineers",
+    "sourceScore": 7,
+    "globalRank": 78,
+    "estimated": false
+  }
+]

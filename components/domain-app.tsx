@@ -411,7 +411,7 @@ export function DomainApp({
       <header className="site-header">
         <Link href={href('home')} className="brand">
           <span className="brand-symbol" aria-hidden="true">
-            🏭︎
+            🏭
           </span>
           <span>
             ISE<span className="brand-thin">DOMAIN</span>

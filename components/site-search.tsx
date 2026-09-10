@@ -1,6 +1,7 @@
 'use client';
 
 import { Search } from 'lucide-react';
+import { useState } from 'react';
 import {
   Combobox,
   ComboboxCollection,
@@ -35,13 +36,21 @@ function localizedText(item: Course | Pathway | CareerProfile, locale: Locale) {
 }
 
 export function SiteSearch({ locale }: { locale: Locale }) {
-  const fa = locale === 'fa';
-  const t = (en: string, per: string) => (fa ? per : en);
+  const [query, setQuery] = useState('');
+  const firstLetter = query.match(/[A-Za-z\u0600-\u06ff]/)?.[0];
+  const resultLocale: Locale = firstLetter
+    ? /[\u0600-\u06ff]/.test(firstLetter)
+      ? 'fa'
+      : 'en'
+    : locale;
+  const t = (en: string, per: string) => (locale === 'fa' ? per : en);
+  const resultText = (en: string, per: string) =>
+    resultLocale === 'fa' ? per : en;
   const suggestions: SearchSuggestion[] = [
     ...categories.map((category) => ({
       value: `category-${category.id}`,
-      label: category.title[locale],
-      secondary: t('Knowledge field', 'حوزه دانش'),
+      label: category.title[resultLocale],
+      secondary: resultText('Knowledge field', 'حوزه دانش'),
       kind: 'category' as const,
       href: `/${locale}/chart?view=content&category=${category.id}`,
       keywords: `${category.title.en} ${category.title.fa} ${category.caption.en} ${category.caption.fa}`,
@@ -50,24 +59,24 @@ export function SiteSearch({ locale }: { locale: Locale }) {
       .filter((course) => course.group !== 'supplementary')
       .map((course) => ({
         value: `course-${course.id}`,
-        label: localizedText(course, locale),
-        secondary: course.code || t('Course', 'درس'),
+        label: localizedText(course, resultLocale),
+        secondary: course.code || resultText('Course', 'درس'),
         kind: 'course' as const,
         href: `/${locale}/chart?view=content&course=${course.id}`,
         keywords: `${course.name.en} ${course.name.fa} ${course.code || ''}`,
       })),
     ...pathways.map((pathway) => ({
       value: `pathway-${pathway.id}`,
-      label: localizedText(pathway, locale),
-      secondary: t("Master's pathway", 'مسیر کارشناسی ارشد'),
+      label: localizedText(pathway, resultLocale),
+      secondary: resultText("Master's pathway", 'مسیر کارشناسی ارشد'),
       kind: 'pathway' as const,
       href: `/${locale}/majors?pathway=${pathway.id}`,
       keywords: `${pathway.name.en} ${pathway.name.fa} ${pathway.description.en} ${pathway.description.fa}`,
     })),
     ...careers.map((career) => ({
       value: `career-${career.id}`,
-      label: localizedText(career, locale),
-      secondary: t('Career', 'مسیر شغلی'),
+      label: localizedText(career, resultLocale),
+      secondary: resultText('Career', 'مسیر شغلی'),
       kind: 'career' as const,
       href:
         career.id === 'data-science'
@@ -90,6 +99,7 @@ export function SiteSearch({ locale }: { locale: Locale }) {
           )
         }
         autoHighlight
+        onInputValueChange={setQuery}
         onValueChange={(item: SearchSuggestion | null) => {
           if (item) window.location.href = withBasePath(item.href);
         }}
@@ -98,12 +108,18 @@ export function SiteSearch({ locale }: { locale: Locale }) {
           className="site-search-input"
           aria-label={t('Search topics', 'جست‌وجوی موضوعات')}
           placeholder={t('Search topics…', 'جست‌وجوی موضوع…')}
+          lang={resultLocale}
+          dir={resultLocale === 'fa' ? 'rtl' : 'ltr'}
           showTrigger={false}
           showClear
         />
-        <ComboboxContent className="site-search-content">
+        <ComboboxContent
+          className="site-search-content"
+          lang={resultLocale}
+          dir={resultLocale === 'fa' ? 'rtl' : 'ltr'}
+        >
           <ComboboxEmpty className="site-search-empty">
-            {t('No matching topic', 'موضوعی پیدا نشد')}
+            {resultText('No matching topic', 'موضوعی پیدا نشد')}
           </ComboboxEmpty>
           <ComboboxList>
             <ComboboxCollection>

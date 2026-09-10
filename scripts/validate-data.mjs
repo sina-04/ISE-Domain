@@ -7,7 +7,8 @@ const json = (name) =>
 const courses = json('courses'),
   tools = json('tools'),
   pathways = json('pathways'),
-  careerData = json('careers');
+  careerData = json('careers'),
+  aiExposure = json('ai-exposure');
 const ids = new Set(courses.map((c) => c.id));
 assert.equal(ids.size, courses.length, 'Duplicate course IDs');
 assert.equal(courses.length, 84);
@@ -95,6 +96,7 @@ for (const t of tools) {
   for (const id of t.courseIds) assert(ids.has(id));
 }
 const careerIds = new Set(careerData.careers.map((career) => career.id));
+const exposureCareerIds = new Set(aiExposure.map((item) => item.careerId));
 assert.equal(careerData.tracks.length, 2, 'Career track count');
 assert.equal(careerData.domains.length, 10, 'Career domain count');
 assert.equal(careerData.careers.length, 30, 'Career profile count');
@@ -104,6 +106,42 @@ assert.equal(
   'Obsolete supplemental careers remain',
 );
 assert.equal(careerIds.size, careerData.careers.length, 'Duplicate career IDs');
+assert.equal(
+  exposureCareerIds.size,
+  aiExposure.length,
+  'Duplicate AI-exposure career IDs',
+);
+assert.equal(
+  aiExposure.length,
+  careerData.careers.length,
+  'AI-exposure profile count',
+);
+for (const career of careerData.careers)
+  assert(
+    exposureCareerIds.has(career.id),
+    `Missing AI exposure for ${career.id}`,
+  );
+for (const exposure of aiExposure) {
+  assert(careerIds.has(exposure.careerId), exposure.careerId);
+  assert(
+    Number.isInteger(exposure.score) &&
+      exposure.score >= 1 &&
+      exposure.score <= 10,
+    `${exposure.careerId} score`,
+  );
+  assert(
+    Number.isInteger(exposure.sourceScore) &&
+      exposure.sourceScore >= 1 &&
+      exposure.sourceScore <= 10,
+    `${exposure.careerId} source score`,
+  );
+  assert(
+    Number.isInteger(exposure.globalRank) && exposure.globalRank > 0,
+    `${exposure.careerId} global rank`,
+  );
+  assert(exposure.occupation, `${exposure.careerId} occupation`);
+  assert.equal(typeof exposure.estimated, 'boolean', exposure.careerId);
+}
 assert.deepEqual(
   careerData.tracks.map((track) => [track.id, ...track.domainIds]),
   [
@@ -189,6 +227,7 @@ assert(
 for (const mapping of [
   "asset: '/Mahito.svg'",
   "asset: '/Dagon.svg'",
+  "asset: '/Yuta-Okkotsu.svg'",
   "audio: '/audio/gojo-domain-expansion.m4a'",
   "audio: '/audio/sukuna-domain-expansion.m4a'",
   "audio: '/audio/mahito-domain-expansion.m4a'",
@@ -208,6 +247,7 @@ for (const asset of [
   'Ryomen-Sukuna.svg',
   'Dagon.svg',
   'Mahito.svg',
+  'Yuta-Okkotsu.svg',
   'Sukuna-Domain-Expansion.svg',
   'audio/dagon-domain-expansion.m4a',
   'audio/gojo-domain-expansion.m4a',
@@ -217,5 +257,5 @@ for (const asset of [
 ])
   assert(existsSync(new URL(`../public/${asset}`, import.meta.url)), asset);
 console.log(
-  `Validated ${courses.length} courses, degree and subject totals, ${pathways.length} pathway groups, ${tools.length} tools, ${careerData.careers.length} bilingual career profiles, relationships and destinations.`,
+  `Validated ${courses.length} courses, degree and subject totals, ${pathways.length} pathway groups, ${tools.length} tools, ${careerData.careers.length} bilingual career profiles with AI-exposure mappings, relationships and destinations.`,
 );

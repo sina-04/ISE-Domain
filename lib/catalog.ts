@@ -2,6 +2,7 @@ import courseData from './data/courses.json';
 import pathwayData from './data/pathways.json';
 import toolData from './data/tools.json';
 import careerData from './data/careers.json';
+import aiExposureData from './data/ai-exposure.json';
 import { type Text, type Locale, normalizeSearch } from './domain-config';
 export interface Source {
   file: string;
@@ -71,6 +72,15 @@ export interface CareerProfile {
   progression: { en: string[]; fa: string[] };
   relatedRoles: { en: string[]; fa: string[] };
   source: CareerSource | null;
+  aiExposure: AIExposure;
+}
+export interface AIExposure {
+  careerId: string;
+  score: number;
+  occupation: string;
+  sourceScore: number;
+  globalRank: number;
+  estimated: boolean;
 }
 export interface CareerTrack {
   id: string;
@@ -89,7 +99,13 @@ export const pathways = pathwayData as Pathway[];
 export const tools = toolData as Tool[];
 export const careerTracks = careerData.tracks as CareerTrack[];
 export const careerDomains = careerData.domains as CareerDomain[];
-export const careers = careerData.careers as CareerProfile[];
+const aiExposureByCareerId = Object.fromEntries(
+  (aiExposureData as AIExposure[]).map((item) => [item.careerId, item]),
+);
+export const careers = careerData.careers.map((career) => ({
+  ...career,
+  aiExposure: aiExposureByCareerId[career.id],
+})) as CareerProfile[];
 export const careerById = Object.fromEntries(careers.map((c) => [c.id, c]));
 export const courseById = Object.fromEntries(courses.map((c) => [c.id, c]));
 export function courseMatches(course: Course, query: string) {

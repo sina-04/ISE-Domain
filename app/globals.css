@@ -140,7 +140,7 @@ svg {
   white-space: nowrap;
 }
 .brand-symbol {
-  color: var(--accent);
+  color: inherit;
   border: 1px solid var(--line);
   padding: 8px;
   border-radius: 8px;
@@ -892,6 +892,15 @@ svg {
       transparent 32%
     ),
     linear-gradient(145deg, #30213b, #17131f 68%);
+}
+@media (min-width: 951px) {
+  .category-product {
+    grid-column: 1 / -1;
+    min-height: 280px;
+  }
+  .category-product .card-bottom {
+    max-width: 560px;
+  }
 }
 .module-section {
   margin-top: 56px;
@@ -2322,6 +2331,35 @@ svg {
   font-size: 1.05rem;
   line-height: 1.45;
 }
+.career-card-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 10px;
+  margin: 5px 0 9px;
+}
+.career-card-title-row strong {
+  margin: 0;
+}
+.ai-exposure-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  padding: 4px 7px;
+  border: 1px solid color-mix(in srgb, var(--accent) 32%, var(--line));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+  font-size: 0.66rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.ai-exposure-badge b {
+  font-family: var(--font-latin-body), sans-serif;
+  font-weight: 800;
+}
 .career-card-copy > span:last-child {
   color: var(--muted);
   font-size: 0.82rem;
@@ -2574,6 +2612,100 @@ svg {
   color: var(--accent);
   font-size: 0.82rem;
   font-weight: 700;
+}
+.career-tree :is(button, a) .career-tree-ai {
+  color: var(--accent);
+  font-family: var(--font-latin-body), sans-serif;
+  font-weight: 700;
+}
+.career-dialog-body .ai-exposure-panel,
+.ds-detail-intro .ai-exposure-panel {
+  margin-top: 22px;
+  padding: 20px;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+  border-radius: 9px;
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--accent) 11%, transparent),
+      transparent 48%
+    ),
+    var(--surface-raised);
+}
+.ai-exposure-heading {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.ai-exposure-heading > svg {
+  color: var(--accent);
+}
+.ai-exposure-heading div {
+  display: grid;
+  gap: 3px;
+}
+.ai-exposure-heading span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.ai-exposure-heading strong {
+  font-size: 1rem;
+}
+.ai-exposure-panel meter {
+  width: 100%;
+  height: 10px;
+  margin: 16px 0 10px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--muted) 18%, transparent);
+}
+.ai-exposure-panel meter::-webkit-meter-bar {
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--muted) 18%, transparent);
+}
+.ai-exposure-panel meter::-webkit-meter-optimum-value {
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5e49d8, #b260ff, #ff7aae);
+}
+.ai-exposure-panel meter::-moz-meter-bar {
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5e49d8, #b260ff, #ff7aae);
+}
+.career-dialog-body .ai-exposure-panel > p,
+.ds-detail-intro .ai-exposure-panel > p {
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.75;
+}
+.ai-exposure-occupation {
+  color: var(--foreground);
+  font-family: var(--font-latin-body), sans-serif;
+  font-weight: 650;
+}
+.ai-exposure-panel > small {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.7;
+}
+.ai-exposure-panel > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+[dir='rtl'] .ai-exposure-heading span {
+  letter-spacing: 0;
 }
 [dir='rtl'] .career-dialog-header [data-slot='dialog-title'],
 [dir='rtl'] .career-domain-heading h3,
@@ -4710,10 +4842,11 @@ html[lang='fa'] .ds-path-heading h2 {
   height: 43px;
   place-items: center;
   padding: 0;
-  color: var(--accent);
-  font-family: 'Segoe UI Symbol', sans-serif;
+  color: inherit;
+  font-family:
+    'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
   font-size: 1.45rem;
-  font-variant-emoji: text;
+  font-variant-emoji: emoji;
   line-height: 1;
 }
 .site-search {
@@ -4747,6 +4880,14 @@ html[lang='fa'] .ds-path-heading h2 {
   padding-inline-start: 34px;
   color: var(--foreground);
   font-size: 0.78rem;
+}
+.site-search-input input[lang='en'],
+.site-search-content[lang='en'] {
+  font-family: var(--font-latin-body), sans-serif;
+}
+.site-search-input input[lang='fa'],
+.site-search-content[lang='fa'] {
+  font-family: var(--font-persian), sans-serif;
 }
 .site-search-input input::placeholder {
   color: var(--muted);

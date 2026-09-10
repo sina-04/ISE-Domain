@@ -28,6 +28,7 @@ import {
 } from '@/lib/catalog';
 import type { Locale } from '@/lib/domain-config';
 import { resourcesForCareer } from '@/lib/resources';
+import { AIExposureBadge, AIExposurePanel } from '@/components/ai-exposure';
 
 function CareerCard({
   career,
@@ -51,7 +52,10 @@ function CareerCard({
         {career.abbreviation && (
           <span className="career-card-kicker">{career.abbreviation}</span>
         )}
-        <strong>{career.name[locale]}</strong>
+        <span className="career-card-title-row">
+          <strong>{career.name[locale]}</strong>
+          <AIExposureBadge exposure={career.aiExposure} locale={locale} />
+        </span>
         <span>{career.summary[locale]}</span>
       </span>
       <span className="career-card-skills">
@@ -204,6 +208,9 @@ export function CareerGuide({
                                           {career.abbreviation && (
                                             <small>{career.abbreviation}</small>
                                           )}
+                                          <small className="career-tree-ai">
+                                            AI {career.aiExposure.score}/10
+                                          </small>
                                         </Link>
                                       ) : (
                                         <button
@@ -214,6 +221,9 @@ export function CareerGuide({
                                           {career.abbreviation && (
                                             <small>{career.abbreviation}</small>
                                           )}
+                                          <small className="career-tree-ai">
+                                            AI {career.aiExposure.score}/10
+                                          </small>
                                         </button>
                                       )}
                                     </li>
@@ -377,6 +387,8 @@ function CareerDialog({
                   <p>{career.iseFit[locale]}</p>
                 </div>
               </div>
+
+              <AIExposurePanel exposure={career.aiExposure} locale={locale} />
 
               <section>
                 <h3>

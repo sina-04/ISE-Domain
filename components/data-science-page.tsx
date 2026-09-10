@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import Link from '@/components/site-link';
+import { AIExposurePanel } from '@/components/ai-exposure';
 import { withBasePath } from '@/lib/base-path';
 import { careerById } from '@/lib/catalog';
 import type { Locale } from '@/lib/domain-config';
@@ -337,6 +338,7 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
                 <p>{career.iseFit[locale]}</p>
               </div>
             </div>
+            <AIExposurePanel exposure={career.aiExposure} locale={locale} />
           </div>
 
           <div className="ds-detail-grid">
