@@ -32,6 +32,7 @@ import {
 } from 'lucide-react';
 import { categories, type Locale } from '@/lib/domain-config';
 import { Explorer } from '@/components/explorer';
+import { DataSciencePage } from '@/components/data-science-page';
 import { withBasePath } from '@/lib/base-path';
 const navigation = [
   ['home', 'Overview', 'نمای کلی'],
@@ -710,6 +711,8 @@ export function DomainApp({
               </Link>
             </section>
           </>
+        ) : activeSection === 'data-science' ? (
+          <DataSciencePage locale={locale} />
         ) : (
           <Suspense
             fallback={

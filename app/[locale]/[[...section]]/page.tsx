@@ -9,6 +9,7 @@ const sections = [
   'tools',
   'resources',
   'wikipedia',
+  'data-science',
 ] as const;
 
 export const dynamicParams = false;

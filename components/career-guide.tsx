@@ -41,13 +41,8 @@ function CareerCard({
   onOpen: (career: CareerProfile) => void;
 }) {
   const t = (en: string, fa: string) => (locale === 'fa' ? fa : en);
-  return (
-    <button
-      type="button"
-      className="career-card"
-      onClick={() => onOpen(career)}
-      aria-label={`${t('Open career guide for', 'باز کردن راهنمای شغلی')} ${career.name[locale]}`}
-    >
+  const content = (
+    <>
       <span className="career-card-number">{number}</span>
       <span className="career-card-icon" aria-hidden="true">
         <BriefcaseBusiness size={20} />
@@ -76,6 +71,29 @@ function CareerCard({
         size={18}
         aria-hidden="true"
       />
+    </>
+  );
+
+  if (career.id === 'data-science') {
+    return (
+      <Link
+        className="career-card"
+        href={`/${locale}/data-science`}
+        aria-label={`${t('Open the Data Science experience', 'باز کردن تجربه علم داده')}`}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      className="career-card"
+      onClick={() => onOpen(career)}
+      aria-label={`${t('Open career guide for', 'باز کردن راهنمای شغلی')} ${career.name[locale]}`}
+    >
+      {content}
     </button>
   );
 }
@@ -180,15 +198,24 @@ export function CareerGuide({
                                   const career = careerById[id];
                                   return (
                                     <li key={id}>
-                                      <button
-                                        type="button"
-                                        onClick={() => onOpen(career)}
-                                      >
-                                        {career.name[locale]}
-                                        {career.abbreviation && (
-                                          <small>{career.abbreviation}</small>
-                                        )}
-                                      </button>
+                                      {career.id === 'data-science' ? (
+                                        <Link href={`/${locale}/data-science`}>
+                                          {career.name[locale]}
+                                          {career.abbreviation && (
+                                            <small>{career.abbreviation}</small>
+                                          )}
+                                        </Link>
+                                      ) : (
+                                        <button
+                                          type="button"
+                                          onClick={() => onOpen(career)}
+                                        >
+                                          {career.name[locale]}
+                                          {career.abbreviation && (
+                                            <small>{career.abbreviation}</small>
+                                          )}
+                                        </button>
+                                      )}
                                     </li>
                                   );
                                 })}
