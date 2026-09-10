@@ -42,10 +42,11 @@ assert.equal(
 );
 const subjectTotals = {
   finance: [10, 2],
-  management: [8, 0],
+  management: [8, 3],
   core: [20, 23],
-  math: [29, 3],
-  programming: [7, 6],
+  math: [29, 11],
+  programming: [7, 12],
+  product: [0, 7],
   other: [14, 0],
 };
 for (const [category, expected] of Object.entries(subjectTotals)) {
@@ -121,11 +122,7 @@ assert.deepEqual(
   'Career track hierarchy',
 );
 const treeCareerIds = careerData.domains.flatMap((domain) => domain.careerIds);
-assert.equal(
-  new Set(treeCareerIds).size,
-  30,
-  'Career tree membership',
-);
+assert.equal(new Set(treeCareerIds).size, 30, 'Career tree membership');
 for (const id of treeCareerIds) {
   const career = careerData.careers.find((item) => item.id === id);
   assert(career && !career.supplemental, `Invalid tree career ${id}`);
@@ -141,9 +138,9 @@ for (const domain of careerData.domains) {
     domain.id,
   );
   assert.equal(
-    careerData.tracks.find((track) => track.id === domain.trackId)?.domainIds.includes(
-      domain.id,
-    ),
+    careerData.tracks
+      .find((track) => track.id === domain.trackId)
+      ?.domainIds.includes(domain.id),
     true,
     `${domain.id} track`,
   );

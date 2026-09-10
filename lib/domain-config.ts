@@ -73,6 +73,20 @@ export const categories = [
     number: '05',
   },
   {
+    id: 'product',
+    title: bilingual('Product & Business', 'محصول و کسب‌وکار'),
+    caption: bilingual(
+      'Shape ideas into valuable products.',
+      'ایده‌ها را به محصولات ارزشمند تبدیل کنید.',
+    ),
+    asset: null,
+    position: '50% 50%',
+    mobilePosition: '50% 50%',
+    audio: null,
+    color: '#d9a4d8',
+    number: '06',
+  },
+  {
     id: 'other',
     title: bilingual('Engineering Foundations', 'مکانیک و برق'),
     caption: bilingual(
@@ -84,7 +98,7 @@ export const categories = [
     mobilePosition: '58% 46%',
     audio: '/audio/dagon-domain-expansion.m4a',
     color: '#b6b9cf',
-    number: '06',
+    number: '07',
   },
 ];
 export const officialGroups = [

@@ -1,4 +1,6 @@
 'use client';
+/* Supplied SVG artwork is intentionally rendered as full-bleed scene art. */
+/* eslint-disable @next/next/no-img-element */
 
 import {
   ArrowDown,
@@ -108,14 +110,22 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
   const fa = locale === 'fa';
   const t = (en: string, per: string) => (fa ? per : en);
   const career = careerById['data-science'];
-  const [merged, setMerged] = useState(false);
+  const [mergePhase, setMergePhase] = useState<
+    'foundations' | 'merging' | 'merged'
+  >('foundations');
   const [audioState, setAudioState] = useState<'idle' | 'playing' | 'failed'>(
     'idle',
   );
   const activeAudio = useRef<HTMLAudioElement | null>(null);
+  const mergeTimer = useRef<number | null>(null);
+  const merging = mergePhase === 'merging';
+  const merged = mergePhase === 'merged';
 
   useEffect(
     () => () => {
+      if (mergeTimer.current !== null) {
+        window.clearTimeout(mergeTimer.current);
+      }
       activeAudio.current?.pause();
       activeAudio.current = null;
     },
@@ -123,9 +133,20 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
   );
 
   function mergeFoundations() {
-    if (merged) return;
-    setMerged(true);
+    if (mergePhase !== 'foundations') return;
+    setMergePhase('merging');
     setAudioState('playing');
+
+    const reduceMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
+    mergeTimer.current = window.setTimeout(
+      () => {
+        setMergePhase('merged');
+        mergeTimer.current = null;
+      },
+      reduceMotion ? 40 : 2800,
+    );
 
     const audio = new Audio(
       withBasePath('/audio/Satoru Gojo Hollow Purple-[AudioTrimmer.com].m4a'),
@@ -152,10 +173,14 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
   }
 
   function resetFoundations() {
+    if (mergeTimer.current !== null) {
+      window.clearTimeout(mergeTimer.current);
+      mergeTimer.current = null;
+    }
     activeAudio.current?.pause();
     activeAudio.current = null;
     setAudioState('idle');
-    setMerged(false);
+    setMergePhase('foundations');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -171,9 +196,7 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
   );
 
   return (
-    <article
-      className={`data-science-page ${merged ? 'is-merged' : 'is-foundations'}`}
-    >
+    <article className={`data-science-page is-${mergePhase}`}>
       <section className="ds-hero" aria-labelledby="data-science-title">
         <img
           className="ds-scene-art ds-foundation-art"
@@ -218,7 +241,10 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
           </p>
         </header>
 
-        <div className="ds-foundation-map" aria-hidden={merged}>
+        <div
+          className="ds-foundation-map"
+          aria-hidden={mergePhase !== 'foundations'}
+        >
           <KnowledgeOrbit
             tone="red"
             title={foundations.mathematics.title}
@@ -235,12 +261,14 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
             className="ds-merge-button"
             type="button"
             onClick={mergeFoundations}
-            disabled={merged}
+            disabled={mergePhase !== 'foundations'}
           >
             <span>{t('MERGE!', 'ادغام!')}</span>
             <small>{t('Create the domain', 'خلق قلمرو')}</small>
           </button>
         </div>
+
+        {merging && <div className="ds-merge-expansion" aria-hidden="true" />}
 
         {merged && (
           <div className="ds-purple-stage">

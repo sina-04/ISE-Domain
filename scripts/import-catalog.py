@@ -50,10 +50,11 @@ add(9,16,'project','ISE-127','Undergraduate Project')
 by_id = {c['id']:c for c in courses}
 membership = {
  'finance':['ise-101','ise-102','ise-103','ise-113','ise-142'],
- 'management':['ise-103','ise-104','ise-111'],
+ 'management':['ise-103','ise-104','ise-111','ise-147'],
  'core':['ise-105','ise-106','ise-107','ise-115','ise-116','ise-121','ise-124','ise-131','ise-132','ise-135','ise-136','ise-138','ise-141','ise-153','ise-162'],
- 'math':['sci-101','sci-102','sci-103','sci-104','sci-115','ise-118','ise-108','ise-109','ise-110','ise-117','ise-139'],
- 'programming':['sci-114','ise-119','ise-122','ise-140','ise-145'],
+ 'math':['sci-101','sci-102','sci-103','sci-104','sci-115','ise-118','ise-108','ise-109','ise-110','ise-117','ise-139','ise-146','ise-148','ise-151'],
+ 'programming':['sci-114','ise-119','ise-122','ise-140','ise-145','ise-149','ise-150'],
+ 'product':['ise-147','ise-156','ise-157'],
  'other':['sci-106','sci-116','ise-112','ise-114','ise-120','ise-125','ise-126'],
 }
 for cat,ids in membership.items():

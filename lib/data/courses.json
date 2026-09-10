@@ -3088,7 +3088,9 @@
     },
     "credits": 3,
     "group": "elective",
-    "categories": [],
+    "categories": [
+      "math"
+    ],
     "pathwayIds": [],
     "sources": [
       {
@@ -3138,7 +3140,10 @@
     },
     "credits": 3,
     "group": "elective",
-    "categories": [],
+    "categories": [
+      "management",
+      "product"
+    ],
     "pathwayIds": [],
     "sources": [
       {
@@ -3189,7 +3194,9 @@
     },
     "credits": 2,
     "group": "elective",
-    "categories": [],
+    "categories": [
+      "math"
+    ],
     "pathwayIds": [],
     "sources": [
       {
@@ -3239,7 +3246,9 @@
     },
     "credits": 3,
     "group": "elective",
-    "categories": [],
+    "categories": [
+      "programming"
+    ],
     "pathwayIds": [],
     "sources": [
       {
@@ -3290,7 +3299,9 @@
     },
     "credits": 3,
     "group": "elective",
-    "categories": [],
+    "categories": [
+      "programming"
+    ],
     "pathwayIds": [],
     "sources": [
       {
@@ -3341,7 +3352,9 @@
     },
     "credits": 3,
     "group": "elective",
-    "categories": [],
+    "categories": [
+      "math"
+    ],
     "pathwayIds": [],
     "sources": [
       {
@@ -3603,7 +3616,9 @@
     },
     "credits": 2,
     "group": "elective",
-    "categories": [],
+    "categories": [
+      "product"
+    ],
     "pathwayIds": [],
     "sources": [
       {
@@ -3654,7 +3669,9 @@
     },
     "credits": 2,
     "group": "elective",
-    "categories": [],
+    "categories": [
+      "product"
+    ],
     "pathwayIds": [],
     "sources": [
       {

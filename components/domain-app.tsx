@@ -19,7 +19,8 @@ import {
   Moon,
   Menu,
   X,
-  ScanLine,
+  ChevronLeft,
+  ChevronRight,
   GraduationCap,
   Wrench,
   BookOpen,
@@ -33,6 +34,7 @@ import {
 import { categories, type Locale } from '@/lib/domain-config';
 import { Explorer } from '@/components/explorer';
 import { DataSciencePage } from '@/components/data-science-page';
+import { SiteSearch } from '@/components/site-search';
 import { withBasePath } from '@/lib/base-path';
 const navigation = [
   ['home', 'Overview', 'نمای کلی'],
@@ -43,6 +45,53 @@ const navigation = [
   ['resources', 'Resources', 'منابع'],
   ['wikipedia', 'Wikipedia', 'ویکی‌پدیا'],
 ];
+const japaneseIndustryCards = [
+  {
+    seal: '改善',
+    overline: {
+      en: 'KAIZEN / CONTINUOUS IMPROVEMENT',
+      fa: 'کایزن / بهبود مستمر',
+    },
+    title: {
+      en: 'Small improvements. Real impact.',
+      fa: 'بهبودهای کوچک؛ تأثیر واقعی.',
+    },
+    copy: {
+      en: 'Kaizen connects everyday observation to better systems and turns ideas from your courses into practical improvements.',
+      fa: 'کایزن مشاهده روزمره را به سیستم‌های بهتر پیوند می‌دهد و ایده‌های درسی را به بهبودهای عملی تبدیل می‌کند.',
+    },
+  },
+  {
+    seal: '適時',
+    overline: {
+      en: 'JUST-IN-TIME / FLOW',
+      fa: 'تولید به‌موقع / جریان',
+    },
+    title: {
+      en: 'The right work, at the right moment.',
+      fa: 'کار درست، درست در زمان نیاز.',
+    },
+    copy: {
+      en: 'Just-in-Time connects inventory, production planning and demand so material moves with less delay and waste.',
+      fa: 'تولید به‌موقع، موجودی، برنامه‌ریزی تولید و تقاضا را به هم پیوند می‌دهد تا مواد با تأخیر و اتلاف کمتر جریان پیدا کنند.',
+    },
+  },
+  {
+    seal: '自働化',
+    overline: {
+      en: 'JIDOKA / QUALITY AT THE SOURCE',
+      fa: 'جیدوکا / کیفیت در منشأ',
+    },
+    title: {
+      en: 'Make problems visible early.',
+      fa: 'مسئله را زودتر آشکار کنید.',
+    },
+    copy: {
+      en: 'Jidoka combines human judgment with automation: stop when something is wrong, learn from it, and protect quality.',
+      fa: 'جیدوکا قضاوت انسانی را با خودکارسازی ترکیب می‌کند: هنگام خطا توقف کنید، از آن بیاموزید و از کیفیت محافظت کنید.',
+    },
+  },
+] as const;
 const SUKUNA_PLAYED_KEY = 'ise-sukuna-domain-played';
 type SukunaPhase = 'wallpaper' | 'fire' | 'reveal' | null;
 const SUKUNA_EMBERS = Array.from({ length: 56 }, (_, index) => ({
@@ -109,6 +158,7 @@ export function DomainApp({
   const [stars, setStars] = useState<number | null>(null);
   const [audioPending, setAudioPending] = useState<string | null>(null);
   const [sukunaPhase, setSukunaPhase] = useState<SukunaPhase>(null);
+  const [japanCard, setJapanCard] = useState(0);
   const themeTransition = useRef(false);
   const sukunaPlayed = useRef(false);
   const activeDomainAudio = useRef<HTMLAudioElement | null>(null);
@@ -135,6 +185,15 @@ export function DomainApp({
       sukunaPlayed.current = false;
     }
   }, []);
+  useEffect(() => {
+    if (activeSection !== 'home') return;
+    const timer = window.setInterval(
+      () =>
+        setJapanCard((current) => (current + 1) % japaneseIndustryCards.length),
+      10_000,
+    );
+    return () => window.clearInterval(timer);
+  }, [activeSection, japanCard]);
   useEffect(() => {
     if (!sukunaActive) return;
     const previousOverflow = document.body.style.overflow;
@@ -351,14 +410,15 @@ export function DomainApp({
       </a>
       <header className="site-header">
         <Link href={href('home')} className="brand">
-          <span className="brand-symbol">
-            <ScanLine size={25} />
+          <span className="brand-symbol" aria-hidden="true">
+            🏭︎
           </span>
           <span>
             ISE<span className="brand-thin">DOMAIN</span>
             <small>INDUSTRIAL & SYSTEMS ENGINEERING</small>
           </span>
         </Link>
+        <SiteSearch locale={locale} />
         <nav
           aria-label={t('Main navigation', 'ناوبری اصلی')}
           className={menu ? 'main-nav open' : 'main-nav'}
@@ -533,7 +593,7 @@ export function DomainApp({
                 <span>{t('Degree credits', 'واحد دوره')}</span>
               </div>
               <div>
-                <strong>{t('06', '۰۶')}</strong>
+                <strong>{t('07', '۰۷')}</strong>
                 <span>{t('Fields of knowledge', 'حوزه دانش')}</span>
               </div>
               <div>
@@ -678,37 +738,60 @@ export function DomainApp({
                 ))}
               </div>
             </section>
-            <section className="japan-note">
-              <div className="japan-seal" lang="ja">
-                改善
+            <section
+              className="japan-note japan-carousel"
+              aria-roledescription={t('carousel', 'اسلایدشو')}
+              aria-label={t('Japanese industry principles', 'اصول صنعت ژاپن')}
+            >
+              <div className="japan-seal" lang="ja" key={`seal-${japanCard}`}>
+                {japaneseIndustryCards[japanCard].seal}
               </div>
-              <div>
+              <div className="japan-slide" key={japanCard}>
                 <p className="overline">
-                  {t(
-                    'FROM JAPAN, TO THE WAY YOU THINK',
-                    'از ژاپن تا شیوه اندیشیدن شما',
-                  )}
+                  {japaneseIndustryCards[japanCard].overline[locale]}
                 </p>
-                <h2>
-                  {t(
-                    'Small improvements. Real impact.',
-                    'بهبودهای کوچک؛ تأثیر واقعی.',
-                  )}
-                </h2>
-                <p>
-                  {t(
-                    'Kaizen connects everyday observation to better systems. Explore how Japanese industry turns ideas from your courses into practice.',
-                    'کایزن مشاهده روزمره را به سیستم‌های بهتر پیوند می‌دهد. ببینید صنعت ژاپن چگونه ایده‌های درسی شما را عملی می‌کند.',
-                  )}
-                </p>
+                <h2>{japaneseIndustryCards[japanCard].title[locale]}</h2>
+                <p>{japaneseIndustryCards[japanCard].copy[locale]}</p>
               </div>
-              <Link
-                className="text-link"
-                href={`${href('resources')}?topic=japan`}
-              >
-                {t('Explore the connection', 'کشف این ارتباط')}
-                <ArrowUpRight size={17} />
-              </Link>
+              <div className="japan-carousel-actions">
+                <div className="japan-carousel-controls">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setJapanCard(
+                        (current) =>
+                          (current - 1 + japaneseIndustryCards.length) %
+                          japaneseIndustryCards.length,
+                      )
+                    }
+                    aria-label={t('Previous principle', 'اصل قبلی')}
+                  >
+                    <ChevronLeft size={17} aria-hidden="true" />
+                  </button>
+                  <span aria-live="polite">
+                    {japanCard + 1} / {japaneseIndustryCards.length}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setJapanCard(
+                        (current) =>
+                          (current + 1) % japaneseIndustryCards.length,
+                      )
+                    }
+                    aria-label={t('Next principle', 'اصل بعدی')}
+                  >
+                    <ChevronRight size={17} aria-hidden="true" />
+                  </button>
+                </div>
+                <Link
+                  className="text-link"
+                  href={`${href('resources')}?topic=japan`}
+                >
+                  {t('Explore the connection', 'کشف این ارتباط')}
+                  <ArrowUpRight size={17} />
+                </Link>
+              </div>
             </section>
           </>
         ) : activeSection === 'data-science' ? (
@@ -800,9 +883,22 @@ export function DomainApp({
           </a>
         </div>
         <div className="footer-meta">
-          <p className="footer-credit" lang="en" dir="ltr">
-            Developed with <span aria-label="love">💜</span> by Sina Rezaei
-            <span className="student-note"> (ISE Bachelor Student)</span>
+          <p
+            className="footer-credit"
+            lang={fa ? 'fa' : 'en'}
+            dir={fa ? 'rtl' : 'ltr'}
+          >
+            {fa ? (
+              <>
+                توسعه یافته با 💜 توسط سینا رضایی (دانشجوی کارشناسی مهندسی صنایع
+                و سیستم‌ها)
+              </>
+            ) : (
+              <>
+                Developed with <span aria-label="love">💜</span> by Sina Rezaei
+                <span className="student-note"> (ISE Bachelor Student)</span>
+              </>
+            )}
           </p>
           <nav className="social-links" aria-label="Sina Rezaei social media">
             <a
