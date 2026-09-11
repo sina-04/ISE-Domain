@@ -17,6 +17,7 @@ import {
   ChevronRight,
   ChevronDown,
   Check,
+  LockKeyhole,
 } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import {
@@ -64,11 +65,7 @@ import {
   type Course,
   type CareerProfile,
 } from '@/lib/catalog';
-import {
-  resources,
-  resourcesForCourse,
-  type Resource,
-} from '@/lib/resources';
+import { resources, resourcesForCourse, type Resource } from '@/lib/resources';
 import { withBasePath } from '@/lib/base-path';
 import { CareerGuide } from '@/components/career-guide';
 const pageNames: Record<string, Text> = {
@@ -223,10 +220,7 @@ function ResourceConnections({
       {resource.categories.map((id) => {
         const category = categories.find((item) => item.id === id);
         return category ? (
-          <Link
-            key={id}
-            href={`/${locale}/chart?view=content&category=${id}`}
-          >
+          <Link key={id} href={`/${locale}/chart?view=content&category=${id}`}>
             {category.title[locale]}
           </Link>
         ) : null;
@@ -383,6 +377,44 @@ export function Explorer({
   const group = params.get('group') || 'all';
   const resourceBasis = params.get('based') || 'all';
   const resourceScope = params.get('scope') || 'all';
+  const resourceContext = params.get('context') || '';
+  const resourceContextId = params.get('contextId') || '';
+  const resourceContextInfo = (() => {
+    if (section !== 'resources' || !resourceContextId) return null;
+    if (resourceContext === 'career') {
+      const career = careerById[resourceContextId];
+      return career
+        ? { kind: 'career', id: career.id, label: career.name[locale] }
+        : null;
+    }
+    if (resourceContext === 'domain') {
+      const domain = careerDomains.find(
+        (item) => item.id === resourceContextId,
+      );
+      return domain
+        ? { kind: 'domain', id: domain.id, label: domain.name[locale] }
+        : null;
+    }
+    if (resourceContext === 'course') {
+      const course = courseById[resourceContextId];
+      return course
+        ? { kind: 'course', id: course.id, label: course.name[locale] }
+        : null;
+    }
+    if (resourceContext === 'major') {
+      const major = pathways.find((item) => item.id === resourceContextId);
+      return major
+        ? { kind: 'major', id: major.id, label: major.name[locale] }
+        : null;
+    }
+    if (resourceContext === 'content') {
+      const content = categories.find((item) => item.id === resourceContextId);
+      return content
+        ? { kind: 'content', id: content.id, label: content.title[locale] }
+        : null;
+    }
+    return null;
+  })();
   const search = query;
   const [returnFocus, setReturnFocus] = useState<HTMLElement | null>(null);
   const update = (values: Record<string, string | null>) => {
@@ -535,8 +567,7 @@ export function Explorer({
     if (resourceBasis === 'content') {
       return (
         resource.categories.length > 0 &&
-        (resourceScope === 'all' ||
-          resource.categories.includes(resourceScope))
+        (resourceScope === 'all' || resource.categories.includes(resourceScope))
       );
     }
     if (resourceBasis === 'majors') {
@@ -557,6 +588,33 @@ export function Explorer({
     }
     return true;
   };
+  const matchesResourceContext = (resource: Resource) => {
+    if (!resourceContextInfo) return matchesResourceBasis(resource);
+    if (resourceContextInfo.kind === 'career') {
+      return resource.careerIds?.includes(resourceContextInfo.id) || false;
+    }
+    if (resourceContextInfo.kind === 'domain') {
+      return (
+        resource.careerIds?.some(
+          (id) => careerById[id]?.domainId === resourceContextInfo.id,
+        ) || false
+      );
+    }
+    if (resourceContextInfo.kind === 'course') {
+      return resource.courseIds?.includes(resourceContextInfo.id) || false;
+    }
+    if (resourceContextInfo.kind === 'major') {
+      return resource.pathwayIds?.includes(resourceContextInfo.id) || false;
+    }
+    return resource.categories.includes(resourceContextInfo.id);
+  };
+  const resourceConnectionBasis = resourceContextInfo
+    ? resourceContextInfo.kind === 'major'
+      ? 'majors'
+      : ['career', 'domain'].includes(resourceContextInfo.kind)
+        ? 'careers'
+        : 'content'
+    : resourceBasis;
   return (
     <>
       <div className="page-heading">
@@ -1050,14 +1108,27 @@ export function Explorer({
         <>
           <div className="explorer-toolbar">
             {searchBar}
-            <ResourceNestedFilter
-              locale={locale}
-              basis={resourceBasis}
-              scope={resourceScope}
-              onChange={(nextBasis, nextScope) =>
-                update({ based: nextBasis, scope: nextScope })
-              }
-            />
+            {resourceContextInfo ? (
+              <output className="resource-context-lock">
+                <LockKeyhole size={17} aria-hidden="true" />
+                <span>
+                  <small>{t('Resources for', 'منابع مرتبط با')}</small>
+                  <strong>{resourceContextInfo.label}</strong>
+                </span>
+                <Link href={`/${locale}/resources`}>
+                  {t('View all resources', 'مشاهده همه منابع')}
+                </Link>
+              </output>
+            ) : (
+              <ResourceNestedFilter
+                locale={locale}
+                basis={resourceBasis}
+                scope={resourceScope}
+                onChange={(nextBasis, nextScope) =>
+                  update({ based: nextBasis, scope: nextScope })
+                }
+              />
+            )}
             <FilterSelect
               label={t('Resource type', 'نوع منبع')}
               value={params.get('type') || 'all'}
@@ -1111,7 +1182,7 @@ export function Explorer({
                 (r) =>
                   (!params.get('type') || r.type === params.get('type')) &&
                   (!params.get('topic') || r.japan) &&
-                  matchesResourceBasis(r) &&
+                  matchesResourceContext(r) &&
                   normalizeSearch(
                     r.title.en +
                       r.title.fa +
@@ -1157,7 +1228,7 @@ export function Explorer({
                     <p>{r.description[locale]}</p>
                     <ResourceConnections
                       resource={r}
-                      basis={resourceBasis}
+                      basis={resourceConnectionBasis}
                       locale={locale}
                     />
                     {r.pdfPage && (
@@ -1180,7 +1251,7 @@ export function Explorer({
             (r) =>
               (!params.get('type') || r.type === params.get('type')) &&
               (!params.get('topic') || r.japan) &&
-              matchesResourceBasis(r) &&
+              matchesResourceContext(r) &&
               normalizeSearch(
                 r.title.en +
                   r.title.fa +
@@ -1473,7 +1544,7 @@ function CourseDialog({
               </section>
               <section>
                 <h3>{t('Resources', 'منابع')}</h3>
-                {resourcesForCourse(course.id).length > 0 ? (
+                {resourcesForCourse(course.id).length > 0 && (
                   <div className="dialog-resource-list">
                     {resourcesForCourse(course.id).map((resource) => (
                       <OutLink key={resource.id} href={resource.url}>
@@ -1481,15 +1552,14 @@ function CourseDialog({
                       </OutLink>
                     ))}
                   </div>
-                ) : (
-                  <Link
-                    className="dialog-resource-browse"
-                    href={`/${locale}/resources?based=content`}
-                  >
-                    {t('Browse related resources', 'مشاهده منابع مرتبط')}
-                    <ArrowUpRight size={14} aria-hidden="true" />
-                  </Link>
                 )}
+                <Link
+                  className="dialog-resource-browse"
+                  href={`/${locale}/resources?context=course&contextId=${course.id}`}
+                >
+                  {t('Browse related resources', 'مشاهده منابع مرتبط')}
+                  <ArrowUpRight size={14} aria-hidden="true" />
+                </Link>
               </section>
               {course.categories.includes('core') && (
                 <section className="course-japan">

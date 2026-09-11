@@ -509,7 +509,7 @@ function CareerDialog({
                   <BookOpen size={18} />
                   {t('Resources', 'منابع')}
                 </h3>
-                {resourcesForCareer(career.id).length > 0 ? (
+                {resourcesForCareer(career.id).length > 0 && (
                   <div className="dialog-resource-list">
                     {resourcesForCareer(career.id).map((resource) => (
                       <a
@@ -524,15 +524,14 @@ function CareerDialog({
                       </a>
                     ))}
                   </div>
-                ) : (
-                  <Link
-                    className="dialog-resource-browse"
-                    href={`/${locale}/resources?based=careers`}
-                  >
-                    {t('Browse career resources', 'مشاهده منابع شغلی')}
-                    <ArrowUpRight size={14} aria-hidden="true" />
-                  </Link>
                 )}
+                <Link
+                  className="dialog-resource-browse"
+                  href={`/${locale}/resources?context=career&contextId=${career.id}`}
+                >
+                  {t('Browse career resources', 'مشاهده منابع شغلی')}
+                  <ArrowUpRight size={14} aria-hidden="true" />
+                </Link>
               </section>
               {career.source && (
                 <a

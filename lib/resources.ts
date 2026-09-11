@@ -29,6 +29,7 @@ export const resources: Resource[] = [
     categories: ['math'],
     pathwayIds: ['optimization', 'logistics'],
     courseIds: ['ise-109', 'ise-110'],
+    careerIds: ['operations-research-analysis'],
   },
   {
     id: 'optexpert-optimization-modeling',
@@ -44,6 +45,7 @@ export const resources: Resource[] = [
     categories: ['math'],
     pathwayIds: ['optimization', 'logistics'],
     courseIds: ['ise-109', 'ise-110'],
+    careerIds: ['operations-research-analysis'],
   },
   {
     id: 'pyomo-channel',
@@ -59,6 +61,7 @@ export const resources: Resource[] = [
     categories: ['math', 'programming'],
     pathwayIds: ['optimization', 'logistics'],
     courseIds: ['ise-109', 'ise-110'],
+    careerIds: ['operations-research-analysis'],
   },
   {
     id: 'optexpert-vrp-python',

@@ -1607,6 +1607,46 @@ html[lang='fa'] .footer-credit {
 .nested-resource-filter {
   padding-inline-end: 0;
 }
+.resource-context-lock {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  max-width: min(610px, 100%);
+  padding: 7px 10px 7px 13px;
+  border: 1px solid color-mix(in srgb, var(--accent) 54%, var(--line));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  color: var(--accent);
+}
+.resource-context-lock > span {
+  display: grid;
+  min-width: 0;
+  line-height: 1.25;
+}
+.resource-context-lock small {
+  color: var(--muted);
+  font-size: 0.6875rem;
+}
+.resource-context-lock strong {
+  overflow: hidden;
+  color: var(--text);
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.resource-context-lock a {
+  margin-inline-start: 8px;
+  padding: 7px 9px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+[dir='rtl'] .resource-context-lock {
+  padding: 7px 13px 7px 10px;
+}
 .nested-resource-trigger {
   width: min(330px, 62vw);
   min-width: 210px;
@@ -3095,6 +3135,9 @@ html[lang='fa'] .ai-exposure-badge b {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+.dialog-resource-list + .dialog-resource-browse {
+  margin-top: 10px;
 }
 .dialog-resource-list .out-link,
 .dialog-resource-browse {
