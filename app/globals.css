@@ -2,7 +2,7 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 :root {
-  --font-persian: 'Sahel';
+  --font-persian: 'Vazirmatn Persian Digits', 'Sahel';
   --font-body: var(--font-latin-body);
   --font-display: var(--font-latin-display);
   --background: #171821;
@@ -1037,6 +1037,9 @@ svg {
   font-family: var(--font-latin-body), sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
+}
+html[lang='fa'] .footer-credit {
+  font-family: var(--font-persian), sans-serif;
 }
 .footer-credit > span:first-child {
   display: inline-block;
@@ -2404,8 +2407,11 @@ svg {
   white-space: nowrap;
 }
 .ai-exposure-badge b {
-  font-family: var(--font-latin-body), sans-serif;
+  font-family: var(--font-latin-body), var(--font-persian), sans-serif;
   font-weight: 800;
+}
+html[lang='fa'] .ai-exposure-badge b {
+  font-family: 'Vazirmatn Persian Digits', var(--font-latin-body), sans-serif;
 }
 .career-card-copy > span:last-child {
   color: var(--muted);
@@ -3503,24 +3509,24 @@ svg {
 
 /* Locale rules also cover portaled dialogs and Persian text on English pages. */
 html[lang='fa'] body {
-  --font-body: 'Sahel';
-  --font-display: 'Sahel';
-  --font-sans: 'Sahel';
-  font-family: 'Sahel', sans-serif;
+  --font-body: var(--font-persian);
+  --font-display: var(--font-persian);
+  --font-sans: var(--font-persian);
+  font-family: var(--font-persian), sans-serif;
 }
 [lang='fa'],
 .language-button[lang='fa'] {
-  font-family: 'Sahel', sans-serif;
+  font-family: var(--font-persian), sans-serif;
   letter-spacing: 0;
 }
 html[lang='fa'] :is(h1, h2, h3, .stats-strip strong),
 html[lang='fa'] .dialog-title[data-slot='dialog-title'] {
-  font-family: 'Sahel', sans-serif;
+  font-family: var(--font-persian), sans-serif;
   font-weight: 900;
   letter-spacing: 0;
 }
 html[lang='fa'] :is(button, input, select, textarea) {
-  font-family: 'Sahel', sans-serif;
+  font-family: var(--font-persian), sans-serif;
 }
 html[lang='fa']
   :is(.overline, .eyebrow, .small-label, .character, .course-code) {
@@ -3559,7 +3565,7 @@ html[lang='fa'] .intro-aside .domain-mark {
   letter-spacing: -6px;
 }
 html[lang='fa'] .domain-mark span {
-  font-family: 'Sahel', sans-serif;
+  font-family: var(--font-persian), sans-serif;
   letter-spacing: 0;
 }
 html[lang='fa'] .stats-strip strong {
@@ -3571,7 +3577,7 @@ html[lang='fa'] .brand {
 }
 html[lang='en'] body,
 html[lang='en'] :is(button, input, textarea, [data-slot='select-content']) {
-  font-family: var(--font-latin-body), 'Sahel', sans-serif;
+  font-family: var(--font-latin-body), var(--font-persian), sans-serif;
 }
 html[lang='fa']
   :is(
@@ -3582,7 +3588,7 @@ html[lang='fa']
     [data-slot='select-trigger'],
     [data-slot='select-content']
   ) {
-  font-family: 'Sahel', sans-serif;
+  font-family: var(--font-persian), sans-serif;
 }
 html[lang='fa'] [lang='en'] {
   font-family: var(--font-latin-body), sans-serif;

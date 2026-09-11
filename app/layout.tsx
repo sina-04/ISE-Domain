@@ -9,6 +9,7 @@ const display = Barlow_Condensed({
 const body = Manrope({ subsets: ['latin'], variable: '--font-latin-body' });
 const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const persianFontFaces = `
+@font-face{font-family:'Vazirmatn Persian Digits';src:url('${publicBasePath}/fonts/Vazirmatn-wght.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+06F0-06F9}
 @font-face{font-family:'Sahel';src:url('${publicBasePath}/fonts/Sahel.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Sahel';src:url('${publicBasePath}/fonts/Sahel-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:'Sahel';src:url('${publicBasePath}/fonts/Sahel-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}

@@ -220,6 +220,15 @@ const categoryConfig = readFileSync(
   new URL('../lib/domain-config.ts', import.meta.url),
   'utf8',
 );
+const rootLayout = readFileSync(
+  new URL('../app/layout.tsx', import.meta.url),
+  'utf8',
+);
+assert(
+  rootLayout.includes("font-family:'Vazirmatn Persian Digits'") &&
+    rootLayout.includes('unicode-range:U+06F0-06F9'),
+  'Vazirmatn Persian numeral face is not configured',
+);
 assert(
   !categoryConfig.includes('character:'),
   'Character labels remain in category data',
@@ -253,6 +262,8 @@ for (const asset of [
   'audio/gojo-domain-expansion.m4a',
   'audio/mahito-domain-expansion.m4a',
   'audio/sukuna-domain-expansion.m4a',
+  'fonts/Vazirmatn-wght.woff2',
+  'fonts/Vazirmatn-OFL.txt',
   'curriculum-1403.pdf',
 ])
   assert(existsSync(new URL(`../public/${asset}`, import.meta.url)), asset);
