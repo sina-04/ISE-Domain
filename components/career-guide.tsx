@@ -3,6 +3,7 @@
 import {
   ArrowRight,
   ArrowUpRight,
+  BrainCircuit,
   BriefcaseBusiness,
   BookOpen,
   CheckCircle2,
@@ -29,6 +30,47 @@ import {
 import type { Locale } from '@/lib/domain-config';
 import { resourcesForCareer } from '@/lib/resources';
 import { AIExposureBadge, AIExposurePanel } from '@/components/ai-exposure';
+
+function formatNumber(value: number, locale: Locale, minimumIntegerDigits = 1) {
+  return new Intl.NumberFormat(locale === 'fa' ? 'fa-IR' : 'en-US', {
+    useGrouping: false,
+    minimumIntegerDigits,
+  }).format(value);
+}
+
+function formatPath(parts: number[], locale: Locale) {
+  return parts.map((part) => formatNumber(part, locale)).join('.');
+}
+
+function CareerTreeRole({
+  career,
+  locale,
+}: {
+  career: CareerProfile;
+  locale: Locale;
+}) {
+  const t = (en: string, fa: string) => (locale === 'fa' ? fa : en);
+  return (
+    <>
+      <span className="career-tree-role-title">{career.name[locale]}</span>
+      <span className="career-tree-role-meta">
+        {career.abbreviation && (
+          <small className="career-tree-acronym" dir="ltr">
+            {career.abbreviation}
+          </small>
+        )}
+        <small className="career-tree-ai">
+          <BrainCircuit size={11} aria-hidden="true" />
+          {t('AI Exposure', 'مواجهه AI')}
+          <bdi dir="ltr">
+            {formatNumber(career.aiExposure.score, locale)}/
+            {formatNumber(10, locale)}
+          </bdi>
+        </small>
+      </span>
+    </>
+  );
+}
 
 function CareerCard({
   career,
@@ -67,7 +109,9 @@ function CareerCard({
         <BookOpen size={13} aria-hidden="true" />
         {t('Resources', 'منابع')}
         {resourcesForCareer(career.id).length > 0 && (
-          <small>{resourcesForCareer(career.id).length}</small>
+          <small>
+            {formatNumber(resourcesForCareer(career.id).length, locale)}
+          </small>
         )}
       </span>
       <ArrowUpRight
@@ -175,7 +219,7 @@ export function CareerGuide({
                   key={track.id}
                 >
                   <div className="career-tree-track-heading">
-                    <span>{String(trackIndex + 1).padStart(2, '0')}</span>
+                    <span>{formatNumber(trackIndex + 1, locale, 2)}</span>
                     <strong>{track.name[locale]}</strong>
                   </div>
                   <div className="career-tree-domain-columns">
@@ -193,7 +237,10 @@ export function CareerGuide({
                             <li key={domain.id}>
                               <a href={`#career-domain-${domain.id}`}>
                                 <span>
-                                  {trackIndex + 1}.{domainIndex + 1}
+                                  {formatPath(
+                                    [trackIndex + 1, domainIndex + 1],
+                                    locale,
+                                  )}
                                 </span>
                                 <strong>{domain.name[locale]}</strong>
                               </a>
@@ -203,27 +250,25 @@ export function CareerGuide({
                                   return (
                                     <li key={id}>
                                       {career.id === 'data-science' ? (
-                                        <Link href={`/${locale}/data-science`}>
-                                          {career.name[locale]}
-                                          {career.abbreviation && (
-                                            <small>{career.abbreviation}</small>
-                                          )}
-                                          <small className="career-tree-ai">
-                                            AI {career.aiExposure.score}/10
-                                          </small>
+                                        <Link
+                                          className="career-tree-role"
+                                          href={`/${locale}/data-science`}
+                                        >
+                                          <CareerTreeRole
+                                            career={career}
+                                            locale={locale}
+                                          />
                                         </Link>
                                       ) : (
                                         <button
                                           type="button"
+                                          className="career-tree-role"
                                           onClick={() => onOpen(career)}
                                         >
-                                          {career.name[locale]}
-                                          {career.abbreviation && (
-                                            <small>{career.abbreviation}</small>
-                                          )}
-                                          <small className="career-tree-ai">
-                                            AI {career.aiExposure.score}/10
-                                          </small>
+                                          <CareerTreeRole
+                                            career={career}
+                                            locale={locale}
+                                          />
                                         </button>
                                       )}
                                     </li>
@@ -247,7 +292,7 @@ export function CareerGuide({
         {careerTracks.map((track, trackIndex) => (
           <section className="career-track-section" key={track.id}>
             <div className="career-track-heading">
-              <span>{String(trackIndex + 1).padStart(2, '0')}</span>
+              <span>{formatNumber(trackIndex + 1, locale, 2)}</span>
               <div>
                 <p className="overline">
                   {t('ISE CAREER BRANCH', 'شاخه مسیرهای مهندسی صنایع')}
@@ -268,7 +313,7 @@ export function CareerGuide({
                   >
                     <div className="career-domain-heading">
                       <span>
-                        {trackIndex + 1}.{domainIndex + 1}
+                        {formatPath([trackIndex + 1, domainIndex + 1], locale)}
                       </span>
                       <div>
                         <p className="overline">
@@ -289,7 +334,10 @@ export function CareerGuide({
                           key={id}
                           career={careerById[id]}
                           locale={locale}
-                          number={`${trackIndex + 1}.${domainIndex + 1}.${careerIndex + 1}`}
+                          number={formatPath(
+                            [trackIndex + 1, domainIndex + 1, careerIndex + 1],
+                            locale,
+                          )}
                           onOpen={onOpen}
                         />
                       ))}
@@ -426,7 +474,7 @@ function CareerDialog({
                 <ol className="career-step-list">
                   {career.entrySteps[locale].map((step, index) => (
                     <li key={step}>
-                      <span>{index + 1}</span>
+                      <span>{formatNumber(index + 1, locale)}</span>
                       <p>{step}</p>
                     </li>
                   ))}

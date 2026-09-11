@@ -34,11 +34,13 @@ export function AIExposureBadge({
   return (
     <span
       className="ai-exposure-badge"
-      title={`${t('AI Exposure', 'میزان مواجهه با هوش مصنوعی')}: ${scoreText(exposure.score, locale)}/10`}
+      title={`${t('AI Exposure', 'میزان مواجهه با هوش مصنوعی')}: ${scoreText(exposure.score, locale)}/${scoreText(10, locale)}`}
     >
       <BrainCircuit size={13} aria-hidden="true" />
       {t('AI Exposure', 'مواجهه با AI')}{' '}
-      <b>{scoreText(exposure.score, locale)}/10</b>
+      <b>
+        {scoreText(exposure.score, locale)}/{scoreText(10, locale)}
+      </b>
     </span>
   );
 }
@@ -63,12 +65,16 @@ export function AIExposurePanel({
             {t('AI Exposure', 'میزان مواجهه با هوش مصنوعی')}
           </span>
           <strong>
-            {scoreText(exposure.score, locale)}/10 · {level[locale]}
+            {scoreText(exposure.score, locale)}/{scoreText(10, locale)} ·{' '}
+            {level[locale]}
           </strong>
         </div>
       </div>
       <meter min="1" max="10" value={exposure.score}>
-        {exposure.score} out of 10
+        {t(
+          `${scoreText(exposure.score, locale)} out of ${scoreText(10, locale)}`,
+          `${scoreText(exposure.score, locale)} از ${scoreText(10, locale)}`,
+        )}
       </meter>
       <p>
         {exposure.estimated ? (

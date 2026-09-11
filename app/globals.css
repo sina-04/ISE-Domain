@@ -2206,6 +2206,53 @@ svg {
   margin-inline-start: 5px;
   font-size: 0.62rem;
 }
+.career-tree :is(button, a).career-tree-role {
+  display: grid;
+  gap: 6px;
+  padding: 7px 8px;
+  border-radius: 6px;
+  transition:
+    color 0.18s ease,
+    background 0.18s ease;
+}
+.career-tree :is(button, a).career-tree-role:hover {
+  background: color-mix(in srgb, var(--accent) 9%, transparent);
+}
+.career-tree-role-title {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+.career-tree-role:hover .career-tree-role-title {
+  color: var(--foreground);
+}
+.career-tree-role-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+.career-tree :is(button, a) .career-tree-acronym,
+.career-tree :is(button, a) .career-tree-ai {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: max-content;
+  min-height: 22px;
+  padding: 3px 7px;
+  margin: 0;
+  border: 1px solid color-mix(in srgb, var(--accent) 26%, var(--line));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  font-size: 0.62rem;
+  line-height: 1.2;
+}
+.career-tree :is(button, a) .career-tree-acronym {
+  color: var(--foreground);
+  font-family: var(--font-latin-body), sans-serif;
+  font-weight: 700;
+}
 .career-domain-list {
   display: grid;
   gap: 48px;
@@ -2617,6 +2664,12 @@ svg {
   color: var(--accent);
   font-family: var(--font-latin-body), sans-serif;
   font-weight: 700;
+}
+[dir='rtl'] .career-tree :is(button, a) .career-tree-ai {
+  font-family: var(--font-persian), sans-serif;
+}
+[dir='rtl'] .career-tree-ai bdi {
+  font-family: var(--font-persian), sans-serif;
 }
 .career-dialog-body .ai-exposure-panel,
 .ds-detail-intro .ai-exposure-panel {
