@@ -118,16 +118,23 @@ svg {
   direction: ltr;
 }
 .site-header {
-  position: relative;
+  position: sticky;
+  z-index: 40;
+  top: 0;
   flex-wrap: wrap;
+  width: min(100%, 1440px);
   max-width: 1440px;
   margin: auto;
   min-height: 100px;
-  padding: 20px 52px;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 20px;
   border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--background) 92%, transparent);
+  box-shadow: 0 10px 30px color-mix(in srgb, #000 16%, transparent);
+  backdrop-filter: blur(18px) saturate(130%);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
 }
 .brand {
   display: flex;
@@ -160,7 +167,7 @@ svg {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
   margin-inline-start: auto;
 }
 .main-nav a {
@@ -185,7 +192,7 @@ svg {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 .github-actions {
   display: inline-flex;
@@ -1222,7 +1229,7 @@ html[lang='fa'] .footer-credit {
     flex-direction: column;
     align-items: stretch;
     position: absolute;
-    top: 100px;
+    top: calc(100% + 1px);
     inset-inline: 20px;
     background: var(--surface);
     border: 1px solid var(--line);
@@ -3064,6 +3071,7 @@ html[lang='fa'] .ai-exposure-badge b {
   color: var(--muted);
 }
 .course-dialog[data-slot='dialog-content'] {
+  z-index: 81;
   top: max(10px, 4dvh);
   right: max(10px, calc((100vw - 760px) / 2));
   left: max(10px, calc((100vw - 760px) / 2));
@@ -3319,7 +3327,7 @@ html[lang='fa'] .ai-exposure-badge b {
     flex-direction: column;
     align-items: stretch;
     position: absolute;
-    top: 100px;
+    top: calc(100% + 1px);
     inset-inline: 20px;
     background: var(--surface);
     border: 1px solid var(--line);
@@ -3481,7 +3489,7 @@ html[lang='fa'] .ai-exposure-badge b {
     font-size: 0.8125rem;
   }
   .main-nav.open {
-    top: 82px;
+    top: calc(100% + 1px);
   }
   .page-heading {
     padding-top: 25px;
@@ -4997,8 +5005,8 @@ html[lang='fa'] .ds-path-heading h2 {
 }
 .site-search {
   position: relative;
-  z-index: 55;
-  width: clamp(185px, 15vw, 250px);
+  z-index: 2;
+  width: clamp(185px, 15vw, 220px);
   flex: 0 1 auto;
 }
 .site-search > svg {
@@ -5039,7 +5047,7 @@ html[lang='fa'] .ds-path-heading h2 {
   color: var(--muted);
 }
 .site-search-content[data-slot='combobox-content'] {
-  z-index: 120;
+  z-index: 60;
   max-height: min(430px, 68vh);
   min-width: min(390px, calc(100vw - 32px));
   padding: 7px;
@@ -5048,6 +5056,17 @@ html[lang='fa'] .ds-path-heading h2 {
   color: var(--foreground);
   box-shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
   backdrop-filter: blur(18px);
+}
+.github-handle {
+  display: none;
+}
+
+/* Keep every modal above the sticky header and its search suggestions. */
+[data-slot='dialog-overlay'] {
+  z-index: 80;
+}
+[data-slot='dialog-content'] {
+  z-index: 81;
 }
 .site-search-content [data-slot='combobox-list'] {
   max-height: min(410px, 64vh);
@@ -5142,12 +5161,47 @@ html[lang='fa'] .ds-path-heading h2 {
     width: 180px;
   }
 }
+@media (max-width: 1400px) {
+  .site-header .main-nav {
+    display: none;
+  }
+  .site-header .menu-button {
+    display: inline-flex;
+  }
+  .site-header .header-actions {
+    margin-inline-start: auto;
+  }
+  .site-header .main-nav.open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    top: calc(100% + 1px);
+    inset-inline: 20px;
+    z-index: 4;
+    gap: 3px;
+    max-height: calc(100dvh - 100% - 1px);
+    padding: 15px 25px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: 0 20px 50px #0005;
+  }
+  .site-header .main-nav a {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 1050px) {
   .site-search {
     width: min(270px, 31vw);
   }
 }
 @media (max-width: 760px) {
+  html {
+    scroll-padding-top: 150px;
+  }
   .site-header .brand {
     order: 1;
   }
@@ -5193,5 +5247,25 @@ html[lang='fa'] .ds-path-heading h2 {
   }
   .japan-carousel-actions .text-link {
     font-size: 0.75rem;
+  }
+}
+@media (max-width: 380px) {
+  html {
+    scroll-padding-top: 150px;
+  }
+  .site-header {
+    padding: 14px 16px;
+    gap: 8px;
+  }
+  .site-header .brand {
+    font-size: 1rem;
+  }
+  .site-header .header-actions {
+    gap: 2px;
+  }
+  .site-header .language-button,
+  .site-header .icon-button {
+    min-width: 40px;
+    min-height: 40px;
   }
 }
