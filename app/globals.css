@@ -2522,7 +2522,7 @@ html[lang='fa'] .ai-exposure-badge b {
   border-radius: 13px;
   background: var(--surface);
   color: var(--foreground);
-  translate: none !important;
+  translate: 0 0 !important;
   scale: none !important;
   transform: none !important;
   overscroll-behavior: contain;
@@ -3077,7 +3077,7 @@ html[lang='fa'] .ai-exposure-badge b {
   color: var(--foreground);
   border: 1px solid var(--line);
   border-radius: 12px;
-  translate: none !important;
+  translate: 0 0 !important;
   scale: none !important;
   transform: none !important;
   overscroll-behavior: contain;
@@ -3458,10 +3458,13 @@ html[lang='fa'] .ai-exposure-badge b {
     font-size: 1rem;
   }
   .course-dialog[data-slot='dialog-content'] {
-    right: 10px;
-    left: 10px;
-    width: auto;
+    inset: 3dvh 10px auto;
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
     max-height: 94dvh;
+    margin: 0;
+    translate: 0 0 !important;
+    transform: none !important;
   }
   .dialog-banner {
     padding: 30px 22px 24px;
@@ -3744,6 +3747,15 @@ html[lang='fa'] [lang='en'] {
   }
 }
 @media (max-width: 700px) {
+  .career-dialog[data-slot='dialog-content'] {
+    inset: 3dvh 10px auto;
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+    max-height: 94dvh;
+    margin: 0;
+    translate: 0 0 !important;
+    transform: none !important;
+  }
   .career-map-intro,
   .career-tree,
   .career-dialog-body {
