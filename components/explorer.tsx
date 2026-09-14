@@ -1106,7 +1106,7 @@ export function Explorer({
       )}
       {section === 'resources' && (
         <>
-          <div className="explorer-toolbar">
+          <div className="explorer-toolbar resource-toolbar">
             {searchBar}
             {resourceContextInfo ? (
               <output className="resource-context-lock">
