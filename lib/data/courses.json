@@ -648,7 +648,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B30:D30"
+        "range": "B35:D35"
       }
     ],
     "description": {
@@ -747,7 +747,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B34:D34"
+        "range": "B39:D39"
       }
     ],
     "description": {
@@ -799,7 +799,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B33:D33"
+        "range": "B38:D38"
       }
     ],
     "description": {
@@ -1014,12 +1014,12 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "G15:I15"
+        "range": "G19:I19"
       },
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "G28:I28"
+        "range": "G32:I32"
       }
     ],
     "description": {
@@ -1127,7 +1127,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "G21:I21"
+        "range": "G25:I25"
       }
     ],
     "description": {
@@ -1188,12 +1188,12 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B25:D25"
+        "range": "B28:D28"
       },
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "G30:I30"
+        "range": "G34:I34"
       }
     ],
     "description": {
@@ -1303,7 +1303,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B31:D31"
+        "range": "B36:D36"
       },
       {
         "file": "workbook",
@@ -1362,7 +1362,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B23:D23"
+        "range": "B26:D26"
       }
     ],
     "description": {
@@ -1574,12 +1574,12 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "G14:I14"
+        "range": "G18:I18"
       },
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "G29:I29"
+        "range": "G33:I33"
       }
     ],
     "description": {
@@ -1850,7 +1850,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B32:D32"
+        "range": "B37:D37"
       }
     ],
     "description": {
@@ -2315,7 +2315,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "G31:I31"
+        "range": "G35:I35"
       }
     ],
     "description": {
@@ -2409,7 +2409,9 @@
     "credits": 2,
     "group": "elective",
     "categories": [],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "quality"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -2424,6 +2426,11 @@
         "file": "curriculum",
         "page": 17,
         "field": "credits"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G10:I10"
       }
     ],
     "description": {
@@ -2460,7 +2467,9 @@
     "credits": 3,
     "group": "elective",
     "categories": [],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "data-ai"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -2475,6 +2484,11 @@
         "file": "curriculum",
         "page": 17,
         "field": "credits"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B42:D42"
       }
     ],
     "description": {
@@ -2528,7 +2542,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "G22:I22"
+        "range": "G26:I26"
       }
     ],
     "description": {
@@ -2617,6 +2631,7 @@
     "group": "elective",
     "categories": [],
     "pathwayIds": [
+      "optimization",
       "logistics"
     ],
     "sources": [
@@ -2632,7 +2647,12 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B24:D24"
+        "range": "B27:D27"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B12:D12"
       }
     ],
     "description": {
@@ -2670,7 +2690,9 @@
     "categories": [
       "core"
     ],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "logistics"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -2680,6 +2702,11 @@
       {
         "file": "curriculum",
         "page": 113
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B29:D29"
       }
     ],
     "description": {
@@ -2787,7 +2814,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B35:D35"
+        "range": "B40:D40"
       }
     ],
     "description": {
@@ -2896,7 +2923,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "G16:I16"
+        "range": "G20:I20"
       }
     ],
     "description": {
@@ -2932,7 +2959,9 @@
     "credits": 1,
     "group": "elective",
     "categories": [],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "optimization"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -2947,6 +2976,11 @@
         "file": "curriculum",
         "page": 17,
         "field": "credits"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B13:D13"
       }
     ],
     "description": {
@@ -2982,7 +3016,9 @@
     "credits": 1,
     "group": "elective",
     "categories": [],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "quality"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -2997,6 +3033,11 @@
         "file": "curriculum",
         "page": 17,
         "field": "credits"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G11:I11"
       }
     ],
     "description": {
@@ -3051,7 +3092,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B36:D36"
+        "range": "B41:D41"
       }
     ],
     "description": {
@@ -3249,7 +3290,9 @@
     "categories": [
       "programming"
     ],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "data-ai"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -3264,6 +3307,11 @@
         "file": "curriculum",
         "page": 17,
         "field": "credits"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B43:D43"
       }
     ],
     "description": {
@@ -3302,7 +3350,9 @@
     "categories": [
       "programming"
     ],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "data-ai"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -3317,6 +3367,11 @@
         "file": "curriculum",
         "page": 17,
         "field": "credits"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B44:D44"
       }
     ],
     "description": {
@@ -3408,7 +3463,9 @@
     "credits": 3,
     "group": "elective",
     "categories": [],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "logistics"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -3423,6 +3480,11 @@
         "file": "curriculum",
         "page": 17,
         "field": "credits"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B30:D30"
       }
     ],
     "description": {
@@ -3516,7 +3578,9 @@
     "credits": 2,
     "group": "elective",
     "categories": [],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "optimization"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -3531,6 +3595,11 @@
         "file": "curriculum",
         "page": 18,
         "field": "credits"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "B14:D14"
       }
     ],
     "description": {
@@ -3722,7 +3791,9 @@
     "credits": 1,
     "group": "elective",
     "categories": [],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "quality"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -3737,6 +3808,11 @@
         "file": "curriculum",
         "page": 18,
         "field": "credits"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G12:I12"
       }
     ],
     "description": {
@@ -3772,7 +3848,9 @@
     "credits": 1,
     "group": "elective",
     "categories": [],
-    "pathwayIds": [],
+    "pathwayIds": [
+      "quality"
+    ],
     "sources": [
       {
         "file": "workbook",
@@ -3787,6 +3865,11 @@
         "file": "curriculum",
         "page": 18,
         "field": "credits"
+      },
+      {
+        "file": "workbook",
+        "sheet": "Master Majors",
+        "range": "G13:I13"
       }
     ],
     "description": {
@@ -3890,7 +3973,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "G23:I23"
+        "range": "G27:I27"
       }
     ],
     "description": {
@@ -4132,7 +4215,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B16:D16"
+        "range": "B19:D19"
       }
     ],
     "description": {
@@ -4173,7 +4256,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B17:D17"
+        "range": "B20:D20"
       }
     ],
     "description": {
@@ -4214,7 +4297,7 @@
       {
         "file": "workbook",
         "sheet": "Master Majors",
-        "range": "B18:D18"
+        "range": "B21:D21"
       }
     ],
     "description": {

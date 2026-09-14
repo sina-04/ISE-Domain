@@ -10,7 +10,10 @@
       "ise-116",
       "ise-117",
       "ise-121",
-      "ise-136"
+      "ise-136",
+      "ise-137",
+      "ise-143",
+      "ise-154"
     ],
     "supporting": false,
     "name": {
@@ -60,7 +63,9 @@
     "courseIds": [
       "ise-109",
       "ise-137",
-      "ise-106"
+      "ise-106",
+      "ise-138",
+      "ise-152"
     ],
     "supporting": false,
     "name": {
@@ -89,7 +94,10 @@
       "sci-115",
       "sci-114",
       "ise-140",
-      "ise-145"
+      "ise-145",
+      "ise-134",
+      "ise-149",
+      "ise-150"
     ],
     "supporting": false,
     "name": {
@@ -118,7 +126,11 @@
       "ise-141",
       "ise-108",
       "ise-107",
-      "ise-132"
+      "ise-132",
+      "ise-133",
+      "ise-144",
+      "ise-158",
+      "ise-159"
     ],
     "supporting": false,
     "name": {
