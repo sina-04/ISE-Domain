@@ -686,7 +686,7 @@ export function DomainApp({
                   </h2>
                 </div>
               </div>
-              <div className="module-grid">
+              <div className="module-grid overview-module-grid">
                 {[
                   {
                     Icon: GraduationCap,
