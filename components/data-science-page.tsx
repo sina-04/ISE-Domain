@@ -1,5 +1,5 @@
 'use client';
-/* Supplied SVG artwork is intentionally rendered as full-bleed scene art. */
+/* Topic illustrations connect the foundations to a data science pipeline. */
 /* eslint-disable @next/next/no-img-element */
 
 import {
@@ -114,10 +114,6 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
   const [mergePhase, setMergePhase] = useState<
     'foundations' | 'merging' | 'merged'
   >('foundations');
-  const [audioState, setAudioState] = useState<'idle' | 'playing' | 'failed'>(
-    'idle',
-  );
-  const activeAudio = useRef<HTMLAudioElement | null>(null);
   const mergeTimer = useRef<number | null>(null);
   const merging = mergePhase === 'merging';
   const merged = mergePhase === 'merged';
@@ -127,8 +123,6 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
       if (mergeTimer.current !== null) {
         window.clearTimeout(mergeTimer.current);
       }
-      activeAudio.current?.pause();
-      activeAudio.current = null;
     },
     [],
   );
@@ -136,7 +130,6 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
   function mergeFoundations() {
     if (mergePhase !== 'foundations') return;
     setMergePhase('merging');
-    setAudioState('playing');
 
     const reduceMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
@@ -149,27 +142,6 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
       reduceMotion ? 40 : 2800,
     );
 
-    const audio = new Audio(
-      withBasePath('/audio/Satoru Gojo Hollow Purple-[AudioTrimmer.com].m4a'),
-    );
-    audio.preload = 'auto';
-    activeAudio.current = audio;
-    audio.addEventListener(
-      'ended',
-      () => {
-        if (activeAudio.current === audio) {
-          activeAudio.current = null;
-          setAudioState('idle');
-        }
-      },
-      { once: true },
-    );
-    void audio.play().catch(() => {
-      if (activeAudio.current === audio) {
-        activeAudio.current = null;
-        setAudioState('failed');
-      }
-    });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -178,9 +150,6 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
       window.clearTimeout(mergeTimer.current);
       mergeTimer.current = null;
     }
-    activeAudio.current?.pause();
-    activeAudio.current = null;
-    setAudioState('idle');
     setMergePhase('foundations');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -201,13 +170,13 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
       <section className="ds-hero" aria-labelledby="data-science-title">
         <img
           className="ds-scene-art ds-foundation-art"
-          src={withBasePath('/Satoru-Gojo-Red-and-Blue.svg')}
+          src={withBasePath('/art/data-foundations.svg')}
           alt=""
           aria-hidden="true"
         />
         <img
-          className="ds-scene-art ds-hollow-art"
-          src={withBasePath('/Satoru-Gojo-Hollow-Purple.svg')}
+          className="ds-scene-art ds-model-art"
+          src={withBasePath('/art/data-science.svg')}
           alt=""
           aria-hidden="true"
         />
@@ -225,7 +194,7 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
           </p>
           <h1 id="data-science-title">
             {merged
-              ? t('HOLLOW PURPLE', 'بنفش توخالی')
+              ? t('DATA SCIENCE', 'علم داده')
               : t('BUILD THE DOMAIN', 'قلمرو را بسازید')}
             <span>.</span>
           </h1>
@@ -308,21 +277,6 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
           </div>
         )}
       </section>
-
-      {audioState !== 'idle' && (
-        <output className="ds-audio-status" aria-live="polite">
-          <span aria-hidden="true" />
-          {audioState === 'playing'
-            ? t(
-                'Hollow Purple sequence playing…',
-                'سکانس بنفش توخالی در حال پخش است…',
-              )
-            : t(
-                'The visual sequence is active; audio could not start.',
-                'سکانس تصویری فعال است؛ پخش صدا آغاز نشد.',
-              )}
-        </output>
-      )}
 
       {merged && (
         <section className="ds-detail-shell" id="data-science-details">

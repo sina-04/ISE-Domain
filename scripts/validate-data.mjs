@@ -233,35 +233,19 @@ assert(
   !categoryConfig.includes('character:'),
   'Character labels remain in category data',
 );
-for (const mapping of [
-  "asset: '/Mahito.svg'",
-  "asset: '/Dagon.svg'",
-  "asset: '/Yuta-Okkotsu.svg'",
-  "audio: '/audio/gojo-domain-expansion.m4a'",
-  "audio: '/audio/sukuna-domain-expansion.m4a'",
-  "audio: '/audio/mahito-domain-expansion.m4a'",
-  "audio: '/audio/dagon-domain-expansion.m4a'",
-]) {
-  assert(categoryConfig.includes(mapping), `Missing domain media ${mapping}`);
-}
-assert(
-  !categoryConfig.includes('/Megumi-Fushiguro.svg') &&
-    !categoryConfig.includes('/Toji-Fushiguro.svg'),
-  'Replaced domain artwork remains configured',
+const categoryArtwork = [...categoryConfig.matchAll(/asset: '([^']+)'/g)].map(
+  (match) => match[1],
 );
+assert.equal(categoryArtwork.length, 7, 'Every category needs artwork');
+assert.equal(new Set(categoryArtwork).size, 7, 'Category artwork must be unique');
+for (const asset of categoryArtwork) {
+  assert(asset.startsWith('/art/') && asset.endsWith('.svg'), asset);
+  assert(existsSync(new URL(`../public${asset}`, import.meta.url)), asset);
+}
 for (const asset of [
-  'Kento-Nanami.svg',
-  'Mei-Mei.svg',
-  'Satoru-Gojo-ISE.svg',
-  'Ryomen-Sukuna.svg',
-  'Dagon.svg',
-  'Mahito.svg',
-  'Yuta-Okkotsu.svg',
-  'Sukuna-Domain-Expansion.svg',
-  'audio/dagon-domain-expansion.m4a',
-  'audio/gojo-domain-expansion.m4a',
-  'audio/mahito-domain-expansion.m4a',
-  'audio/sukuna-domain-expansion.m4a',
+  'art/systems-overview.svg',
+  'art/data-foundations.svg',
+  'art/data-science.svg',
   'fonts/Vazirmatn-wght.woff2',
   'fonts/Vazirmatn-OFL.txt',
   'curriculum-1403.pdf',

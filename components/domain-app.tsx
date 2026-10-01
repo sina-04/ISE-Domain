@@ -1,5 +1,5 @@
 'use client';
-/* Supplied SVG artwork is preserved intact and loaded lazily; raster optimization does not apply. */
+/* Decorative topic illustrations are SVGs and load lazily on category cards. */
 /* eslint-disable @next/next/no-img-element */
 import {
   Suspense,
@@ -92,18 +92,6 @@ const japaneseIndustryCards = [
     },
   },
 ] as const;
-const SUKUNA_PLAYED_KEY = 'ise-sukuna-domain-played';
-type SukunaPhase = 'wallpaper' | 'fire' | 'reveal' | null;
-const SUKUNA_EMBERS = Array.from({ length: 56 }, (_, index) => ({
-  x: `${(index * 37 + 11) % 101}%`,
-  base: `${2 + ((index * 17) % 35)}%`,
-  size: `${2 + (index % 4)}px`,
-  delay: `${-((index % 14) * 0.29)}s`,
-  duration: `${2.4 + (index % 7) * 0.34}s`,
-  drift: `${(index % 2 === 0 ? 1 : -1) * (18 + (index % 5) * 11)}px`,
-  rise: `${42 + (index % 6) * 9}vh`,
-  color: ['#ff2f12', '#ff6a16', '#ff9d18', '#ffd34d'][index % 4],
-}));
 const subscribeTheme = (listener: () => void) => {
   window.addEventListener('ise-themechange', listener);
   return () => window.removeEventListener('ise-themechange', listener);
@@ -156,14 +144,8 @@ export function DomainApp({
   const [activeSection, setActiveSection] = useState(section);
   const [menu, setMenu] = useState(false);
   const [stars, setStars] = useState<number | null>(null);
-  const [audioPending, setAudioPending] = useState<string | null>(null);
-  const [sukunaPhase, setSukunaPhase] = useState<SukunaPhase>(null);
   const [japanCard, setJapanCard] = useState(0);
   const themeTransition = useRef(false);
-  const sukunaPlayed = useRef(false);
-  const activeDomainAudio = useRef<HTMLAudioElement | null>(null);
-  const transitionTimers = useRef<number[]>([]);
-  const sukunaActive = sukunaPhase !== null;
   useEffect(() => {
     document.documentElement.lang = locale;
     document.documentElement.dir = fa ? 'rtl' : 'ltr';
@@ -171,20 +153,6 @@ export function DomainApp({
       localStorage.setItem('ise-language', locale);
     } catch {}
   }, [locale, fa]);
-  useEffect(() => {
-    try {
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as
-        | PerformanceNavigationTiming
-        | undefined;
-      if (navigationEntry?.type === 'reload') {
-        sessionStorage.removeItem(SUKUNA_PLAYED_KEY);
-      }
-      sukunaPlayed.current =
-        sessionStorage.getItem(SUKUNA_PLAYED_KEY) === 'true';
-    } catch {
-      sukunaPlayed.current = false;
-    }
-  }, []);
   useEffect(() => {
     if (activeSection !== 'home') return;
     const timer = window.setInterval(
@@ -195,14 +163,6 @@ export function DomainApp({
     return () => window.clearInterval(timer);
   }, [activeSection, japanCard]);
   useEffect(() => {
-    if (!sukunaActive) return;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = previousOverflow;
-    };
-  }, [sukunaActive]);
-  useEffect(() => {
     const syncSectionFromLocation = () => {
       const parts = window.location.pathname.split('/').filter(Boolean);
       const localeIndex = parts.lastIndexOf(locale);
@@ -212,16 +172,6 @@ export function DomainApp({
     return () =>
       window.removeEventListener('popstate', syncSectionFromLocation);
   }, [locale]);
-  useEffect(
-    () => () => {
-      for (const timer of transitionTimers.current) {
-        window.clearTimeout(timer);
-      }
-      activeDomainAudio.current?.pause();
-      activeDomainAudio.current = null;
-    },
-    [],
-  );
   useEffect(() => {
     let active = true;
     const loadStars = async () => {
@@ -344,65 +294,6 @@ export function DomainApp({
     }
   }
   const href = (id: string) => `/${locale}${id === 'home' ? '' : `/${id}`}`;
-  function stopDomainAudio() {
-    if (activeDomainAudio.current) {
-      activeDomainAudio.current.pause();
-      activeDomainAudio.current.currentTime = 0;
-      activeDomainAudio.current = null;
-    }
-    setAudioPending(null);
-  }
-  function showDomain(categoryId: string) {
-    const destination = withBasePath(
-      `${href('chart')}?view=content&category=${categoryId}`,
-    );
-    window.history.pushState(window.history.state, '', destination);
-    window.dispatchEvent(new Event('ise-querychange'));
-    setActiveSection('chart');
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }
-  function handleDomainClick(
-    event: MouseEvent<HTMLAnchorElement>,
-    category: (typeof categories)[number],
-  ) {
-    if (!category.audio) return;
-
-    event.preventDefault();
-    stopDomainAudio();
-    const audio = new Audio(withBasePath(category.audio));
-    audio.preload = 'auto';
-    activeDomainAudio.current = audio;
-    setAudioPending(category.id);
-    const finishAudio = () => {
-      if (activeDomainAudio.current !== audio) return;
-      activeDomainAudio.current = null;
-      setAudioPending(null);
-    };
-    audio.addEventListener('ended', finishAudio, { once: true });
-    audio.addEventListener('error', finishAudio, { once: true });
-
-    if (category.id === 'math' && !sukunaPlayed.current) {
-      sukunaPlayed.current = true;
-      try {
-        sessionStorage.setItem(SUKUNA_PLAYED_KEY, 'true');
-      } catch {}
-
-      flushSync(() => setSukunaPhase('wallpaper'));
-      void audio.play().catch(finishAudio);
-      const fireTimer = window.setTimeout(() => setSukunaPhase('fire'), 7000);
-      const revealTimer = window.setTimeout(() => {
-        showDomain(category.id);
-        setSukunaPhase('reveal');
-      }, 18000);
-      const clearTimer = window.setTimeout(() => setSukunaPhase(null), 23000);
-      transitionTimers.current = [fireTimer, revealTimer, clearTimer];
-      return;
-    }
-
-    const playback = audio.play();
-    showDomain(category.id);
-    void playback.catch(finishAudio);
-  }
   return (
     <div id="top" className="site-shell" dir={fa ? 'rtl' : 'ltr'}>
       <a href="#main" className="skip-link">
@@ -546,7 +437,7 @@ export function DomainApp({
                   aria-hidden="true"
                   alt=""
                   className="intro-art"
-                  src={withBasePath('/JJK-all-in-one.svg')}
+                  src={withBasePath('/art/systems-overview.svg')}
                 />
                 <div className="intro-main-content">
                   <p className="overline">
@@ -631,7 +522,6 @@ export function DomainApp({
                     key={c.id}
                     href={`${href('chart')}?view=content&category=${c.id}`}
                     className={`domain-card category-${c.id}`}
-                    onClick={(event) => handleDomainClick(event, c)}
                     style={
                       {
                         '--category-color': c.color,
@@ -808,64 +698,6 @@ export function DomainApp({
           </Suspense>
         )}
       </main>
-      {audioPending && !sukunaActive && (
-        <output className="domain-audio-status" aria-live="polite">
-          <span aria-hidden="true" />
-          {t('Domain expansion playing…', 'گسترش قلمرو در حال پخش است…')}
-        </output>
-      )}
-      {sukunaPhase && (
-        <div
-          className={`sukuna-domain-expansion is-${sukunaPhase}`}
-          role="presentation"
-        >
-          <img
-            src={withBasePath('/Sukuna-Domain-Expansion.svg')}
-            alt=""
-            aria-hidden="true"
-          />
-          <div className="sukuna-lights" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-          <div className="sukuna-embers" aria-hidden="true">
-            {SUKUNA_EMBERS.map((ember, index) => (
-              <span
-                key={index}
-                style={
-                  {
-                    '--ember-x': ember.x,
-                    '--ember-base': ember.base,
-                    '--ember-size': ember.size,
-                    '--ember-delay': ember.delay,
-                    '--ember-duration': ember.duration,
-                    '--ember-drift': ember.drift,
-                    '--ember-rise': ember.rise,
-                    '--ember-color': ember.color,
-                  } as React.CSSProperties
-                }
-              />
-            ))}
-          </div>
-          <div className="sukuna-reveal" aria-hidden="true" />
-          <div className="sukuna-subtitles" aria-hidden="true">
-            <p className="sukuna-subtitle sukuna-subtitle-domain">
-              <span lang="en">Domain Expansion</span>
-              <span lang="ja">領域展開</span>
-            </p>
-            <p className="sukuna-subtitle sukuna-subtitle-shrine">
-              <span lang="en">Malevolent Shrine</span>
-              <span lang="ja">伏魔御廚子</span>
-            </p>
-            <p className="sukuna-subtitle sukuna-subtitle-open">
-              <span lang="en">Open!</span>
-              <span lang="ja">開</span>
-            </p>
-          </div>
-        </div>
-      )}
       <footer className="site-footer">
         <div className="footer-main">
           <Link className="footer-brand" href={href('home')}>
@@ -873,8 +705,8 @@ export function DomainApp({
           </Link>
           <p>
             {t(
-              'A personal exploration of engineering, anime & Japanese industry.',
-              'کاوشی شخصی در مهندسی، انیمه و صنعت ژاپن.',
+              'A personal exploration of engineering, systems & Japanese industry.',
+              'کاوشی شخصی در مهندسی، سیستم‌ها و صنعت ژاپن.',
             )}
           </p>
           <a className="back-to-top" href="#top">

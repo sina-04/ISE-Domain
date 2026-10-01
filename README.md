@@ -38,7 +38,7 @@ Module links use native document navigation through `components/site-link.tsx`. 
 
 ## Replace backgrounds
 
-Edit `categories` in `lib/domain-config.ts` to change the asset URL, desktop focal position, mobile focal position and accent. The five supplied SVGs are unchanged. The other engineering category and all non-category pages use simple backgrounds. `Satoru-Gojo-Hollow-Purple.svg` is not referenced.
+Original vector illustrations in `public/art` depict each of the seven subject areas. Edit `categories` in `lib/domain-config.ts` to change the asset URL, desktop focal position, mobile focal position and accent. The overview uses `systems-overview.svg`; the Data Science page uses `data-foundations.svg` and `data-science.svg`. All artwork is self-contained SVG with no external images or fonts. Category cards link directly to their courses, and the Data Science merge keeps its visual interaction without anime artwork or audio.
 
 ## Validation
 
