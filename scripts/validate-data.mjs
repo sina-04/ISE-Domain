@@ -121,7 +121,7 @@ const careerIds = new Set(careerData.careers.map((career) => career.id));
 const exposureCareerIds = new Set(aiExposure.map((item) => item.careerId));
 assert.equal(careerData.tracks.length, 2, 'Career track count');
 assert.equal(careerData.domains.length, 10, 'Career domain count');
-assert.equal(careerData.careers.length, 30, 'Career profile count');
+assert.equal(careerData.careers.length, 31, 'Career profile count');
 assert.equal(
   careerData.careers.filter((career) => career.supplemental).length,
   0,
@@ -182,7 +182,12 @@ assert.deepEqual(
   'Career track hierarchy',
 );
 const treeCareerIds = careerData.domains.flatMap((domain) => domain.careerIds);
-assert.equal(new Set(treeCareerIds).size, 30, 'Career tree membership');
+assert.equal(new Set(treeCareerIds).size, 31, 'Career tree membership');
+assert.deepEqual(
+  careerData.domains.find((domain) => domain.id === 'production').careerIds,
+  ['maintenance-repair', 'production-planning'],
+  'Industrial/Manufacturing career tree order',
+);
 for (const id of treeCareerIds) {
   const career = careerData.careers.find((item) => item.id === id);
   assert(career && !career.supplemental, `Invalid tree career ${id}`);

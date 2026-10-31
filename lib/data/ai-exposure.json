@@ -1,5 +1,13 @@
 [
   {
+    "careerId": "maintenance-repair",
+    "score": 3,
+    "occupation": "Industrial machinery mechanics, machinery maintenance workers, and millwrights",
+    "sourceScore": 3,
+    "globalRank": 260,
+    "estimated": true
+  },
+  {
     "careerId": "data-analytics",
     "score": 9,
     "occupation": "Data scientists",

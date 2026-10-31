@@ -23,6 +23,7 @@ import {
 import Link from '@/components/site-link';
 import {
   careerById,
+  careers,
   careerDomains,
   careerTracks,
   type CareerProfile,
@@ -187,11 +188,11 @@ export function CareerGuide({
             aria-label={t('Career guide totals', 'آمار راهنمای شغلی')}
           >
             <span>
-              <strong>{locale === 'fa' ? '۱۰' : '10'}</strong>
+              <strong>{formatNumber(careerDomains.length, locale)}</strong>
               {t('domains', 'حوزه')}
             </span>
             <span>
-              <strong>{locale === 'fa' ? '۳۰' : '30'}</strong>
+              <strong>{formatNumber(careers.length, locale)}</strong>
               {t('career paths', 'مسیر شغلی')}
             </span>
           </div>

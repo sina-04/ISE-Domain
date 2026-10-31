@@ -69,8 +69,11 @@
     {
       "id": "production",
       "trackId": "traditional",
-      "name": { "en": "Production Domain", "fa": "حوزه تولید" },
-      "careerIds": ["production-planning"]
+      "name": {
+        "en": "Industrial/Manufacturing Domain",
+        "fa": "حوزه صنعتی و تولید"
+      },
+      "careerIds": ["maintenance-repair", "production-planning"]
     },
     {
       "id": "modeling-optimization",
@@ -1634,6 +1637,82 @@
         },
         "url": "https://jobvision.ir/career-guide/hse-expert"
       }
+    },
+    {
+      "id": "maintenance-repair",
+      "domainId": "production",
+      "supplemental": false,
+      "name": {
+        "en": "Maintenance and Repair",
+        "fa": "نگهداری و تعمیرات (نت)"
+      },
+      "abbreviation": "MR",
+      "summary": {
+        "en": "Keep industrial equipment available and reliable by planning preventive maintenance, coordinating repairs, and learning from failures.",
+        "fa": "با برنامه‌ریزی نگهداری پیشگیرانه، هماهنگی تعمیرات و تحلیل خرابی‌ها، آماده‌به‌کاری و قابلیت اطمینان تجهیزات صنعتی را بهبود می‌دهد."
+      },
+      "iseFit": {
+        "en": "Reliability, maintenance planning, inventory control, and scheduling connect ISE methods to equipment performance and production continuity.",
+        "fa": "قابلیت اطمینان، برنامه‌ریزی نگهداری، کنترل موجودی و زمان‌بندی، روش‌های مهندسی صنایع را به عملکرد تجهیزات و تداوم تولید پیوند می‌دهند."
+      },
+      "dayInLife": {
+        "en": "Review equipment downtime and work orders, prioritize maintenance with technicians, coordinate production windows and spare parts, and investigate recurring failures.",
+        "fa": "توقف تجهیزات و دستورکارها را مرور می‌کند، با تکنسین‌ها فعالیت‌های نگهداری را اولویت‌بندی می‌کند، زمان توقف تولید و قطعات یدکی را هماهنگ و خرابی‌های تکراری را بررسی می‌کند."
+      },
+      "responsibilities": {
+        "en": [
+          "Plan preventive maintenance and repair work orders",
+          "Coordinate technicians, spare parts, and production downtime",
+          "Analyze failure history and track equipment reliability"
+        ],
+        "fa": [
+          "برنامه‌ریزی نگهداری پیشگیرانه و دستورکارهای تعمیرات",
+          "هماهنگی تکنسین‌ها، قطعات یدکی و توقف تولید",
+          "تحلیل سوابق خرابی و پایش قابلیت اطمینان تجهیزات"
+        ]
+      },
+      "skills": {
+        "en": [
+          "Reliability analysis and maintenance planning",
+          "Root-cause analysis and failure prioritization",
+          "Spare-parts control and work-order scheduling"
+        ],
+        "fa": [
+          "تحلیل قابلیت اطمینان و برنامه‌ریزی نگهداری",
+          "تحلیل علت ریشه‌ای و اولویت‌بندی خرابی‌ها",
+          "کنترل قطعات یدکی و زمان‌بندی دستورکارها"
+        ]
+      },
+      "tools": ["CMMS", "IBM Maximo", "Fiix", "Excel / Power BI"],
+      "entrySteps": {
+        "en": [
+          "Study reliability, maintenance, and equipment safety basics",
+          "Build a preventive-maintenance plan and downtime dashboard",
+          "Start through a maintenance-planning or plant-operations internship"
+        ],
+        "fa": [
+          "مبانی قابلیت اطمینان، نگهداری و ایمنی تجهیزات را بیاموزید",
+          "یک برنامه نگهداری پیشگیرانه و داشبورد توقف تجهیزات بسازید",
+          "از کارآموزی برنامه‌ریزی نگهداری یا عملیات کارخانه شروع کنید"
+        ]
+      },
+      "progression": {
+        "en": [
+          "Maintenance planning specialist",
+          "Senior maintenance or reliability specialist",
+          "Maintenance manager"
+        ],
+        "fa": [
+          "کارشناس برنامه‌ریزی نگهداری و تعمیرات",
+          "کارشناس ارشد نگهداری یا قابلیت اطمینان",
+          "مدیر نگهداری و تعمیرات"
+        ]
+      },
+      "relatedRoles": {
+        "en": ["Reliability specialist", "Asset-management specialist", "Production planner"],
+        "fa": ["کارشناس قابلیت اطمینان", "کارشناس مدیریت دارایی", "برنامه‌ریز تولید"]
+      },
+      "source": null
     },
     {
       "id": "production-planning",
