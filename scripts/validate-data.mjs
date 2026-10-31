@@ -10,6 +10,28 @@ const courses = json('courses'),
   careerData = json('careers'),
   aiExposure = json('ai-exposure');
 const ids = new Set(courses.map((c) => c.id));
+const mathStructure = json('math-structure');
+const mathCourseIds = mathStructure.groups.flatMap((group) => group.courseIds);
+assert(mathStructure.title.en && mathStructure.title.fa, 'Math tree title');
+assert.equal(mathStructure.groups.length, 4, 'Math subgroup count');
+assert.equal(
+  new Set(mathCourseIds).size,
+  mathCourseIds.length,
+  'Duplicate math tree courses',
+);
+assert.deepEqual(
+  [...mathCourseIds].sort(),
+  courses
+    .filter((course) => course.categories.includes('math'))
+    .map((course) => course.id)
+    .sort(),
+  'Math tree must include every Mathematics course exactly once',
+);
+for (const group of mathStructure.groups)
+  assert(
+    group.title.en && group.title.fa && group.courseIds.length,
+    `${group.id} math subgroup`,
+  );
 assert.equal(ids.size, courses.length, 'Duplicate course IDs');
 assert.equal(courses.length, 84);
 assert.equal(courses.filter((c) => c.group !== 'supplementary').length, 81);

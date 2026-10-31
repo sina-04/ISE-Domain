@@ -1,0 +1,31 @@
+{
+  "title": {
+    "en": "Mathematical and Analytical Foundations",
+    "fa": "مبانی ریاضی و تحلیلی"
+  },
+  "groups": [
+    {
+      "id": "foundations",
+      "title": { "en": "Foundations", "fa": "مبانی" },
+      "courseIds": ["sci-101", "sci-102", "sci-103"]
+    },
+    {
+      "id": "statistics",
+      "title": { "en": "Statistics", "fa": "آمار" },
+      "courseIds": ["sci-104", "ise-108", "ise-117", "ise-148", "ise-151"]
+    },
+    {
+      "id": "optimization",
+      "title": { "en": "Optimization", "fa": "بهینه‌سازی" },
+      "courseIds": ["ise-109", "ise-110", "ise-146"]
+    },
+    {
+      "id": "machine-learning-foundations",
+      "title": {
+        "en": "Machine Learning Foundations",
+        "fa": "مبانی یادگیری ماشین"
+      },
+      "courseIds": ["sci-115", "ise-118", "ise-139"]
+    }
+  ]
+}

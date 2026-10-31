@@ -1632,6 +1632,14 @@ html[lang='fa'] .footer-credit {
   font-weight: 600;
   line-height: 1.5;
 }
+.course-subgroup + .course-subgroup {
+  border-top: 1px solid var(--line);
+}
+.course-subgroup .group-heading h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
 .group-heading span {
   font-size: 0.8125rem;
   color: var(--muted);

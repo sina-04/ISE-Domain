@@ -68,6 +68,7 @@ import {
 import { resources, resourcesForCourse, type Resource } from '@/lib/resources';
 import { withBasePath } from '@/lib/base-path';
 import { CareerGuide } from '@/components/career-guide';
+import mathStructure from '@/lib/data/math-structure.json';
 const pageNames: Record<string, Text> = {
   chart: { en: 'CHART ANALYSIS', fa: 'تحلیل چارت' },
   majors: { en: 'FIND YOUR DIRECTION', fa: 'مسیر خود را پیدا کنید' },
@@ -870,7 +871,11 @@ export function Explorer({
                             />
                           )}
                           <div className="card-shade" />
-                          <h2>{cat.title[locale]}</h2>
+                          <h2>
+                            {cat.id === 'math'
+                              ? mathStructure.title[locale]
+                              : cat.title[locale]}
+                          </h2>
                           <p>
                             {num(list.length)} {t('courses', 'درس')}{' '}
                             <span> / </span>
@@ -880,7 +885,34 @@ export function Explorer({
                             {t('elective credits', 'واحد انتخابی')}
                           </p>
                         </div>
-                        <div className="course-list">{list.map(courseRow)}</div>
+                        {cat.id === 'math' ? (
+                          mathStructure.groups.map((subgroup, index) => {
+                            const members = subgroup.courseIds
+                              .map((id) => list.find((course) => course.id === id))
+                              .filter((course): course is Course => !!course);
+                            return members.length > 0 ? (
+                              <section
+                                className="course-subgroup"
+                                key={subgroup.id}
+                                aria-labelledby={`math-${subgroup.id}`}
+                              >
+                                <div className="group-heading">
+                                  <h3 id={`math-${subgroup.id}`}>
+                                    {num(index + 1)}. {subgroup.title[locale]}
+                                  </h3>
+                                  <span>
+                                    {num(members.length)} {t('courses', 'درس')}
+                                  </span>
+                                </div>
+                                <div className="course-list">
+                                  {members.map(courseRow)}
+                                </div>
+                              </section>
+                            ) : null;
+                          })
+                        ) : (
+                          <div className="course-list">{list.map(courseRow)}</div>
+                        )}
                       </section>
                     )
                   );
