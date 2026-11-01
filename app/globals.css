@@ -2054,7 +2054,8 @@ html[lang='fa'] .footer-credit {
 }
 .career-tree ul {
   list-style: none;
-  padding: 9px 0 0 21px;
+  padding-block: 9px 0;
+  padding-inline: 21px 0;
   margin: 0;
   border-inline-start: 1px solid var(--line);
 }
