@@ -18,7 +18,7 @@ Date: 2026-11-01. Mode: during (session override). Owner direction: retain the J
 - R-28 PASS: no FAQ added.
 - R-32 PASS: a course was opened with Enter and its dialog dismissed with Escape; semantic links/buttons and visible focus styling retained.
 - R-33 PASS: changes are authored directly in TSX/CSS; no source-rewriting helper or runtime CSS patcher added.
-- R-34 PASS: both native theme selections were exercised; layout checks passed in light and dark. Palette calculations use declared site colors. Extension interference is recorded under limits.
+- R-34 PASS: both native theme selections were exercised; layout checks passed in light and dark. A follow-up with Dark Reader disabled confirmed the rendered colors match the declared palettes and the theme persists through language navigation.
 - R-35 PASS: type check, catalog validation, authored-code lint, production export, artifact checks, and the scoped click-through below completed.
 - R-36 PASS: no security, customer, or speed claims added; no Lighthouse or Web Vitals score claimed.
 - R-37 PASS: owner-selected direction is recorded in `DESIGN.md`; Design Read announced before implementation.
@@ -93,6 +93,7 @@ The course, tool, career, and resource lists share data-driven renderers. Repres
 - `node scripts/validate-data.mjs`: passed, including 84 course records, 10 pathway groups, 77 tools, 31 career profiles, and Mathematics membership.
 - Authored application `oxlint`: passed.
 - GitHub Pages production export and `prepare-github-pages.mjs`: passed; all localized routes prerendered and asset references verified.
-- Browser console: hydration warnings explicitly contained Dark Reader's injected `data-darkreader-inline-color` and style attributes. No separate application exception was observed in the inspected log entries.
-- Browser limitation: the available preview browser has Dark Reader enabled, which can recolor pages after navigation. A clean Chrome connector was unavailable. Extension settings were left untouched; screenshots may reflect its colors. Native palette ratios above were calculated directly from the site stylesheet.
+- Initial browser run: hydration warnings explicitly contained Dark Reader's injected `data-darkreader-inline-color` and style attributes. No separate application exception was observed in the inspected log entries.
+- Follow-up after the owner disabled Dark Reader: a fresh browser tab contained zero injected Dark Reader nodes and recorded zero console errors or warnings through theme changes and English/Persian navigation. Rendered light background/text matched `#f5f2e9` / `#242922`; dark matched `#191b1a` / `#f1efe7`. At the 390px Persian phone viewport, content and scroll width both measured 375px. Light-theme selection persisted through the language switch. No application changes were needed.
+- Fresh desktop light/dark screenshots were captured after the extension was disabled. The earlier extension-related verification limit is resolved; the original warning history above is retained for traceability.
 - Unchanged imported external resource links were code/data-validated, not revisited individually. No accessibility certification, error-injection test, Lighthouse score, or Web Vitals measurement is claimed.
