@@ -88,6 +88,9 @@ export function SiteSearch({ locale }: { locale: Locale }) {
 
   return (
     <div className="site-search">
+      <label htmlFor="site-topic-search">
+        {t('Search the guide', 'جست‌وجو در راهنما')}
+      </label>
       <Search size={17} aria-hidden="true" />
       <Combobox
         items={suggestions}
@@ -105,6 +108,7 @@ export function SiteSearch({ locale }: { locale: Locale }) {
         }}
       >
         <ComboboxInput
+          id="site-topic-search"
           className="site-search-input"
           aria-label={t('Search topics', 'جست‌وجوی موضوعات')}
           placeholder={t('Search topics…', 'جست‌وجوی موضوع…')}

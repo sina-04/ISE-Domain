@@ -70,12 +70,12 @@ import { withBasePath } from '@/lib/base-path';
 import { CareerGuide } from '@/components/career-guide';
 import mathStructure from '@/lib/data/math-structure.json';
 const pageNames: Record<string, Text> = {
-  chart: { en: 'CHART ANALYSIS', fa: 'تحلیل چارت' },
-  majors: { en: 'FIND YOUR DIRECTION', fa: 'مسیر خود را پیدا کنید' },
-  tools: { en: 'YOUR ENGINEERING TOOLKIT', fa: 'جعبه‌ابزار مهندسی شما' },
-  resources: { en: 'KEEP EXPLORING', fa: 'به کاوش ادامه دهید' },
-  wikipedia: { en: 'FOLLOW THE KNOWLEDGE', fa: 'دانش را دنبال کنید' },
-  careers: { en: 'CAREER GUIDE', fa: 'راهنمای مسیر شغلی' },
+  chart: { en: 'Chart Analysis', fa: 'تحلیل چارت' },
+  majors: { en: 'Master’s Majors', fa: 'گرایش‌های کارشناسی ارشد' },
+  tools: { en: 'Tools & Software', fa: 'ابزار و نرم‌افزار' },
+  resources: { en: 'Resources', fa: 'منابع یادگیری' },
+  wikipedia: { en: 'Wikipedia References', fa: 'مراجع ویکی‌پدیا' },
+  careers: { en: 'Career Guide', fa: 'راهنمای مسیر شغلی' },
 };
 const pageDescriptions: Record<string, Text> = {
   chart: {
@@ -99,7 +99,7 @@ const pageDescriptions: Record<string, Text> = {
     fa: 'نقطه آغاز کنجکاوی؛ مقاله‌های تأییدشده مرتبط با هر درس را به انگلیسی و فارسی کاوش کنید.',
   },
   careers: {
-    en: 'See where Industrial and Systems Engineering can take you—and what to build next for each direction.',
+    en: 'Compare the work, skills, and entry routes across Industrial and Systems Engineering careers.',
     fa: 'ببینید مهندسی صنایع و سیستم‌ها شما را به کجا می‌برد و برای هر مسیر چه توانمندی‌هایی باید بسازید.',
   },
 };
@@ -460,55 +460,61 @@ export function Explorer({
         : pathway === 'all' || c.pathwayIds.includes(pathway),
   );
   const searchBar = (
-    <form
-      className="search-form"
-      onSubmit={(e) => {
-        e.preventDefault();
-        update({ q: search });
-      }}
-    >
-      <Search size={18} />
-      <input
-        aria-label={t(
-          'Search in English or Persian',
-          'جست‌وجو به فارسی یا انگلیسی',
-        )}
-        value={search}
-        onChange={(e) => {
-          update({ q: e.target.value });
+    <div className="catalog-search">
+      <label htmlFor="catalog-search">
+        {t('Search this section', 'جست‌وجو در این بخش')}
+      </label>
+      <form
+        className="search-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          update({ q: search });
         }}
-        placeholder={
-          section === 'tools'
-            ? t('Search tools or a course…', 'نام ابزار یا درس…')
-            : section === 'resources'
-              ? t(
-                  'Search books, guides and resources…',
-                  'جست‌وجوی کتاب، راهنما و منابع…',
-                )
-              : t(
-                  'Search a course in English or Persian…',
-                  'جست‌وجوی درس به فارسی یا انگلیسی…',
-                )
-        }
-      />
-      {search && (
-        <button
-          type="button"
-          className="icon-button"
-          onClick={() => {
-            update({ q: null });
+      >
+        <Search size={18} />
+        <input
+          id="catalog-search"
+          aria-label={t(
+            'Search in English or Persian',
+            'جست‌وجو به فارسی یا انگلیسی',
+          )}
+          value={search}
+          onChange={(e) => {
+            update({ q: e.target.value });
           }}
-          aria-label={t('Clear search', 'پاک کردن جست‌وجو')}
-        >
-          <X size={16} />
-        </button>
-      )}
-    </form>
+          placeholder={
+            section === 'tools'
+              ? t('Search tools or a course…', 'نام ابزار یا درس…')
+              : section === 'resources'
+                ? t(
+                    'Search books, guides and resources…',
+                    'جست‌وجوی کتاب، راهنما و منابع…',
+                  )
+                : t(
+                    'Search a course in English or Persian…',
+                    'جست‌وجوی درس به فارسی یا انگلیسی…',
+                  )
+          }
+        />
+        {search && (
+          <button
+            type="button"
+            className="icon-button"
+            onClick={() => {
+              update({ q: null });
+            }}
+            aria-label={t('Clear search', 'پاک کردن جست‌وجو')}
+          >
+            <X size={16} />
+          </button>
+        )}
+      </form>
+    </div>
   );
   const courseRow = (c: Course) => (
     <button className="course-row" key={c.id} onClick={() => open(c)}>
       <span className="course-code" dir="ltr">
-        {c.code || '—'}
+        {c.code || 'N/A'}
       </span>
       <span className="course-name">
         <strong>{c.name[locale]}</strong>
@@ -864,6 +870,8 @@ export function Explorer({
                         >
                           {cat.asset && (
                             <img
+                              width={1200}
+                              height={600}
                               src={withBasePath(cat.asset)}
                               alt=""
                               loading="lazy"
@@ -888,7 +896,9 @@ export function Explorer({
                         {cat.id === 'math' ? (
                           mathStructure.groups.map((subgroup, index) => {
                             const members = subgroup.courseIds
-                              .map((id) => list.find((course) => course.id === id))
+                              .map((id) =>
+                                list.find((course) => course.id === id),
+                              )
                               .filter((course): course is Course => !!course);
                             return members.length > 0 ? (
                               <section
@@ -911,7 +921,9 @@ export function Explorer({
                             ) : null;
                           })
                         ) : (
-                          <div className="course-list">{list.map(courseRow)}</div>
+                          <div className="course-list">
+                            {list.map(courseRow)}
+                          </div>
                         )}
                       </section>
                     )
@@ -1336,7 +1348,7 @@ export function Explorer({
                 <article key={c.id} className="wiki-row">
                   <button onClick={() => open(c)}>
                     <span className="course-code" dir="ltr">
-                      {c.code || '—'}
+                      {c.code || 'N/A'}
                     </span>
                     <strong>{c.name[locale]}</strong>
                     <small>{t('Related concepts', 'مفاهیم مرتبط')}</small>
@@ -1436,6 +1448,8 @@ function CourseDialog({
             >
               {cat?.asset && (
                 <img
+                  width={1200}
+                  height={600}
                   alt=""
                   src={withBasePath(cat.asset)}
                   className="category-art"
@@ -1629,7 +1643,7 @@ function CourseDialog({
                       </OutLink>
                     ) : (
                       <span key={lang} className="unavailable">
-                        {lang === 'en' ? 'EN' : 'فا'} —{' '}
+                        {lang === 'en' ? 'EN' : 'فا'}:{' '}
                         {t('No verified article', 'مقاله تأییدشده موجود نیست')}
                       </span>
                     ),

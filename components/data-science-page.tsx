@@ -1,23 +1,18 @@
 'use client';
-/* Topic illustrations connect the foundations to a data science pipeline. */
-/* eslint-disable @next/next/no-img-element */
 
 import {
   ArrowDown,
   ArrowLeft,
   ArrowRight,
   CheckCircle2,
-  Code2,
   Compass,
   RotateCcw,
   Route,
-  Sparkles,
   Wrench,
 } from 'lucide-react';
-import { useEffect, useRef, useState, type CSSProperties } from 'react';
+import { useState } from 'react';
 import Link from '@/components/site-link';
 import { AIExposurePanel } from '@/components/ai-exposure';
-import { withBasePath } from '@/lib/base-path';
 import { careerById } from '@/lib/catalog';
 import type { Locale } from '@/lib/domain-config';
 
@@ -49,14 +44,7 @@ const foundations = {
   },
 };
 
-const energyParticles = Array.from({ length: 14 }, (_, index) => ({
-  x: `${9 + ((index * 31) % 83)}%`,
-  y: `${8 + ((index * 47) % 79)}%`,
-  delay: `${(index % 7) * -0.34}s`,
-  duration: `${2.4 + (index % 5) * 0.42}s`,
-}));
-
-function KnowledgeOrbit({
+function FoundationPanel({
   tone,
   title,
   items,
@@ -69,34 +57,20 @@ function KnowledgeOrbit({
 }) {
   return (
     <section
-      className={`knowledge-orbit knowledge-orbit-${tone}`}
+      className="data-foundation-panel"
       aria-labelledby={`${tone}-foundation-title`}
-      style={{ '--segment-count': items.length } as CSSProperties}
     >
-      <div className="knowledge-orbit-ring" aria-hidden="true" />
-      <div className="knowledge-core">
-        {tone === 'red' ? (
-          <Sparkles size={22} aria-hidden="true" />
-        ) : (
-          <Code2 size={22} aria-hidden="true" />
-        )}
-        <h2 id={`${tone}-foundation-title`}>{title[locale]}</h2>
-      </div>
-      <ol className="knowledge-orbit-items">
+      <h2 id={`${tone}-foundation-title`}>{title[locale]}</h2>
+      <ol>
         {items.map((item, index) => {
-          const angle = -90 + (360 / items.length) * index;
           return (
-            <li
-              key={item.en}
-              style={
-                {
-                  '--orbit-angle': `${angle}deg`,
-                  '--orbit-counter-angle': `${-angle}deg`,
-                } as CSSProperties
-              }
-            >
+            <li key={item.en}>
               <span>
-                <b>{String(index + 1).padStart(2, '0')}</b>
+                <b>
+                  {new Intl.NumberFormat(locale === 'fa' ? 'fa-IR' : 'en-US', {
+                    minimumIntegerDigits: 2,
+                  }).format(index + 1)}
+                </b>
                 {item[locale]}
               </span>
             </li>
@@ -111,47 +85,14 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
   const fa = locale === 'fa';
   const t = (en: string, per: string) => (fa ? per : en);
   const career = careerById['data-science'];
-  const [mergePhase, setMergePhase] = useState<
-    'foundations' | 'merging' | 'merged'
-  >('foundations');
-  const mergeTimer = useRef<number | null>(null);
-  const merging = mergePhase === 'merging';
-  const merged = mergePhase === 'merged';
-
-  useEffect(
-    () => () => {
-      if (mergeTimer.current !== null) {
-        window.clearTimeout(mergeTimer.current);
-      }
-    },
-    [],
-  );
+  const [merged, setMerged] = useState(false);
 
   function mergeFoundations() {
-    if (mergePhase !== 'foundations') return;
-    setMergePhase('merging');
-
-    const reduceMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)',
-    ).matches;
-    mergeTimer.current = window.setTimeout(
-      () => {
-        setMergePhase('merged');
-        mergeTimer.current = null;
-      },
-      reduceMotion ? 40 : 2800,
-    );
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setMerged(true);
   }
 
   function resetFoundations() {
-    if (mergeTimer.current !== null) {
-      window.clearTimeout(mergeTimer.current);
-      mergeTimer.current = null;
-    }
-    setMergePhase('foundations');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setMerged(false);
   }
 
   const detailList = (items: string[]) => (
@@ -166,27 +107,14 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
   );
 
   return (
-    <article className={`data-science-page is-${mergePhase}`}>
-      <section className="ds-hero" aria-labelledby="data-science-title">
-        <img
-          className="ds-scene-art ds-foundation-art"
-          src={withBasePath('/art/data-foundations.svg')}
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          className="ds-scene-art ds-model-art"
-          src={withBasePath('/art/data-science.svg')}
-          alt=""
-          aria-hidden="true"
-        />
-        <div className="ds-scene-shade" aria-hidden="true" />
-        <Link className="ds-back-link" href={`/${locale}/careers`}>
+    <article className="data-science-page">
+      <section className="data-study-hero" aria-labelledby="data-science-title">
+        <Link className="text-link" href={`/${locale}/careers`}>
           <ArrowLeft size={17} aria-hidden="true" />
           {t('Back to career guide', 'بازگشت به راهنمای شغلی')}
         </Link>
 
-        <header className="ds-scene-heading">
+        <header className="data-study-heading">
           <p className="overline">
             {merged
               ? t('MATHEMATICS × PROGRAMMING', 'ریاضیات × برنامه‌نویسی')
@@ -194,9 +122,11 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
           </p>
           <h1 id="data-science-title">
             {merged
-              ? t('DATA SCIENCE', 'علم داده')
-              : t('BUILD THE DOMAIN', 'قلمرو را بسازید')}
-            <span>.</span>
+              ? t('Data Science', 'علم داده')
+              : t(
+                  'How data science comes together',
+                  'علم داده چگونه شکل می‌گیرد؟',
+                )}
           </h1>
           <p>
             {merged
@@ -211,70 +141,62 @@ export function DataSciencePage({ locale }: { locale: Locale }) {
           </p>
         </header>
 
-        <div
-          className="ds-foundation-map"
-          aria-hidden={mergePhase !== 'foundations'}
-        >
-          <KnowledgeOrbit
-            tone="red"
-            title={foundations.mathematics.title}
-            items={foundations.mathematics.items}
-            locale={locale}
-          />
-          <KnowledgeOrbit
-            tone="blue"
-            title={foundations.programming.title}
-            items={foundations.programming.items}
-            locale={locale}
-          />
-          <button
-            className="ds-merge-button"
-            type="button"
-            onClick={mergeFoundations}
-            disabled={mergePhase !== 'foundations'}
-          >
-            <span>{t('MERGE!', 'ادغام!')}</span>
-            <small>{t('Create the domain', 'خلق قلمرو')}</small>
-          </button>
-        </div>
-
-        {merging && <div className="ds-merge-expansion" aria-hidden="true" />}
+        {!merged && (
+          <div className="data-foundations">
+            <FoundationPanel
+              tone="red"
+              title={foundations.mathematics.title}
+              items={foundations.mathematics.items}
+              locale={locale}
+            />
+            <FoundationPanel
+              tone="blue"
+              title={foundations.programming.title}
+              items={foundations.programming.items}
+              locale={locale}
+            />
+            <button
+              className="primary-button data-connect-button"
+              type="button"
+              onClick={mergeFoundations}
+            >
+              {t('Connect the foundations', 'پیوند بنیان‌ها')}
+            </button>
+          </div>
+        )}
+        <output className="sr-only" aria-live="polite">
+          {merged
+            ? t(
+                'Foundations connected. The Data Science guide is available below.',
+                'بنیان‌ها پیوند خوردند. راهنمای علم داده در ادامه نمایش داده می‌شود.',
+              )
+            : ''}
+        </output>
 
         {merged && (
-          <div className="ds-purple-stage">
-            <div className="ds-energy-field" aria-hidden="true">
-              {energyParticles.map((particle, index) => (
-                <span
-                  key={index}
-                  style={
-                    {
-                      '--particle-x': particle.x,
-                      '--particle-y': particle.y,
-                      '--particle-delay': particle.delay,
-                      '--particle-duration': particle.duration,
-                    } as CSSProperties
-                  }
-                />
-              ))}
-            </div>
-            <div className="ds-purple-ring" aria-hidden="true" />
-            <div className="ds-data-sphere">
-              <span lang="ja">領域</span>
-              <strong>{career.name[locale]}</strong>
-            </div>
+          <section
+            className="data-study-result"
+            aria-label={t('Connected foundations', 'بنیان‌های پیوندخورده')}
+          >
+            <p>
+              {t(
+                'The foundations connect through statistical modeling, programming, and decisions made with data.',
+                'این بنیان‌ها با مدل‌سازی آماری، برنامه‌نویسی و تصمیم‌گیری بر پایه داده به هم پیوند می‌خورند.',
+              )}
+            </p>
             <button
               type="button"
-              className="ds-reset-button"
+              className="secondary-button"
               onClick={resetFoundations}
             >
               <RotateCcw size={16} aria-hidden="true" />
               {t('Revisit foundations', 'بازگشت به بنیان‌ها')}
             </button>
-            <a className="ds-scroll-cue" href="#data-science-details">
+            <a className="text-link" href="#data-science-details">
               {t('Enter the field', 'ورود به حوزه')}
               <ArrowDown size={17} aria-hidden="true" />
             </a>
-          </div>
+          </section>
         )}
       </section>
 

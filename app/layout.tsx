@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Barlow_Condensed, Manrope } from 'next/font/google';
 import './globals.css';
+import './field-guide.css';
 const display = Barlow_Condensed({
   weight: ['500', '600', '700', '800'],
   subsets: ['latin'],

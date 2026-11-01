@@ -5,32 +5,36 @@
   --font-persian: 'Vazirmatn Persian Digits', 'Sahel';
   --font-body: var(--font-latin-body);
   --font-display: var(--font-latin-display);
-  --background: #171821;
-  --surface: #1e202a;
-  --surface-raised: #272a36;
-  --foreground: #f3f2f8;
-  --muted: #a6a8b5;
-  --line: #353846;
-  --accent: #afa0ff;
-  --accent-strong: #8c77f9;
+  --background: #191b1a;
+  --surface: #212421;
+  --surface-raised: #2b2e2a;
+  --foreground: #f1efe7;
+  --muted: #b8bcb2;
+  --line: #494e46;
+  --control-line: #798171;
+  --accent: #f2a48c;
+  --accent-strong: #f2a48c;
+  --on-accent: #251c17;
   --font-sans: var(--font-body);
-  --popover: #1e202a;
-  --popover-foreground: #f3f2f8;
-  --muted-foreground: #a6a8b5;
+  --popover: #212421;
+  --popover-foreground: #f1efe7;
+  --muted-foreground: #b8bcb2;
   color-scheme: dark;
 }
 :root[data-theme='light'] {
-  --background: #f7f8fc;
-  --surface: #fff;
-  --surface-raised: #eef0f7;
-  --foreground: #171a2c;
-  --muted: #5b6075;
-  --line: #dce0ec;
-  --accent: #6748cb;
-  --accent-strong: #6748cb;
-  --popover: #fff;
-  --popover-foreground: #171a2c;
-  --muted-foreground: #5b6075;
+  --background: #f5f2e9;
+  --surface: #fffcf5;
+  --surface-raised: #e9e5d9;
+  --foreground: #242922;
+  --muted: #596050;
+  --line: #b4b8a8;
+  --control-line: #838978;
+  --accent: #a33c25;
+  --accent-strong: #a33c25;
+  --on-accent: #fffaf0;
+  --popover: #fffcf5;
+  --popover-foreground: #242922;
+  --muted-foreground: #596050;
   color-scheme: light;
 }
 * {
@@ -140,10 +144,7 @@ svg {
   align-items: center;
   gap: 20px;
   border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--background) 92%, transparent);
-  box-shadow: 0 10px 30px color-mix(in srgb, #000 16%, transparent);
-  backdrop-filter: blur(18px) saturate(130%);
-  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  background: var(--background);
 }
 .brand {
   display: flex;
@@ -349,7 +350,7 @@ svg {
 .overline {
   font-size: 0.6875rem;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 0.04em;
   color: var(--muted);
   margin-bottom: 12px;
 }
@@ -485,7 +486,7 @@ svg {
   font-size: 0.6875rem;
 }
 .heading-dot {
-  color: var(--accent);
+  display: none;
 }
 .text-link {
   display: inline-flex;

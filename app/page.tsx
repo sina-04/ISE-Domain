@@ -15,8 +15,10 @@ export default function Entry() {
         className="entry-loader"
         aria-label="Loading ISE Domain / در حال بارگذاری"
       >
-        <span className="entry-loader-orbit" aria-hidden="true" />
-        <span className="entry-loader-core" aria-hidden="true" />
+        <span>Opening ISE Domain…</span>
+        <span lang="fa" dir="rtl">
+          در حال باز کردن راهنما…
+        </span>
       </output>
     </main>
   );

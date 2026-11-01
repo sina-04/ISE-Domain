@@ -1,19 +1,9 @@
 'use client';
-/* Decorative topic illustrations are SVGs and load lazily on category cards. */
+/* Original subject SVGs identify entries in the curriculum index. */
 /* eslint-disable @next/next/no-img-element */
-import {
-  Suspense,
-  useEffect,
-  useRef,
-  useState,
-  useSyncExternalStore,
-  type MouseEvent,
-} from 'react';
-import { flushSync } from 'react-dom';
+import { Suspense, useEffect, useState, useSyncExternalStore } from 'react';
 import Link from '@/components/site-link';
 import {
-  ArrowUpRight,
-  ArrowRight,
   Globe2,
   Sun,
   Moon,
@@ -21,14 +11,8 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
-  GraduationCap,
-  Wrench,
-  BookOpen,
-  ExternalLink,
   Star,
-  Sparkles,
   ArrowUp,
-  BriefcaseBusiness,
   Mail,
 } from 'lucide-react';
 import { categories, type Locale } from '@/lib/domain-config';
@@ -36,6 +20,7 @@ import { Explorer } from '@/components/explorer';
 import { DataSciencePage } from '@/components/data-science-page';
 import { SiteSearch } from '@/components/site-search';
 import { withBasePath } from '@/lib/base-path';
+import { courses, pathways } from '@/lib/catalog';
 const navigation = [
   ['home', 'Overview', 'نمای کلی'],
   ['chart', 'Chart Analysis', 'تحلیل چارت'],
@@ -145,7 +130,6 @@ export function DomainApp({
   const [menu, setMenu] = useState(false);
   const [stars, setStars] = useState<number | null>(null);
   const [japanCard, setJapanCard] = useState(0);
-  const themeTransition = useRef(false);
   useEffect(() => {
     document.documentElement.lang = locale;
     document.documentElement.dir = fa ? 'rtl' : 'ltr';
@@ -153,15 +137,6 @@ export function DomainApp({
       localStorage.setItem('ise-language', locale);
     } catch {}
   }, [locale, fa]);
-  useEffect(() => {
-    if (activeSection !== 'home') return;
-    const timer = window.setInterval(
-      () =>
-        setJapanCard((current) => (current + 1) % japaneseIndustryCards.length),
-      10_000,
-    );
-    return () => window.clearInterval(timer);
-  }, [activeSection, japanCard]);
   useEffect(() => {
     const syncSectionFromLocation = () => {
       const parts = window.location.pathname.split('/').filter(Boolean);
@@ -196,102 +171,13 @@ export function DomainApp({
       window.clearInterval(refresh);
     };
   }, []);
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    const revealSelector = [
-      '.eyebrow',
-      '.intro',
-      '.stats-strip',
-      '.section-heading',
-      '.domain-card',
-      '.module-card',
-      '.japan-note',
-      '.page-heading',
-      '.explorer-toolbar',
-      '.source-note',
-      '.degree-summary',
-      '.course-group',
-      '.pathway-card',
-      '.career-map',
-      '.career-domain-section',
-      '.career-card',
-      '.supporting-grid',
-      '.tool-card',
-      '.japan-explainer',
-      '.resource-row',
-      '.wiki-row',
-      'footer',
-    ].join(',');
-    const tracked = new WeakSet<Element>();
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue;
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -5% 0px' },
-    );
-    const register = () => {
-      document.querySelectorAll(revealSelector).forEach((element) => {
-        if (tracked.has(element)) return;
-        tracked.add(element);
-        element.classList.add('scroll-reveal');
-        observer.observe(element);
-      });
-    };
-
-    register();
-    const main = document.getElementById('main');
-    const mutations = new MutationObserver(register);
-    if (main) mutations.observe(main, { childList: true, subtree: true });
-
-    return () => {
-      observer.disconnect();
-      mutations.disconnect();
-    };
-  }, [activeSection]);
-  async function toggleTheme(event: MouseEvent<HTMLButtonElement>) {
-    if (themeTransition.current) return;
+  function toggleTheme() {
     const next = theme === 'dark' ? 'light' : 'dark';
-    const applyTheme = () => {
-      document.documentElement.dataset.theme = next;
-      window.dispatchEvent(new Event('ise-themechange'));
-      try {
-        localStorage.setItem('ise-theme', next);
-      } catch {}
-    };
-    if (
-      !document.startViewTransition ||
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    ) {
-      applyTheme();
-      return;
-    }
-    const bounds = event.currentTarget.getBoundingClientRect();
-    const x = bounds.left + bounds.width / 2;
-    const y = bounds.top + bounds.height / 2;
-    const radius = Math.hypot(
-      Math.max(x, window.innerWidth - x),
-      Math.max(y, window.innerHeight - y),
-    );
-    document.documentElement.style.setProperty('--theme-x', `${x}px`);
-    document.documentElement.style.setProperty('--theme-y', `${y}px`);
-    document.documentElement.style.setProperty('--theme-radius', `${radius}px`);
-    themeTransition.current = true;
+    document.documentElement.dataset.theme = next;
+    window.dispatchEvent(new Event('ise-themechange'));
     try {
-      const transition = document.startViewTransition(() =>
-        flushSync(applyTheme),
-      );
-      await transition.ready;
-      await transition.finished;
-    } catch {
-      applyTheme();
-    } finally {
-      themeTransition.current = false;
-    }
+      localStorage.setItem('ise-theme', next);
+    } catch {}
   }
   const href = (id: string) => `/${locale}${id === 'home' ? '' : `/${id}`}`;
   return (
@@ -301,9 +187,6 @@ export function DomainApp({
       </a>
       <header className="site-header">
         <Link href={href('home')} className="brand">
-          <span className="brand-symbol" aria-hidden="true">
-            🏭
-          </span>
           <span>
             ISE<span className="brand-thin">DOMAIN</span>
             <small>INDUSTRIAL & SYSTEMS ENGINEERING</small>
@@ -424,141 +307,115 @@ export function DomainApp({
       <main id="main" className="main-content">
         {activeSection === 'home' ? (
           <>
-            <div className="eyebrow">
-              <span className="live-dot" />
-              {t('A NEW PERSPECTIVE ON ENGINEERING', 'نگاهی تازه به مهندسی')}
-              <span className="eyebrow-end">
-                {t('EST. 1403', 'از ۱۴۰۳')} <span>↗</span>
-              </span>
-            </div>
-            <section className="intro">
-              <div className="intro-main">
-                <img
-                  aria-hidden="true"
-                  alt=""
-                  className="intro-art"
-                  src={withBasePath('/art/systems-overview.svg')}
-                />
-                <div className="intro-main-content">
-                  <p className="overline">
-                    {t('WELCOME TO YOUR DOMAIN', 'به قلمرو خودتان خوش آمدید')}
-                  </p>
-                  <h1>
-                    {t('EVERY SYSTEM.', 'دنیای سیستم‌ها،')}
-                    <br />
-                    <span>{t('INFINITE POSSIBILITIES.', 'قلمرو فرصت‌ها.')}</span>
-                  </h1>
-                  <p className="intro-copy">
-                    {t(
-                      'People. Data. Decisions. Discover the engineering that connects them all — and find where you belong.',
-                      'مهندسی صنایع و سیستم‌ها، انسان‌ها، داده‌ها و فرایندها را به هم پیوند می‌دهد تا تصمیم‌های بهتری بگیریم. از شناخت درس‌ها شروع کنید و مسیر خودتان را بسازید.',
-                    )}
-                  </p>
-                  <Link className="primary-button" href={href('chart')}>
-                    {t('Explore the curriculum', 'کاوش در برنامه درسی')}
-                    <ArrowUpRight size={18} />
-                  </Link>
-                </div>
-              </div>
-              <aside className="intro-aside">
-                <span className="vertical-japanese" lang="ja">
-                  無限の可能性
-                </span>
-                <div className="domain-mark">
-                  領域<span>{t('DOMAIN / 01', 'قلمرو / ۰۱')}</span>
-                </div>
-                <p>
-                  {t('See the whole picture.', 'تصویر کامل را ببینید.')}
+            <section className="guide-intro">
+              <div className="guide-intro-copy">
+                <h1>
+                  {t('Understand the system.', 'سیستم را بشناسید.')}
                   <br />
-                  {t('Change how it works.', 'کارکرد آن را تغییر دهید.')}
+                  <span>
+                    {t('Choose your direction.', 'مسیرتان را انتخاب کنید.')}
+                  </span>
+                </h1>
+                <p className="intro-copy">
+                  {t(
+                    'A student’s guide to Industrial and Systems Engineering. Connect the courses you study with the work you want to do.',
+                    'راهنمای دانشجویی مهندسی صنایع و سیستم‌ها. درس‌هایی که می‌خوانید را به کاری که می‌خواهید انجام دهید پیوند دهید.',
+                  )}
                 </p>
-                <div className="tiny-rule" />
-                <span className="small-label">
-                  {t('ENGINEER YOUR OWN PATH', 'مسیر خود را مهندسی کنید')}
-                </span>
-              </aside>
+                <Link className="primary-button" href={href('chart')}>
+                  {t('Read the curriculum', 'مشاهده برنامه درسی')}
+                </Link>
+                <p className="guide-degree-note">
+                  {t('140 degree credits', '۱۴۰ واحد دوره')}{' '}
+                  <span aria-hidden="true">/</span>{' '}
+                  {new Intl.NumberFormat(fa ? 'fa-IR' : 'en-US').format(
+                    pathways.filter((pathway) => !pathway.supporting).length,
+                  )}{' '}
+                  {t('graduate pathways', 'مسیر تحصیلات تکمیلی')}
+                </p>
+              </div>
+              <figure className="guide-figure">
+                <div className="guide-figure-heading">
+                  <span lang="ja">領域</span>
+                  <span>
+                    {t(
+                      'People, processes, decisions.',
+                      'انسان‌ها، فرایندها، تصمیم‌ها.',
+                    )}
+                  </span>
+                </div>
+                <img
+                  src={withBasePath('/art/systems-overview.svg')}
+                  alt=""
+                  width={960}
+                  height={640}
+                  fetchPriority="high"
+                />
+                <figcaption>
+                  {t(
+                    'See the connections. Find your place.',
+                    'ارتباط‌ها را ببینید. جای خود را پیدا کنید.',
+                  )}
+                </figcaption>
+              </figure>
             </section>
-            <div className="stats-strip">
-              <div>
-                <strong>{t('140', '۱۴۰')}</strong>
-                <span>{t('Degree credits', 'واحد دوره')}</span>
-              </div>
-              <div>
-                <strong>{t('07', '۰۷')}</strong>
-                <span>{t('Fields of knowledge', 'حوزه دانش')}</span>
-              </div>
-              <div>
-                <strong>{t('07', '۰۷')}</strong>
-                <span>{t('Graduate pathways', 'مسیر تحصیلات تکمیلی')}</span>
-              </div>
-              <p>
-                <Sparkles size={18} />
-                {t(
-                  'One discipline. A world of directions.',
-                  'یک رشته؛ دنیایی از مسیرها.',
-                )}
-              </p>
-            </div>
-            <section>
+            <section className="guide-curriculum">
               <div className="section-heading">
                 <div>
                   <p className="overline">
-                    {t('01', '۰۱')} /{' '}
-                    {t('CHOOSE YOUR FIELD', 'حوزه خود را انتخاب کنید')}
+                    {t('01', '۰۱')} / {t('The curriculum', 'برنامه درسی')}
                   </p>
                   <h2>
-                    {t('EXPLORE THE DOMAINS', 'قلمروها را کشف کنید')}
-                    <span className="heading-dot">.</span>
+                    {t('Seven fields. One discipline.', 'هفت حوزه در یک رشته.')}
                   </h2>
+                  <p className="guide-section-copy">
+                    {t(
+                      'Start with a subject. See its courses, prerequisites, and connections.',
+                      'از یک موضوع شروع کنید. درس‌ها، پیش‌نیازها و ارتباط‌هایش را ببینید.',
+                    )}
+                  </p>
                 </div>
                 <Link className="text-link" href={href('chart')}>
                   {t('View full chart', 'مشاهده چارت کامل')}
-                  <ArrowUpRight size={16} />
                 </Link>
               </div>
-              <div className="domain-grid">
+              <div className="guide-domain-index">
                 {categories.map((c) => (
                   <Link
                     key={c.id}
                     href={`${href('chart')}?view=content&category=${c.id}`}
-                    className={`domain-card category-${c.id}`}
-                    style={
-                      {
-                        '--category-color': c.color,
-                        '--image-position': c.position,
-                        '--mobile-position': c.mobilePosition,
-                      } as React.CSSProperties
-                    }
+                    className="guide-domain-row"
                   >
                     {c.asset && (
                       <img
                         loading="lazy"
                         src={withBasePath(c.asset)}
                         alt=""
-                        className="category-art"
+                        className="guide-domain-art"
+                        width={96}
+                        height={72}
                       />
                     )}
-                    <div className="card-shade" />
-                    <div className="card-top">
-                      <span>
-                        領域{' '}
-                        {fa
-                          ? c.number.replace(
-                              /\d/g,
-                              (d) => '۰۱۲۳۴۵۶۷۸۹'[Number(d)],
-                            )
-                          : c.number}
-                      </span>
-                      <ArrowUpRight size={20} />
-                    </div>
-                    <div className="card-bottom">
+                    <span className="guide-domain-number">
+                      {fa
+                        ? c.number.replace(
+                            /\d/g,
+                            (d) => '۰۱۲۳۴۵۶۷۸۹'[Number(d)],
+                          )
+                        : c.number}
+                    </span>
+                    <div className="guide-domain-copy">
                       <h3>{c.title[locale]}</h3>
                       <p>{c.caption[locale]}</p>
-                      <span className="card-explore">
-                        {t('Explore courses', 'مشاهده دروس')}
-                        <ArrowRight size={15} />
-                      </span>
                     </div>
+                    <span className="guide-domain-count">
+                      {new Intl.NumberFormat(fa ? 'fa-IR' : 'en-US').format(
+                        courses.filter((course) =>
+                          course.categories.includes(c.id),
+                        ).length,
+                      )}
+                      <small>{t('courses', 'درس')}</small>
+                    </span>
                   </Link>
                 ))}
               </div>
@@ -568,62 +425,62 @@ export function DomainApp({
                 <div>
                   <p className="overline">
                     {t('02', '۰۲')} /{' '}
-                    {t('GO BEYOND THE CHART', 'فراتر از چارت')}
+                    {t('Beyond the curriculum', 'فراتر از برنامه درسی')}
                   </p>
                   <h2>
-                    {t('YOUR NEXT CHAPTER', 'فصل بعدی شما')}
-                    <span className="heading-dot">.</span>
+                    {t(
+                      'Put your studies in context.',
+                      'درس‌ها را در عمل بشناسید.',
+                    )}
                   </h2>
                 </div>
               </div>
               <div className="module-grid overview-module-grid">
                 {[
                   {
-                    Icon: GraduationCap,
                     id: 'majors',
-                    en: 'Find your specialization',
-                    fa: 'گرایش خود را پیدا کنید',
+                    en: 'Master’s majors',
+                    fa: 'گرایش‌های کارشناسی ارشد',
                     desc: 'From optimization to financial systems.',
                     per: 'از بهینه‌سازی تا سیستم‌های مالی.',
                   },
                   {
-                    Icon: BriefcaseBusiness,
                     id: 'careers',
-                    en: 'Explore career paths',
-                    fa: 'مسیرهای شغلی را کشف کنید',
+                    en: 'Career Guide',
+                    fa: 'راهنمای شغلی',
                     desc: 'From data and projects to operations and business.',
                     per: 'از داده و پروژه تا عملیات و کسب‌وکار.',
                   },
                   {
-                    Icon: Wrench,
                     id: 'tools',
-                    en: 'Build your toolkit',
-                    fa: 'جعبه‌ابزار خود را بسازید',
+                    en: 'Tools & software',
+                    fa: 'ابزار و نرم‌افزار',
                     desc: 'Meet the software behind the solutions.',
                     per: 'با نرم‌افزارهای پشت راه‌حل‌ها آشنا شوید.',
                   },
                   {
-                    Icon: BookOpen,
                     id: 'resources',
-                    en: 'Keep your curiosity alive',
-                    fa: 'کنجکاوی را زنده نگه دارید',
+                    en: 'Resources',
+                    fa: 'منابع یادگیری',
                     desc: 'Books, ideas and trusted places to learn.',
                     per: 'کتاب‌ها، ایده‌ها و منابع معتبر یادگیری.',
                   },
                   {
-                    Icon: ExternalLink,
                     id: 'wikipedia',
-                    en: 'Follow the knowledge',
-                    fa: 'دانش را دنبال کنید',
+                    en: 'Wikipedia references',
+                    fa: 'مراجع ویکی‌پدیا',
                     desc: 'Explore the concepts behind each course.',
                     per: 'مفاهیم هر درس را عمیق‌تر بشناسید.',
                   },
-                ].map(({ Icon, id, en, fa: per, desc, per: pdesc }) => (
+                ].map(({ id, en, fa: per, desc, per: pdesc }, index) => (
                   <Link className="module-card" href={href(id)} key={id}>
-                    <Icon size={24} />
+                    <span className="guide-directory-number">
+                      {new Intl.NumberFormat(fa ? 'fa-IR' : 'en-US', {
+                        minimumIntegerDigits: 2,
+                      }).format(index + 1)}
+                    </span>
                     <h3>{t(en, per)}</h3>
                     <p>{t(desc, pdesc)}</p>
-                    <ArrowUpRight size={17} />
                   </Link>
                 ))}
               </div>
@@ -679,7 +536,6 @@ export function DomainApp({
                   href={`${href('resources')}?topic=japan`}
                 >
                   {t('Explore the connection', 'کشف این ارتباط')}
-                  <ArrowUpRight size={17} />
                 </Link>
               </div>
             </section>
@@ -722,12 +578,12 @@ export function DomainApp({
           >
             {fa ? (
               <>
-                توسعه یافته با 💜 توسط سینا رضایی (دانشجوی کارشناسی مهندسی صنایع
-                و سیستم‌ها)
+                توسعه‌یافته توسط سینا رضایی (دانشجوی کارشناسی مهندسی صنایع و
+                سیستم‌ها)
               </>
             ) : (
               <>
-                Developed with <span aria-label="love">💜</span> by Sina Rezaei
+                Developed by Sina Rezaei
                 <span className="student-note"> (ISE Bachelor Student)</span>
               </>
             )}

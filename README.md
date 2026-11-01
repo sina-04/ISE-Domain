@@ -6,6 +6,8 @@
 
 A bilingual, responsive introduction to Industrial and Systems Engineering. Built on the existing React 19 / TypeScript / vinext / Tailwind / Sites project.
 
+The interface follows the owner-approved Japanese industry field-guide direction in `DESIGN.md`: restrained ink/paper surfaces, a vermilion action color, a numbered curriculum index, and manual Japanese-principle navigation. `app/field-guide.css` supplies the shared presentation layer. Motion is limited to interaction feedback; the Data Science foundations connect through a direct state change. Verification evidence is recorded in `anti-slop/redesign-verification.md`.
+
 ## Run
 
 - `npm install` if dependencies are absent (Node 22.13+).
@@ -39,7 +41,7 @@ Module links use native document navigation through `components/site-link.tsx`. 
 
 ## Replace backgrounds
 
-Original vector illustrations in `public/art` depict each of the seven subject areas. Edit `categories` in `lib/domain-config.ts` to change the asset URL, desktop focal position, mobile focal position and accent. The overview uses `systems-overview.svg`; the Data Science page uses `data-foundations.svg` and `data-science.svg`. All artwork is self-contained SVG with no external images or fonts. Category cards link directly to their courses, and the Data Science merge keeps its visual interaction without anime artwork or audio.
+Original vector illustrations in `public/art` depict each of the seven subject areas. Edit `categories` in `lib/domain-config.ts` to change asset URLs and catalog-banner focal positions. The overview uses `systems-overview.svg` as its figure and grayscale subject thumbnails in the curriculum index. All artwork is self-contained SVG with no external images or fonts. Index entries link directly to their courses. The Data Science page presents two readable foundation lists and a user-triggered connection to its career guide; it uses no looping animation or audio.
 
 ## Validation
 
